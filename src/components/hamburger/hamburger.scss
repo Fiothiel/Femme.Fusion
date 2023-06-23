@@ -1,0 +1,30 @@
+.hamburger {
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    top: $spacing-medium;
+    right: $spacing-medium;
+    
+
+    &__bar {
+        width: 4rem;
+        height: 0.5rem;
+        background-color: $white;
+        margin: 0.6rem 0;
+        transition: 0.4s;
+    }
+
+    &--open {
+        .hamburger__bar-1 {
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+
+        .hamburger__bar-2 {
+            opacity: 0;
+        }
+
+        .hamburger__bar-3 {
+            transform: translate(0, -11px) rotate(45deg);
+        }
+    }
+}

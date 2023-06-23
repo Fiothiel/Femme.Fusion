@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Pacifico';
+    src: url('./assets/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla-Regular';
+    src: url('./assets/fonts/Karla/Karla-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla-Bold';
+    src: url('./assets/fonts/Karla/Karla-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+}
+
+$font-family-pacifico: 'Pacifico';
+$font-family-karla-regular: 'Karla-Regular';
+$font-family-karla-bold: 'Karla-Bold';
+
+$font-size-base: 1.6rem;
