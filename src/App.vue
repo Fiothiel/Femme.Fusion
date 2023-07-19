@@ -2,6 +2,9 @@
   <div class="femme-fusion">
     <Menu />
     <Hero />
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
