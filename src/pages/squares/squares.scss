@@ -1,0 +1,36 @@
+.squares {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  margin-bottom: $spacing-large;
+
+  &__square {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &--pink {
+      background-color: $pink-hot;
+    }
+
+    &--purple {
+      background-color: #4f0a6a;
+    }
+
+    &--black {
+      background-color: black;
+    }
+  }
+
+  .square-text {
+    padding: $spacing-medium;
+  }
+}

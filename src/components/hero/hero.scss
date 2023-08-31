@@ -1,7 +1,15 @@
 .hero {
     width: 100%;
-    height: 900px;
+    height: 800px;
     position: relative;
+
+    &__logo {
+        position: absolute;
+        z-index: 1;
+        width: 450px;
+        left: $spacing-large;
+        bottom: $spacing-xx-large;
+    }
     
     &__image {
         width: 100%;

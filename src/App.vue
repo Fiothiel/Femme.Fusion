@@ -2,7 +2,7 @@
   <div class="femme-fusion">
     <Menu />
     <Hero />
-    <main>
+    <main class="femme-fusion__content">
       <router-view />
     </main>
   </div>
