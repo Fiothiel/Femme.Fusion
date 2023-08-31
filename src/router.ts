@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import About from './pages/about/About.vue';
 import Home from './pages/home/Home.vue';
 
-export default createRouter({
+ const  router = createRouter({
   history: createWebHistory(),
   routes: [
     {
@@ -16,3 +16,5 @@ export default createRouter({
     },
   ],
 });
+
+export default router;

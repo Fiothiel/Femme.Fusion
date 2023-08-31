@@ -1,6 +1,6 @@
 <template>
-  <Hamburger />
-  <div class="menu">
+  <Hamburger @click="onClick()"/>
+  <div class="menu" :class="{'menu--open': open}">
     <nav class="menu__nav">
       <h1>Menu</h1>
       <a href="#">Link 1</a>
@@ -13,5 +13,12 @@
 </template>
   
 <script setup lang="ts">
+import { ref } from 'vue';
+
 import Hamburger from "../hamburger/hamburger.vue";
+let open = ref(false);
+
+const onClick = () => {
+  open.value = !open.value;
+}
 </script>
