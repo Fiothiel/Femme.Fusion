@@ -1,23 +1,37 @@
-@font-face {
-    font-family: 'Pacifico';
-    src: url('./assets/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-display: swap;
+@mixin font($family, $name, $weight, $style) {
+    @font-face {
+        font-family: $family;
+        src: url('/assets/poppins/#{$name}.ttf') format("truetype");
+        src: url('./assets/fonts/#{$family}/#{$name}.ttf') format('truetype');
+        font-weight: $weight;
+        font-style: $style;
+    }
 }
 
-@font-face {
-    font-family: 'Karla-Regular';
-    src: url('./assets/fonts/Karla/Karla-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-display: swap;
-}
+/* Playfair */
+@include font('Playfair', 'PlayfairDisplay-Regular', 400, normal);
+@include font('Playfair', 'PlayfairDisplay-Italic', 400, italic);
+@include font('Playfair', 'PlayfairDisplay-Medium', 500, normal);
+@include font('Playfair', 'PlayfairDisplay-MediumItalic', 500, italic);
+@include font('Playfair', 'PlayfairDisplay-SemiBold', 600, normal);
+@include font('Playfair', 'PlayfairDisplay-SemiBoldItalic', 600, italic);
+@include font('Playfair', 'PlayfairDisplay-Bold', 700, normal);
+@include font('Playfair', 'PlayfairDisplay-BoldItalic', 700, italic);
+@include font('Playfair', 'PlayfairDisplay-ExtraBold', 800, normal);
+@include font('Playfair', 'PlayfairDisplay-ExtraBoldItalic', 800, italic);
+@include font('Playfair', 'PlayfairDisplay-Black', 900, normal);
+@include font('Playfair', 'PlayfairDisplay-BlackItalic', 900, italic);
 
-@font-face {
-    font-family: 'Karla-Bold';
-    src: url('./assets/fonts/Karla/Karla-Bold.ttf') format('truetype');
-    font-style: normal;
-    font-display: swap;
-}
+/* Oswald */
+@include font('Oswald', 'Oswald-ExtraLight', 200, normal);
+@include font('Oswald', 'Oswald-Light', 300, normal);
+@include font('Oswald', 'Oswald-Regular', 400, normal);
+@include font('Oswald', 'Oswald-Medium,', 500, normal);
+@include font('Oswald', 'Oswald-SemiBold', 600, normal);
+@include font('Oswald', 'Oswald-Bold', 700, normal);
+
+$font-family-playfair: 'Playfair';
+$font-family-oswald: 'Oswald';
 
 $font-family-pacifico: 'Pacifico';
 $font-family-karla-regular: 'Karla-Regular';
