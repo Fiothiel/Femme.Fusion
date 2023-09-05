@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: $grey-dark;
+    background-color: black;
     font-family: $font-family-oswald;
     font-size: $font-size-base;
     color: $white;
@@ -26,54 +26,76 @@ body {
         font-size: 3rem;
     }
 
-/*     ul,
-    li {
-        list-style: none;
-    }
-
-    main {
-        margin: auto;
-        max-width: 800px;
-        margin-bottom: $spacing-xx-large;
-
-        @include for-tablet-landscape-down {
-            padding: 0 $spacing-large;
-        }
-    } */
-
     a {
         font-weight: bold;
-        color: $black;
+        color: $white;
         text-decoration: none;
-        
+
         &:hover {
             color: $pink-hot;
             transition: 0.2s ease;
         }
     }
 }
-/* 
+
+
 #app {
-    .femme-fusion {      
-        &__title {
-            font-size: 10rem;
-            font-family: $font-family-pacifico;
-        }
-    
-        &__sub {
-            font-family: $font-family-karla-regular;
-            font-size: 2rem;
-            margin-top: -2.5rem;
-        }
-    
-        &__sub-sub {
-            font-size: 1.2rem;
-            margin-top: -0.5rem;
+    .femme-fusion {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        text-align: center;
+
+        @include for-tablet-landscape-down {
+            padding: 3rem;
         }
         
-        &__mail {
-            padding-top: 5rem;
+        .logo {
+            max-width: 700px;
+
+            @include for-phone-only {
+                max-width: 100%;
+            }
+        }
+
+        .tag {
             font-size: 2.5rem;
+            font-weight: 300;
+            padding-bottom: 10rem;            
+
+            @include for-phone-only {
+                font-size: 2rem;                
+                padding-bottom: 5rem;
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 0.5rem;
+            font-size: 1.8rem;
+
+            &__email {
+                font-size: 2.2rem;
+                padding-bottom: 2rem;
+            }
+
+            &__social {
+                svg {
+                    height: 50px;
+                    width: 50px
+                }
+
+                g:hover {
+                    fill: $pink-hot;
+                    transition: 0.2s ease;
+                }
+            }
         }
     }
-} */
+}
