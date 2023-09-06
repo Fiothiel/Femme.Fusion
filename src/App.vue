@@ -2,7 +2,7 @@
   <div class="femme-fusion">
     <img class="logo" src="./assets/logo/logo-white.svg" />
     <div class="tag">
-      The femme fatales of burlesque - burlesque showgrupp baserad i Linköping
+      The femme fatales of burlesque - showgrupp baserad i Linköping
     </div>
     <div class="info">
       <div>
