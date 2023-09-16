@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import About from './pages/about/About.vue';
 import Book from './pages/book/Book.vue';
+import Contact from './pages/contact/Contact.vue';
 import Home from './pages/home/Home.vue';
 import Squares from './pages/squares/Squares.vue';
 
@@ -23,6 +24,10 @@ import Squares from './pages/squares/Squares.vue';
     {
       path: "/rutor",
       component: Squares,
+    },
+    {
+      path: "/contact",
+      component: Contact,
     },
   ],
 });

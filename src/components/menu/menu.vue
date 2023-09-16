@@ -7,7 +7,7 @@
       <a href="/about">About</a>
       <a href="/book">Book</a>
       <a href="/rutor">Rutor</a>
-      <a href="#">Link 5</a>
+      <a href="/contact">Kontakta oss</a>
     </nav>
   </div>
 </template>
