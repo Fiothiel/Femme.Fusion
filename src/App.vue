@@ -5,11 +5,13 @@
     <main class="femme-fusion__content">
       <router-view />
     </main>
+    <Footer />
   </div>
 </template>
 
 
 <script setup lang="ts">
+import Footer from './components/footer/Footer.vue';
 import Hero from './components/hero/hero.vue';
 import Menu from './components/menu/menu.vue';
 
