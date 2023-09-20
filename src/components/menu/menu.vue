@@ -2,7 +2,7 @@
   <Hamburger @click="onClick()"/>
   <div class="menu" :class="{'menu--open': open}">
     <nav class="menu__nav">
-      <h1>Menu</h1>
+      <h1>Meny</h1>
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/book">Book</a>
