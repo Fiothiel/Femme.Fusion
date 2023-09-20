@@ -1,0 +1,17 @@
+.testamonials {
+    font-family: $font-family-playfair;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing-large;
+    padding: $spacing-medium 0;
+
+    &__quote {
+        &--right {
+            text-align: right;
+        }
+    }    
+}
