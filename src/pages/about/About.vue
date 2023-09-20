@@ -1,13 +1,19 @@
 <template>
-  <Page 
-    heading="About" 
-    preamble="Ingress ingress ingress ingress ingress ingress ingress. Ingress ingress ingress ingress. Ingress ingress ingress ingress ingress ingress ingress. Ingress ingress ingress ingress.   " 
-    image="../../src/assets/images/sandra-01.jpg" 
-    content="<p>Content content content content content content content content content. Content content content content content.</p> <p>Content content content <b>content</b>! Content content content content content content content.</p>" />
+  <div class="about">
+    <h1>Vi i Femme Fusion</h1>
+    <div class="about__members">
+      <MemberInfo path="../../src/assets/images/kris-01.jpg" alt="Kristina" name="Kristina" />
+      <MemberInfo path="../../src/assets/images/sandra-01.jpg" alt="Sandra" name="Sandra" />
+      <MemberInfo path="../../src/assets/images/hanna-01.jpg" alt="Hanna" name="Hanna" :right="true" />
+      <MemberInfo path="../../src/assets/images/ella-01.jpg" alt="Ella" name="Ella" :right="true" />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, computed } from 'vue';
-import Page from '../../components/page/page.vue';
+import MemberInfo from '../../components/memberinfo/MemberInfo.vue';
+
+// Todo: List<IMember> to loop out
 
 </script>

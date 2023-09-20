@@ -1,0 +1,29 @@
+.member {
+    position: relative;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    span {
+        position: absolute;
+        right: $spacing-x-small;
+        bottom: 0;
+        font-size: 7rem;
+        font-weight: 300;
+        transition: 0.2s ease;
+    }
+
+    &--right {
+        span {
+            left: $spacing-x-small;
+        }
+    }
+
+    &:hover {
+        span {
+            text-shadow: $white 1px 0 10px;
+        }
+    }
+}

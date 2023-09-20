@@ -13,10 +13,13 @@
     justify-content: center;
     transition: 0.2s ease-in all;
 
-
     &--open {
         top: 0;
         display: flex;
+    }
+
+    h1 {
+        font-size: 8rem;
     }
 
     &__nav {
@@ -29,6 +32,7 @@
 
         a {
             color: $white;
+            font-weight: 200;
             font-size: 4rem;
         }
     }
