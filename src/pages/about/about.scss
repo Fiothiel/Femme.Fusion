@@ -5,6 +5,10 @@
 
         .member {
             @include flex-item-half;
+
+            @include for-tablet-landscape-down {
+                width: 100%;
+            }
         }        
     }
 }
