@@ -1,0 +1,16 @@
+.image {
+    object-fit: cover;
+    margin: $spacing-x-large 0;
+    height: 500px;
+
+    &--full-width {
+        height: 800px;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+
+        @include for-tablet-landscape-down {
+            height: 500px;
+        }
+    }
+}

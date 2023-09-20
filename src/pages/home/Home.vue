@@ -1,13 +1,18 @@
 <template>
-  <Page 
-    heading="Home" 
-    preamble="Burlesquens femme fatale" 
-    image="../../src/assets/images/kanna-01.jpg" 
-    content="<p>Content content content content content content content content content. Content content content content content.</p> <p>Content content content <b>content</b>! Content content content content content content content.</p>" />
+  <div class="home content">
+    <section>
+      <h1>Femme Fusion</h1>
+      With tail in the air. Gnaw the corn cob sleep over your phone and make cute snoring noises, stare at guinea pigs try to jump onto window and fall while scratching at wall or i will ruin the couch with my claws and kitty kitty pussy cat doll. Lie on your belly and purr when you are asleep good now the other hand, too run off table persian cat jump eat fish soft kitty warm kitty little ball of furr for eat the rubberband hey! 
+    </section>
+    <Image 
+      path="../../src/assets/images/louboutin.jpg" 
+      alt="Louboutinsko i svart lack mot en parkeringshusvägg"
+      :fullWidth="true" />
+  </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, computed } from 'vue';
-import Page from '../../components/page/page.vue';
+import Image from '../../components/image/Image.vue';
 
 </script>
