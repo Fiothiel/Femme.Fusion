@@ -12,22 +12,22 @@ import Squares from './pages/squares/Squares.vue';
     {
       path: "/",
       component: Home,
+      name: "Start"
     },
     {
       path: "/about",
       component: About,
+      name: "Om oss"
     },
     {
       path: "/book",
       component: Book,
-    },
-    {
-      path: "/rutor",
-      component: Squares,
+      name: "Vi erbjuder"
     },
     {
       path: "/contact",
       component: Contact,
+      name: "Kontakt"
     },
   ],
 });

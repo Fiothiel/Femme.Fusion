@@ -30,10 +30,24 @@
         align-items: center;
         padding-top: $spacing-xx-large;
 
-        a {
-            color: $white;
-            font-weight: 200;
-            font-size: 4rem;
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            text-align: center;
+
+            a {
+                color: $white;
+                font-weight: 200;
+                font-size: 4rem;
+
+                &:hover {
+                    color: $pink-hot;
+                    transition: 0.2s ease;
+                }
+            }
         }
     }
 }

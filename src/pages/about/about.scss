@@ -3,7 +3,7 @@
     &__members {
         @include flex-container;
 
-        .member {
+        .image-text {
             @include flex-item-half;
 
             @include for-tablet-landscape-down {
