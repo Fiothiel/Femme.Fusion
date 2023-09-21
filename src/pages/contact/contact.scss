@@ -1,4 +1,20 @@
-.contact-form {
-    display: flex;
-    flex-direction: column;
+.contact {
+    div {
+        display: flex;        
+    }
+
+    p {
+        @include flex-item-half;
+    }
+
+    &__form {
+        display: flex;
+        row-gap: $spacing-x-small;
+        flex-direction: column;
+        @include flex-item-half;
+
+        button {
+            margin-top: $spacing-small;
+        }
+    }
 }

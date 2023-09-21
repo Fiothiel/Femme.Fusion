@@ -51,13 +51,14 @@ body {
         flex-direction: column;
         align-items: center;
         overflow-x: hidden;
+        padding: $spacing-large 0 $spacing-x-large 0;
     }
 
     .content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: $spacing-x-large;
+        padding: 0 $spacing-x-large;
         max-width: 800px;
     }
 }

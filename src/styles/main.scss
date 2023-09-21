@@ -4,16 +4,17 @@
 @import 'global';
 
 // Components
-@import '../components/footer/footer.scss';
-@import '../components/hamburger/hamburger.scss';
-@import '../components/hero/hero.scss';
-@import '../components/image/image.scss';
-@import '../components/memberinfo/memberinfo.scss';
-@import '../components/menu/menu.scss';
-@import '../components/page/page.scss';
-@import '../components/testamonials/testamonials.scss';
+@import 'button';
+@import '../components/footer/footer';
+@import '../components/hamburger/hamburger';
+@import '../components/hero/hero';
+@import '../components/image/image';
+@import '../components/memberinfo/memberinfo';
+@import '../components/menu/menu';
+@import '../components/page/page';
+@import '../components/testamonials/testamonials';
 
 // Pages
-@import '../pages/about/about.scss';
-@import '../pages/contact/contact.scss';
-@import '../pages/squares/squares.scss';
+@import '../pages/about/about';
+@import '../pages/contact/contact';
+@import '../pages/squares/squares';
