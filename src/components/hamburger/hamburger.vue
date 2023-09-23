@@ -1,5 +1,5 @@
 <template>
-  <div class="hamburger" :class="{'hamburger--open': open}" @click="onClick">
+  <div tabindex="0" class="hamburger" :class="{'hamburger--open': open}" @click="onClick" @keypress.enter="onClick">
     <div class="hamburger__bar hamburger__bar-1"></div>
     <div class="hamburger__bar hamburger__bar-2"></div>
     <div class="hamburger__bar hamburger__bar-3"></div>

@@ -19,7 +19,7 @@
     }
 
     h1 {
-        font-size: 8rem;
+        font-size: 9rem;
     }
 
     &__nav {
@@ -32,6 +32,9 @@
 
         ul {
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            row-gap: $spacing-small;
             padding: 0;
         }
 
@@ -41,7 +44,7 @@
             a {
                 color: $white;
                 font-weight: 200;
-                font-size: 4rem;
+                font-size: 4.5rem;
 
                 &:hover {
                     color: $pink-hot;

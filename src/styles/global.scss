@@ -43,6 +43,12 @@ body {
             transition: 0.2s ease;
         }
     }
+
+    &.no-scroll {
+        position: fixed;
+        overflow-y: scroll;
+        width: 100%;
+    }
 }
 
 .femme-fusion {

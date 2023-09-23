@@ -1,11 +1,11 @@
 <template>
-  <Hamburger @click="onClick()"/>
+  <Hamburger @click="onMenuToggle" @keypress.enter="onMenuToggle"/>
   <div class="menu" :class="{'menu--open': open}">
     <nav class="menu__nav">
       <h1>Meny</h1>
       <ul>
         <li v-for="(route, index) in router.options.routes" :key="index">
-          <router-link :to="route.path">{{ route.name }}</router-link>
+          <router-link @click="onRouteClick" :to="route.path">{{ route.name }}</router-link>
         </li>
       </ul>
     </nav>
@@ -21,7 +21,29 @@ import Hamburger from "../hamburger/hamburger.vue";
 const router = useRouter();
 let open = ref(false);
 
-const onClick = () => {
-  open.value = !open.value;
+const onRouteClick = () => {
+  onMenuToggle();
+  document.querySelector('main')?.scrollIntoView({
+    behavior: 'smooth'
+  })
 }
+
+const onMenuToggle = () => {
+  open.value = !open.value;
+
+  if (open.value) {
+    document.body.classList.add('no-scroll');
+    document.body.addEventListener('keydown', onKeyPress);
+  } else {
+    document.body.classList.remove('no-scroll');
+    document.body.removeEventListener('keydown', onKeyPress);
+  }
+}
+
+const onKeyPress = (e: KeyboardEvent) => {
+  if (e.key === 'Escape') {
+    onMenuToggle();
+  }
+}
+
 </script>
