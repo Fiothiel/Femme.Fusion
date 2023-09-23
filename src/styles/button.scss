@@ -11,6 +11,11 @@
   font-family: $font-family-oswald;
   font-weight: 300;
 
+  &--large {
+    font-size: 3.5rem;
+    padding: $spacing-medium $spacing-x-large;
+  }
+
   &:hover {
     color: $wine;
     background-color: $white;

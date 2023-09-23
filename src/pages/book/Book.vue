@@ -14,6 +14,7 @@
       <ImageText path="../../src/assets/images/ff-05.jpg" alt="3 am zoomies" heading="3 am zoomies"
         text="Spend all night ensuring people don't sleep sleep all day really likes hummus. I dreamt about fish yum! hide from vacuum cleaner sniff sniff yet whenever a door is opened, rush in before the human refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am or carrying out surveillance on the neighbour's dog more napping, more napping all the napping is exhausting. " />
     </div>
+    <router-link to="/contact" class="button button--large">Kontakta oss för information och bokning!</router-link>
   </div>
 </template>
 

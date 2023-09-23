@@ -5,6 +5,11 @@
     top: $spacing-medium;
     right: $spacing-medium;
     
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+
+    position: fixed;
 
     &__bar {
         width: 4rem;

@@ -22,7 +22,7 @@
         <textarea name="message" v-model="message"></textarea>
         <button type="submit" class="button">Skicka</button>
       </form>
-    </div>
+    </div>    
   </div>
 </template>
 
