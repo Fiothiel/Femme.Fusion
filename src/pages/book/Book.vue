@@ -6,11 +6,11 @@
       problem! Vi kan alltid anpassa efter just dina önskemål.
     </p>
     <div class="book__offers">
-      <ImageText path="../../src/assets/images/ff-05.jpg" alt="Cattt catt cattty" heading="Burlesque Fusion"
+      <ImageText path="../../src/assets/images/ff-07.jpg" alt="Cattt catt cattty" heading="Burlesque Fusion"
         text=" " />
       <ImageText path="../../src/assets/images/ff-06.jpg" alt="Purrr" heading="Great Gatsby"
         text=" " />
-      <ImageText path="../../src/assets/images/ff-05.jpg" alt="3 am zoomies" heading="Julshow"
+      <ImageText path="../../src/assets/images/kris-02.jpg" alt="3 am zoomies" heading="Julshow"
         text=" " />
     </div>
     <router-link to="/contact" class="button button--large">Kontakta oss för information och bokning!</router-link>
