@@ -1,6 +1,6 @@
 <template>
   <div class="book content">
-    <h1>Våra erbjudanden</h1>
+    <h1>Vi erbjuder</h1>
     <p>
       Vi erbjuder färdiga showpaket med olika teman att välja mellan. Hittar du inte den ultimata matchningen? Inga
       problem! Vi kan alltid anpassa efter just dina önskemål.
