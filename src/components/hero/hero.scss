@@ -29,6 +29,7 @@
         font-family: $font-family-playfair;
         font-style: italic;
         font-size: 3rem;
+        padding-top: $spacing-x-large;
 
         @include for-phone-only {
             font-size: 2rem;
