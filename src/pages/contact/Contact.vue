@@ -29,7 +29,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import emailjs from "@emailjs/browser";
-import Page from "../../components/page/page.vue";
 
 const form = ref();
 let name = ref("");

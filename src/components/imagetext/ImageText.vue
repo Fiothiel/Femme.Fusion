@@ -16,13 +16,13 @@
 <script setup lang="ts">
 
 // Todo: class/interface
-const props = defineProps<{
+defineProps<{
   path: string;
   alt: string;
-  name: string;
+  name: string  | null;
   right: boolean;
-  heading: string;
-  text: string;
+  heading: string | null;
+  text: string | null;
 }>();
 
 </script>

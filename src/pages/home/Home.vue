@@ -6,7 +6,7 @@
         En showgrupp som erbjuder dans och sång med en tydlig inspiration av burlesque, en konstform som kombinerar
         sensualitet, humor och extravagans.
 
-        Låt Femme Fusion skapa magi på ditt evenemang - boka nu för en unik och minnesvärd upplevelse!
+        Låt Femme Fusion skapa magi på ditt evenemang - <router-link to="/contact">boka nu</router-link> för en unik och minnesvärd upplevelse!
       </p>
 
     </section>
@@ -20,7 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, computed } from 'vue';
 import Image from '../../components/image/Image.vue';
 import Testamonials from '../../components/testamonials/Testamonials.vue';
 

@@ -6,19 +6,18 @@
       problem! Vi kan alltid anpassa efter just dina önskemål.
     </p>
     <div class="book__offers">
-      <ImageText path="../../src/assets/images/ff-07.jpg" alt="Cattt catt cattty" heading="Burlesque Fusion"
-        text=" " />
-      <ImageText path="../../src/assets/images/ff-06.jpg" alt="Purrr" heading="Great Gatsby"
-        text=" " />
-      <ImageText path="../../src/assets/images/kris-02.jpg" alt="3 am zoomies" heading="Julshow"
-        text=" " />
+      <ImageText path="../../src/assets/images/ff-07.jpg" alt="Burlesque Fusion" heading="Burlesque Fusion" :name="null"
+        text=" " :right="false" />
+      <ImageText path="../../src/assets/images/ff-06.jpg" alt="Great Gatsby" heading="Great Gatsby" :name="null"
+        text=" " :right="false" />
+      <ImageText path="../../src/assets/images/kris-02.jpg" alt="Julshow" heading="Julshow" :name="null"
+        text=" " :right="false" />
     </div>
     <router-link to="/contact" class="button button--large">Kontakta oss för information och bokning!</router-link>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, computed } from 'vue';
 import ImageText from '../../components/imagetext/ImageText.vue';
 
 

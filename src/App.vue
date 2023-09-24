@@ -12,8 +12,8 @@
 
 <script setup lang="ts">
 import Footer from './components/footer/Footer.vue';
-import Hero from './components/hero/Hero.vue';
-import Menu from './components/menu/Menu.vue';
+import Hero from './components/hero/hero.vue';
+import Menu from './components/menu/menu.vue';
 
 </script>
 

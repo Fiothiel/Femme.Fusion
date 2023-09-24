@@ -19,11 +19,12 @@ import { useRouter } from 'vue-router';
 import Hamburger from "../hamburger/hamburger.vue";
 
 const router = useRouter();
-const burger = ref(null);
+const burger: any = ref(null);
 let open = ref(false);
 
 const onRouteClick = () => {
   onMenuToggle();
+  burger.value.onClick();
   document.querySelector('main')?.scrollIntoView({
     behavior: 'smooth'
   })
@@ -47,7 +48,6 @@ const onKeyPress = (e: KeyboardEvent) => {
     if (burger && burger.value) {
       burger.value.onClick();
     }
-    //document.querySelector('.hamburger')?.classList.remove('hamburger--open');
   }
 }
 
