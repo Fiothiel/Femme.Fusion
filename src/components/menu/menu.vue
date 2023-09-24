@@ -1,6 +1,6 @@
 <template>
-  <Hamburger @click="onMenuToggle" @keypress.enter="onMenuToggle"/>
-  <div class="menu" :class="{'menu--open': open}">
+  <Hamburger @click="onMenuToggle" @keypress.enter="onMenuToggle" ref="burger" />
+  <div class="menu" :class="{ 'menu--open': open }">
     <nav class="menu__nav">
       <h1>Meny</h1>
       <ul>
@@ -19,6 +19,7 @@ import { useRouter } from 'vue-router';
 import Hamburger from "../hamburger/hamburger.vue";
 
 const router = useRouter();
+const burger = ref(null);
 let open = ref(false);
 
 const onRouteClick = () => {
@@ -43,6 +44,10 @@ const onMenuToggle = () => {
 const onKeyPress = (e: KeyboardEvent) => {
   if (e.key === 'Escape') {
     onMenuToggle();
+    if (burger && burger.value) {
+      burger.value.onClick();
+    }
+    //document.querySelector('.hamburger')?.classList.remove('hamburger--open');
   }
 }
 

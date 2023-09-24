@@ -8,12 +8,16 @@
 </template>
   
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, defineExpose } from 'vue';
 
 const open = ref(false);
 
 const onClick = () => {
     open.value = !open.value;
 }
+
+defineExpose({
+  onClick
+});
 
 </script>
