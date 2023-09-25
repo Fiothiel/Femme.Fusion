@@ -2,15 +2,7 @@
   <div class="contact content">
     <h1>Kontakta oss</h1>
     <div>
-      <p>Catch mouse and gave it as a present as lick i the shoes cat walks in keyboard for cat slap dog in face cat
-        meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog sleep in the bathroom sink and refuse
-        to
-        leave cardboard box. Spread kitty litter all over house spend six hours per day washing, but still have a crusty
-        butthole yet pee in the shoe white cat sleeps on a black shirt, sleep. Purr for no reason man running from cops
-        stops to pet cats, goes to jail and jump on fridge lick master's hand at first then bite because im moody yet lick
-        yarn hanging out of own butt so eats owners hair then claws head yet i do no work yet get food, shelter, and lots
-        of
-        stuff just like man who lives with us.
+      <p>Vill du eller funderar du på att boka en show? En danslektion för möhippan eller kompisgänget? Kontakta oss så hör vi av oss!
       </p>
 
       <form class="contact__form" ref="form" @submit.prevent="sendEmail">

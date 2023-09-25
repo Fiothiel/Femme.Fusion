@@ -10,7 +10,7 @@
       </p>
 
     </section>
-    <Image path="../../src/assets/images/louboutin.jpg" alt="Louboutinsko i svart lack mot en parkeringshusvägg"
+    <Image name="louboutin.jpg" alt="Louboutinsko i svart lack mot en parkeringshusvägg"
       :fullWidth="true" />
     <section v-if="false">
       <h1>Sagt om oss</h1>
