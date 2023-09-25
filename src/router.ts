@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import About from './pages/about/About.vue';
-import Book from './pages/book/Book.vue';
 import Contact from './pages/contact/Contact.vue';
+import GroupBooking from './pages/groupbooking/GroupBooking.vue';
 import Home from './pages/home/Home.vue';
+import ShowBooking from './pages/showbooking/ShowBooking.vue';
 
  const  router = createRouter({
   history: createWebHistory(),
@@ -16,12 +17,17 @@ import Home from './pages/home/Home.vue';
     {
       path: "/about",
       component: About,
-      name: "Om oss"
+      name: "The Femme Fatales"
     },
     {
-      path: "/book",
-      component: Book,
-      name: "Vi erbjuder"
+      path: "/showbooking",
+      component: ShowBooking,
+      name: "Shower"
+    },
+    {
+      path: "/groupbooking",
+      component: GroupBooking,
+      name: "Gruppbokning"
     },
     {
       path: "/contact",

@@ -1,0 +1,22 @@
+.book {
+    &__offers {
+        @include flex-container;
+        flex-direction: row;
+        width: 90vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+
+        
+        .image-text {
+            @include flex-item-one-third;
+
+            @include for-tablet-landscape-down {
+                width: 100%;
+            }
+        }
+    }
+
+    .button {
+        margin: $spacing-x-large 0 $spacing-large 0;
+    }
+}
