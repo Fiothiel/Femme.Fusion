@@ -10,10 +10,21 @@
   transition: 0.3s ease;
   font-family: $font-family-oswald;
   font-weight: 300;
+  white-space: nowrap;
 
   &--large {
     font-size: 3.5rem;
     padding: $spacing-medium $spacing-x-large;
+
+    @include for-tablet-landscape-down {
+      font-size: 3rem;
+      padding: $spacing-medium $spacing-large;
+    }
+
+    @include for-phone-only {
+      font-size: 2.5rem;
+      padding: $spacing-small $spacing-medium;
+    }
   }
 
   &:hover {
