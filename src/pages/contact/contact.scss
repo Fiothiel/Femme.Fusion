@@ -1,10 +1,19 @@
 .contact {
     div {
         display: flex;        
+        column-gap: $spacing-small;
+
+        @include for-tablet-landscape-down {
+            flex-direction: column
+        }
     }
 
     p {
-        @include flex-item-half;
+        @include flex-item-half;        
+
+        @include for-tablet-landscape-down {
+            @include flex-item;   
+        }
     }
 
     &__form {
@@ -15,6 +24,10 @@
 
         button {
             margin-top: $spacing-small;
+        }
+
+        @include for-tablet-landscape-down {
+            @include flex-item;   
         }
     }
 }

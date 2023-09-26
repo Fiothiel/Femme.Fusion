@@ -2,7 +2,11 @@
   <div class="contact content">
     <h1>Kontakta oss</h1>
     <div>
-      <p>Vill du eller funderar du på att boka en show? En danslektion för möhippan eller kompisgänget? Kontakta oss så hör vi av oss!
+      <p>
+        Vill du förgylla ditt evenemang med en hänförande show, eller överraska
+        gästerna på födelsedagsfesten med glittrande underhållning? Kanske
+        önskas en inspirerande danslektion för möhippan eller konferensen?
+        Kontakta oss så hjälper vi dig vidare från idé till verklighet!
       </p>
 
       <form class="contact__form" ref="form" @submit.prevent="sendEmail">
@@ -14,7 +18,7 @@
         <textarea name="message" v-model="message"></textarea>
         <button type="submit" class="button">Skicka</button>
       </form>
-    </div>    
+    </div>
   </div>
 </template>
 
