@@ -22,10 +22,6 @@
         flex-direction: column;
         @include flex-item-half;
 
-        button {
-            margin-top: $spacing-small;
-        }
-
         @include for-tablet-landscape-down {
             @include flex-item;   
         }

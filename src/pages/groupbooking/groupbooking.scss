@@ -1,22 +1,16 @@
-.book {
-    &__offers {
-        @include flex-container;
-        flex-direction: row;
-        width: 90vw;
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw);
+.group-booking {
+    &__styles {
+        @include flex-container();
 
+        @include for-tablet-landscape-down {
+            row-gap: $spacing-large;
+        }
         
-        .image-text {
-            @include flex-item-one-third;
-
+       .image-text {
+            @include flex-item-half();
             @include for-tablet-landscape-down {
                 width: 100%;
             }
-        }
-    }
-
-    .button {
-        margin: $spacing-x-large 0 $spacing-large 0;
+        }        
     }
 }

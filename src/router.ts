@@ -17,7 +17,7 @@ import ShowBooking from './pages/showbooking/ShowBooking.vue';
     {
       path: "/about",
       component: About,
-      name: "The Femme Fatales"
+      name: "Medlemmar"
     },
     {
       path: "/showbooking",
