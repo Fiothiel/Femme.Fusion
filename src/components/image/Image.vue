@@ -1,16 +1,13 @@
 <template>
-  <img :src="imagePath" :alt="alt" class="image" :class="{'image--full-width': fullWidth}" />
+  <img :src="getImagePath(name)" :alt="alt" class="image" :class="{'image--full-width': fullWidth}" />
 </template>
   
 <script setup lang="ts">
-import { computed } from 'vue';
+import { useUtils } from '../../utils';
 
-const imagePath = computed(() => {
-  const path = new URL(`../../assets/images`, import.meta.url);
-  return `${path}/${props.name}`;
-})
+const { getImagePath } = useUtils();
 
-const props = defineProps<{
+defineProps<{
   name: string;
   alt: string;
   fullWidth: boolean;

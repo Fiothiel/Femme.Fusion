@@ -8,8 +8,8 @@
       kan delta och ha roligt.
     </p>
     <div class="group-booking__styles">
-      <ImageText path="ff-06.jpg" alt="Burlesque" :name="null" :right="false" heading="Burlesque" text="Burlesque kan vara allt från oskuldsfullt flirtigt till sensuellt och provokativt med attityd. Musiken spänner från storband till rock, och möjlighet finns att dansa med olika rekvisita såsom stol, boa och handskar."/>
-      <ImageText path="kris-03.jpg" alt="Sensual Heels" :name="null" :right="false" heading="Sensual Heels" text="Sensual Heels är sensuellt och kaxigt, och dansas med fördel i riktiga höga och snygga klackskor. Dansen sker främst nere på golvet eller med stöd av en stol, och fokuserar på virvlande benrörelser och mycket attityd."/>
+      <ImageText imageName="ff-06.jpg" alt="Burlesque" :name="null" :right="false" heading="Burlesque" text="Burlesque kan vara allt från oskuldsfullt flirtigt till sensuellt och provokativt med attityd. Musiken spänner från storband till rock, och möjlighet finns att dansa med olika rekvisita såsom stol, boa och handskar."/>
+      <ImageText imageName="kris-03.jpg" alt="Sensual Heels" :name="null" :right="false" heading="Sensual Heels" text="Sensual Heels är sensuellt och kaxigt, och dansas med fördel i riktiga höga och snygga klackskor. Dansen sker främst nere på golvet eller med stöd av en stol, och fokuserar på virvlande benrörelser och mycket attityd."/>
     </div>
 
 
