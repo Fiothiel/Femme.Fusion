@@ -10,6 +10,10 @@
     padding: $spacing-medium 0;
     max-width: 800px;
 
+    @include for-tablet-landscape-down {
+        padding: $spacing-medium $spacing-x-large;
+    }
+
     &__quote {
         &--right {
             text-align: right;
