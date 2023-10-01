@@ -6,11 +6,11 @@
       problem! Vi kan alltid anpassa efter just dina önskemål.
     </p>
     <div class="book__offers">
-      <ImageText imageName="ff-07.jpg" alt="Burlesque Fusion" heading="Burlesque Fusion" :name="null"
+      <ImageText imageName="burlesque-fusion-900.jpg" alt="Burlesque Fusion" heading="Burlesque Fusion" :name="null"
         text=" " :right="false" />
-      <ImageText imageName="ff-06.jpg" alt="Great Gatsby" heading="Great Gatsby" :name="null"
+      <ImageText imageName="great-gatsby-900.jpg" alt="Great Gatsby" heading="Great Gatsby" :name="null"
         text=" " :right="false" />
-      <ImageText imageName="kris-02.jpg" alt="Julshow" heading="Julshow" :name="null"
+      <ImageText imageName="christmas-900.jpg" alt="Jingle Bell Burlesque" heading="Jingle Bell Burlesque" :name="null"
         text=" " :right="false" />
     </div>
     <router-link to="/contact" class="button button--large">Kontakta oss för information och bokning!</router-link>

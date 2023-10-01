@@ -1,5 +1,5 @@
 <template>
-  <div class="home content">
+  <div class="home content content--home">
     <section>
       <h1>Femme Fusion</h1>
       <p>
@@ -10,9 +10,9 @@
       </p>
 
     </section>
-    <Image name="louboutin.jpg" alt="Louboutinsko i svart lack mot en parkeringshusvägg"
+    <Image name="loboutin-2500.jpg" alt="Louboutinsko i svart lack mot en parkeringshusvägg"
       :fullWidth="true" />
-    <section v-if="false">
+    <section class="home__testamonials">
       <h1>Sagt om oss</h1>
       <Testamonials />
     </section>

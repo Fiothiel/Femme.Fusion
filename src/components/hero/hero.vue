@@ -5,7 +5,6 @@
       <span class="hero__tag">The femme fatales of burlesque</span>
     </div>
     <div class="hero__overlay"></div>
-    <!-- <img class="hero__image" src="../../assets/images/hero.jpg" /> -->
     <img 
       class="hero__image" 
       src="../../assets/images/hero-1000.jpg"

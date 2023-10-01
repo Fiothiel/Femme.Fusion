@@ -1,10 +1,6 @@
 .group-booking {
     &__styles {
-        @include flex-container();
-
-        @include for-tablet-landscape-down {
-            row-gap: $spacing-large;
-        }
+        @include wide-content();
         
        .image-text {
             @include flex-item-half();

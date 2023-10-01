@@ -2,5 +2,16 @@
     p {
         text-align: center;
         padding-top: $spacing-medium;
+        padding-bottom: $spacing-large;
+    }
+
+    &__testamonials {
+        padding: $spacing-large 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 100%;
+        background-color: $wine;
     }
 }

@@ -1,14 +1,6 @@
 .book {
     &__offers {
-        @include flex-container;
-        flex-direction: row;
-        width: 90vw;
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw);
-
-        @include for-tablet-landscape-down {
-            row-gap: $spacing-large;
-        }
+        @include wide-content();
         
         .image-text {
             @include flex-item-one-third;
