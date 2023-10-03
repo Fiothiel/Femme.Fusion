@@ -16,7 +16,9 @@
         <input type="email" name="user_email" v-model="email" />
         <label>Meddelande</label>
         <textarea name="message" v-model="message"></textarea>
-        <button type="submit" class="button">Skicka</button>
+        <button v-if="!loading" type="submit" class="button">Skicka</button>
+        <button v-else disabled type="submit" class="button"><Loader/></button>
+        <div v-if="displayMessage">Tack för ditt meddelande!</div>
       </form>
     </div>
   </div>
@@ -24,14 +26,18 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import Loader from '../../components/loader/Loader.vue';
 import emailjs from "@emailjs/browser";
 
 const form = ref();
-let name = ref("");
-let email = ref("");
-let message = ref("");
+let name = ref('');
+let email = ref('');
+let message = ref('');
+let loading = ref(false);
+let displayMessage = ref(false);
 
 const sendEmail = () => {
+  loading.value = true;
   emailjs
     .send(
       "service_3vexa7i",
@@ -44,7 +50,11 @@ const sendEmail = () => {
       "2V1Svme8xyPiol8YX"
     )
     .then((result: any) => {
-      console.log("Success! ", result.text);
+      loading.value = false;
+      displayMessage.value = true;
+      name.value = '';
+      email.value = '';
+      message.value = '';
     })
     .catch((error: any) => {
       console.log("Fail.. ", error.text);

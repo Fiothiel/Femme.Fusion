@@ -12,6 +12,7 @@
   font-weight: 300;
   white-space: nowrap;
   margin: $spacing-medium 0;
+  height: 50px;
 
   &--large {
     font-size: 3.5rem;
@@ -32,5 +33,18 @@
     color: $white;
     border-color: $white;
     background-color: $grey-dark;
+  }
+
+  &:disabled {
+    cursor: initial;
+    background-color: $wine-damp;
+    border-color: $wine-damp;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .loader {
+      margin-top: 0.5rem;
+    }
   }
 }
