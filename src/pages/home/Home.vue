@@ -10,8 +10,15 @@
       </p>
 
     </section>
-    <Image name="loboutin-2500.jpg" alt="Louboutinsko i svart lack mot en parkeringshusvägg"
-      :fullWidth="true" />
+    <Image 
+      alt="Louboutinsko i svart lack mot en parkeringshusvägg"
+      :fullWidth="true"
+      :fallback="getImagePath('loboutin-1000.jpg')"
+      :sizes="null"
+      :srcset="`
+        ${getImagePath('loboutin-2500.jpg')}, 2500w,
+        ${getImagePath('loboutin-1000.jpg')}, 1000w,
+        ${getImagePath('loboutin-500.jpg')}, 500w`" />
     <section class="home__testamonials">
       <h1>Sagt om oss</h1>
       <Testamonials />
@@ -22,5 +29,7 @@
 <script setup lang="ts">
 import Image from '../../components/image/Image.vue';
 import Testamonials from '../../components/testamonials/Testamonials.vue';
+import { useUtils } from '../../utils';
+const { getImagePath } = useUtils();
 
 </script>

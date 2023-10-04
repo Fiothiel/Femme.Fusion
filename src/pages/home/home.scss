@@ -1,8 +1,11 @@
 .home {
     p {
         text-align: center;
-        padding-top: $spacing-medium;
-        padding-bottom: $spacing-large;
+        padding: $spacing-medium 0 $spacing-large 0;
+
+        @include for-tablet-landscape-down {
+            padding: $spacing-medium $spacing-x-large $spacing-large $spacing-x-large;
+        }
     }
 
     &__testamonials {
