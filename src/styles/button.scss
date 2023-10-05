@@ -13,6 +13,9 @@
   white-space: nowrap;
   margin: $spacing-medium 0;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &--large {
     font-size: 3.5rem;
