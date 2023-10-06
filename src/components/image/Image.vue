@@ -1,6 +1,4 @@
 <template>
- <!--  <img :src="getImagePath(name)" :alt="alt" class="image" ${getImagePath('loboutin-2500.jpg')}, 2500w," />
- -->
   <img 
       class="image"
       :class="{'image--full-width': fullWidth}"
@@ -11,9 +9,6 @@
   
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useUtils } from '../../utils';
-
-const { getImagePath } = useUtils();
 
 const props = defineProps<{  
   alt: string;

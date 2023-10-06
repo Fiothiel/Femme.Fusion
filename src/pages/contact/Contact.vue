@@ -33,7 +33,7 @@
 import { ref } from 'vue';
 import { useField, useForm } from 'vee-validate';
 import Loader from '../../components/loader/Loader.vue';
-import emailjs, { send } from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 const form = ref();
 let loading = ref(false);
@@ -62,7 +62,7 @@ const sendEmail = () => {
       },
       "2V1Svme8xyPiol8YX"
     )
-    .then((result: any) => {
+    .then(() => {
       loading.value = false;
       displayMessage.value = true;
       name.value = '';
