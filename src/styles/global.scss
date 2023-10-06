@@ -71,4 +71,17 @@ body {
             padding-bottom: 0;
         }
     }
+
+    .form {
+        input, textarea  {
+            margin-bottom: $spacing-small;
+        }
+    }   
+
+    .form__error {
+        margin-top: -$spacing-small;
+        margin-bottom: $spacing-small;
+        font-size: 1.4rem;
+        color: $error;
+    }
 }

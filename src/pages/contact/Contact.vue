@@ -9,15 +9,20 @@
         Kontakta oss så hjälper vi dig vidare från idé till verklighet!
       </p>
 
-      <form class="contact__form" ref="form" @submit.prevent="sendEmail">
+      <form class="form contact__form" ref="form" @submit="onSubmit">
         <label>Namn</label>
-        <input type="text" name="user_name" v-model="name" />
+        <input type="text" name="name" v-model="name" />
+        <div class="form__error" v-if="!!nameError">{{ nameError }}</div>
         <label>Email</label>
-        <input type="email" name="user_email" v-model="email" />
+        <input type="email" name="email" v-model="email" />
+        <div class="form__error" v-if="!!emailError">{{ emailError }}</div>
         <label>Meddelande</label>
         <textarea name="message" v-model="message"></textarea>
+        <div class="form__error" v-if="!!messageError">{{ messageError }}</div>
         <button v-if="!loading" type="submit" class="button">Skicka</button>
-        <button v-else disabled type="submit" class="button"><Loader/></button>
+        <button v-else disabled class="button">
+          <Loader />
+        </button>
         <div v-if="displayMessage">Tack för ditt meddelande!</div>
       </form>
     </div>
@@ -25,16 +30,24 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue';
+import { useField, useForm } from 'vee-validate';
 import Loader from '../../components/loader/Loader.vue';
-import emailjs from "@emailjs/browser";
+import emailjs, { send } from "@emailjs/browser";
 
 const form = ref();
-let name = ref('');
-let email = ref('');
-let message = ref('');
 let loading = ref(false);
 let displayMessage = ref(false);
+
+const { handleSubmit } = useForm();
+
+const { value: name, errorMessage: nameError } = useField<string>('name', 'required');
+const { value: email, errorMessage: emailError } = useField<string>('email', 'required|email');
+const { value: message, errorMessage: messageError } = useField<string>('message', 'required');
+
+const onSubmit = handleSubmit(() => {
+  sendEmail();
+});
 
 const sendEmail = () => {
   loading.value = true;

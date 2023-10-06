@@ -2,21 +2,21 @@
   border: none;
   color: $white;
   cursor: pointer;
-  border-radius: 50px;
   font-size: 2rem;
+  border-radius: 50px;
   background-color: $wine-light;
   border: 2px solid $wine-light;
   padding: $spacing-x-small $spacing-medium $spacing-small $spacing-medium;
-  transition: 0.3s ease;
   font-family: $font-family-oswald;
-  font-weight: 300;
-  white-space: nowrap;
   margin: $spacing-medium 0;
+  transition: 0.3s ease;
+  white-space: nowrap;
+  font-weight: 300;
   height: 50px;
   display: flex;
-  justify-content: center;
   align-items: center;
-
+  justify-content: center;
+  
   &--large {
     font-size: 3.5rem;
     padding: $spacing-medium $spacing-x-large 2.5rem $spacing-x-large;

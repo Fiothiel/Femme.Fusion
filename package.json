@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@vee-validate/i18n": "^4.11.7",
+    "@vee-validate/rules": "^4.11.7",
     "sass": "^1.63.3",
+    "vee-validate": "^4.11.7",
     "vue": "^3.2.47",
     "vue-router": "^4.2.2"
   },

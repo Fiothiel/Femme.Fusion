@@ -1,12 +1,17 @@
 .group-booking {
     &__styles {
-        @include wide-content();
-        
-       .image-text {
+        @include flex-container();
+
+        @include for-tablet-landscape-down {
+            row-gap: $spacing-large;
+        }
+
+        .image-text {
             @include flex-item-half();
+
             @include for-tablet-landscape-down {
                 width: 100%;
             }
-        }        
+        }
     }
 }
