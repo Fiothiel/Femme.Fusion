@@ -4,6 +4,7 @@ import About from './pages/about/About.vue';
 import Contact from './pages/contact/Contact.vue';
 import GroupBooking from './pages/groupbooking/GroupBooking.vue';
 import Home from './pages/home/Home.vue';
+import Events from './pages/events/Events.vue';
 import ShowBooking from './pages/showbooking/ShowBooking.vue';
 
  const  router = createRouter({
@@ -18,6 +19,11 @@ import ShowBooking from './pages/showbooking/ShowBooking.vue';
       path: "/about",
       component: About,
       name: "Medlemmar"
+    },
+    {
+      path: "/events",
+      component: Events,
+      name: "Aktuellt"
     },
     {
       path: "/showbooking",
