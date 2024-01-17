@@ -19,6 +19,14 @@
         transition: 0.4s;
     }
 
+    &:hover {
+        .hamburger__bar {
+            background-color: $wine-light;
+        }
+
+        color: $wine-light;
+    }
+
     &--open {
         .hamburger__bar-1 {
             transform: translate(0, 11px) rotate(-45deg);
