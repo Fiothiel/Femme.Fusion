@@ -1,9 +1,11 @@
-import { eventType } from "../constants";
+import { EventType } from "../constants";
 
 export default interface IEvent {
   title: string;
-  startdate: Date;
-  enddate: Date;
+  description: string;
+  address: string;
+  startdate: string;
+  enddate: string;
   url: string;
-  type: eventType;
+  type: EventType;
 };

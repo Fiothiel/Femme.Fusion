@@ -1,26 +1,38 @@
 [
   {
     "title": "Burlesque",
-    "startdate": "2024-02-07",
-    "enddate": "2024-03-13",
-    "url": ""
+    "description": "<p>Burlesque är en sensuell dans med lekfullt inslag och mycket rum för personlig tolkning.</p><p>Sensuell, sexig och humoristisk! Burlesquen lär dig tänja på gränserna, våga mer och bli bekväm i dig själv och din kropp men framförallt bjuder den på många härliga skratt!</p><p>Nivån på kursen är från nybörjare som upptäcker burlesque för första gången till mer erfarna dansare som då istället kan fokusera på att utveckla sitt uttryck och slipa på detaljerna. Dansa med olika rekvisita som till exempel boa eller hatt, och upptäck hur de kan användas för att förstärka burlesquens teasiga element.</p>",
+    "address": "St Larsgatan 3",
+    "startdate": "2024-02-07T17:30:00",
+    "enddate": "2024-03-13T18:45:00",
+    "url": "https://dans.se/dansarna/shop/?event=209407&info=1",
+    "type": "course"
   },
   {
     "title": "Femme Fusion",
-    "startdate": "2024-03-27",
-    "enddate": "2024-05-01",
-    "url": ""
+    "description": "<p>Vad får man om man mixar burlesque och feminine vibe? Femme fusion! I den här kursen tar vi det bästa av två världar. Feminint, kaxigt och med glimten i ögat. Ibland med rekvisita, ibland inte.</p>",
+    "address": "St Larsgatan 3",
+    "startdate": "2024-03-27T17:30:00",
+    "enddate": "2024-05-01T18:45:00",
+    "url": "https://dans.se/dansarna/shop/?event=209410&info=1",
+    "type": "course"
   },
   {
     "title": "Sensual Heels",
-    "startdate": "2024-05-11",
-    "enddate": "2024-06-12",
-    "url": ""
+    "description": "<p>Har du ett par riktigt snygga (men kanske lite för höga...) klackskor hemma som du aldrig får användning av? Nu kommer det perfekta tillfället att plocka fram dem ur garderoben!</p><p>Sensual Heels är en sensuell och kaxig dansstil med mycket fokus på virvlande benrörelser, attityd och, såklart, snygga skor! Utmana dig själv med denna tuffa  \"girl power\"-dans och känn självförtroendet växa!</p><p>I Sensual Heels håller vi oss mycket nere på golvet så du behöver inte kunna gå i skorna du dansar med här, och självklart går det även bra att delta utan klackar om du vill det!</p>",
+    "address": "St Larsgatan 3",
+    "startdate": "2024-05-15T17:30:00",
+    "enddate": "2024-06-12T18:45:00",
+    "url": "https://dans.se/dansarna/shop/?event=209411&info=1",
+    "type": "course"
   },
   {
     "title": "Burlesque Seduction",
-    "startdate": "2024-02-10",
-    "enddate": "2024-02-10",
-    "url": ""
+    "description": "<p>Burlesque är en sensuell dans med lekfullt inslag och mycket rum för personlig tolkning. Sätt lite extra krydda på februari med en härlig självförtroende boost lagom till alla hjärtans dag!<p></p>Sensuell, sexig och humoristisk! Burlesquen lär dig tänja på gränserna, våga mer och bli bekväm i dig själv och din kropp men framförallt bjuder den på många härliga skratt!</p>",
+    "address": "St Larsgatan 3",
+    "startdate": "2024-02-10T11:00:00",
+    "enddate": "2024-02-10T13:00:00",
+    "url": "https://dans.se/dansarna/shop/?event=209412&info=1",
+    "type": "workshop"
   }
 ]
