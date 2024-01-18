@@ -1,7 +1,7 @@
 <template>
   <img 
       class="image"
-      :class="{'image--full-width': fullWidth}"
+      :class="{ 'image--full-width': fullWidth }"
       :src="fallback"
       :srcset="srcset"
       :sizes="sizes">

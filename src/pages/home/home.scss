@@ -8,7 +8,8 @@
         }
     }
 
-    &__testamonials {
+    &__testamonials,
+    &__twitch {
         padding: $spacing-large 0;
         display: flex;
         align-items: center;
@@ -16,5 +17,28 @@
         width: 100vw;
         height: 100%;
         background-color: $wine;
+    }
+
+
+    &__twitch {
+        a {
+            text-align: center;
+
+            span {
+                display: block;
+                font-size: 1.2rem;
+                margin-top: $spacing-small;
+            }            
+        }
+
+        svg {
+            margin-top: $spacing-large;
+
+            &:hover {
+                path {
+                    fill: $wine-light !important;
+                }
+            }
+        }
     }
 }

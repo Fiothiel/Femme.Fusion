@@ -3,7 +3,7 @@
         @include wide-content();
         
         .image-text {
-            @include flex-item-one-third;
+            @include flex-item-half;
 
             @include for-tablet-landscape-down {
                 width: 100%;

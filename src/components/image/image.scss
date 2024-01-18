@@ -15,4 +15,12 @@
             height: 500px;
         }
     }
+
+    &--slim {
+        height: 500px;
+
+        @include for-tablet-landscape-down {
+            height: 300px;
+        }
+    }
 }

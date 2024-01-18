@@ -10,8 +10,8 @@
         text=" " :right="false" />
       <ImageText imageName="great-gatsby-900.jpg" alt="Great Gatsby" heading="Great Gatsby" :name="null"
         text=" " :right="false" />
-      <ImageText imageName="christmas-900.jpg" alt="Jingle Bell Burlesque" heading="Jingle Bell Burlesque" :name="null"
-        text=" " :right="false" />
+      <!-- <ImageText imageName="christmas-900.jpg" alt="Jingle Bell Burlesque" heading="Jingle Bell Burlesque" :name="null"
+        text=" " :right="false" /> -->
     </div>
     <router-link to="/contact" class="button button--large">Kontakta oss för information och bokning!</router-link>
   </div>
