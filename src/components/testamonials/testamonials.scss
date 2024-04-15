@@ -23,5 +23,12 @@
     &__from {
         margin-top: $spacing-x-small;
         font-size: 1.3rem;
+        /* display: flex;
+        align-items: center; */
+
+        img {
+            width: 4rem;
+            padding: 0 $spacing-small;
+        }
     }
 }

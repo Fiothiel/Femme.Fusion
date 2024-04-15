@@ -21,14 +21,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref, computed } from "vue";
+import { ref, computed } from "vue";
 import { EventType } from "../../constants";
 import { useUtils } from "../../utils";
 import data from "../../assets/data/courses.json";
 import IEvent from "../../interfaces/IEvent";
 
 const { getShortDate } = useUtils();
-const events: Ref<IEvent[]> = ref(data);
+const events: any = ref(data);
 const courses = computed(() =>
   events.value.filter(
     (event: IEvent) =>

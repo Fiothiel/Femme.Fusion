@@ -73,6 +73,10 @@ body {
         &--home {
             padding-bottom: 0;
         }
+
+        @include for-phone-only {
+            padding: $spacing-large $spacing-medium;
+        }
     }
 
     .form {
