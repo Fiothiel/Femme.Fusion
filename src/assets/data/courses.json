@@ -34,5 +34,50 @@
     "enddate": "2024-02-10T14:00:00",
     "url": "https://dans.se/dansarna/shop/?event=209412&info=1",
     "type": "workshop"
+  },
+  {
+    "title": "Burlesque Rocker Chick",
+    "description": "",
+    "address": "St Larsgatan 3",
+    "startdate": "2024-06-12T17:30:00",
+    "enddate": "2024-06-12T19:00:00",
+    "url": "https://dans.se/dansarna/shop/?event=216192&info=1",
+    "type": "workshop"
+  },
+  {
+    "title": "Feminine Vibe",
+    "description": "",
+    "address": "St Larsgatan 3",
+    "startdate": "2024-06-01T11:00:00",
+    "enddate": "2024-06-01T12:30:00",
+    "url": "https://dans.se/dansarna/shop/?event=216191&info=1",
+    "type": "workshop"
+  },
+  {
+    "title": "Sensual Heels - prova på",
+    "description": "",
+    "address": "St Larsgatan 3",
+    "startdate": "2024-04-22T17:30:00",
+    "enddate": "2024-04-22T18:30:00",
+    "url": "https://dans.se/dansarna/shop/?event=214265&info=1",
+    "type": "workshop"
+  },
+  {
+    "title": "Femme Fusion - drop in",
+    "description": "",
+    "address": "St Larsgatan 3",
+    "startdate": "2024-04-24T17:30:00",
+    "enddate": "2024-04-24T18:45:00",
+    "url": "https://dans.se/dansarna/shop/?event=214097&info=1",
+    "type": "workshop"
+  },
+  {
+    "title": "Femme Fusion back to school edition",
+    "description": "",
+    "address": "St Larsgatan 3",
+    "startdate": "2024-08-17T11:00:00",
+    "enddate": "2024-08-17T13:00:00",
+    "url": "https://dans.se/dansarna/shop/?event=216218&info=1",
+    "type": "workshop"
   }
 ]
