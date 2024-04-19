@@ -40,6 +40,8 @@ import Image from "../../components/image/Image.vue";
 import Testamonials from "../../components/testamonials/Testamonials.vue";
 import { useUtils } from "../../utils";
 const { getImagePath } = useUtils();
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import '@splidejs/vue-splide/css';
 
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
