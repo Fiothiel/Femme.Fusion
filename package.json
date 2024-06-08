@@ -12,6 +12,7 @@
     "@emailjs/browser": "^3.11.0",
     "@vee-validate/i18n": "^4.11.7",
     "@vee-validate/rules": "^4.11.7",
+    "axios": "^1.7.2",
     "sass": "^1.63.3",
     "vee-validate": "^4.11.7",
     "vue": "^3.2.47",

@@ -11,9 +11,15 @@
 
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
+import { useEvents } from './services/events-service';
 import Footer from './components/footer/Footer.vue';
 import Hero from './components/hero/hero.vue';
-import Menu from './components/menu/menu.vue';
+import Menu from './components/menu/menu.vue'
+
+onMounted(() => {
+  useEvents().getDansarnaEvents();
+});
 
 </script>
 

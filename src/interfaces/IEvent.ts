@@ -3,9 +3,11 @@ import { EventType } from "../constants";
 export default interface IEvent {
   title: string;
   description: string;
+  level: string;
   address: string;
-  startdate: string;
-  enddate: string;
+  startDate: string;
+  endDate: string;
+  day: string;
   url: string;
   type: EventType;
 };
