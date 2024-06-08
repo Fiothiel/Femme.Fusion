@@ -7,7 +7,7 @@
         height: 500px;
     }
 
-    div {
+    a {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -15,6 +15,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-weight: normal;
+
+        &:hover {
+            color: $white;
+        }
     }
 
     &__logo {
