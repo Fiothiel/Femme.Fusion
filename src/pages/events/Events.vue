@@ -20,10 +20,8 @@
   </div></template>
 
 <script setup lang="ts">
-import { ref, Ref, computed, onMounted } from "vue";
-import { EventType } from "../../constants";
+import { ref, Ref, onMounted } from "vue";
 import { useUtils } from "../../utils";
-import data from "../../assets/data/courses.json";
 import IEvent from "../../interfaces/IEvent";
 import { useEvents } from "../../services/events-service";
 
