@@ -21,7 +21,7 @@
         <div class="form__error" v-if="!!messageError">{{ messageError }}</div>
         <button v-if="!loading" type="submit" class="button">Skicka</button>
         <button v-else disabled class="button">
-          <Loader />
+          <Loader :large="false" :label="false" />
         </button>
         <div v-if="displayMessage">Tack för ditt meddelande!</div>
       </form>

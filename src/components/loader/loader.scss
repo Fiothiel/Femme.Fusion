@@ -10,6 +10,15 @@
     background-size: 50% 50%;
     background-repeat: no-repeat;
     position: relative;
+
+    &--large {
+        width: 60px;
+    }
+}
+
+.loader-label {
+    font-size: $font-size-label;
+    margin-top: $spacing-small
 }
 
 .loader:after {
