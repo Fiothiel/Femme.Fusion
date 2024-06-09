@@ -20,14 +20,14 @@
         &:hover {
             color: $white;
         }
-    }
-
-    &__logo {
-        max-width: 900px;
 
         @include for-tablet-landscape-down {
             padding: 0 $spacing-x-large;
         }
+    }
+
+    &__logo {
+        max-width: 900px;
     }
 
     &__tag {

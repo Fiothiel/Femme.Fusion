@@ -3,7 +3,6 @@ html {
 }
 
 body {
-
     background-color: $grey-dark;
     font-family: $font-family-roboto;
     font-size: $font-size-base;
@@ -11,6 +10,10 @@ body {
     font-weight: 200;
     color: $white;
     margin: 0;
+
+    * {
+        box-sizing: border-box;
+    }
 
     h1 {
         font-size: 4rem;
@@ -71,7 +74,7 @@ body {
         max-width: 800px;
 
         &--home {
-            padding-bottom: 0;
+            padding: 0;
         }
 
         @include for-phone-only {

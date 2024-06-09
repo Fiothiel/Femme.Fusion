@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { IDansarnaEvent, IDansarnaResponse } from '../interfaces/IDansResponse';
-import { DANSARNA_ID, EventType } from '../constants';
+import { DANSARNA_API_ORG, DANSARNA_API_URL, DANSARNA_ID, EventType } from '../constants';
 import IEvent from '../interfaces/IEvent';
 
 export const useEvents = () => {
@@ -51,7 +51,7 @@ export const useEvents = () => {
 
     async function fetchDansarnaEvents(): Promise<IDansarnaResponse> {
         try {
-          const response = await axios.get<IDansarnaResponse>('https://dans.se/api/public/events/?org=3836&verbose=1');
+          const response = await axios.get<IDansarnaResponse>(`${DANSARNA_API_URL}/events/?org=${DANSARNA_API_ORG}&verbose=1`);
           return response.data;
         } catch (error) {
           console.error('Error fetching events:', error);
