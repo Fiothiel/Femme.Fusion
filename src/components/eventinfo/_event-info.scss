@@ -1,0 +1,51 @@
+.event-info {
+    font-size: 1.4rem;
+
+    a {
+        margin-bottom: 0;
+        margin-top: $spacing-large;
+    }
+
+    p:first-of-type {
+        margin-top: 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    &__details {
+        display: block;
+        display: flex;
+        text-align: left;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid $grey-medium;
+        margin-bottom: $spacing-medium;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: $spacing-medium;
+            row-gap: $spacing-small;
+        }
+    }    
+
+    dl {
+        display: flex;
+        flex-direction: column;        
+        text-wrap: nowrap;
+
+        dt {
+            font-weight: bold;
+            
+        }
+
+        dd {
+            margin: 0;
+        }
+    }
+}

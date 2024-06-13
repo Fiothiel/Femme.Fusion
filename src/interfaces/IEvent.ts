@@ -10,4 +10,7 @@ export default interface IEvent {
   day: string;
   url: string;
   type: EventType;
+  numOccasions: number;
+  dayAndTimeInfo: string;
+  
 };
