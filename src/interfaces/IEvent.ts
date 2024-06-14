@@ -11,6 +11,6 @@ export default interface IEvent {
   url: string;
   type: EventType;
   numOccasions: number;
-  dayAndTimeInfo: string;
-  
+  dayAndTimeInfo: string;  
+  price: number;
 };

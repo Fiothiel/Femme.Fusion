@@ -29,6 +29,18 @@ function toggleModal() {
 
   const body = document.querySelector("body");
   body?.classList.toggle("modal-open");
+
+  if (showModal.value) {
+    document.addEventListener("keydown", handleKeydown);
+  } else {
+    document.removeEventListener("keydown", handleKeydown);
+  }
+}
+
+function handleKeydown(event: KeyboardEvent) {
+  if (event.key === "Escape") {
+    closeModal();
+  }
 }
 
 function closeModal() {

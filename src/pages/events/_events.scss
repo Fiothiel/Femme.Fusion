@@ -16,6 +16,10 @@
         margin: 0;
     }
 
+    ul:first-of-type {
+        margin-bottom: $spacing-large;
+    }
+
     li {
         list-style: none;
         padding: 1rem;

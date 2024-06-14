@@ -3,12 +3,12 @@
     <h2>{{ event.title }}</h2>
     <div class="event-info__wrapper">
       <div class="event-info__details">
-        <div>
-          <dl>
+        <div v-if="event.price || event.level">
+          <dl v-if="event.price">
             <dt>Pris:</dt>
-            <dd>300 kr</dd>
+            <dd>{{ event.price }} kr</dd>
           </dl>
-          <dl>
+          <dl v-if="event.level">
             <dt>Nivå:</dt>
             <dd>{{ event.level }}</dd>
           </dl>
@@ -28,19 +28,19 @@
         <p v-html="event.description"></p>
       </div>
     </div>
-    <a :href="event.url" target="_blank" class="button">Anmäl dig här</a>
+    <a :href="event.url" target="_blank" class="button">{{ buttonText }}</a>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { ref } from 'vue';
+import { EventType } from "../../constants";
 import IEvent from "../../interfaces/IEvent";
 
 const props = defineProps<{
   event: IEvent;
 }>();
 
-onMounted(() => {
-  console.log(props.event);
-});
+const buttonText = ref(props.event.type === EventType.Course ? 'Anmäl dig' : 'Mer information')
+
 </script>

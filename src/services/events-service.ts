@@ -7,17 +7,19 @@ import {
   EventType,
 } from "../constants";
 import IEvent from "../interfaces/IEvent";
+import eventsData from "../assets/data/events.json";
 
 export const useEvents = () => {
   async function getEvents(): Promise<IEvent[]> {
     try {
       const dansarnaEvents = await getDansarnaEvents();
       let events: IEvent[] = [];
-      console.log(dansarnaEvents);
+      
       dansarnaEvents.forEach((d: IDansarnaEvent) => {
-        let event: IEvent = {
+        const event: IEvent = {
           title: d.name,
           description: d.longdescription,
+          price: d.pricing.basePriceInclVat,
           level: extractTitleFromSpanString(d.requirements.levelLong),
           address: d.place,
           startDate: formatDateTime(
@@ -30,6 +32,24 @@ export const useEvents = () => {
           numOccasions: d.schedule.numberOfPlannedOccasions,
           url: d.source,
           type: EventType.Course,
+        };
+        events.push(event);
+      });
+
+      eventsData.forEach(d => {
+        const event: IEvent = {
+          title: d.title,
+          description: d.description,
+          level: d.level,
+          address: d.address,
+          startDate: d.startDate,
+          endDate: d.endDate,
+          day: d.day,
+          dayAndTimeInfo: d.dayAndTimeInfo,
+          numOccasions: d.numOccasions,
+          url: d.url,
+          type: getType(d.type),
+          price: d.price
         };
         events.push(event);
       });
@@ -61,7 +81,15 @@ export const useEvents = () => {
         throw error;
       });
   };
+/* 
+  const getEventsFromFile = (): IEvent[] => {
+    var events: IEvent[] = [];
 
+    eventsData.forEach(event => {
+
+    });
+  };
+ */
   async function fetchDansarnaEvents(): Promise<IDansarnaResponse> {
     try {
       const response = await axios.get<IDansarnaResponse>(
@@ -101,6 +129,10 @@ export const useEvents = () => {
 
     // If a match is found, return the captured group; otherwise, return null
     return match ? match[1] : '';
+  }
+
+  function getType(s: string): EventType {
+    return s ===  EventType.Show ? EventType.Show : EventType.Course;
   }
 
   return {
