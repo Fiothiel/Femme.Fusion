@@ -7,11 +7,12 @@
     "startDate": "2024-09-21T09:00:00",
     "endDate": "2024-09-22T17:00:00",
     "day": "",
-    "url": "https://femmefusion.se/#/burlesque-weekend",
+    "url": "https://www.facebook.com/events/1183871072804555/",
     "type": "course",
     "numOccasions": 2,
     "dayAndTimeInfo": "Lör 09:00-16:00, Sön 09:00-17:00",
-    "price": 1800
+    "price": 1800,
+    "buttonText": "Läs mer"
   },
   {
     "title": "Danskolosseum",
@@ -23,6 +24,8 @@
     "url": "https://www.facebook.com/events/775982184015386",
     "type": "show",
     "numOccasions": 1,
-    "dayAndTimeInfo": "Lör 09:00-16:00, Sön 09:00-17:00"
+    "dayAndTimeInfo": "Lör 09:00-16:00, Sön 09:00-17:00",
+    "buttonText": "Läs mer"
+
   }
 ]

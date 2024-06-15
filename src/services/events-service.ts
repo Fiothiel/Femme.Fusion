@@ -5,6 +5,7 @@ import {
   DANSARNA_API_URL,
   DANSARNA_ID,
   EventType,
+  SIGNUP,
 } from "../constants";
 import IEvent from "../interfaces/IEvent";
 import eventsData from "../assets/data/events.json";
@@ -32,6 +33,7 @@ export const useEvents = () => {
           numOccasions: d.schedule.numberOfPlannedOccasions,
           url: d.source,
           type: EventType.Course,
+          buttonText: SIGNUP
         };
         events.push(event);
       });
@@ -49,7 +51,8 @@ export const useEvents = () => {
           numOccasions: d.numOccasions,
           url: d.url,
           type: getType(d.type),
-          price: d.price
+          price: d.price,
+          buttonText: d.buttonText
         };
         events.push(event);
       });

@@ -4,7 +4,7 @@
     <nav class="menu__nav">
       <h1>Meny</h1>
       <ul>
-        <li v-for="(route, index) in router.options.routes" :key="index">
+        <li v-for="(route, index) in routes" :key="index">
           <router-link @click="onRouteClick" :to="route.path">{{ route.name }}</router-link>
         </li>
       </ul>
@@ -21,6 +21,8 @@ import Hamburger from "../hamburger/hamburger.vue";
 const router = useRouter();
 const burger: any = ref(null);
 let open = ref(false);
+
+const routes = ref(router.options.routes.filter(route => route.meta === undefined || route.meta.displayInMenu));
 
 const onRouteClick = () => {
   onMenuToggle();

@@ -28,19 +28,16 @@
         <p v-html="event.description"></p>
       </div>
     </div>
-    <a :href="event.url" target="_blank" class="button">{{ buttonText }}</a>
+    <a :href="event.url" target="_blank" class="button">{{ event.buttonText }}</a>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { EventType } from "../../constants";
 import IEvent from "../../interfaces/IEvent";
 
-const props = defineProps<{
+defineProps<{
   event: IEvent;
 }>();
 
-const buttonText = ref(props.event.type === EventType.Course ? 'Anmäl dig' : 'Mer information')
 
 </script>

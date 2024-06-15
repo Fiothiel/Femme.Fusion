@@ -44,7 +44,10 @@ import Current from "./pages/current/Current.vue";
     {
       path: "/burlesque-weekend",
       component: Current,
-      name: "Burlesque Weekend"
+      name: "Burlesque Weekend",
+      meta: {
+        displayInMenu: false
+      }
     },
   ],
 });

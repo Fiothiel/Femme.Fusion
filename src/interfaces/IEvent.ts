@@ -13,4 +13,5 @@ export default interface IEvent {
   numOccasions: number;
   dayAndTimeInfo: string;  
   price: number;
+  buttonText: string;
 };
