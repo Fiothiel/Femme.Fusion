@@ -6,6 +6,7 @@ import GroupBooking from './pages/groupbooking/GroupBooking.vue';
 import Home from './pages/home/Home.vue';
 import Events from './pages/events/Events.vue';
 import ShowBooking from './pages/showbooking/ShowBooking.vue';
+import Current from "./pages/current/Current.vue";
 
  const  router = createRouter({
   history: createWebHashHistory(),
@@ -39,6 +40,11 @@ import ShowBooking from './pages/showbooking/ShowBooking.vue';
       path: "/contact",
       component: Contact,
       name: "Kontakt"
+    },
+    {
+      path: "/burlesque-weekend",
+      component: Current,
+      name: "Burlesque Weekend"
     },
   ],
 });
