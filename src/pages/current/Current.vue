@@ -27,9 +27,13 @@
       Vi utlovar en härlig helg med dans, glitter och glädje!
     </p>
   </article>
+  <Accordion 
+  summary="Måste jag vara med på film och foto?"
+  details="Självklart inte. Det är helt upp till dig, men stanna gärna ändå och var peppande publik!" />
 </template>
 
 <script setup lang="ts">
+import Accordion from "../../components/accordion/Accordion.vue";
 import Image from "../../components/image/Image.vue";
 import { useUtils } from "../../utils";
 const { getImagePath } = useUtils();
