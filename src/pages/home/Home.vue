@@ -11,9 +11,9 @@
       </p>
     </section>
     <section class="home__section home__section--red home__section--narrow">
-      <h2><img :src="getImagePath('sparkles.png')"/>Burlesquehelg<img :src="getImagePath('sparkles.png')"/></h2>
-      <p>Boka in 20-22 september redan nu för en helg fylld med burlesque och dans! Dans med olika rekvisita, tillverkning av egna scenkläder och show som förevigas på film ni får med er efter helgen. Allt i en härlig och trygg atmosfär med  mycket skratt och leenden.</p>
-      <p>Mer information och anmälan kommer inom kort.</p>
+      <h2><img :src="getImagePath('sparkles.png')"/>Burlesque weekend<img :src="getImagePath('sparkles.png')"/></h2>
+      <p>Boka in 20-22 september redan nu för en helg fylld med burlesque och dans! Dans med olika rekvisita, tillverkning av egna scenkläder och show som förevigas på film ni får med er efter helgen. Allt i en härlig och trygg atmosfär med  mycket skratt och leenden.</p>      
+     <router-link class="button" to="/burlesque-weekend">Mer information och anmälan</router-link>
     </section>
     <Image
       alt="Louboutinsko i svart lack mot en parkeringshusvägg"
@@ -27,7 +27,8 @@
     />
     <section class="home__twitch home__section home__section">
       <h2>Live @ Twitch</h2>
-      <p>Varje tisdag 17:30 streamar vi live från våra träningar!</p>
+      <p>Nu på sommaren har vi uppehåll från vårt ordinarie streamingschema, men håll koll i våra sociala medier så missar du inte en eventuell extrastream!</p>
+      <!-- <p>Varje tisdag 17:30 streamar vi live från våra träningar!</p> -->
       <a href="https://www.twitch.tv/femmefusion" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
           <path

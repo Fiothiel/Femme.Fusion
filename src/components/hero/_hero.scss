@@ -38,10 +38,7 @@
 
         @include for-phone-only {
             font-size: 2rem;
-        }
-        
-        @include for-tablet-landscape-down {
-            padding: $spacing-medium;
+            text-wrap: nowrap;
         }
     }
 

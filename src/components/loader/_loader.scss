@@ -1,15 +1,5 @@
 .loader {
-    width: 30px;
-    aspect-ratio: 1;
-    color: $white;
-    background:
-        radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%) top left,
-        radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
-        linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left,
-        linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
-    background-size: 50% 50%;
-    background-repeat: no-repeat;
-    position: relative;
+    @include heart;
 
     &--large {
         width: 60px;

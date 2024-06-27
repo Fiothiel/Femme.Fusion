@@ -1,9 +1,9 @@
 <template>
-  <article class="current content">
+  <article class="current content">    
+    <h1>Burlesque weekend</h1>
     <Image alt="Femme Fusion med röda organzaboor" :fullWidth="false" :fallback="getImagePath('burlesque-weekend.jpg')"
       :sizes="null" :srcset="null" />
-    <h1>Burlesque weekend</h1>
-    <p>Gör dig redo för några härliga dagar fyllda med burlesque tillsammans med oss i Femme Fusion! Dans med olika
+    <p>Gör dig redo för två härliga dagar fyllda med burlesque tillsammans med oss i Femme Fusion! Dans med olika
       rekvisita, tillverkning av egna scenkläder, fotografering, och en show som förevigas på film är ingredienser som
       ingår under denna inspirerande helg. Allt i en uppmuntrande och trygg atmosfär med mycket skratt och leenden.
     </p>
@@ -28,18 +28,21 @@
     <p>
       Vi utlovar en härlig helg med dans, glitter och glädje!
     </p>
-    <p>
+    <section>
+      <h2>Detaljer</h2>
     <dl>
-      <dt>Fredag:</dt>
-      <dd>18:30-19:30 Kick-off med information och välkomstmingel</dd>
+<!--       <dt>Fredag:</dt>
+      <dd>18:30-19:30 Kick-off med information och välkomstmingel</dd> -->
       <dt>Lördag:</dt>
       <dd>09:00-16:00 Dans och pysselverkstad</dd>
       <dt>Söndag:</dt>
-      <dd>09:00-17:00 Dans och uppvisning, film och foto</dd>
+      <dd>09:00-17:00 Dans och uppvisning, film och foto</dd>    
+      <dt>Pris:</dt>
+      <dd>1800 kr</dd>
     </dl>
-    </p>
+    </section>
     <p>
-      <i>I priset ingår lån av rekvisita, pysselmaterial, professionellt filmad show, gruppbilder och fika/snacks. Ta
+      <i>I priset ingår lån av rekvisita, pysselmaterial, professionellt filmad show, gruppbilder och fika/snacks.<br> Ta
         med lunch, träningskläder, eventuellt eget klädesplagg att smycka, samt smink och kläder som du vill bli fotad
         och uppträda i.
       </i>

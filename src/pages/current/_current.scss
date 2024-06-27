@@ -1,12 +1,32 @@
 .current {
-  dl {
-    dt {
-        font-weight: bold;
-        margin-top: $spacing-small;
+    dl {
+        dt {
+            font-weight: bold;
+            margin-top: $spacing-small;
+        }
+
+        dd {
+            margin: 0;
+        }
     }
 
-    dd {
-        margin: 0;
+    section {
+        width: 100%;
+        margin-top: $spacing-large;
     }
-}
+
+    @include for-tablet-landscape-down {
+        img {
+            height: 500px;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+        }
+    }
+
+    @include for-phone-only {
+        img {
+            height: 400px;
+        }
+    }
 }
