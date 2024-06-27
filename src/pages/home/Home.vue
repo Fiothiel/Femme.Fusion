@@ -12,7 +12,7 @@
     </section>
     <section class="home__section home__section--red home__section--narrow">
       <h2><img :src="getImagePath('sparkles.png')"/>Burlesquehelg<img :src="getImagePath('sparkles.png')"/></h2>
-      <p>Boka in 21-22 september redan nu för två härliga dagar fyllda med burlesque och dans! Dans med olika rekvisita, tillverkning av egna scenkläder och show som förevigas på film ni får med er efter helgen. Allt i en härlig och trygg atmosfär med  mycket skratt och leenden.</p>
+      <p>Boka in 20-22 september redan nu för en helg fylld med burlesque och dans! Dans med olika rekvisita, tillverkning av egna scenkläder och show som förevigas på film ni får med er efter helgen. Allt i en härlig och trygg atmosfär med  mycket skratt och leenden.</p>
       <p>Mer information och anmälan kommer inom kort.</p>
     </section>
     <Image

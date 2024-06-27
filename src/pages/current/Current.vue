@@ -1,7 +1,9 @@
-<template><sub></sub>
+<template>
   <article class="current content">
+    <Image alt="Femme Fusion med röda organzaboor" :fullWidth="false" :fallback="getImagePath('burlesque-weekend.jpg')"
+      :sizes="null" :srcset="null" />
     <h1>Burlesque weekend</h1>
-    <p>Gör dig redo för två härliga dagar fyllda med burlesque tillsammans med oss i Femme Fusion! Dans med olika
+    <p>Gör dig redo för några härliga dagar fyllda med burlesque tillsammans med oss i Femme Fusion! Dans med olika
       rekvisita, tillverkning av egna scenkläder, fotografering, och en show som förevigas på film är ingredienser som
       ingår under denna inspirerande helg. Allt i en uppmuntrande och trygg atmosfär med mycket skratt och leenden.
     </p>
@@ -26,15 +28,35 @@
     <p>
       Vi utlovar en härlig helg med dans, glitter och glädje!
     </p>
+    <p>
+    <dl>
+      <dt>Fredag:</dt>
+      <dd>18:30-19:30 Kick-off med information och välkomstmingel</dd>
+      <dt>Lördag:</dt>
+      <dd>09:00-16:00 Dans och pysselverkstad</dd>
+      <dt>Söndag:</dt>
+      <dd>09:00-17:00 Dans och uppvisning, film och foto</dd>
+    </dl>
+    </p>
+    <p>
+      <i>I priset ingår lån av rekvisita, pysselmaterial, professionellt filmad show, gruppbilder och fika/snacks. Ta
+        med lunch, träningskläder, eventuellt eget klädesplagg att smycka, samt smink och kläder som du vill bli fotad
+        och uppträda i.
+      </i>
+    </p>
+    <section>
+      <h2>FAQ</h2>
+      <p>Hittar du inte svaret på din fråga? <router-link to="/contact">Kontakta oss.</router-link></p>
+      <Accordion v-for="(question, i) in faqData" :key="`faq-${i}`" :summary="question.question"
+        :details="question.answer" />
+    </section>
   </article>
-  <Accordion 
-  summary="Måste jag vara med på film och foto?"
-  details="Självklart inte. Det är helt upp till dig, men stanna gärna ändå och var peppande publik!" />
 </template>
 
 <script setup lang="ts">
 import Accordion from "../../components/accordion/Accordion.vue";
 import Image from "../../components/image/Image.vue";
+import faqData from "../../assets/data/faq.json";
 import { useUtils } from "../../utils";
 const { getImagePath } = useUtils();
 </script>
