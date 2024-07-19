@@ -12,7 +12,7 @@
     </section>
     <section class="home__section home__section--red home__section--narrow">
       <h2><img :src="getImagePath('sparkles.png')"/>Burlesque weekend<img :src="getImagePath('sparkles.png')"/></h2>
-      <p>Boka in 20-22 september redan nu för en helg fylld med burlesque och dans! Dans med olika rekvisita, tillverkning av egna scenkläder och show som förevigas på film ni får med er efter helgen. Allt i en härlig och trygg atmosfär med  mycket skratt och leenden.</p>      
+      <p>Boka in 21-22 september redan nu för en helg fylld med burlesque och dans! Dans med olika rekvisita, tillverkning av egna scenkläder och show som förevigas på film ni får med er efter helgen. Allt i en härlig och trygg atmosfär med  mycket skratt och leenden.</p>      
      <router-link class="button" to="/burlesque-weekend">Mer information och anmälan</router-link>
     </section>
     <Image
@@ -25,7 +25,7 @@
         ${getImagePath('loboutin-1000.jpg')}, 1000w,
         ${getImagePath('loboutin-500.jpg')}, 500w`"
     />
-    <section class="home__twitch home__section home__section">
+    <section class="home__twitch home__section home__section--narrow">
       <h2>Live @ Twitch</h2>
       <p>Nu på sommaren har vi uppehåll från vårt ordinarie streamingschema, men håll koll i våra sociala medier så missar du inte en eventuell extrastream!</p>
       <!-- <p>Varje tisdag 17:30 streamar vi live från våra träningar!</p> -->

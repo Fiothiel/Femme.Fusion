@@ -52,7 +52,7 @@ export const useEvents = () => {
           url: d.url,
           type: getType(d.type),
           price: d.price,
-          buttonText: d.buttonText
+          buttonText: d.buttonText ?? SIGNUP
         };
         events.push(event);
       });
