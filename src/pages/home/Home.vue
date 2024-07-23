@@ -10,21 +10,16 @@
         minnesvärd upplevelse!
       </p>
     </section>
+    <section class="home__section home__section--video">     
+      <video controls autoplay muted poster="/trailer-thumb.png">
+        <source src="/trailer.mp4" type="video/mp4">
+      </video>
+    </section>
     <section class="home__section home__section--red home__section--narrow">
       <h2><img :src="getImagePath('sparkles.png')"/>Burlesque weekend<img :src="getImagePath('sparkles.png')"/></h2>
       <p>Boka in 21-22 september redan nu för en helg fylld med burlesque och dans! Dans med olika rekvisita, tillverkning av egna scenkläder och show som förevigas på film ni får med er efter helgen. Allt i en härlig och trygg atmosfär med  mycket skratt och leenden.</p>      
      <router-link class="button" to="/burlesque-weekend">Mer information och anmälan</router-link>
     </section>
-    <Image
-      alt="Louboutinsko i svart lack mot en parkeringshusvägg"
-      :fullWidth="true"
-      :fallback="getImagePath('loboutin-1000.jpg')"
-      :sizes="null"
-      :srcset="`
-        ${getImagePath('loboutin-2500.jpg')}, 2500w,
-        ${getImagePath('loboutin-1000.jpg')}, 1000w,
-        ${getImagePath('loboutin-500.jpg')}, 500w`"
-    />
     <section class="home__twitch home__section home__section--narrow">
       <h2>Live @ Twitch</h2>
       <p>Nu på sommaren har vi uppehåll från vårt ordinarie streamingschema, men håll koll i våra sociala medier så missar du inte en eventuell extrastream!</p>
@@ -40,6 +35,16 @@
         <span>twitch.tv/femmefusion</span>
       </a>
     </section>
+    <Image
+      alt="Louboutinsko i svart lack mot en parkeringshusvägg"
+      :fullWidth="true"
+      :fallback="getImagePath('loboutin-1000.jpg')"
+      :sizes="null"
+      :srcset="`
+        ${getImagePath('loboutin-2500.jpg')}, 2500w,
+        ${getImagePath('loboutin-1000.jpg')}, 1000w,
+        ${getImagePath('loboutin-500.jpg')}, 500w`"
+    />
     <section class="home__testamonials home__section home__section--red">
       <h2>Sagt om oss</h2>
       <Testamonials />

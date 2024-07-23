@@ -26,8 +26,19 @@
         }
 
         &--narrow {
-            p, div {
+
+            p,
+            div {
                 max-width: 600px;
+            }
+        }
+
+        &--video {
+            padding: 0;
+            padding-bottom: $spacing-large;
+
+            @include for-big-desktop-down {
+                padding-bottom: 0;
             }
         }
     }
@@ -52,5 +63,10 @@
                 }
             }
         }
+    }
+
+    video {
+        width: 100%;
+        max-width: 1920px;
     }
 }

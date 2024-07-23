@@ -77,9 +77,9 @@ body {
             padding: 0;
         }
 
-        @include for-phone-only {
+/*         @include for-phone-only {
             padding: $spacing-large $spacing-medium;
-        }
+        } */
     }
 
     .form {
