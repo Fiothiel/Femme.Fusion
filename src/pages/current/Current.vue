@@ -1,6 +1,7 @@
 <template>
   <article class="current content">
-    <h1>Burlesque weekend</h1>
+    <h1 id="burlesque-weekend-heading">Burlesque weekend</h1>
+    <span>Sista anmälningsdag 5 september</span>
     <Image
       alt="Femme Fusion med röda organzaboor"
       :fullWidth="false"
@@ -87,6 +88,11 @@
 import Accordion from "../../components/accordion/Accordion.vue";
 import Image from "../../components/image/Image.vue";
 import faqData from "../../assets/data/faq.json";
+import { onMounted } from 'vue';
 import { useUtils } from "../../utils";
 const { getImagePath } = useUtils();
+
+onMounted(() => {
+  document.getElementById('burlesque-weekend-heading')?.scrollIntoView({ behavior: 'smooth' });
+});
 </script>

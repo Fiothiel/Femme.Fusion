@@ -1,30 +1,17 @@
 [
   {
-    "title": "Burlesque Weekend",
-    "description": "<p>Gör dig redo för två härliga dagar fyllda med burlesque tillsammans med showgruppen Femme Fusion! Dans med olika rekvisita, tillverkning av egna scenkläder, fotografering, och en show som förevigas på film är ingredienser som ingår under denna inspirerande helg. Allt i en uppmuntrande och trygg atmosfär med mycket skratt och leenden.</p>",
-    "level": "Nybörjare",
-    "address": "Skylten, Södra Oskarsgatan 3",
-    "startDate": "2024-09-20T18:30:00",
-    "endDate": "2024-09-22T17:00:00",
+    "title": "Kulturnatten Musikens hus",
+    "description": "<p>Vi medverkar under Kulurnatten i Norrköping</p>",    
+    "address": "Knäppingsborg, Norrköping",
+    "level": null,
+    "startDate": "2024-09-28T22:30:00",
+    "endDate": "2024-09-28T22:450:00",
     "day": "",
-    "url": "https://www.studieframjandet.se/ostergotlands-lan/gustav-arrangemang/kalenderhandelser/2024/september/burlesque-weekend-med-femme-fusion/",
-    "type": "course",
-    "numOccasions": 2,
-    "dayAndTimeInfo": "Lör 09:00-16:00, Sön 09:00-17:00",
-    "price": 1800
-  },
-  {
-    "title": "Danskolosseum",
-    "description": "<p>Vi medverkar under Augustifesten i Norrköping</p>",    
-    "address": "Hörsalen, Norrköping",
-    "startDate": "2024-08-17T17:00:00",
-    "endDate": "2024-08-17T20:00:00",
-    "day": "",
-    "url": "https://www.facebook.com/events/775982184015386",
+    "url": "https://www.facebook.com/musikenshusknappingsborg/",
     "type": "show",
     "numOccasions": 1,
-    "dayAndTimeInfo": "Lör 09:00-16:00, Sön 09:00-17:00",
-    "buttonText": "Läs mer"
-
+    "dayAndTimeInfo": "Lör 22:30",
+    "buttonText": "Musikens hus",
+    "price": 0
   }
 ]
