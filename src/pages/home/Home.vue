@@ -1,7 +1,6 @@
 <template>
   <div class="home content content--home">
     <nav>
-      <a @click="scrollTo('twitch')">Twitch</a>
       <a @click="scrollTo('testimonials')">Sagt om oss</a>
     </nav>
     <section class="home__section home__section--narrow">
@@ -19,6 +18,10 @@
         <source src="/trailer.mp4" type="video/mp4">
       </video>
     </section>
+    <section class="home__testamonials home__section home__section--red">
+      <h2 id="testimonials">Sagt om oss</h2>
+      <Testamonials />
+    </section>
     <Image
       alt="Louboutinsko i svart lack mot en parkeringshusvägg"
       :fullWidth="true"
@@ -29,10 +32,6 @@
         ${getImagePath('loboutin-1000.jpg')}, 1000w,
         ${getImagePath('loboutin-500.jpg')}, 500w`"
     />
-    <section class="home__testamonials home__section home__section--red">
-      <h2 id="testimonials">Sagt om oss</h2>
-      <Testamonials />
-    </section>
   </div>
 </template>
 

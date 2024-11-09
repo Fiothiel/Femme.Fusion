@@ -57,8 +57,10 @@ export const useEvents = () => {
         events.push(event);
       });
 
-      // Assuming sort is defined somewhere and is a boolean or function
-      return events.sort(sort);
+    
+      const now = new Date(); // Get the current date and time      
+      const upcomingEvents = events.filter(event => new Date(event.startDate) >= now);
+      return upcomingEvents.sort(sort);
     } catch (error) {
       console.error("Failed to fetch or process events:", error);
       // Handle or throw the error as needed
@@ -84,15 +86,7 @@ export const useEvents = () => {
         throw error;
       });
   };
-/* 
-  const getEventsFromFile = (): IEvent[] => {
-    var events: IEvent[] = [];
 
-    eventsData.forEach(event => {
-
-    });
-  };
- */
   async function fetchDansarnaEvents(): Promise<IDansarnaResponse> {
     try {
       const response = await axios.get<IDansarnaResponse>(
