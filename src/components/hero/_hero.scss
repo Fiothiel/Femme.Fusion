@@ -8,6 +8,7 @@
     }
 
     &__logo-container {
+        z-index: 1;
         position: absolute;
         height: 100%;
         width: 100%;
@@ -35,7 +36,7 @@
         font-family: $font-family-playfair;
         font-style: italic;
         font-size: 3rem;
-        padding-top: $spacing-x-large;
+        padding-top: $spacing-medium;
 
         @include for-phone-only {
             font-size: 2rem;
@@ -45,7 +46,22 @@
 
     &__image {
         width: 100%;
-        height: 100%;
+        height: 800px;
         object-fit: cover;
+
+        @include for-tablet-landscape-down {
+            height: 500px;
+        }
+    }
+
+    figure {
+        margin: 0;
+        position: relative;
+
+        figcaption {
+            position: absolute;
+            bottom: $spacing-x-small;
+            right: $spacing-small;
+        }
     }
 }

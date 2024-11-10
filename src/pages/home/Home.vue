@@ -1,6 +1,7 @@
 <template>
   <div class="home content content--home">
     <nav>
+      <a @click="scrollTo('sizzle-reel')">Sizzle reel</a>
       <a @click="scrollTo('testimonials')">Sagt om oss</a>
     </nav>
     <section class="home__section home__section--narrow">
@@ -13,7 +14,7 @@
         minnesvärd upplevelse!
       </p>
     </section>
-    <section class="home__section home__section--video">     
+    <section id="sizzle-reel" class="home__section home__section--video">
       <video controls autoplay muted poster="/trailer-thumb.png">
         <source src="/trailer.mp4" type="video/mp4">
       </video>
@@ -40,8 +41,6 @@ import Image from "../../components/image/Image.vue";
 import Testamonials from "../../components/testamonials/Testamonials.vue";
 import { useUtils } from "../../utils";
 const { getImagePath } = useUtils();
-import { Splide, SplideSlide } from '@splidejs/vue-splide';
-import '@splidejs/vue-splide/css';
 
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
