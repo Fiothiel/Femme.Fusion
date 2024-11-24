@@ -24,10 +24,10 @@
         <figure>
           <img
             class="hero__image"
-            :src="`src/assets/images/hero/${image.imageName}-1000.jpg`"
-            :srcset="`src/assets/images/hero/${image.imageName}-2500.jpg 2500w,
-           src/assets/images/hero/${image.imageName}-1000.jpg 1000w,
-           src/assets/images/hero/${image.imageName}-500.jpg 500w`"
+            :src="`../../assets/images/hero/${image.imageName}-1000.jpg`"
+            :srcset="`../../assets/images/hero/${image.imageName}-2500.jpg 2500w,
+           ../../assets/images/hero/${image.imageName}-1000.jpg 1000w,
+           ../../assets/images/hero/${image.imageName}-500.jpg 500w`"
             sizes="
           (min-width: 1920px) 2500px,
           (min-width: 960px) 1000px,
