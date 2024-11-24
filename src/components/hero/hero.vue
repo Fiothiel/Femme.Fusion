@@ -27,7 +27,7 @@
             :src="`../../assets/images/hero/${image.imageName}-1000.webp`"
             :srcset="`../../assets/images/hero/${image.imageName}-2500.webp 2500w,
            ../../assets/images/hero/${image.imageName}-1000.webp 1000w,
-           ../../assets/images/hero/${image.imageName}-500.webp 500w`"
+           ../../assets/images/hero/${image.imageName}-1000.webp 500w`"
             sizes="
           (min-width: 1920px) 2500px,
           (min-width: 960px) 1000px,
