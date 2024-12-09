@@ -26,6 +26,14 @@
         border-bottom: 1px solid $grey-medium;
         margin-bottom: $spacing-medium;
 
+        @include for-phone-only {
+            flex-direction: column;
+
+            div:first-of-type {
+                margin-bottom: $spacing-small;
+            }
+        }
+
         div {
             display: flex;
             flex-direction: column;

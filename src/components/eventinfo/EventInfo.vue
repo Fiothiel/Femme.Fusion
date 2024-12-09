@@ -12,8 +12,16 @@
             <dt>Nivå:</dt>
             <dd>{{ event.level }}</dd>
           </dl>
+          <dl>
+            <dt>Antal tillfällen:</dt>
+            <dd>{{ event.numOccasions}}</dd>
+          </dl>
         </div>
         <div>
+          <dl>
+            <dt>Startdatum:</dt>
+            <dd>{{ useUtils().getShortDate(event.startDate) }}</dd>
+          </dl>
           <dl>
             <dt>Dag & tid:</dt>
             <dd>{{ event.dayAndTimeInfo }}</dd>
@@ -34,6 +42,7 @@
 
 <script setup lang="ts">
 import IEvent from "../../interfaces/IEvent";
+import { useUtils } from "../../utils";
 
 defineProps<{
   event: IEvent;
