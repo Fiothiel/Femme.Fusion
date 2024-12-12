@@ -18,7 +18,7 @@
           </Modal>
         </li>
       </ul>
-      <p v-else>
+      <p v-else-if="courses.length === 0 && !loading">
         Inga kurser eller workshops planerade för tillfället. Boka en lektion?
       </p>
     </section>
