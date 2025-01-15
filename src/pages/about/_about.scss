@@ -1,6 +1,11 @@
 .about {
     max-width: 1000px;
     padding-bottom: $spacing-x-large;
+
+    p {
+        text-align: center;
+    }
+
     &__members {
         @include flex-container;
 

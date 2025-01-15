@@ -1,0 +1,31 @@
+.book {
+    p {
+        text-align: center;
+    }
+
+    &__images {
+        @include wide-content();
+        
+        .image {
+            @include flex-item-one-third();
+            height: 800px;            
+
+            @include for-desktop-down {
+                height: 500px;
+            }
+        }
+
+        @include for-tablet-landscape-down {
+            flex-direction: column;
+            margin: auto;
+            
+            .image {
+                @include flex-item();
+            }
+        }
+    }
+
+    .button {
+        margin: $spacing-x-large 0 $spacing-large 0;
+    }
+}

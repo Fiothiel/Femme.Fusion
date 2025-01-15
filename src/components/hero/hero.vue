@@ -59,29 +59,27 @@ const images: Ref<IImageInfo[]> = ref([
   {
     imageName: "hero-splide-1",
     photographer: "Foto: Kim Vestbrant",
-    description:
-      "Hanna dancing on stage while sitting on a chair during a performance.",
+    description: "Hanna dansar på scenen medan hon sitter på en stol under en föreställning på Kulturnatten i Norrköping."
   },
   {
     imageName: "hero-splide-2",
     photographer: "Foto: Kim Vestbrant",
-    description: "Kristina singing on stage during a live performance.",
+    description: "Kristina framför ett liveframträdande på scenen under Kulturnatten i Norrköping."
   },
   {
     imageName: "hero-splide-3",
     photographer: "Foto: Kim Vestbrant",
-    description: "Kristina and Ella dancing on stage with cowboy hats.",
+    description: "Kristina och Ella bjuder på en energisk dans med cowboyhattar på scenen under Kulturnatten i Norrköping."
   },
   {
     imageName: "hero-splide-4",
     photographer: "Foto: Kim Vestbrant",
-    description:
-      "Sandra dancing on stage, flipping her hair during the performance.",
+    description: "Sandra dansar uttrycksfullt på scenen och slänger med håret under ett framträdande på Kulturnatten i Norrköping."
   },
   {
     imageName: "hero-splide-5",
     photographer: "Foto: Kim Vestbrant",
-    description: "The full group on stage after completing a performance.",
-  },
+    description: "Hela gruppen poserar på scenen efter ett lyckat uppträdande på Kulturnatten i Norrköping."
+  }
 ]);
 </script>

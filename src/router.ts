@@ -2,10 +2,9 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 import About from './pages/about/About.vue';
 import Contact from './pages/contact/Contact.vue';
-import GroupBooking from './pages/groupbooking/GroupBooking.vue';
 import Home from './pages/home/Home.vue';
 import Events from './pages/events/Events.vue';
-import ShowBooking from './pages/showbooking/ShowBooking.vue';
+import Booking from './pages/booking/Booking.vue';
 import Current from "./pages/current/Current.vue";
 
  const  router = createRouter({
@@ -19,22 +18,17 @@ import Current from "./pages/current/Current.vue";
     {
       path: "/about",
       component: About,
-      name: "Medlemmar"
+      name: "Om oss"
+    },
+    {
+      path: "/booking",
+      component: Booking,
+      name: "Bokning"
     },
     {
       path: "/events",
       component: Events,
       name: "Aktuellt"
-    },
-    {
-      path: "/showbooking",
-      component: ShowBooking,
-      name: "Shower"
-    },
-    {
-      path: "/groupbooking",
-      component: GroupBooking,
-      name: "Gruppbokning"
     },
     {
       path: "/contact",
