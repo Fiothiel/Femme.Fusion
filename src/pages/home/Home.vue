@@ -7,9 +7,7 @@
     <section class="home__section home__section--narrow">
       <h1>Femme Fusion</h1>
       <p>
-        En Linköpingsbaserad showgrupp som erbjuder dans och sång med en tydlig inspiration av
-        burlesque, en konstform som kombinerar sensualitet, humor och
-        extravagans. Låt Femme Fusion skapa magi på ditt evenemang -
+        Femme Fusion är en showgrupp som erbjuder underhållning, sång och dans för fester, middagar och event. Artisterna levererar shower där en variation av olika dansstilar möter inspiration av burlesque. . Låt Femme Fusion skapa magi på ditt evenemang -
         <router-link to="/contact">boka nu</router-link> för en unik och
         minnesvärd upplevelse!
       </p>
