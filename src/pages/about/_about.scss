@@ -3,7 +3,8 @@
     padding-bottom: $spacing-x-large;
 
     p {
-        text-align: center;
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
     }
 
     &__members {

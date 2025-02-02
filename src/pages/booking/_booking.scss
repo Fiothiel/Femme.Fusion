@@ -1,8 +1,4 @@
 .book {
-    p {
-        text-align: center;
-    }
-
     &__images {
         @include wide-content();
         
