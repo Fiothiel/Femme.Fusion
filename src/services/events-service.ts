@@ -57,10 +57,9 @@ export const useEvents = () => {
         events.push(event);
       });
 
-      console.log(events);
       const now = new Date(); // Get the current date and time      
       const upcomingEvents = events.filter(event => new Date(event.startDate) >= now);
-      console.log(upcomingEvents);
+      
       return upcomingEvents.sort(sort);
     } catch (error) {
       console.error("Failed to fetch or process events:", error);
