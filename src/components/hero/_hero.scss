@@ -22,7 +22,7 @@
             padding: 0 $spacing-x-large;
         }
 
-        a {
+       .logo-link  {
             width: 100%;
             max-width: 900px;
         }
@@ -33,14 +33,32 @@
     }
 
     &__tag {
+        max-width: 900px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        column-gap: $spacing-x-small;
         font-family: $font-family-playfair;
+        padding: $spacing-medium $spacing-x-large;
+        padding-bottom: 0;
+        text-align: center;
         font-style: italic;
         font-size: 3rem;
-        padding-top: $spacing-medium;
+        
+
+        a {
+            font-weight: 400;
+            text-wrap: nowrap;
+        }
+
+        @include for-tablet-landscape-down {
+            font-size: 2.5rem;
+            flex-direction: column;
+        }
 
         @include for-phone-only {
+            padding: $spacing-large 0;
             font-size: 2rem;
-            text-wrap: nowrap;
         }
     }
 

@@ -13,10 +13,14 @@
             (min-width: 960px) 1000px,
             100vw" /> -->
     <div class="hero__logo-container">
-      <a href="/">
+      <a class="logo-link" href="/">
         <img class="hero__logo" src="../../assets/logo/logo-white.svg" />
       </a>
-      <span class="hero__tag">Experience the extraordinary</span>
+      <span class="hero__tag">
+        <router-link to="/booking">Shower</router-link>
+        <router-link to="/events">Kurser & workshops</router-link>
+        <router-link to="/booking">Gruppbokningar</router-link>
+      </span>
     </div>
 
     <Splide :data-splide="options">
