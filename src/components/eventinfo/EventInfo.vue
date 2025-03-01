@@ -36,7 +36,7 @@
         <p v-html="event.description"></p>
       </div>
     </div>
-    <a :href="event.url" target="_blank" class="button">{{ event.buttonText }}</a>
+    <a v-if="event.url" :href="event.url" target="_blank" class="button">{{ event.buttonText }}</a>
   </div>
 </template>
 
