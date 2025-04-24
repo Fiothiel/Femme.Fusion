@@ -26,5 +26,11 @@
         &--mail{
             margin-left: $spacing-small;
         }
+
+        &--linkedin {
+            svg {
+                height: 3.2rem;
+            }
+        }
     }
 }
