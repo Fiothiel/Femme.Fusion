@@ -61,29 +61,34 @@ const options = JSON.stringify({
 
 const images: Ref<IImageInfo[]> = ref([
   {
-    imageName: "hero-splide-1",
-    photographer: "Foto: Kim Vestbrant",
-    description: "Hanna dansar på scenen medan hon sitter på en stol under en föreställning på Kulturnatten i Norrköping."
+    "imageName": "hero-splide-0",
+    "photographer": "Foto: Kim Vestbrant",
+    "description": "Sandra i spotlighten med övriga tre i bakgrunden, alla med blåglittriga toppar."
   },
   {
-    imageName: "hero-splide-2",
-    photographer: "Foto: Kim Vestbrant",
-    description: "Kristina framför ett liveframträdande på scenen under Kulturnatten i Norrköping."
+    "imageName": "hero-splide-1",
+    "photographer": "Foto: Kim Vestbrant",
+    "description": "Hanna dansar på scenen medan hon sitter på en stol under en föreställning på Kulturnatten i Norrköping."
   },
   {
-    imageName: "hero-splide-3",
-    photographer: "Foto: Kim Vestbrant",
-    description: "Kristina och Ella bjuder på en energisk dans med cowboyhattar på scenen under Kulturnatten i Norrköping."
+    "imageName": "hero-splide-2",
+    "photographer": "Foto: Kim Vestbrant",
+    "description": "Kristina framför ett liveframträdande på scenen under Kulturnatten i Norrköping."
   },
   {
-    imageName: "hero-splide-4",
-    photographer: "Foto: Kim Vestbrant",
-    description: "Sandra dansar uttrycksfullt på scenen och slänger med håret under ett framträdande på Kulturnatten i Norrköping."
+    "imageName": "hero-splide-3",
+    "photographer": "Foto: Kim Vestbrant",
+    "description": "Ella och Sandra sitter på stolar i scenljus och showar med stora vita fjädervippor i klassisk burlesquestil."
   },
   {
-    imageName: "hero-splide-5",
-    photographer: "Foto: Kim Vestbrant",
-    description: "Hela gruppen poserar på scenen efter ett lyckat uppträdande på Kulturnatten i Norrköping."
+    "imageName": "hero-splide-4",
+    "photographer": "Foto: Mattias Åström",
+    "description": "Sandra, Kristina och Ella i korsetter på Skyltens scen, Kristina sjunger."
+  },
+  {
+    "imageName": "hero-splide-5",
+    "photographer": "Foto: Mattias Åström",
+    "description": "Hanna, Sandra och Ella i vita fransklänningar under blått scenljus, med glamourös energi."
   }
 ]);
 </script>

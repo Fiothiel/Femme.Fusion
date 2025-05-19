@@ -43,5 +43,20 @@
     "dayAndTimeInfo": "Lör 10:30-12:00",
     "buttonText": null,
     "price": 190
+  },
+  {
+    "title": "Linköpings stadsfest",
+    "description": "<p>Vi ger en kort show, tillsammans med andra dansare, under Linköpings Stadsfest. Mer info kommer.</p>",    
+    "address": "",
+    "level": null,
+    "startDate": "2025-08-23T00:00:00",
+    "endDate": "2025-08-23T00:00:00",
+    "day": "",
+    "url": "",
+    "type": "show",
+    "numOccasions": 1,
+    "dayAndTimeInfo": "Lördag",
+    "buttonText": "",
+    "price": 0
   }
 ]
