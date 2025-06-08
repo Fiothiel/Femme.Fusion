@@ -71,22 +71,22 @@ const images: Ref<IImageInfo[]> = ref([
     "description": "Hanna dansar på scenen medan hon sitter på en stol under en föreställning på Kulturnatten i Norrköping."
   },
   {
+    "imageName": "hero-splide-7",
+    "photographer": "Foto: Mattias Åström",
+    "description": "Sandra, Kristina och Ella i korsetter på Skyltens scen, Kristina sjunger."
+  },
+  {
+    "imageName": "hero-splide-6",
+    "photographer": "Foto: Kim Vestbrant",
+    "description": "Ella och Sandra sitter på stolar i scenljus och showar med stora vita fjädervippor i klassisk burlesquestil."
+  },
+  {
     "imageName": "hero-splide-2",
     "photographer": "Foto: Kim Vestbrant",
     "description": "Kristina framför ett liveframträdande på scenen under Kulturnatten i Norrköping."
   },
   {
-    "imageName": "hero-splide-3",
-    "photographer": "Foto: Kim Vestbrant",
-    "description": "Ella och Sandra sitter på stolar i scenljus och showar med stora vita fjädervippor i klassisk burlesquestil."
-  },
-  {
-    "imageName": "hero-splide-4",
-    "photographer": "Foto: Mattias Åström",
-    "description": "Sandra, Kristina och Ella i korsetter på Skyltens scen, Kristina sjunger."
-  },
-  {
-    "imageName": "hero-splide-5",
+    "imageName": "hero-splide-8",
     "photographer": "Foto: Mattias Åström",
     "description": "Hanna, Sandra och Ella i vita fransklänningar under blått scenljus, med glamourös energi."
   }

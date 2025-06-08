@@ -1,4 +1,4 @@
-@mixin for-phone-only {
+  @mixin for-phone-only {
     @media (max-width: 599px) { @content; }
   }
   @mixin for-tablet-landscape-down {
@@ -53,7 +53,6 @@
       row-gap: $spacing-large;
   }
 }
-
 
 // Cross
 @mixin cross($size: 20px, $color: currentColor, $thickness: 1px) {

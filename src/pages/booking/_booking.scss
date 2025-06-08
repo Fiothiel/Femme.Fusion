@@ -1,27 +1,67 @@
 .book {
-    &__images {
-        @include wide-content();
-        
-        .image {
-            @include flex-item-one-third();
-            height: 800px;            
 
-            @include for-desktop-down {
-                height: 500px;
+    h2,
+    p {
+        max-width: $content-max-width-desktop;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__toggle {
+        display: flex;
+        width: 100%;
+        background-color: $grey-medium;
+        margin: $spacing-medium 0;
+    }
+
+    &__images {
+        width: 70vw;
+        margin: $spacing-large auto;
+        overflow: visible;
+
+        .splide__pagination {
+            position: relative;
+        }
+
+        .splide__slide {
+            width: 900px;
+
+            @include for-tablet-landscape-down {
+                width: 600px;
             }
         }
 
-        @include for-tablet-landscape-down {
-            flex-direction: column;
-            margin: auto;
-            
-            .image {
-                @include flex-item();
+        @include for-big-desktop-down {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+        }
+
+        // Temporary
+        &--dance-class {
+            .splide__slide {
+                width: 600px;
+    
+                @include for-tablet-landscape-down {
+                    width: 400px;
+                }
             }
+        }
+
+        figcaption {
+            text-align: right;
+            font-size: $font-size-button;
+            margin-top: $spacing-small;
         }
     }
 
-    .button {
-        margin: $spacing-x-large 0 $spacing-large 0;
+    &__image {
+        object-fit: cover;
+        height: 600px;
+        width: 100%;
+
+        @include for-phone-only {
+            height: 400px;
+        }
     }
 }
