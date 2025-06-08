@@ -19,7 +19,7 @@
       <span class="hero__tag">
         <router-link to="/booking">Shower</router-link>
         <router-link to="/events">Kurser & workshops</router-link>
-        <router-link to="/booking">Gruppbokningar</router-link>
+        <router-link to="/booking?q=danceclass">Gruppbokningar</router-link>
       </span>
     </div>
 

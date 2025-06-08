@@ -11,7 +11,7 @@
         id="show-tab"
         class="button button--large button--toggle"
         :class="{ 'button--toggle-active': displayShow }"
-        @click="displayShow = true">
+        @click="setTab(true)">
         Show
       </button>
       <button
@@ -21,7 +21,7 @@
         id="dance-tab"
         class="button button--large button--toggle"
         :class="{ 'button--toggle-active': !displayShow }"
-        @click="displayShow = false">
+        @click="setTab(false)">
         Dansklass
       </button>
     </div>
@@ -39,13 +39,38 @@
 
 
 <script setup lang="ts">
-import { useUtils } from "../../utils";
-import { ref } from "vue";
-const { getImagePath } = useUtils();
-import Image from "../../components/image/Image.vue";
+import { ref, watch, onMounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import DanceClass from "./DanceClass.vue";
 import Show from "./Show.vue";
 
+const route = useRoute();
+const router = useRouter();
+
 const displayShow = ref(true);
+
+
+const updateTabFromQuery = () => {
+  const q = route.query.q;
+  displayShow.value = q !== 'danceclass'; // default to true/show
+};
+
+onMounted(() => {
+  updateTabFromQuery();
+});
+
+watch(() => route.query.q, () => {
+  updateTabFromQuery();
+});
+
+function setTab(show: boolean) {
+  displayShow.value = show;
+  router.replace({
+    query: {
+      ...route.query,
+      q: show ? 'show' : 'danceclass'
+    }
+  });
+}
 
 </script>
