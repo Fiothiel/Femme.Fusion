@@ -41,9 +41,13 @@
         &--dance-class {
             .splide__slide {
                 width: 600px;
-    
-                @include for-tablet-landscape-down {
-                    width: 400px;
+            }
+
+            .book__image {
+                height: 800px;
+
+                @include for-phone-only {
+                    height: 600px;
                 }
             }
         }
@@ -52,6 +56,11 @@
             text-align: right;
             font-size: $font-size-button;
             margin-top: $spacing-small;
+
+            // temporary
+            @include for-phone-only {
+                text-align: center;
+            }
         }
     }
 
