@@ -3,6 +3,7 @@
     <nav>
       <a @click="scrollTo('sizzle-reel')">Sizzle reel</a>
       <a @click="scrollTo('testimonials')">Sagt om oss</a>
+      <RouterLink to="/workshop">Gratis dans</RouterLink>
     </nav>
     <section class="home__section home__section--narrow">
       <h1>Femme Fusion</h1>

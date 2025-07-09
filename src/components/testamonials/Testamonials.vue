@@ -1,5 +1,12 @@
 <template>
   <div class="testamonials">
+    <div class="testamonials__quote">
+      <div>
+        "Det var en jätterolig workshop med härlig energi! Tiden gick alldeles för fort, och man gick därifrån och ville ha mer!"
+      </div>
+      <div class="testamonials__from">- deltagare burlesqueworkshop 2025</div>
+    </div>
+  
     <div class="testamonials__quote testamonials__quote--right">
       <div>
         "Femme Fusion levererar energi och glädje som tänder även den mest svårflörtade publik. På vårt event med närmare 500 gäster fick de stående ovationer!"

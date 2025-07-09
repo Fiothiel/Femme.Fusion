@@ -35,6 +35,11 @@ import Current from "./pages/current/Current.vue";
       component: Contact,
       name: "Kontakt"
     },
+    {
+      path: "/workshop",
+      component: Current,
+      name: "Workshop"
+    },
   ],
 });
 

@@ -2,6 +2,7 @@
   <div class="events content">
     <section>
       <h1>Aktuellt</h1>
+      <p>Om vi har kommande dansklasser eller shower hittar du information om dem här.-</p>
       <h2>Kurser och workshops</h2>
       <Loader v-if="loading" :large="true" :label="true" />
       <ul v-if="courses.length > 0">

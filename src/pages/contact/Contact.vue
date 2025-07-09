@@ -39,7 +39,7 @@ const form = ref();
 let loading = ref(false);
 let displayMessage = ref(false);
 
-const { handleSubmit } = useForm();
+const { handleSubmit, resetForm } = useForm();
 
 const { value: name, errorMessage: nameError } = useField<string>('name', 'required');
 const { value: email, errorMessage: emailError } = useField<string>('email', 'required|email');
@@ -65,9 +65,7 @@ const sendEmail = () => {
     .then(() => {
       loading.value = false;
       displayMessage.value = true;
-      name.value = '';
-      email.value = '';
-      message.value = '';
+      resetForm();
     })
     .catch((error: any) => {
       console.log("Fail.. ", error.text);

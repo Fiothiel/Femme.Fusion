@@ -5,7 +5,7 @@
       <h1>Meny</h1>
       <ul>
         <li v-for="(route, index) in routes" :key="index">
-          <router-link @click="onRouteClick" :to="route.path">{{ route.name }}</router-link>
+          <router-link v-if="route.path !== '/workshop'" @click="onRouteClick" :to="route.path">{{ route.name }}</router-link>
         </li>
       </ul>
     </nav>
@@ -14,7 +14,7 @@
   
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'; 
 
 import Hamburger from "../hamburger/hamburger.vue";
 
