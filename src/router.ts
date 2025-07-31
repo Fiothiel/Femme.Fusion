@@ -5,7 +5,8 @@ import Contact from './pages/contact/Contact.vue';
 import Home from './pages/home/Home.vue';
 import Events from './pages/events/Events.vue';
 import Booking from './pages/booking/Booking.vue';
-import Current from "./pages/current/Current.vue";
+import FreeDance from "./pages/signup/FreeDance.vue";
+import Workshop from "./pages/signup/Workshop.vue";
 
  const  router = createRouter({
   history: createWebHashHistory(),
@@ -36,9 +37,16 @@ import Current from "./pages/current/Current.vue";
       name: "Kontakt"
     },
     {
-      path: "/workshop",
-      component: Current,
-      name: "Workshop"
+      path: "/workshop-gratis",
+      component: FreeDance,
+      name: "Gratis dansworkshop",
+      meta: { displayInMenu: false }
+    },
+    {
+      path: "/workshop-streetdance",
+      component: Workshop,
+      name: "Streetdance",
+      meta: { displayInMenu: false }
     },
   ],
 });

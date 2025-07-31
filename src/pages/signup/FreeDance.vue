@@ -1,13 +1,21 @@
 <template>
-  <div class="current content">
+  <div class="signup content">
     <h1>Gratis dansworkshop</h1>
+
     <p>
-      Den 13 september kl. 10:00–12:15 på Skylten (Södra Oskarsgatan 3) bjuder vi på ett timmespass burlesque följt av
-      ett timmespass feminine vibe. Vi filmar och fotar hela passet – du dansar gratis mot att synas i våra sociala
-      kanaler. Inga förkunskaper krävs. Anmäl dig gratis i formuläret och ange om du vill delta på burlesque, feminine
-      vibe eller båda! Det går även bra att anmäla sig via DM på Instagram.
-    </p>
-    <form class="form contact__form" ref="form" @submit="onSubmit">
+  Kom och dansa med oss den <strong>13 september kl. 10:00–12:15</strong> på <strong>Skylten</strong> (Södra Oskarsgatan 3)!  
+  Vi bjuder på två pass – ett i <strong>burlesque</strong> och ett i <strong>feminine vibe</strong> – där du får prova på våra stilar, ha kul och uttrycka dig fritt.
+</p>
+
+<p>
+  Det är helt gratis att delta – allt vi ber om är att vi får fota och filma under passen och använda materialet i våra sociala kanaler.
+  <strong>Inga förkunskaper krävs.</strong>
+</p>
+
+<p>
+  Anmäl dig i formuläret nedan (eller via DM på Instagram) och ange om du vill vara med på <strong>burlesque, feminine vibe</strong> eller <strong>båda passen</strong>.
+</p>
+    <form class="form" ref="form" @submit="onSubmit">
       <label>Namn</label>
       <input type="text" name="name" v-model="name" />
       <div class="form__error" v-if="!!nameError">{{ nameError }}</div>

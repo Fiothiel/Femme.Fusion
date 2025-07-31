@@ -2,6 +2,7 @@
 @import 'typography';
 @import 'variables';
 @import 'global';
+@import 'forms';
 
 // Components
 @import 'button';
@@ -20,7 +21,7 @@
 // Pages
 @import '../pages/about/about';
 @import '../pages/contact/contact';
-@import '../pages/current/current';
+@import '../pages/signup/signup';
 @import '../pages/events/events';
 @import '../pages/groupbooking/groupbooking';
 @import '../pages/home/home';

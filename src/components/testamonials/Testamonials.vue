@@ -33,9 +33,6 @@
       </div>
       <div class="testamonials__from">- deltagare burlesqueworkshop 2022</div>
     </div>
-    <!-- <div class="testamonials__quote">
-      "I show my fluffy belly but it's a trap! if you pet it i will tear up your hand purr for no reason. Steal the warm chair right after you get up."
-    </div> -->
   </div>
 </template>
   

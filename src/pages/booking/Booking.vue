@@ -1,5 +1,5 @@
 <template>
-  <div class="book content">
+  <div class="book content content--center">
     <h1>Bokning</h1>
     <p>Show eller dansklass – låt oss ta hand om det!</p>
 

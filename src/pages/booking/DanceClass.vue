@@ -11,35 +11,6 @@
       <router-link to="/contact">Kontakta oss</router-link> för mer information
       och bokning!
     </p>
-<!--     <div class="book__images book__images--dance-class">      
-      <Image
-        alt="Gatsbyvibbar med flapper"
-        :fullWidth="false"
-        :fallback="getImagePath('great-gatsby-900.jpg')"
-        :sizes="null"
-        :srcset="`
-            ${getImagePath('great-gatsby-900.jpg')}, 2500w,
-            ${getImagePath('great-gatsby-600.jpg')}, 500w`"
-      />
-      <Image
-        alt="Burlesque och korsetter"
-        :fullWidth="false"
-        :fallback="getImagePath('groupbooking-burlesque-900.jpg')"
-        :sizes="null"
-        :srcset="`
-            ${getImagePath('groupbooking-burlesque-900.jpg')}, 2500w,
-            ${getImagePath('groupbooking-burlesque-600.jpg')}, 500w`"
-      />
-      <Image
-        alt="Höga pleaser shoes i sensual heels"
-        :fullWidth="false"
-        :fallback="getImagePath('groupbooking-heels-900.jpg')"
-        :sizes="null"
-        :srcset="`
-            ${getImagePath('groupbooking-heels-900.jpg')}, 2500w,
-            ${getImagePath('groupbooking-heels-600.jpg')}, 500w`"
-      />
-    </div> -->
 
     <div class="book__images book__images--dance-class">
       <Splide :data-splide="options">
