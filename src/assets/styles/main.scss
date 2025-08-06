@@ -1,0 +1,20 @@
+// Components
+@use '../../components/accordion/accordion';
+@use '../../components/footer/footer';
+@use '../../components/hamburger/hamburger';
+@use '../../components/hero/hero';
+@use '../../components/EventInfo/event-info';
+@use '../../components/image/image';
+@use '../../components/imagetext/imagetext';
+@use '../../components/loader/loader';
+@use '../../components/menu/menu';
+@use '../../components/modal/modal';
+@use '../../components/testamonials/testamonials';
+
+// Pages
+@use '../../pages/styles/about';
+@use '../../pages/styles/contact';
+@use '../../pages/styles/signup';
+@use '../../pages/styles/events';
+@use '../../pages/styles/home';
+@use '../../pages/styles/booking';

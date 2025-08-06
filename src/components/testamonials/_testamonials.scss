@@ -1,0 +1,43 @@
+@use '../../assets/styles/variables'   as *;
+@use '../../assets/styles/mixins'   as *;
+@use '../../assets/styles/typography'   as *;
+
+.testamonials {
+    font-family: $font-family-playfair;
+    font-weight: 200;
+    font-size: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing-large;
+    padding: $spacing-medium 0;
+    max-width: 800px;
+
+    @include for-tablet-landscape-down {
+        padding: $spacing-medium $spacing-x-large;
+    }
+
+    @include for-phone-only {
+        font-size: 1.7rem;
+        padding: $spacing-medium;
+    }
+
+    &__quote {
+        &--right {
+            text-align: right;
+        }
+    }
+    
+    &__from {
+        margin-top: $spacing-x-small;
+        font-style: italic;
+        font-size: 1.3rem;
+        /* display: flex;
+        align-items: center; */
+
+        img {
+            width: 4rem;
+            padding: 0 $spacing-small;
+        }
+    }
+}

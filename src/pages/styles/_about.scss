@@ -1,0 +1,24 @@
+@use '../../assets/styles/variables'   as *;
+@use '../../assets/styles/mixins'   as *;
+
+.about {
+    max-width: 1000px;
+    padding-bottom: $spacing-x-large;
+
+    p {
+        padding-left: $spacing-small;
+        padding-right: $spacing-small;
+    }
+
+    &__members {
+        @include flex-container;
+
+        .image-text {
+            @include flex-item-half;
+
+            @include for-tablet-landscape-down {
+                width: 100%;
+            }
+        }        
+    }
+}

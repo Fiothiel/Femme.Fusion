@@ -1,0 +1,106 @@
+@use './variables'   as *;
+  
+  @mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin for-tablet-landscape-down {
+    @media (max-width: 899px) { @content; }
+  }
+  @mixin for-desktop-down {
+    @media (max-width: 1199px) { @content; }
+  }
+  @mixin for-big-desktop-down {
+    @media (max-width: 1799px) { @content; }
+  }
+  
+
+  // Flex griddy stuff
+@mixin flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: $spacing-small auto;
+}
+
+@mixin flex-item {
+  flex: 0 1 auto;
+  margin: $spacing-small;
+  width: 100%;
+}
+
+@mixin flex-item-half {
+  @include flex-item;
+  width: calc(50% - ($spacing-small * 2));
+}
+
+@mixin flex-item-one-third {
+  @include flex-item;
+  width: calc(33.333% - ($spacing-small * 2));
+}
+
+@mixin flex-item-one-fourth {
+  @include flex-item;
+  width: calc(25% - ($spacing-small * 2));
+}
+
+@mixin wide-content {
+  @include flex-container;
+  flex-direction: row;
+  width: 90vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  @include for-tablet-landscape-down {
+      row-gap: $spacing-large;
+  }
+}
+
+// Cross
+@mixin cross($size: 20px, $color: currentColor, $thickness: 1px) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  position: relative;
+  width: $size;
+  height: $size;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(($size - $thickness) / 2);
+    left: 0;
+    right: 0;
+    height: $thickness;
+    background: $color;
+    border-radius: $thickness;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  span {
+    display: block;
+  }
+}
+
+@mixin heart($size: 30px) {
+  width: $size;
+  aspect-ratio: 1;
+  color: $white;
+  background:
+      radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%) top left,
+      radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
+      linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left,
+      linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}

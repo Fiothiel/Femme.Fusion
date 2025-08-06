@@ -1,0 +1,31 @@
+@use '../../assets/styles/variables'   as *;
+
+.accordion {
+  width: 100%;
+  padding: $spacing-small;
+  cursor: pointer;
+  border: 1px solid $grey-medium;
+
+  summary::marker {
+    color: $wine-light;
+  }
+
+/* 
+  &__marker {
+    @include heart;
+    width: 15px;
+    display: block;
+    transition: transform 0.3s ease;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+ */
+  &__details {
+    padding-top: $spacing-small;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.1s ease-out;
+  }
+}
