@@ -48,7 +48,7 @@
 import { ref, Ref, onMounted } from "vue";
 import { useUtils } from "@/utils";
 import { useEvents } from "@/services/events-service";
-import IEvent from "@/interfaces/IEvent";
+import type { IEvent } from '@/types/IEvent' ;
 import EventInfo from "@/components/eventinfo/EventInfo.vue";
 import Loader from "@/components/loader/Loader.vue";
 import Modal from "@/components/modal/Modal.vue";
