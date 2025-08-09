@@ -41,7 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import IEvent from "../../interfaces/IEvent";
+import IEvent from "../../types/IEvent";
 import { useUtils } from "../../utils";
 
 defineProps<{

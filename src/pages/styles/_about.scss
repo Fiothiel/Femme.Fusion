@@ -1,5 +1,5 @@
-@use '../../assets/styles/variables'   as *;
-@use '../../assets/styles/mixins'   as *;
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
 
 .about {
     max-width: 1000px;
@@ -12,13 +12,41 @@
 
     &__members {
         @include flex-container;
+        row-gap: $spacing-small;
+        justify-content: space-between;
+    }
 
-        .image-text {
-            @include flex-item-half;
+    &__member {
+        @include flex-item-half;
+        position: relative;
+        margin: 0;
 
-            @include for-tablet-landscape-down {
-                width: 100%;
-            }
+        @include for-tablet-landscape-down {
+            width: 100%;
         }        
+
+        img {
+            transition: 0.3s ease;
+
+            &:hover {
+                box-shadow: 0px 0px 30px 0px rgba(88, 88, 88, 0.8);
+            }
+        }
+
+        figcaption {
+            position: absolute;
+            right: $spacing-x-small;
+            bottom: 0;
+            font-size: 7rem;
+            font-weight: 300;
+            transition: 0.2s ease;
+        }
+
+
+        &--left {
+            span {
+                left: $spacing-x-small;
+            }
+        }
     }
 }

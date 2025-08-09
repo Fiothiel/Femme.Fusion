@@ -8,8 +8,11 @@
     <section class="home__section home__section--narrow">
       <h1>Femme Fusion</h1>
       <p>
-        Femme Fusion är en showgrupp som erbjuder underhållning, sång och dans för fester, middagar och event. Artisterna levererar shower där en variation av olika dansstilar möter inspiration av burlesque. Låt Femme Fusion skapa magi på ditt evenemang -
-        <router-link to="/contact">boka nu</router-link> för en unik och
+        Femme Fusion är en showgrupp som erbjuder underhållning, sång och dans
+        för fester, middagar och event. Artisterna levererar shower där en
+        variation av olika dansstilar möter inspiration av burlesque. Låt Femme
+        Fusion skapa magi på ditt evenemang -
+        <router-link to="/kontakt">boka nu</router-link> för en unik och
         minnesvärd upplevelse!
       </p>
     </section>
@@ -22,24 +25,10 @@
       <h2 id="testimonials">Sagt om oss</h2>
       <Testamonials />
     </section>
-<!--     <Image
+    <NuxtImg
+      src="/images/loboutin.jpg"
+      sizes="xl:2500px md:1500px 100vw"
       alt="Louboutinsko i svart lack mot en parkeringshusvägg"
-      :fullWidth="true"
-      :fallback="getImagePath('loboutin-1000.jpg')"
-      :sizes="null"
-      :srcset="`
-        ${getImagePath('loboutin-2500.jpg')}, 2500w,
-        ${getImagePath('loboutin-1000.jpg')}, 1000w,
-        ${getImagePath('loboutin-500.jpg')}, 500w`"
-    /> -->
-    <NuxtImage
-      src="/images/loboutin-2500.jpg"
-      alt="Louboutinsko i svart lack mot en parkeringshusvägg"
-      widths="[500,1000,2500]"
-      :sizes="null"
-      full-width
-      placeholder="blur"
-      blurSize="20"
     />
   </div>
 </template>
@@ -48,8 +37,13 @@
 import Image from "~/components/image/Image.vue";
 import Testamonials from "~/components/testamonials/Testamonials.vue";
 
-const scrollTo = (id: string) => {
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-}
+definePageMeta({
+  displayInMenu: true,
+  menuLabel: 'Hem',
+  order: 0
+})
 
+const scrollTo = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
 </script>

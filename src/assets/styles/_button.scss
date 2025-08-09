@@ -1,5 +1,7 @@
-@use './variables'   as *;
-@use './mixins'   as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'typography' as *;
+@use 'sass:color';
 
 .button {
   border: none;
@@ -17,19 +19,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   &--large {
     font-size: 2.5rem;
     padding: $spacing-small $spacing-large;
 
     @include for-tablet-landscape-down {
       font-size: 3rem;
-     // padding: $spacing-medium $spacing-large 2.5rem $spacing-large;
+      // padding: $spacing-medium $spacing-large 2.5rem $spacing-large;
     }
 
     @include for-phone-only {
       font-size: 2rem;
-     // padding: $spacing-small $spacing-medium 1.5rem $spacing-medium;
+      // padding: $spacing-small $spacing-medium 1.5rem $spacing-medium;
     }
   }
 
@@ -60,8 +62,8 @@
     border-color: $grey-medium;
 
     &:hover {
-      background-color: lighten($grey-dark, 3%);
-      border-color: lighten($grey-medium, 3%);
+      background-color: color.adjust($grey-dark, $lightness: 3%);
+      border-color: color.adjust($grey-medium, $lightness: 3%);
       color: $white;
     }
   }

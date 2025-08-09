@@ -1,6 +1,6 @@
-@use '../../assets/styles/variables'   as *;
-@use '../../assets/styles/mixins'   as *;
-@use '../../assets/styles/typography'   as *;
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/typography' as *;
 
 .hero {
     width: 100%;
@@ -26,11 +26,11 @@
             padding: 0 $spacing-x-large;
         }
 
-       .logo-link  {
+        .logo-link {
             width: 100%;
             max-width: 900px;
         }
-    }    
+    }
 
     &__logo {
         max-width: 900px;
@@ -48,7 +48,7 @@
         text-align: center;
         font-style: italic;
         font-size: 3rem;
-        
+
 
         a {
             font-weight: 400;

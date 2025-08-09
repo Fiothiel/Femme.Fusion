@@ -1,61 +1,26 @@
 import axios from "axios";
-import { IDansarnaEvent, IDansarnaResponse } from "../interfaces/IDansResponse";
+import type { IDansarnaEvent, IDansarnaResponse } from "@/types/IDansResponse";
 import {
   DANSARNA_API_ORG,
   DANSARNA_API_URL,
   DANSARNA_ID,
   EventType,
   SIGNUP,
-} from "../constants";
-import IEvent from "../interfaces/IEvent";
-import eventsData from "../assets/data/events.json";
+} from "@/constants";
+import type { IEvent } from '@/types/IEvent' ;
 
 export const useEvents = () => {
   async function getEvents(): Promise<IEvent[]> {
     try {
-      const dansarnaEvents = await getDansarnaEvents();
-      let events: IEvent[] = [];
-      
-      dansarnaEvents.forEach((d: IDansarnaEvent) => {
-        const event: IEvent = {
-          title: d.name,
-          description: d.longdescription,
-          price: d.pricing.basePriceInclVat,
-          level: extractTitleFromSpanString(d.requirements.levelLong),
-          address: d.place,
-          startDate: formatDateTime(
-            d.schedule.start.date,
-            d.schedule.start.time
-          ),
-          endDate: formatDateTime(d.schedule.end.date, d.schedule.end.time),
-          day: d.schedule.start.dayOfWeek,
-          dayAndTimeInfo: d.schedule.dayAndTimeInfo,
-          numOccasions: d.schedule.numberOfPlannedOccasions,
-          url: d.source,
-          type: EventType.Course,
-          buttonText: SIGNUP
-        };
-        events.push(event);
-      });
+      const [dansarnaEvents, localEvents] = await Promise.all([
+        getDansarnaEvents(),
+        getLocalEvents()
+      ]);
 
-      eventsData.forEach(d => {
-        const event: IEvent = {
-          title: d.title,
-          description: d.description,
-          level: d.level,
-          address: d.address,
-          startDate: d.startDate,
-          endDate: d.endDate,
-          day: d.day,
-          dayAndTimeInfo: d.dayAndTimeInfo,
-          numOccasions: d.numOccasions,
-          url: d.url,
-          type: getType(d.type),
-          price: d.price,
-          buttonText: d.buttonText ?? SIGNUP
-        };
-        events.push(event);
-      });
+      const events: IEvent[] = [
+        ...dansarnaEvents.map(mapDansarna),
+        ...localEvents.map(mapLocal)
+      ];
 
       const now = new Date(); // Get the current date and time      
       const upcomingEvents = events.filter(event => new Date(event.startDate) >= now);
@@ -99,6 +64,17 @@ export const useEvents = () => {
     }
   }
 
+  async function getLocalEvents(): Promise<IEvent[]> {
+    try {
+      return await $fetch<IEvent[]>("/data/events.json", {
+        query: { v: Date.now() } // optional cache-buster
+      });
+    } catch (e) {
+      console.error("Failed to load local events.json", e);
+      return [];
+    }
+  }
+
   function formatDateTime(date: string, time: string): string {
     return `${date}T${time}`;
   }
@@ -130,6 +106,42 @@ export const useEvents = () => {
 
   function getType(s: string): EventType {
     return s ===  EventType.Show ? EventType.Show : EventType.Course;
+  }
+
+  function mapDansarna(d: IDansarnaEvent): IEvent {
+    return {
+      title: d.name,
+      description: d.longdescription,
+      price: d.pricing.basePriceInclVat,
+      level: extractTitleFromSpanString(d.requirements.levelLong),
+      address: d.place,
+      startDate: `${d.schedule.start.date}T${d.schedule.start.time}`,
+      endDate: `${d.schedule.end.date}T${d.schedule.end.time}`,
+      day: d.schedule.start.dayOfWeek,
+      dayAndTimeInfo: d.schedule.dayAndTimeInfo,
+      numOccasions: d.schedule.numberOfPlannedOccasions,
+      url: d.source,
+      type: EventType.Course,
+      buttonText: SIGNUP
+    };
+  }
+
+  function mapLocal(d: IEvent): IEvent {
+    return {
+      title: d.title,
+      description: d.description ?? "",
+      level: d.level,
+      address: d.address,
+      startDate: d.startDate,
+      endDate: d.endDate,
+      day: d.day,
+      dayAndTimeInfo: d.dayAndTimeInfo,
+      numOccasions: d.numOccasions,
+      url: d.url,
+      type: getType(d.type as string),
+      price: d.price,
+      buttonText: d.buttonText ?? SIGNUP
+    };
   }
 
   return {

@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 .form {
   display: flex;
   row-gap: $spacing-x-small;

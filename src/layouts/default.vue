@@ -13,6 +13,4 @@
 import Footer from '@/components/footer/Footer.vue';
 import Hero from '@/components/hero/Hero.vue';
 import Menu from '@/components/menu/Menu.vue'
-
-import '../assets/styles/main.scss'
 </script>

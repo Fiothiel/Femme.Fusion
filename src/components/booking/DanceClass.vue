@@ -8,7 +8,7 @@
       och glädje. Välj mellan olika dansstilar som burlesque, cabaret, feminine
       vibe, en mix av båda eller sensual heels – vi skräddarsyr lektionen efter
       era behov och nivåer, så att alla kan vara med och ha roligt.
-      <router-link to="/contact">Kontakta oss</router-link> för mer information
+      <router-link to="/kontakt">Kontakta oss</router-link> för mer information
       och bokning!
     </p>
 
@@ -18,12 +18,9 @@
           <figure>
             <NuxtImg
               class="book__image"
-              :src="`/images/${image.imageName}`"
-              :widths="[500,1000,2500]"
-              sizes="(min-width:1920px) 2500px, (min-width:960px) 1000px, 100vw"
-              alt="…"
-              placeholder="blur"
-              full-width
+              :src="image.imageName"
+              sizes="md:960px 100vw"
+              :alt="image.description"
             />
             <figcaption>Foto: {{ image.photographer }}</figcaption>
           </figure>
@@ -56,17 +53,17 @@ const options = JSON.stringify({
 
 const images: Ref<IImageInfo[]> = ref([
   {
-    imageName: "great-gatsby-900.jpg",
+    imageName: "/images/great-gatsby.jpg",
     photographer: "Mattias Kannerstål",
     description: "Gatsbyvibbar med flapper"
   },
   {
-    imageName: "groupbooking-burlesque-900.jpg",
+    imageName: "/images/groupbooking-burlesque.jpg",
     photographer: "Mattias Kannerstål",
     description: "Burlesque och korsetter"
   },
   {
-    imageName: "groupbooking-heels-900.jpg",
+    imageName: "/images/groupbooking-heels.jpg",
     photographer: "Daniel Häggmyr",
     description: "Höga pleaser shoes i sensual heels"
   },
