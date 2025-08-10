@@ -11,7 +11,7 @@
     </p>
 
     <p>
-      <strong>När:</strong> Lördag 21 september, kl. 10:30–12:00<br />
+      <strong>När:</strong> Lördag 20 september, kl. 10:30–12:00<br />
       <strong>Plats:</strong> Skylten, Södra Oskarsgatan 3<br />
       <strong>Pris:</strong> 200 kr
     </p>
