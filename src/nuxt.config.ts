@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   sitemap: {
     siteUrl: 'https://femmefusion.se',
     // add routes that aren’t easily discoverable:
-    urls: ['/workshop-gratis', '/workshop-streetdance'],
+    urls: ['/workshop-streetdance'],
     defaults: { changefreq: 'monthly', priority: 0.7 }
   },
   image: {
@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     preset: "static",
     prerender: {
       // Nuxt will crawl links by default; list extra routes if needed:
-      routes: ["/workshop-gratis", "/workshop-streetdance"],
+      routes: ["/workshop-streetdance"],
     },
   },
 
@@ -41,7 +41,7 @@ export default defineNuxtConfig({
           name: "twitter:description",
           content: "En showgrupp som erbjuder dans och sång…",
         },
-        { name: "twitter:image", content: "/public/images/meta.jpg" },
+        { name: "twitter:image", content: "https://femmefusion.se/images/meta.jpg" },
 
         // OG
         { property: "og:url", content: "https://femmefusion.se" },
@@ -50,7 +50,7 @@ export default defineNuxtConfig({
           property: "og:description",
           content: "En showgrupp som erbjuder dans och sång…",
         },
-        { property: "og:image", content: "/public/images/meta.jpg" },
+        { property: "og:image", content: "https://femmefusion.se/images/meta.jpg" },
         { property: "og:type", content: "website" },
 
         // Theme
