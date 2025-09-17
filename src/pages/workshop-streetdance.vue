@@ -13,7 +13,7 @@
     <p>
       <strong>När:</strong> Lördag 20 september, kl. 10:30–12:00<br />
       <strong>Plats:</strong> Skylten, Södra Oskarsgatan 3<br />
-      <strong>Pris:</strong> 200 kr
+      <strong>Pris:</strong> 200 kr (175 kr för studenter)
     </p>
 
     <p class="signup__terms">
@@ -90,6 +90,9 @@
         {{ personalnumberError }}
       </div>
 
+      <label>Student? (ja/nej)</label>
+      <input type="text" name="student" v-model="student" />
+
       <label>E-postadress</label>
       <input type="email" name="email" v-model="email" />
       <div class="form__error" v-if="!!emailError">{{ emailError }}</div>
@@ -155,6 +158,7 @@ const { value: city, errorMessage: cityError } = useField<string>(
   "city",
   "required"
 );
+const student = ref('');
 
 const onSubmit = handleSubmit(() => {
   sendEmail();
@@ -169,7 +173,7 @@ const sendEmail = () => {
       {
         from_name: name.value,
         reply_to: email.value,
-        message: `Streetdance workshop-anmälan:\nPersonnummer: ${personalnumber.value}\nAdress: ${street.value}, ${postal.value} ${city.value}`,
+        message: `Streetdance workshop-anmälan:\nPersonnummer: ${personalnumber.value}\nAdress: ${street.value}, ${postal.value} ${city.value}\n Student? ${student.value}`,
       },
       "2V1Svme8xyPiol8YX"
     )
