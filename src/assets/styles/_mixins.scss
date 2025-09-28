@@ -104,3 +104,11 @@
   background-repeat: no-repeat;
   position: relative;
 }
+
+// Lists
+@mixin no-style-list {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
