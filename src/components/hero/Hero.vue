@@ -5,9 +5,9 @@
         <img class="hero__logo" src="/logo-white.svg" />
       </a>
       <span class="hero__tag">
-        <router-link to="/bokning">Shower</router-link>
+        <router-link to="/bokning/show">Shower</router-link>
         <router-link to="/aktuellt">Kurser & workshops</router-link>
-        <router-link to="/bokning?q=dansklass">Gruppbokningar</router-link>
+        <router-link to="/bokning/dansklass">Dansklasser</router-link>
       </span>
     </div>
 

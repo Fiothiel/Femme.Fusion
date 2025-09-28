@@ -1,6 +1,6 @@
-@use 'variables'   as *;
-@use 'typography'  as *;
-@use 'mixins'      as *;
+@use 'variables' as *;
+@use 'typography' as *;
+@use 'mixins' as *;
 
 html {
     font-size: 62.5%;
@@ -28,7 +28,8 @@ body {
         }
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         font-family: $font-family-playfair;
         font-weight: 400;
         text-transform: uppercase;
@@ -51,7 +52,8 @@ body {
         }
     }
 
-    a {
+    a,
+    .link {
         font-weight: bold;
         color: $white;
         text-decoration: none;
@@ -59,6 +61,11 @@ body {
         &:hover {
             color: $wine-light;
             transition: 0.2s ease;
+        }
+
+        &--accent {
+            text-decoration: underline;
+            text-underline-offset: 0.25em;
         }
     }
 
@@ -79,14 +86,15 @@ body {
         flex-direction: column;
         align-items: center;
         overflow-x: hidden;
-        padding: 0;        
+        padding: 0;
     }
 
     .content {
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;
         padding: $spacing-x-large 0;
         max-width: $content-max-width-desktop;
+        row-gap: $spacing-medium;
 
         &--center {
             align-items: center;
@@ -94,19 +102,22 @@ body {
 
         &--home {
             padding: 0 !important;
+            row-gap: 0;
         }
 
-         @include for-tablet-landscape-down {
+        @include for-tablet-landscape-down {
             width: 100%;
             padding: $spacing-large $spacing-medium;
         }
     }
 
     .form {
-        input, textarea  {
+
+        input,
+        textarea {
             margin-bottom: $spacing-small;
         }
-    }   
+    }
 
     .form__error {
         margin-top: -$spacing-small;

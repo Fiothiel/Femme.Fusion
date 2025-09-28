@@ -1,20 +1,31 @@
 @use './variables' as *;
-  
-  @mixin for-phone-only {
-    @media (max-width: 599px) { @content; }
-  }
-  @mixin for-tablet-landscape-down {
-    @media (max-width: 899px) { @content; }
-  }
-  @mixin for-desktop-down {
-    @media (max-width: 1199px) { @content; }
-  }
-  @mixin for-big-desktop-down {
-    @media (max-width: 1799px) { @content; }
-  }
-  
 
-  // Flex griddy stuff
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-down {
+  @media (max-width: 899px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-down {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-down {
+  @media (max-width: 1799px) {
+    @content;
+  }
+}
+
+
+// Flex griddy stuff
 @mixin flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -25,7 +36,7 @@
 
 @mixin flex-item {
   flex: 0 1 auto;
-  margin: $spacing-small;
+  margin: $spacing-small auto;
   width: 100%;
 }
 
@@ -52,7 +63,7 @@
   margin-right: calc(50% - 50vw);
 
   @include for-tablet-landscape-down {
-      row-gap: $spacing-large;
+    row-gap: $spacing-large;
   }
 }
 
@@ -96,10 +107,10 @@
   aspect-ratio: 1;
   color: $white;
   background:
-      radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%) top left,
-      radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
-      linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left,
-      linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
+    radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%) top left,
+    radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
+    linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left,
+    linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
   background-size: 50% 50%;
   background-repeat: no-repeat;
   position: relative;
@@ -107,6 +118,9 @@
 
 // Lists
 @mixin no-style-list {
+  list-style: none;
+  padding: 0;
+
   ul {
     list-style: none;
     padding: 0;

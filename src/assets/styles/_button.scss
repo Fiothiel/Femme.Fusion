@@ -19,7 +19,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  width: max-content;
+  
   &--large {
     font-size: 2.5rem;
     padding: $spacing-small $spacing-large;
@@ -76,5 +77,9 @@
       background-color: $wine-damp;
       border-color: $wine-light;
     }
+  }
+
+  &--cta {
+    margin: $spacing-large auto 0;
   }
 }

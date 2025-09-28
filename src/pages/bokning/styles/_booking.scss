@@ -1,8 +1,9 @@
-@use '../../assets/styles/variables'   as *;
-@use '../../assets/styles/mixins'   as *;
-@use '../../assets/styles/typography'   as *;
+@use '../../../assets/styles/variables' as *;
+@use '../../../assets/styles/mixins' as *;
+@use '../../../assets/styles/typography' as *;
 
 .book {
+
     h2,
     p {
         max-width: $content-max-width-desktop;
@@ -10,11 +11,42 @@
         margin-right: auto;
     }
 
-    &__toggle {
+    &__cards {
+        @include no-style-list();
         display: flex;
-        width: 100%;
-        background-color: $grey-medium;
-        margin: $spacing-medium 0;
+        flex-wrap: wrap;
+        /* margin: $spacing-medium 0; */
+
+        @include no-style-list();
+
+
+        li {
+            @include flex-item-half();
+        }
+
+        @include for-tablet-landscape-down {
+            flex-direction: column;
+
+            li {
+                @include flex-item();
+            }
+        }
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: $spacing-medium;
+        border: 1px solid $wine-damp;
+        background: $wine-darker;
+        transition: border-color 0.2s ease, transform 0.15s ease;
+
+        &:hover {
+            border-color: $wine;
+            transform: translateY(-4px);
+            color: $wine-contrast;
+        }
     }
 
     &__images {

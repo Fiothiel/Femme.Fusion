@@ -10,9 +10,11 @@
         Femme Fusion är en showgrupp som erbjuder underhållning, sång och dans
         för fester, middagar och event. Artisterna levererar shower där en
         variation av olika dansstilar möter inspiration av burlesque. Låt Femme
-        Fusion skapa magi på ditt evenemang -
-        <router-link to="/kontakt">boka nu</router-link> för en unik och
+        Fusion skapa magi på ditt evenemang - för en unik och
         minnesvärd upplevelse!
+        <NuxtLink to="/kontakt" class="button button--cta">
+          Boka nu
+        </NuxtLink>
       </p>
     </section>
     <section id="sizzle-reel" class="home__section home__section--video">
@@ -24,11 +26,8 @@
       <h2 id="testimonials">Sagt om oss</h2>
       <Testamonials />
     </section>
-    <NuxtImg
-      src="/images/loboutin.jpg"
-      sizes="xl:2500px md:1500px 100vw"
-      alt="Louboutinsko i svart lack mot en parkeringshusvägg"
-    />
+    <NuxtImg src="/images/loboutin.jpg" sizes="xl:2500px md:1500px 100vw"
+      alt="Louboutinsko i svart lack mot en parkeringshusvägg" />
   </div>
 </template>
 

@@ -10,7 +10,10 @@
     align-items: center;
     column-gap: 2rem;
     padding: $spacing-large $spacing-xx-large;
-    @include no-style-list();
+    
+    ul {
+        @include no-style-list();
+    }    
 
     @include for-tablet-landscape-down {
         padding: $spacing-large;
