@@ -18,10 +18,10 @@ export default defineNuxtConfig({
   css: ["~/assets/styles/main.scss", "@splidejs/vue-splide/css"],
   nitro: {
     preset: "static",
-    /* prerender: {
+    prerender: {
       // Nuxt will crawl links by default; list extra routes if needed:
-      routes: ["/workshop-streetdance"],
-    }, */
+      routes: ["/bokning/show", "/bokning/dansklass"],
+    },
   },
 
   app: {

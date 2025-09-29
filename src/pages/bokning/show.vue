@@ -62,37 +62,60 @@ import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
 import IImageInfo from "../../interfaces/IImageInfo";
 
-useHead({
-    title: 'Boka show | Femme Fusion – underhållning i Sverige & Östergötland',
-    link: [{ rel: 'canonical', href: 'https://femmefusion.se/bokning/show' }],
-    meta: [
-        {
-            name: 'description',
-            content:
-                'Boka show med Femme Fusion. Glittrande nummer, temashower och kundanpassad underhållning för företagsevent och fester - i Linköping, Östergötland och i hela Sverige.'
-        }
-    ],
-    // Valfritt: lägg till FAQ-schema för rikare sökresultat
-    script: [{
-        type: 'application/ld+json',
-        children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Kan ni skräddarsy ett tema för vårt event?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Ja! Vi anpassar nummer, kostym och musik efter ert varumärke, publik och scen." }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Uppträder ni utanför Linköping?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Absolut. Vi utgår från Linköping men uppträder i hela Östergötland och i övriga Sverige." }
-                }
-            ]
-        })
-    }]
+const canonicalUrl = 'https://femmefusion.se/bokning/show'
+
+useSeoMeta({
+  title: 'Boka show | Femme Fusion - underhållning i Sverige & Östergötland',
+  description:
+    'Boka show med Femme Fusion. Glittrande nummer, temashower och kundanpassad underhållning för företagsevent och fester - i Linköping, Östergötland och hela Sverige.',
+  ogTitle: 'Boka show | Femme Fusion',
+  ogDescription:
+    'Kundanpassade shownummer - glitter, glamour och burlesque med modern edge. Vi uppträder i hela Sverige.',
+  ogUrl: canonicalUrl,
+  ogImage: 'https://femmefusion.se/images/meta.jpg',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Boka show | Femme Fusion',
+  twitterDescription:
+    'Glittrande, skräddarsydd underhållning för företag och fester. Boka Femme Fusion.',
+  twitterImage: 'https://femmefusion.se/images/meta.jpg'
 });
+
+
+useHead({ link: [{ rel: 'canonical', href: canonicalUrl }] });
+
+const faq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Kan ni skräddarsy ett tema för vårt event?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ja! Vi anpassar nummer, kostym och musik efter ert varumärke, publik och scen.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Uppträder ni utanför Linköping?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Absolut. Vi utgår från Linköping men uppträder i hela Östergötland och i övriga Sverige.'
+      }
+    }
+  ]
+};
+
+useHead({
+  script: [
+    {
+      key: 'faq-show',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(faq)
+    }
+  ]
+});
+
 
 const options = JSON.stringify({
     type: "loop",

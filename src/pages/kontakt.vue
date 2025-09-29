@@ -85,5 +85,24 @@ const sendEmail = () => {
       console.log("Fail.. ", error.text);
     });
 };
+
+const canonicalUrl = 'https://femmefusion.se/kontakt';
+
+useSeoMeta({
+  title: 'Kontakt | Femme Fusion - boka show eller dansklass',
+  description:
+    'Kontakta Femme Fusion för bokning av show, dansklass eller workshop. Vi utgår från Linköping och arbetar i hela Sverige.',
+  ogTitle: 'Kontakt | Femme Fusion',
+  ogDescription:
+    'Hör av dig för offert och bokning - vi skräddarsyr underhållning för ert event.',
+  ogUrl: canonicalUrl,
+  ogImage: 'https://femmefusion.se/images/meta.jpg',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Kontakt | Femme Fusion',
+  twitterDescription:
+    'Maila oss för bokning av show, dansklass eller workshop. Snabb återkoppling.',
+  twitterImage: 'https://femmefusion.se/images/meta.jpg'
+});
+
+useHead({ link: [{ rel: 'canonical', href: canonicalUrl }] });
 </script>
->

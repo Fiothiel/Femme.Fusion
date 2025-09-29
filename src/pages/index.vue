@@ -27,7 +27,7 @@
       <Testamonials />
     </section>
     <NuxtImg src="/images/loboutin.jpg" sizes="xl:2500px md:1500px 100vw"
-      alt="Louboutinsko i svart lack mot en parkeringshusvägg" />
+      alt="Louboutinsko i svart lack mot en parkeringshusvägg" class="image image--full-width" />
   </div>
 </template>
 

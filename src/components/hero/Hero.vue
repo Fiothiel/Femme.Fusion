@@ -4,22 +4,19 @@
       <a class="logo-link" href="/">
         <img class="hero__logo" src="/logo-white.svg" />
       </a>
-      <span class="hero__tag">
-        <router-link to="/bokning/show">Shower</router-link>
-        <router-link to="/aktuellt">Kurser & workshops</router-link>
-        <router-link to="/bokning/dansklass">Dansklasser</router-link>
-      </span>
+      <nav class="hero__actions" aria-label="Snabbval">
+        <NuxtLink to="/bokning/show" class="hero__link">Shower</NuxtLink>
+        <NuxtLink to="/bokning/dansklass" class="hero__link">Dansklasser</NuxtLink>
+        <!-- <NuxtLink to="/aktuellt" class="hero__link">Kurser & workshops</NuxtLink> -->
+        <NuxtLink to="/kontakt" class="hero__cta">Boka nu</NuxtLink>
+      </nav>
     </div>
 
     <Splide :data-splide="options">
       <SplideSlide v-for="image in images" :key="image.imageName">
         <figure>
-          <NuxtImg
-            class="hero__image"
-            :src="image.imageName"
-            sizes="xl:2500px md:1500px 100vw"
-            :alt="image.description"            
-          />
+          <NuxtImg class="hero__image" :src="image.imageName" sizes="xl:2500px md:1500px 100vw"
+            :alt="image.description" />
           <figcaption>{{ image.photographer }}</figcaption>
         </figure>
       </SplideSlide>

@@ -71,47 +71,68 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide'
 import '@splidejs/vue-splide/css'
 import IImageInfo from '@/interfaces/IImageInfo'
 
-script: [{
-    type: 'application/ld+json',
-    children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Kan vi boka en dansklass även om vi aldrig har dansat förut?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Självklart! Vi anpassar nivå, tempo och känsla efter gruppens erfarenhet, så att alla kan vara med och ha roligt."
+const canonicalUrl = 'https://femmefusion.se/bokning/dansklass'
+
+useSeoMeta({
+    title: 'Boka dansklass | Femme Fusion – workshop & prova på för event',
+    description:
+        'Boka dansklass eller prova på med Femme Fusion. Energigivande workshop med burlesque-inspiration för kickoff, möhippa och företagsevent – i Linköping, Östergötland och i hela Sverige.',
+    ogTitle: 'Boka dansklass | Femme Fusion',
+    ogDescription:
+        'Prova på-pass och skräddarsydda workshops som höjer stämningen på ert event. Vi kommer till er – i hela Sverige.',
+    ogUrl: canonicalUrl,
+    ogImage: 'https://femmefusion.se/images/meta.jpg',
+    twitterCard: 'summary_large_image',
+    twitterTitle: 'Boka dansklass | Femme Fusion',
+    twitterDescription:
+        'Rolig, inkluderande dansworkshop för grupper, möhippor och företag. Skicka förfrågan idag.',
+    twitterImage: 'https://femmefusion.se/images/meta.jpg'
+})
+
+useHead({
+    link: [{ rel: 'canonical', href: canonicalUrl }],
+    script: [{
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Kan vi boka en dansklass även om vi aldrig har dansat förut?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Självklart! Vi anpassar nivå, tempo och känsla efter gruppens erfarenhet, så att alla kan vara med och ha roligt."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Erbjuder ni privatlektioner?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ja! Förutom gruppbokningar kan du boka en privatlektion där vi fokuserar helt på dina mål och önskemål."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Vilka dansstilar kan vi välja?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": " Ni kan välja mellan burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Hur lång är en klass?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Vanligtvis är våra klasser 60-90 minuter, men vi anpassar längden efter era behov."
+                    }
                 }
-            },
-            {
-                "@type": "Question",
-                "name": "Erbjuder ni privatlektioner?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ja! Förutom gruppbokningar kan du boka en privatlektion där vi fokuserar helt på dina mål och önskemål."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Vilka dansstilar kan vi välja?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": " Ni kan välja mellan burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Hur lång är en klass?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Vanligtvis är våra klasser 60-90 minuter, men vi anpassar längden efter era behov."
-                }
-            }
-        ]
-    })
-}];
+            ]
+        })
+    }]
+});
 
 const options = JSON.stringify({
     type: 'loop',

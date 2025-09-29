@@ -1,5 +1,6 @@
 @use '../../assets/styles/variables' as *;
 @use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/typography' as *;
 
 .about {
     max-width: 1000px;
@@ -12,8 +13,40 @@
 
     &__members {
         @include flex-container;
-        row-gap: $spacing-small;
+        row-gap: $spacing-large;
         justify-content: space-between;
+        width: 60vw;
+        padding: 0 15rem;
+        margin-left: calc(50% - 30vw);
+        margin-right: calc(50% - 30vw);
+
+        @media (max-width: 1900px) {
+            width: 70vw;
+            margin-left: calc(50% - 35vw);
+            margin-right: calc(50% - 35vw);
+        }
+
+        @include for-big-desktop-down {
+            width: 80vw;
+            margin-left: calc(50% - 40vw);
+            margin-right: calc(50% - 40vw);
+        }
+
+        @include for-desktop-down {
+            width: 100vw;
+            padding: 0 $spacing-xx-large;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+        }
+
+        @include for-tablet-landscape-down {
+            padding: 0 $spacing-x-large;
+        }
+
+        @include for-phone-only {
+            padding: 0 $spacing-large;
+            row-gap: $spacing-small;
+        }
     }
 
     &__member {
@@ -23,7 +56,7 @@
 
         @include for-tablet-landscape-down {
             width: 100%;
-        }        
+        }
 
         img {
             transition: 0.3s ease;
@@ -37,18 +70,30 @@
 
         figcaption {
             position: absolute;
-            right: $spacing-x-small;
-            bottom: 0;
-            font-size: 7rem;
-            font-weight: 300;
+            right: $spacing-medium;
+            bottom: $spacing-medium;
+            font-size: 3.2rem;
+            text-align: right;
+            font-weight: 700;
             transition: 0.2s ease;
+            font-family: $font-family-oswald;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
         }
 
 
         &--left {
-            span {
-                left: $spacing-x-small;
+            figcaption {
+                left: $spacing-medium;
+                text-align: left;
+                right: auto;
             }
         }
+    }
+
+    &__role {
+        font-weight: 400;
+        font-size: 2.4rem;
     }
 }

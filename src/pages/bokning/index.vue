@@ -21,7 +21,7 @@
             <li>
                 <NuxtLink to="/bokning/dansklass" class="card">
                     <h2>Boka dansklass</h2>
-                    <p>Perfekt för möhippa, födelsedag eller teambuilding – alla nivåer.</p>
+                    <p>Perfekt för möhippa, födelsedag eller teambuilding - alla nivåer.</p>
                 </NuxtLink>
             </li>
         </ul>
@@ -34,18 +34,25 @@
 </template>
 
 <script setup lang="ts">
+const canonicalUrl = 'https://femmefusion.se/bokning'
 
-useHead({
-    title: 'Bokning - show eller dansklass | Femme Fusion',
-    meta: [
-        {
-            name: 'description',
-            content:
-                'Boka Femme Fusion: skräddarsydd show eller dansklass. Perfekt för företagsevent, fester och möhippor, i Linköping, Östergötland och hela Sverige.'
-        }
-    ],
-    link: [{ rel: 'canonical', href: 'https://femmefusion.se/bokning' }]
-});
+useSeoMeta({
+  title: 'Bokning | Femme Fusion - show, dansklass & workshops',
+  description:
+    'Skicka förfrågan för show, dansklass eller workshop. Vi skräddarsyr upplägg för företagsevent, bröllop och privata fester - i Linköping, Östergötland och hela Sverige.',
+  ogTitle: 'Bokning | Femme Fusion',
+  ogDescription:
+    'Boka show, dansklass eller workshop - vi anpassar allt efter publik, tema och scen.',
+  ogUrl: canonicalUrl,
+  ogImage: 'https://femmefusion.se/images/meta.jpg',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Bokning | Femme Fusion',
+  twitterDescription:
+    'Skicka förfrågan för show, dansklass eller workshop. Vi uppträder i hela Sverige.',
+  twitterImage: 'https://femmefusion.se/images/meta.jpg'
+})
+
+useHead({ link: [{ rel: 'canonical', href: canonicalUrl }] });
 
 definePageMeta({
     displayInMenu: true,
