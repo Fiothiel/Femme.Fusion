@@ -1,19 +1,22 @@
 <template>
-    <div class="book content content--center">
-        <section aria-labelledby="show-title">
-            <h1 id="show-title">Show</h1>
-            <p>
-                Att stå på scen är vår specialitet. Med en mångsidig repertoar levererar vi underhållning som passar
-                både företagsevent och privata tillställningar. Vi skräddarsyr shower utifrån ert varumärke, publik och
-                scen.
-            </p>
-            <p>
-                <NuxtLink class="link link--accent" to="/kontakt">Kontakta oss</NuxtLink> för offert och bokning.
-            </p>
-            <p>
-                Vill ni hellre själva dansa? Läs mer om våra
-                <NuxtLink class="link link--accent" to="/bokning/dansklass">dansklasser</NuxtLink>.
-            </p>
+    <div class="book content">
+        <section class="section" aria-labelledby="show-title">
+            <div class="section__content">
+                <h1 id="show-title">Show</h1>
+                <p>
+                    Att stå på scen är vår specialitet. Med en mångsidig repertoar levererar vi underhållning som passar
+                    både företagsevent och privata tillställningar. Vi skräddarsyr shower utifrån ert varumärke, publik
+                    och
+                    scen.
+                </p>
+                <p>
+                    <NuxtLink class="link link--accent" to="/kontakt">Kontakta oss</NuxtLink> för offert och bokning.
+                </p>
+                <p>
+                    Vill ni hellre själva dansa? Läs mer om våra
+                    <NuxtLink class="link link--accent" to="/bokning/dansklass">dansklasser</NuxtLink>.
+                </p>
+            </div>
         </section>
         <section>
             <div class="book__images">
@@ -28,30 +31,37 @@
                 </Splide>
             </div>
         </section>
-        <section aria-labelledby="show-offer">
-            <h2 id="show-offer">Vad vi erbjuder</h2>
-            <p>
-                Ingen show är den andra lik, och det är precis så vi vill ha det. Ibland gör vi ett kort inslag på ett
-                par
-                minuter som blir kvällens överraskning, ibland bygger vi upp en hel kväll med flera nummer och olika
-                teman.
-                Oavsett om ni önskar glitter och glamour, burlesque med humoristisk twist eller något helt skräddarsytt,
-                så
-                formar vi showen efter era behov och publik.
-            </p>
+        <section class="section section--airy" aria-labelledby="show-offer">
+            <div class="section__content">
+                <h2 id="show-offer">Vad vi erbjuder</h2>
+                <p>
+                    Ingen show är den andra lik, och det är precis så vi vill ha det. Ibland gör vi ett kort inslag på
+                    ett
+                    par
+                    minuter som blir kvällens överraskning, ibland bygger vi upp en hel kväll med flera nummer och olika
+                    teman.
+                    Oavsett om ni önskar glitter och glamour, burlesque med humoristisk twist eller något helt
+                    skräddarsytt,
+                    så
+                    formar vi showen efter era behov och publik.
+                </p>
 
-            <p>
-                Vi utgår från Linköping men tar våra shower till scener, företag och fester i hela Sverige.
-                Vart ni än är, kan vi skapa en upplevelse som lyfter ert event.
-            </p>
+                <p>
+                    Vi utgår från Linköping men tar våra shower till scener, företag och fester i hela Sverige.
+                    Vart ni än är, kan vi skapa en upplevelse som lyfter ert event.
+                </p>
+            </div>
         </section>
-        <section aria-labelledby="show-next">
-            <h2 id="show-next">Nästa steg</h2>
-            <p>
-                Berätta om datum, plats och vilken känsla ni vill skapa så återkommer vi med ett förslag som passar just
-                er.
-            </p>
-            <NuxtLink to="/kontakt" class="button button--cta">Skicka förfrågan</NuxtLink>
+        <section class="section" aria-labelledby="show-next">
+            <div class="section__content">
+                <h2 id="show-next">Nästa steg</h2>
+                <p>
+                    Berätta om datum, plats och vilken känsla ni vill skapa så återkommer vi med ett förslag som passar
+                    just
+                    er.
+                </p>
+                <NuxtLink to="/kontakt" class="button button--cta">Skicka förfrågan</NuxtLink>
+            </div>
         </section>
     </div>
 </template>
@@ -65,55 +75,55 @@ import IImageInfo from "../../interfaces/IImageInfo";
 const canonicalUrl = 'https://femmefusion.se/bokning/show'
 
 useSeoMeta({
-  title: 'Boka show | Femme Fusion - underhållning i Sverige & Östergötland',
-  description:
-    'Boka show med Femme Fusion. Glittrande nummer, temashower och kundanpassad underhållning för företagsevent och fester - i Linköping, Östergötland och hela Sverige.',
-  ogTitle: 'Boka show | Femme Fusion',
-  ogDescription:
-    'Kundanpassade shownummer - glitter, glamour och burlesque med modern edge. Vi uppträder i hela Sverige.',
-  ogUrl: canonicalUrl,
-  ogImage: 'https://femmefusion.se/images/meta.jpg',
-  twitterCard: 'summary_large_image',
-  twitterTitle: 'Boka show | Femme Fusion',
-  twitterDescription:
-    'Glittrande, skräddarsydd underhållning för företag och fester. Boka Femme Fusion.',
-  twitterImage: 'https://femmefusion.se/images/meta.jpg'
+    title: 'Boka show | Femme Fusion - underhållning i Sverige & Östergötland',
+    description:
+        'Boka show med Femme Fusion. Glittrande nummer, temashower och kundanpassad underhållning för företagsevent och fester - i Linköping, Östergötland och hela Sverige.',
+    ogTitle: 'Boka show | Femme Fusion',
+    ogDescription:
+        'Kundanpassade shownummer - glitter, glamour och burlesque med modern edge. Vi uppträder i hela Sverige.',
+    ogUrl: canonicalUrl,
+    ogImage: 'https://femmefusion.se/images/meta.jpg',
+    twitterCard: 'summary_large_image',
+    twitterTitle: 'Boka show | Femme Fusion',
+    twitterDescription:
+        'Glittrande, skräddarsydd underhållning för företag och fester. Boka Femme Fusion.',
+    twitterImage: 'https://femmefusion.se/images/meta.jpg'
 });
 
 
 useHead({ link: [{ rel: 'canonical', href: canonicalUrl }] });
 
 const faq = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Kan ni skräddarsy ett tema för vårt event?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Ja! Vi anpassar nummer, kostym och musik efter ert varumärke, publik och scen.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Uppträder ni utanför Linköping?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Absolut. Vi utgår från Linköping men uppträder i hela Östergötland och i övriga Sverige.'
-      }
-    }
-  ]
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+        {
+            '@type': 'Question',
+            name: 'Kan ni skräddarsy ett tema för vårt event?',
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Ja! Vi anpassar nummer, kostym och musik efter ert varumärke, publik och scen.'
+            }
+        },
+        {
+            '@type': 'Question',
+            name: 'Uppträder ni utanför Linköping?',
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Absolut. Vi utgår från Linköping men uppträder i hela Östergötland och i övriga Sverige.'
+            }
+        }
+    ]
 };
 
 useHead({
-  script: [
-    {
-      key: 'faq-show',
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify(faq)
-    }
-  ]
+    script: [
+        {
+            key: 'faq-show',
+            type: 'application/ld+json',
+            innerHTML: JSON.stringify(faq)
+        }
+    ]
 });
 
 

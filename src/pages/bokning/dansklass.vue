@@ -1,28 +1,30 @@
 <template>
-    <div class="book content content--center">
-        <!-- Intro -->
-        <section aria-labelledby="dance-title">
-            <h1 id="dance-title">Dansklass - gruppbokning eller privatlektion</h1>
-            <p>
-                Skapa minnen med vänner eller kollegor eller unna dig en privatlektion! Våra
-                <strong>dansklasser</strong> passar
-                perfekt för möhippor, födelsedagar, teambuilding eller när du helt enkelt bara vill dansa.
-                Välj mellan burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix. Prata med oss så
-                hittar vi det som passar för dig.
-                Vi anpassar nivå, tempo och känsla efter just er grupp eller dina individuella mål.
-            </p>
-            <p>
-                <NuxtLink class="link link--accent" to="/kontakt">Kontakta oss</NuxtLink> för förslag och bokning.
-            </p>
-            <p>
-                Är ni ute efter underhållning på scen istället? Läs mer om våra
-                <NuxtLink class="link link--accent" to="/bokning/show">shower</NuxtLink>.
-            </p>
+    <div class="book content">
+        <section class="section" aria-labelledby="dance-title">
+            <div class="section__content">
+                <h1 id="dance-title">Dansklass - gruppbokning eller privatlektion</h1>
+                <p>
+                    Skapa minnen med vänner eller kollegor eller unna dig en privatlektion! Våra
+                    <strong>dansklasser</strong> passar
+                    perfekt för möhippor, födelsedagar, teambuilding eller när du helt enkelt bara vill dansa.
+                    Välj mellan burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix. Prata med
+                    oss så
+                    hittar vi det som passar för dig.
+                    Vi anpassar nivå, tempo och känsla efter just er grupp eller dina individuella mål.
+                </p>
+                <p>
+                    <NuxtLink class="link link--accent" to="/kontakt">Kontakta oss</NuxtLink> för förslag och bokning, eller kolla i vår <NuxtLink class="link link--accent" to="/kalender">kalender</NuxtLink> för kommande datum på öppna klasser.
+                </p>
+                <p>
+                    Är ni ute efter underhållning på scen istället? Läs mer om våra
+                    <NuxtLink class="link link--accent" to="/bokning/show">shower</NuxtLink>.
+                </p>
+            </div>
         </section>
 
-        <section>
-            <div class="book__images book__images--dance-class">
-                <Splide :data-splide="options">
+        <section class="section section--full-width">
+            <div class="section__content">
+                <Splide :data-splide="options" class="carousel carousel--vertical">
                     <SplideSlide v-for="image in images" :key="image.imageName">
                         <figure>
                             <NuxtImg class="book__image" :src="image.imageName" sizes="md:960px 100vw"
@@ -34,44 +36,85 @@
             </div>
         </section>
 
-        <section aria-labelledby="dance-offer">
-            <h2 id="dance-offer">En klass med oss</h2>
-            <p>
-                Vårt mål är att skapa en stund där alla känner sig trygga, snygga och fyllda av dansglädje, oavsett
-                tidigare erfarenhet. Det viktigaste är inte stegen i sig, utan att ni får skratta och njuta av dansen.
-            </p>
-            <p>
-                Klassen börjar med en uppvärmning för att sedan gå över till koreografi som anpassas efter er grupps
-                nivå och önskemål. Vi ser alltid till att det finns tid på slutet om ni vill filma
-                er dans, så att ni får ett roligt minne att ta med er hem.
-            </p>
-            <p>
-                Vi utgår från Linköping men håller <strong>dansklasser i hela Sverige</strong>, i er lokal eller i en
-                lokal vi
-                hjälper till att ordna.
-            </p>
+        <section class="section" id="dance-offer">
+            <div class="section__content">
+                <h2>En klass med oss</h2>
+                <p>
+                    Vårt mål är att skapa en stund där alla känner sig trygga, snygga och fyllda av dansglädje, oavsett
+                    tidigare erfarenhet. Det viktigaste är inte stegen i sig, utan att ni får skratta och njuta av
+                    dansen.
+                </p>
+                <p>
+                    Klassen börjar med en uppvärmning för att sedan gå över till koreografi som anpassas efter er grupps
+                    nivå och önskemål. Vi ser alltid till att det finns tid på slutet om ni vill filma
+                    er dans, så att ni får ett roligt minne att ta med er hem.
+                </p>
+                <p>
+                    Vi utgår från Linköping men håller <strong>dansklasser i hela Sverige</strong>, i er lokal eller i
+                    en
+                    lokal vi
+                    hjälper till att ordna.
+                </p>
+            </div>
         </section>
 
+        <section class="section section--airy" id="testimonials">
+            <div class="section__content">
+                <Testimonials heading="Röster från deltagare" :testimonials="testimonials" />
+            </div>
+        </section>
 
-        <section aria-labelledby="dance-next">
-            <h2 id="dance-next">Nästa steg</h2>
-            <p>
-                Skriv gärna datum, plats, antal deltagare och önskad stil, så återkommer vi med ett upplägg och
-                prisförslag.
-            </p>
-            <NuxtLink to="/kontakt" class="button button--cta">Skicka förfrågan</NuxtLink>
+        <section class="section" id="book">
+            <div class="section__content">
+                <h2>Boka din dansupplevelse</h2>
+                <p>
+                    Vill du dansa med oss? Anmäl dig till en av våra kommande workshops eller boka en egen dansklass för
+                    din grupp.
+                    Osäker på vad som passar? Hör av dig så guidar vi dig rätt.
+                    För bokning av egen dansklass – skriv gärna datum, plats, antal deltagare och önskad stil, så återkommer vi med ett upplägg och prisförslag.
+                </p>
+                <div class="section__buttons">
+                    <NuxtLink to="/kontakt" class="button">Skicka förfrågan</NuxtLink>
+                    <NuxtLink to="/kalender" class="button button--secondary">Se alla datum</NuxtLink>
+                </div>
+            </div>
         </section>
     </div>
 </template>
 
 
 <script setup lang="ts">
-import { ref, Ref } from 'vue'
+import { ref, Ref, onMounted } from 'vue'
 import { Splide, SplideSlide } from '@splidejs/vue-splide'
 import '@splidejs/vue-splide/css'
 import IImageInfo from '@/interfaces/IImageInfo'
+import { useTestimonials } from '~/services/testimonials-service';
+import { useEvents } from '~/services/events-service';
+import { useUtils } from '~/utils';
 
-const canonicalUrl = 'https://femmefusion.se/bokning/dansklass'
+const { getShortDate } = useUtils();
+const testimonials = useTestimonials().getDanceclass();
+const { data: workshops } = await useAsyncData('workshops', () => useEvents().getCourses(2));
+
+const options = JSON.stringify({
+    type: 'loop',
+    autoplay: false,
+    perPage: 3,
+    focus: 'center',
+    speed: 1500,
+    autoWidth: true,
+    gap: '0.5rem',
+    breakpoints: { 900: { perPage: 1 } }
+});
+
+const images: Ref<IImageInfo[]> = ref([
+    { imageName: '/images/great-gatsby.jpg', photographer: 'Mattias Kannerstål', description: 'Gatsbyvibbar med flapper' },
+    { imageName: '/images/groupbooking-burlesque.jpg', photographer: 'Mattias Kannerstål', description: 'Burlesque och korsetter' },
+    { imageName: '/images/groupbooking-heels.jpg', photographer: 'Daniel Häggmyr', description: 'Höga pleaser shoes i sensual heels' }
+]);
+
+// SEO
+const canonicalUrl = 'https://femmefusion.se/bokning/dansklass';
 
 useSeoMeta({
     title: 'Boka dansklass | Femme Fusion – workshop & prova på för event',
@@ -134,20 +177,4 @@ useHead({
     }]
 });
 
-const options = JSON.stringify({
-    type: 'loop',
-    autoplay: false,
-    perPage: 3,
-    focus: 'center',
-    speed: 1500,
-    autoWidth: true,
-    gap: '0.5rem',
-    breakpoints: { 900: { perPage: 1 } }
-})
-
-const images: Ref<IImageInfo[]> = ref([
-    { imageName: '/images/great-gatsby.jpg', photographer: 'Mattias Kannerstål', description: 'Gatsbyvibbar med flapper' },
-    { imageName: '/images/groupbooking-burlesque.jpg', photographer: 'Mattias Kannerstål', description: 'Burlesque och korsetter' },
-    { imageName: '/images/groupbooking-heels.jpg', photographer: 'Daniel Häggmyr', description: 'Höga pleaser shoes i sensual heels' }
-])
 </script>

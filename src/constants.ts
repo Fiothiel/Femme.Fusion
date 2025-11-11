@@ -3,6 +3,11 @@ export enum EventType {
   Show = "show"
 }
 
+export enum TestimonialCategory {
+  DanceClass = "danceclass",
+  Show = "show",
+}
+
 export const SIGNUP = "Anmälan";
 export const INFOMRATION = "Läs mer";
 

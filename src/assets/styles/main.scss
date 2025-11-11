@@ -1,6 +1,9 @@
 @use 'global';
 @use 'button';
 @use 'forms';
+@use 'section';
+@use 'carousel';
+@use 'shared/list';
 
 // Components
 @use '../../components/accordion/accordion';
@@ -12,7 +15,8 @@
 @use '../../components/loader/loader';
 @use '../../components/menu/menu';
 @use '../../components/modal/modal';
-@use '../../components/testamonials/testamonials';
+@use '../../components/sectionnav/section-nav';
+@use '../../components/testimonials/testimonials';
 
 // Pages
 @use '../../pages/styles/about';

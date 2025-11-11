@@ -6,8 +6,6 @@
   row-gap: $spacing-x-small;
   flex-direction: column;
   @include flex-item;
-  max-width: 500px;
-
 
   fieldset {
     display: flex;
@@ -16,7 +14,8 @@
   }
 
   input[type="text"],
-  input[type="email"] {
+  input[type="email"],
+  input[type="telephone"] {
     height: 3rem;
   }
 

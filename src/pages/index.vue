@@ -1,30 +1,29 @@
 <template>
-  <div class="home content content--home content--center">
-    <nav>
-      <a @click="scrollTo('sizzle-reel')">Sizzle reel</a>
-      <a @click="scrollTo('testimonials')">Sagt om oss</a>
-    </nav>
-    <section class="home__section home__section--narrow">
-      <h1>Femme Fusion</h1>
-      <p>
-        Femme Fusion är en showgrupp som erbjuder underhållning, sång och dans
-        för fester, middagar och event. Artisterna levererar shower där en
-        variation av olika dansstilar möter inspiration av burlesque. Låt Femme
-        Fusion skapa magi på ditt evenemang - för en unik och
-        minnesvärd upplevelse!
-        <NuxtLink to="/kontakt" class="button button--cta">
-          Boka nu
-        </NuxtLink>
-      </p>
+  <div class="content content--home home">
+    <section class="section section--airy">
+      <div class="section__content">
+        <h1>Femme Fusion</h1>
+        <p>
+          Femme Fusion är en showgrupp som erbjuder underhållning, sång och dans
+          för fester, middagar och event. Artisterna levererar shower där en
+          variation av olika dansstilar möter inspiration av burlesque. Låt Femme
+          Fusion skapa magi på ditt evenemang - för en unik och
+          minnesvärd upplevelse!
+          <NuxtLink to="/kontakt" class="button button--cta">
+            Boka nu
+          </NuxtLink>
+        </p>
+      </div>
     </section>
-    <section id="sizzle-reel" class="home__section home__section--video">
-      <video controls autoplay muted poster="/images/trailer-thumbnail.png">
+    <section class="section" id="sizzle-reel">
+      <video class="home__video" controls autoplay muted poster="/images/trailer-thumbnail.png">
         <source src="/trailer.mp4" type="video/mp4" />
       </video>
     </section>
-    <section class="home__testamonials home__section home__section--red">
-      <h2 id="testimonials">Sagt om oss</h2>
-      <Testamonials />
+    <section class="section section--wide section--red section--airy" id="testimonials">
+      <div class="section__content">
+        <Testimonials heading="Sagt om oss" :testimonials="testimonials" />
+      </div>
     </section>
     <NuxtImg src="/images/loboutin.jpg" sizes="xl:2500px md:1500px 100vw"
       alt="Louboutinsko i svart lack mot en parkeringshusvägg" class="image image--full-width" />
@@ -32,8 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import Image from "~/components/image/Image.vue";
-import Testamonials from "~/components/testamonials/Testamonials.vue";
+import { useTestimonials } from '~/services/testimonials-service';
 
 definePageMeta({
   displayInMenu: true,
@@ -41,7 +39,5 @@ definePageMeta({
   order: 0
 })
 
-const scrollTo = (id: string) => {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-};
+const testimonials = useTestimonials().getRandom(2);
 </script>

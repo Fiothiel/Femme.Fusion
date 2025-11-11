@@ -1,30 +1,36 @@
 <template>
-  <div class="contact content">
-    <h1>Kontakta oss</h1>
+  <div class="content">
+    <section class="section">
+      <div class="section__content">
+        <h1>Kontakta oss</h1>
 
-    <p>
-      Vill du förgylla ditt evenemang med en hänförande show, eller överraska
-      gästerna på födelsedagsfesten med glittrande underhållning? Kanske önskas
-      en inspirerande danslektion för möhippan eller konferensen? Kontakta oss
-      så hjälper vi dig vidare från idé till verklighet!
-    </p>
+        <p>
+          Vill du förgylla ditt evenemang med en hänförande show, eller överraska
+          gästerna på födelsedagsfesten med glittrande underhållning? Kanske önskas
+          en inspirerande danslektion för möhippan eller konferensen? Kontakta oss
+          så hjälper vi dig vidare från idé till verklighet!
+        </p>
 
-    <form class="form" ref="form" @submit="onSubmit">
-      <label>Namn</label>
-      <input type="text" name="name" v-model="name" />
-      <div class="form__error" v-if="!!nameError">{{ nameError }}</div>
-      <label>Email</label>
-      <input type="email" name="email" v-model="email" />
-      <div class="form__error" v-if="!!emailError">{{ emailError }}</div>
-      <label>Meddelande</label>
-      <textarea name="message" v-model="message"></textarea>
-      <div class="form__error" v-if="!!messageError">{{ messageError }}</div>
-      <button v-if="!loading" type="submit" class="button">Skicka</button>
-      <button v-else disabled class="button">
-        <Loader :large="false" :label="false" />
-      </button>
-      <div v-if="displayMessage">Tack för ditt meddelande!</div>
-    </form>
+        <form class="form" ref="form" @submit="onSubmit">
+          <label>Namn</label>
+          <input type="text" name="name" v-model="name" />
+          <div class="form__error" v-if="!!nameError">{{ nameError }}</div>
+          <label>Email</label>
+          <input type="email" name="email" v-model="email" />
+          <div class="form__error" v-if="!!emailError">{{ emailError }}</div>
+          <label>Telefonnummer</label>
+          <input type="telephone" name="phone" v-model="phone" />
+          <label>Meddelande</label>
+          <textarea name="message" v-model="message"></textarea>
+          <div class="form__error" v-if="!!messageError">{{ messageError }}</div>
+          <button v-if="!loading" type="submit" class="button">Skicka</button>
+          <button v-else disabled class="button">
+            <Loader :large="false" :label="false" />
+          </button>
+          <div v-if="displayMessage">Tack för ditt meddelande!</div>
+        </form>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -46,18 +52,10 @@ let displayMessage = ref(false);
 
 const { handleSubmit, resetForm } = useForm();
 
-const { value: name, errorMessage: nameError } = useField<string>(
-  "name",
-  "required"
-);
-const { value: email, errorMessage: emailError } = useField<string>(
-  "email",
-  "required|email"
-);
-const { value: message, errorMessage: messageError } = useField<string>(
-  "message",
-  "required"
-);
+const { value: name, errorMessage: nameError } = useField<string>("name", "required");
+const { value: email, errorMessage: emailError } = useField<string>("email", "required|email");
+const { value: phone } = useField<string>("phone");
+const { value: message, errorMessage: messageError } = useField<string>("message", "required");
 
 const onSubmit = handleSubmit(() => {
   sendEmail();
@@ -72,7 +70,7 @@ const sendEmail = () => {
       {
         from_name: name.value,
         message: message.value,
-        reply_to: email.value,
+        reply_to: `${email.value}, ${phone.value}`,
       },
       "2V1Svme8xyPiol8YX"
     )

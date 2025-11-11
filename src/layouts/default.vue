@@ -2,7 +2,7 @@
   <div class="femme-fusion">
     <Menu />
     <Hero />
-    <main class="femme-fusion__content">
+    <main class="femme-fusion__main">
       <NuxtPage/>
     </main>
     <Footer />

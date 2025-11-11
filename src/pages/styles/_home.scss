@@ -1,114 +1,14 @@
-@use '../../assets/styles/variables'   as *;
-@use '../../assets/styles/mixins'   as *;
-@use '../../assets/styles/typography'   as *;
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/typography' as *;
 
 .home {
-    p {
+    h2 {
         text-align: center;
     }
 
-    h2 {
-        display: flex;
-        align-items: center;
-
-        img {
-            height: 3rem;
-            padding: 0 $spacing-small;
-        }
-    }
-
-    &__section {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: $spacing-large;
-        width: 100vw;
-        height: 100%;
-
-        @include for-phone-only {
-            padding: $spacing-medium;
-        }
-
-        &--red {
-            background-color: $wine;
-        }
-
-        &--narrow {
-
-            p,
-            div {
-                max-width: 600px;
-            }
-        }
-
-        &--video {
-            padding: 0;
-            padding-bottom: $spacing-large;
-
-            @include for-big-desktop-down {
-                padding-bottom: 0;
-            }
-        }        
-    }
-
-    &__twitch {
-        a {
-            text-align: center;
-
-            span {
-                display: block;
-                font-size: 1.2rem;
-                margin-top: $spacing-small;
-            }
-        }
-
-        svg {
-            margin-top: $spacing-large;
-
-            &:hover {
-                path {
-                    fill: $wine-light !important;
-                }
-            }
-        }
-    }
-
-    video {
+    &__video {
         width: 100%;
         max-width: 1920px;
-    }
-
-    nav {
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        column-gap: $spacing-xx-large;
-        padding: $spacing-small;
-        background-color: $wine;
-
-        a {
-            font-family: $font-family-oswald;
-            font-weight: 200;
-            font-size: 2.5rem;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-
-        @include for-tablet-landscape-down {
-            column-gap: $spacing-large;
-
-            a {
-                font-size: 2rem;
-            }
-        }
-
-        @include for-phone-only {
-            column-gap: $spacing-small;
-            padding: $spacing-small $spacing-x-small;
-
-            a {
-                font-size: 1.6rem;
-            }
-        }
     }
 }

@@ -3,14 +3,6 @@
 @use '../../assets/styles/typography' as *;
 
 .about {
-    max-width: 1000px;
-    padding-bottom: $spacing-x-large;
-
-    p {
-        padding-left: $spacing-small;
-        padding-right: $spacing-small;
-    }
-
     &__members {
         @include flex-container;
         row-gap: $spacing-large;
@@ -63,8 +55,43 @@
             object-fit: cover;
             width: 100%;
 
-            &:hover {
-                box-shadow: 0px 0px 30px 0px rgba(88, 88, 88, 0.8);
+            border-radius: 8px;
+            transition: transform .35s cubic-bezier(.2, .6, .2, 1), filter .35s, border-radius .35s;
+            filter: saturate(.95);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(80% 60% at 70% 85%, rgba($wine-light, .18), transparent 60%),
+                linear-gradient(0deg, rgba(#000, .10), rgba(#000, 0));
+            opacity: 0;
+            border-radius: 8px;
+            transition: opacity .35s, border-radius .35s;
+        }
+
+        figcaption {
+            transform: translateY(2px);
+            transition: transform .35s, text-shadow .35s;
+        }
+
+        &:hover {
+            img {
+                transform: translateY(-6px) scale(1.03);
+                filter: saturate(1.05) contrast(1.02);
+                border-radius: 16px;
+            }
+
+            &::after {
+                opacity: 1;
+                border-radius: 16px;
+            }
+
+            figcaption {
+                transform: translateY(-2px);
+                text-shadow: 0 2px 10px rgba(#000, .35);
             }
         }
 

@@ -1,0 +1,151 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/typography' as *;
+
+.testimonials {
+    font-family: $font-family-playfair;
+    font-size: clamp(2rem, 1.8vw, 2.5rem);
+    line-height: 1.6;
+    font-weight: 200;
+
+    &__list {
+        @include no-style-list();
+        display: flex;
+        flex-direction: column;
+        row-gap: $spacing-large;
+        margin-top: $spacing-large;
+        align-items: center;
+
+        @include for-phone-only {
+            row-gap: $spacing-medium;
+        }
+    }
+
+    &__quote {
+        margin: 0;
+        text-indent: 7rem;
+
+        @include for-tablet-landscape-down {
+            text-indent: 5.5rem;
+        }
+    }
+
+    &__group {
+        display: flex;
+        gap: $spacing-x-large;
+        flex-direction: column;
+        height: 100%;
+
+        @include for-tablet-landscape-down {
+            gap: $spacing-large;
+        }
+    }
+
+    &__item {
+        width: 80%;
+        background-color: $wine;
+        padding: $spacing-large;
+        position: relative;
+        color: $apricot;
+        background: linear-gradient(to bottom, $wine-light, $wine);
+
+        &:before {
+            content: "";
+            position: absolute;
+            background-image: url("/icons/quote.svg");
+            width: 8rem;
+            height: 8rem;
+            left: 2rem;
+            top: 1rem;
+        }
+
+        &--right {
+            margin-left: auto;
+        }
+
+        &--long {
+            width: 90%;
+        }
+
+
+        @include for-tablet-landscape-down {
+            padding: $spacing-medium;
+            width: 100%;
+            margin: 0;
+
+            &:before {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+
+    }
+
+    &__from {
+        margin-top: $spacing-x-small;
+        font-style: italic;
+        font-size: 1.3rem;
+
+        img {
+            width: 4rem;
+            padding: 0 $spacing-small;
+        }
+    }
+
+    &__carousel {
+        margin-top: $spacing-large;
+        max-width: $content-max-width-desktop;
+        margin-inline: auto;
+        overflow: hidden;
+        height: auto !important;
+        display: block;
+
+        &:deep(.splide__track) {
+            height: auto;
+        }
+
+        &:deep(.splide__list) {
+            align-items: stretch;
+        }
+
+        &:deep(.splide__slide) {
+            height: auto !important;
+            display: block;
+        }
+
+        .splide {
+            &__arrow--prev {
+                transform: translate(-100%, -50%) !important;
+
+                &:hover {
+                    transform: translate(-100%, -50%) scale(1.05) !important;
+                }
+
+                @include for-tablet-landscape-down() {
+                    transform: translate(0, -50%) !important;
+
+                    &:hover {
+                        transform: translate(0, -50%) scale(1.05) !important;
+                    }
+                }
+            }
+
+
+            &__arrow--next {
+                transform: translate(100%, -50%) !important;
+
+                &:hover {
+                    transform: translate(100%, -50%) scale(1.05) !important;
+                }
+
+                @include for-tablet-landscape-down() {
+                    transform: translate(0, -50%) !important;
+
+                    &:hover {
+                        transform: translate(0, -50%) scale(1.05) !important;
+                    }
+                }
+            }
+        }
+    }
+}

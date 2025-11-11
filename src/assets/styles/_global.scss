@@ -19,9 +19,12 @@ body {
         box-sizing: border-box;
     }
 
+    h1, h2, h3, h4 {
+        text-align: center;
+    }
+
     h1 {
         font-size: 4rem;
-        text-align: center;
 
         @include for-phone-only {
             font-size: 3rem;
@@ -81,38 +84,23 @@ body {
 }
 
 .femme-fusion {
-    &__content {
+    &__main {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        overflow-x: hidden;
-        padding: 0;
+        width: 100%;
     }
 
     .content {
         display: flex;
         flex-direction: column;
         padding: $spacing-x-large 0;
-        max-width: $content-max-width-desktop;
-        row-gap: $spacing-medium;
-
-        &--center {
-            align-items: center;
-        }
-
+        
         &--home {
-            padding: 0 !important;
-            row-gap: 0;
-        }
-
-        @include for-tablet-landscape-down {
-            width: 100%;
-            padding: $spacing-large $spacing-medium;
+            padding: 0;
         }
     }
 
     .form {
-
         input,
         textarea {
             margin-bottom: $spacing-small;

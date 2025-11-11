@@ -1,44 +1,51 @@
 <template>
-  <div class="about content">
-    <h1 class="about__title">Femme Fusion - <span>burlesque-inspirerad showgrupp i Linköping</span></h1>
-    <section>
-      <p class="about__intro">
-
-        Vi är <strong>Femme Fusion</strong>, en professionell showgrupp som levererar dansshow med burlesque-känsla.
-        Basen är Linköping i Östergötland, men vi reser dit bokningarna tar oss. Vår mix av sensualitet, humor och
-        glamour skapar
-        minnesvärd underhållning för företagsevent, bröllop, möhippor och privata fester.
-      </p>
+  <div class="about content">    
+    <section class="section">
+      <div class="section__content">
+        <h1 class="about__title">Femme Fusion - <span>burlesque-inspirerad showgrupp i Linköping</span></h1>
+        <p class="about__intro">
+          Vi är <strong>Femme Fusion</strong>, en professionell showgrupp som levererar dansshow med burlesque-känsla.
+          Basen är Linköping i Östergötland, men vi reser dit bokningarna tar oss. Vår mix av sensualitet, humor och
+          glamour skapar
+          minnesvärd underhållning för företagsevent, bröllop, möhippor och privata fester.
+        </p>
+      </div>
     </section>
 
-    <section class="about__section">
-      <h2>Vad vi levererar</h2>
-      <p>
-        Gruppen startade 2023 och består av erfarna artister med bakgrund inom flera dansstilar och showformat.
-        Vi skapar <strong>skräddarsydda nummer</strong> som passar rummet, publiken och ert tema. Med genomtänkt kostym,
-        musikval och scenisk närvaro bygger vi en helhetsupplevelse som känns både exklusiv och lekfull.
-      </p>
-      <ul class="about__bullets">
-        <li><strong>Flexibla upplägg.</strong> Fristående nummer eller sammanhållen show.</li>
-        <li><strong>Passar många sammanhang.</strong> Företagsfest, gala, after work, bröllop, privata events.</li>
-        <li><strong>Dansfokuserad neoburlesque.</strong> Fusion av stilar. Alltid stilfullt och underhållande.</li>
-      </ul>
+    <section class="section section--darkred">
+      <div class="section__content">
+        <h2>Vad vi levererar</h2>
+        <p>
+          Gruppen startade 2023 och består av erfarna artister med bakgrund inom flera dansstilar och showformat.
+          Vi skapar <strong>skräddarsydda nummer</strong> som passar rummet, publiken och ert tema. Med genomtänkt
+          kostym,
+          musikval och scenisk närvaro bygger vi en helhetsupplevelse som känns både exklusiv och lekfull.
+        </p>
+        <ul class="about__bullets">
+          <li><strong>Flexibla upplägg.</strong> Fristående nummer eller sammanhållen show.</li>
+          <li><strong>Passar många sammanhang.</strong> Företagsfest, gala, after work, bröllop, privata events.</li>
+          <li><strong>Dansfokuserad neoburlesque.</strong> Fusion av stilar. Alltid stilfullt och underhållande.</li>
+        </ul>
+      </div>
     </section>
 
-    <section class="about__section">
-      <h2>Varför boka Femme Fusion?</h2>
-      <p>
-        Ni får <strong>pålitliga artister</strong> som kan scen, publik och logistik. Vi hjälper gärna med
-        <strong>programförslag</strong>, tempo och placering i körschemat, och samarbetar smidigt med DJ, konferencier
-        och teknik.
-      </p>
-      <p>
-        Behöver ni även <NuxtLink to="/bokning/dansklass" class="link">dansklass eller workshop</NuxtLink> för gruppen?
-        Vi håller korta <strong>prova på-pass</strong> som värmer upp publiken och skapar energi i rummet.
-      </p>
+    <section class="section">
+      <div class="section__content">
+        <h2>Varför boka Femme Fusion?</h2>
+        <p>
+          Ni får <strong>pålitliga artister</strong> som kan scen, publik och logistik. Vi hjälper gärna med
+          <strong>programförslag</strong>, tempo och placering i körschemat, och samarbetar smidigt med DJ, konferencier
+          och teknik.
+        </p>
+        <p>
+          Behöver ni även <NuxtLink to="/bokning/dansklass" class="link">dansklass eller workshop</NuxtLink> för
+          gruppen?
+          Vi håller korta <strong>prova på-pass</strong> som värmer upp publiken och skapar energi i rummet.
+        </p>
+      </div>
     </section>
 
-    <section class="about__section" id="medlemmar">
+    <section id="medlemmar">
       <h2>Medlemmar</h2>
       <div class="about__members">
         <figure v-for="m in members" :key="m.name" class="about__member" :class="m.align">

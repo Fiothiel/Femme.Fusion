@@ -14,5 +14,9 @@
     {
       "path": "./.nuxt/tsconfig.node.json"
     }
-  ]
+  ],
+    "compilerOptions": {
+    "types": ["@types/node"],
+    "include": ["src/**/*.ts", "src/**/*.vue", "src/types/global.d.ts"]
+  }
 }

@@ -1,0 +1,119 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'typography' as *;
+
+.carousel {
+  // horizontal by default
+  width: 70vw;
+  margin: $spacing-large auto;
+  overflow: visible;
+
+  @include for-big-desktop-down {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  &--vertical {
+    .splide__slide {
+      width: 600px;
+    }
+
+    .book__image {
+      height: 800px;
+
+      @include for-phone-only {
+        height: 600px;
+      }
+    }
+  }
+
+  figcaption {
+    text-align: right;
+    font-size: $font-size-button;
+    margin-top: $spacing-small;
+
+    // temporary
+    @include for-phone-only {
+      text-align: center;
+    }
+  }
+
+
+  .splide__slide {
+    width: 900px;
+
+    @include for-tablet-landscape-down {
+      width: 600px;
+    }
+  }
+}
+
+.splide {
+  overflow: visible !important;
+
+  &__pagination {
+    position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    background: transparent !important;
+    transform: translateY(-50%);
+    width: 8rem !important;
+    height: 8rem !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform .2s ease, opacity .2s ease;
+
+    @include for-tablet-landscape-down() {
+      width: 6rem !important;
+      height: 6rem !important;
+    }
+
+    svg {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 1;
+      filter: drop-shadow(0 0 6px rgba($wine-contrast, .4));
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba($wine-contrast, .3);
+      border-radius: 50%;
+    }
+
+    &.is-disabled {
+      opacity: .35;
+      pointer-events: none;
+    }
+  }
+
+  &__arrow--prev {
+    left: 0 !important;
+    /* transform: translate(0, -50%) !important; */
+    background-image: url('/icons/arrow-left.svg') !important;
+
+    &:hover {
+      transform: translate(0, -50%) scale(1.05) !important;
+    }
+  }
+
+  &__arrow--next {
+    right: 0 !important;
+    background-image: url('/icons/arrow-right.svg') !important;
+    transform: translate(0, -50%) !important;
+
+    &:hover {
+      transform: translate(0, -50%) scale(1.05) !important;
+    }
+  }
+}

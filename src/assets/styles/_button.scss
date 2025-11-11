@@ -7,8 +7,7 @@
   border: none;
   color: $white;
   cursor: pointer;
-  font-size: 2rem;
-  border-radius: 50px;
+  font-size: 2.3rem;
   background-color: $wine-light;
   border: 2px solid $wine-light;
   padding: $spacing-small $spacing-medium;
@@ -27,12 +26,10 @@
 
     @include for-tablet-landscape-down {
       font-size: 3rem;
-      // padding: $spacing-medium $spacing-large 2.5rem $spacing-large;
     }
 
     @include for-phone-only {
       font-size: 2rem;
-      // padding: $spacing-small $spacing-medium 1.5rem $spacing-medium;
     }
   }
 
@@ -55,31 +52,29 @@
     }
   }
 
-  &--toggle {
-    width: 100%;
-    border-radius: 4px;
-    font-family: $font-family-playfair;
-    background-color: $grey-medium;
-    border-color: $grey-medium;
-
-    &:hover {
-      background-color: color.adjust($grey-dark, $lightness: 3%);
-      border-color: color.adjust($grey-medium, $lightness: 3%);
-      color: $white;
-    }
-  }
-
-  &--toggle-active {
-    background-color: $wine-damp;
-    border-color: $wine-light;
-
-    &:hover {
-      background-color: $wine-damp;
-      border-color: $wine-light;
-    }
-  }
-
   &--cta {
     margin: $spacing-large auto 0;
+  }
+
+  &--secondary {
+    background: transparent;
+    border-color: $white;
+
+    &:hover {
+      background-color: $wine;
+    }
+  }
+
+  &--ghost {
+    background: rgba(0,0,0,.25);             /* bättre läsbarhet över foto */
+    border-color: rgba(255,255,255,.9);
+    backdrop-filter: blur(6px) saturate(130%);
+    color: $white;
+
+    &:hover {
+      background: rgba(255,255,255,.12);     /* håll den “ghost”, byt inte till vinröd */
+      border-color: $white;
+      color: $white;
+    }
   }
 }

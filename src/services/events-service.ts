@@ -7,24 +7,32 @@ import {
   EventType,
   SIGNUP,
 } from "@/constants";
-import type { IEvent } from '@/types/IEvent' ;
+import type { IEvent } from "@/types/IEvent";
+
+// TODO: Dansarna Service
+
+// Local events service
+
+// Event service
 
 export const useEvents = () => {
   async function getEvents(): Promise<IEvent[]> {
     try {
       const [dansarnaEvents, localEvents] = await Promise.all([
         getDansarnaEvents(),
-        getLocalEvents()
+        getLocalEvents(),
       ]);
 
       const events: IEvent[] = [
         ...dansarnaEvents.map(mapDansarna),
-        ...localEvents.map(mapLocal)
+        ...localEvents.map(mapLocal),
       ];
 
-      const now = new Date(); // Get the current date and time      
-      const upcomingEvents = events.filter(event => new Date(event.startDate) >= now);
-      
+      const now = new Date(); // Get the current date and time
+      const upcomingEvents = events.filter(
+        (event) => new Date(event.startDate) >= now
+      );
+
       return upcomingEvents.sort(sort);
     } catch (error) {
       console.error("Failed to fetch or process events:", error);
@@ -67,7 +75,7 @@ export const useEvents = () => {
   async function getLocalEvents(): Promise<IEvent[]> {
     try {
       return await $fetch<IEvent[]>("/data/events.json", {
-        query: { v: Date.now() } // optional cache-buster
+        query: { v: Date.now() }, // optional cache-buster
       });
     } catch (e) {
       console.error("Failed to load local events.json", e);
@@ -101,11 +109,11 @@ export const useEvents = () => {
     const match = spanString.match(regex);
 
     // If a match is found, return the captured group; otherwise, return null
-    return match ? match[1] : '';
+    return match ? match[1] : "";
   }
 
   function getType(s: string): EventType {
-    return s ===  EventType.Show ? EventType.Show : EventType.Course;
+    return s === EventType.Show ? EventType.Show : EventType.Course;
   }
 
   function mapDansarna(d: IDansarnaEvent): IEvent {
@@ -122,7 +130,7 @@ export const useEvents = () => {
       numOccasions: d.schedule.numberOfPlannedOccasions,
       url: d.source,
       type: EventType.Course,
-      buttonText: SIGNUP
+      buttonText: SIGNUP,
     };
   }
 
@@ -140,12 +148,26 @@ export const useEvents = () => {
       url: d.url,
       type: getType(d.type as string),
       price: d.price,
-      buttonText: d.buttonText ?? SIGNUP
+      buttonText: d.buttonText ?? SIGNUP,
     };
+  }
+
+  async function getCourses(limit?: number): Promise<IEvent[]> {
+    const all = await getEvents();
+    const list = all.filter((e) => e.type === EventType.Course);
+    return typeof limit === "number" ? list.slice(0, limit) : list;
+  }
+
+  async function getShows(limit?: number): Promise<IEvent[]> {
+    const all = await getEvents();
+    const list = all.filter((e) => e.type === EventType.Show);
+    return typeof limit === "number" ? list.slice(0, limit) : list;
   }
 
   return {
     getDansarnaEvents,
     getEvents,
+    getCourses,
+    getShows
   };
 };

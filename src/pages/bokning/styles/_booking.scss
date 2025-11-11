@@ -3,22 +3,10 @@
 @use '../../../assets/styles/typography' as *;
 
 .book {
-
-    h2,
-    p {
-        max-width: $content-max-width-desktop;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     &__cards {
         @include no-style-list();
         display: flex;
         flex-wrap: wrap;
-        /* margin: $spacing-medium 0; */
-
-        @include no-style-list();
-
 
         li {
             @include flex-item-half();
@@ -46,56 +34,6 @@
             border-color: $wine;
             transform: translateY(-4px);
             color: $wine-contrast;
-        }
-    }
-
-    &__images {
-        width: 70vw;
-        margin: $spacing-large auto;
-        overflow: visible;
-
-        .splide__pagination {
-            position: relative;
-        }
-
-        .splide__slide {
-            width: 900px;
-
-            @include for-tablet-landscape-down {
-                width: 600px;
-            }
-        }
-
-        @include for-big-desktop-down {
-            width: 100vw;
-            margin-left: calc(50% - 50vw);
-            margin-right: calc(50% - 50vw);
-        }
-
-        // Temporary
-        &--dance-class {
-            .splide__slide {
-                width: 600px;
-            }
-
-            .book__image {
-                height: 800px;
-
-                @include for-phone-only {
-                    height: 600px;
-                }
-            }
-        }
-
-        figcaption {
-            text-align: right;
-            font-size: $font-size-button;
-            margin-top: $spacing-small;
-
-            // temporary
-            @include for-phone-only {
-                text-align: center;
-            }
         }
     }
 

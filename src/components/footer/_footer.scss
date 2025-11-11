@@ -87,4 +87,14 @@
             }
         }
     }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-small;
+
+        img {
+            max-height: 56px;
+        }
+    }
 }

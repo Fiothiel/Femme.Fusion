@@ -1,0 +1,84 @@
+@use '../../assets/styles/variables' as *;
+@use 'mixins' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+
+  &--red {
+    background-color: $wine;
+  }
+
+  &--darkred {
+    background-color: $wine-damp;
+  }
+
+  &__content {
+    max-width: $content-max-width-desktop;
+    min-width: $content-max-width-desktop;
+    padding: $spacing-medium;
+
+    @media (max-width: 700px) {
+      min-width: 100%;
+      width: 100%;
+      padding: $spacing-small $spacing-medium;
+    }
+  }
+
+  &--wide &__content {
+    h2 {
+      max-width: $content-max-width-desktop;
+      padding: 0 $spacing-medium;
+      margin: auto;
+    }
+
+    max-width: $content-max-width-desktop-wide;
+  }
+
+  &--full-width &__content {
+    h2 {
+      max-width: $content-max-width-desktop;
+      padding: 0 $spacing-medium;
+      margin: auto;
+    }
+
+    max-width: none;
+    width: 100%;
+  }
+
+  &--airy &__content {
+    padding: $spacing-large $spacing-medium;
+
+    @include for-phone-only {
+      padding: $spacing-large $spacing-medium;
+    }
+  }
+
+  &:last-child &__content {
+    padding-bottom: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $spacing-medium;
+    margin-top: $spacing-large;
+
+    @include for-tablet-landscape-down {
+      justify-content: center;
+    }
+
+    @include for-phone-only {
+      flex-direction: column;
+      .button {        
+        width: 100%;
+      }
+    }
+  }
+}

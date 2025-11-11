@@ -1,0 +1,62 @@
+[
+  {
+    "id": "d1",
+    "quote": "Det var en jätterolig workshop med härlig energi! Tiden gick alldeles för fort, och man gick därifrån och ville ha mer!",
+    "from": "workshopdeltagare",
+    "category": "danceclass"
+  }, 
+  {
+    "id": "d2",
+    "quote": "The lessons were so much fun! The instructors were welcoming and encouraging. The music choice was also really good!",
+    "from": "workshopdeltagare",
+    "category": "danceclass"
+  },
+  {
+    "id": "d3",
+    "quote": "Workshopen var toppen! Super snälla, glada och roliga instruktörer. Trevlig lokal, bra känsla och roliga danser!",
+    "from": "workshopdeltagare",
+    "category": "danceclass"
+  },
+  {
+    "id": "d4",
+    "quote": "Så himla duktiga och engagerade instruktörer! Trots att jag i vanliga fall har svårt för koordination så lyckades jag ganska bra med det, tack vare stegvisa genomgångar och super snälla instruktörer. Och så kul vi hade hela gänget. Ni var bäst!",
+    "from": "workshopdeltagare",
+    "category": "danceclass"
+  },
+  {
+    "id": "d5",
+    "quote": "Jag hade så roligt på workshopen! Instruktörerna var både pedagogiska och inspirerande, vilket gjorde att jag kände mig trygg och vågade släppa loss. Vi fick tydliga grunder men också utrymme att improvisera, vilket gjorde upplevelsen både lärorik och superkul!",
+    "from": "workshopdeltagare",
+    "category": "danceclass"
+  },
+  {
+    "id": "d6",
+    "quote": "Att dansa med Femme Fusion hjälper mig 'unlock my inner baddie'",
+    "from": "workshopdeltagare",
+    "category": "danceclass"
+  },
+  {
+    "id": "d7",
+    "quote": "Inspirerande och roligt med pedagogiska instruktörer!",
+    "from": "workshopdeltagare",
+    "category": "danceclass"
+  },
+  {
+    "id": "d8",
+    "quote": "Välkomnande och uppmuntrande miljö. Här får man va som man är och bara njuta av rolig dans till härlig musik och hitta gemenskap till andra härliga människor. Man lär sig alltid något nytt och det är lika roligt varje gång. Beroende framkallande helt enkelt och en riktig boost för kropp och själ!",
+    "from": "workshopdeltagare",
+    "category": "danceclass"
+  },
+  {
+    "id": "s1",
+    "quote": "Femme Fusion levererar energi och glädje som tänder även den mest svårflörtade publik. På vårt event med närmare 500 gäster fick de stående ovationer!",
+    "from": "Kent Renåker, System Q event & expo",
+    "category": "show"
+  },
+  {
+    "id": "s2",
+    "quote": "Femme Fusion är en proffsig och engagerad dansgrupp som verkligen levererar efter kundens önskemål. Vi på HSB Östergötland hade nöjet att anlita dem i samband med vår personalfest. Deras shownummer satte ribban på vår fest, vilket gjorde att den blev succé! Vi kan med nöje rekommendera Femme Fusion för att sätta ribban på er fest!",
+    "from": "HSB Östergötland",
+    "category": "show"
+  }
+]

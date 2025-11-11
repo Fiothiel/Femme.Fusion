@@ -1,0 +1,37 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins'   as *;
+@use '../../assets/styles/typography' as *;
+
+.section-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: $spacing-xx-large;
+  padding: $spacing-small;
+  background-color: $wine;
+
+  a {
+    font-family: $font-family-oswald;
+    font-weight: 200;
+    font-size: 2.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  @include for-tablet-landscape-down {
+    column-gap: $spacing-large;
+
+    a {
+      font-size: 2rem;
+    }
+  }
+
+  @include for-phone-only {
+    column-gap: $spacing-small;
+    padding: $spacing-small $spacing-x-small;
+
+    a {
+      font-size: 1.6rem;
+    }
+  }
+}

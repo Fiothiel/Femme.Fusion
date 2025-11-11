@@ -95,6 +95,7 @@
       </section>
     </div>
     <div class="footer__bottom">
+      <img class="hero__logo" src="/logo-white.svg" />
       <span>© <time :datetime="String(year)">{{ year }}</time> Femme Fusion</span>
     </div>
   </footer>

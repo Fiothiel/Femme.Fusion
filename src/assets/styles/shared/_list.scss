@@ -1,0 +1,44 @@
+@use '../variables' as *;
+
+ul.table-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  &:first-of-type {
+    margin-bottom: $spacing-large;
+  }
+
+  li {
+    list-style: none;
+    padding: 1rem;
+    transition: 0.2s ease-in all;
+
+    a {
+      cursor: pointer;
+    }
+
+    &:hover {
+      background-color: $wine !important;
+    }
+
+    a:hover {
+      color: $grey-light;
+    }
+
+    span {
+      margin-right: $spacing-medium;
+      display: inline-block;
+      width: 8rem;
+    }
+
+
+    &:nth-child(even) {
+      background-color: #121212;
+    }
+
+    &:nth-child(odd) {
+      background-color: #171717;
+    }
+  }
+}
