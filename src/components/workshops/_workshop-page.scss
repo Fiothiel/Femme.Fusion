@@ -1,0 +1,23 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/typography' as *;
+
+.workshop {
+    &__image {
+        transition: 0.3s ease;
+        object-fit: cover;
+        width: 100%;
+
+        border-radius: 8px;
+        transition: transform .35s cubic-bezier(.2, .6, .2, 1), filter .35s, border-radius .35s;
+        filter: saturate(.95);
+
+        &:hover {
+
+            transform: translateY(-6px) scale(1.03);
+            filter: saturate(1.05) contrast(1.02);
+            border-radius: 16px;
+        }
+    }
+
+}

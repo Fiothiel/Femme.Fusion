@@ -14,7 +14,7 @@
           </dl>
           <dl>
             <dt>Antal tillfällen:</dt>
-            <dd>{{ event.numOccasions}}</dd>
+            <dd>{{ event.numOccasions }}</dd>
           </dl>
         </div>
         <div>
@@ -30,10 +30,13 @@
             <dt>Adress:</dt>
             <dd>{{ event.address }}</dd>
           </dl>
-        </div>        
+        </div>
       </div>
       <div>
-        <p v-html="event.description"></p>
+        <p v-html="event.shortDescription"></p>
+        <p v-if="event.id">
+          <NuxtLink :to="`/workshops/${event.id}`">Läs mer</NuxtLink>
+        </p>
       </div>
     </div>
     <a v-if="event.url" :href="event.url" target="_blank" class="button">{{ event.buttonText }}</a>
@@ -41,7 +44,7 @@
 </template>
 
 <script setup lang="ts">
-import IEvent from "../../types/IEvent";
+import type { IEvent } from "@/types/IEvent";
 import { useUtils } from "../../utils";
 
 defineProps<{

@@ -14,7 +14,7 @@
           <li v-for="event in courses" :key="event.url">
             <Modal :id="event.url">
               <template v-slot:link="{ clicked }: { clicked: () => void }">
-                <a class="events__details" @click="clicked">
+                <a class="table-list__link" @click="clicked">
                   <span>{{ getShortDate(event.startDate) }}</span>
                   {{ event.title }}</a>
               </template>
@@ -37,7 +37,7 @@
           <li v-for="event in shows" :key="event.url">
             <Modal :id="event.url">
               <template v-slot:link="{ clicked }: { clicked: () => void }">
-                <a class="events__details" @click="clicked">
+                <a class="table-list__link" @click="clicked">
                   <span>{{ getShortDate(event.startDate) }}</span>
                   {{ event.title }}</a>
               </template>
@@ -69,17 +69,9 @@ definePageMeta({
 });
 
 const { getShortDate } = useUtils();
-const { getEvents } = useEvents();
+const { getCourses, getShows } = useEvents();
 
-const courses: Ref<IEvent[]> = ref([]);
-const shows: Ref<IEvent[]> = ref([]);
-const loading = ref(true);
+const courses: Ref<IEvent[]> = computed(() => getCourses());
+const shows: Ref<IEvent[]> = computed(() => getShows());
 
-onMounted(() => {
-  getEvents().then((result: IEvent[]) => {
-    courses.value = result.filter((e: IEvent) => e.type === EventType.Course);
-    shows.value = result.filter((e: IEvent) => e.type === EventType.Show);
-    loading.value = false;
-  });
-});
 </script>

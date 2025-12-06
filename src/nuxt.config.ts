@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/image", "@nuxtjs/sitemap"],  
+  modules: ["@nuxt/image", "@nuxtjs/sitemap"],
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://femmefusion.se'
   },

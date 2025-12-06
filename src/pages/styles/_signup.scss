@@ -1,4 +1,5 @@
-@use '../../assets/styles/variables'   as *;
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/typography' as *;
 
 .signup {
     p {
@@ -8,8 +9,34 @@
     button {
         margin-top: $spacing-medium;
     }
-    
+
     h2 {
         text-transform: none;
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-small;
+        margin: $spacing-medium 0;
+    }
+
+    &__option {
+        display: flex;
+        gap: $spacing-small;
+        align-items: flex-start;
+    }
+
+    &__option-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__option-title {
+        font-weight: 600;
+    }
+
+    &__option-meta {
+        font-size: $font-size-button;
     }
 }

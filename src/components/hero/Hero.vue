@@ -5,7 +5,7 @@
         <img class="hero__logo" src="/logo-white.svg" />
       </a>
       <nav class="hero__actions" aria-label="Snabbval">
-        <NuxtLink to="/bokning" class="button button--primary">Bokning</NuxtLink>
+        <NuxtLink to="/bokning" class="button button--ghost">Bokning</NuxtLink>
         <NuxtLink to="/kalender" class="button button--ghost">Kalender</NuxtLink>
         <NuxtLink to="/kontakt" class="button button--ghost">Kontakta oss</NuxtLink>
       </nav>
