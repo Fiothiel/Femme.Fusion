@@ -14,7 +14,7 @@
           <li v-for="event in courses" :key="event.url">
             <Modal :id="event.url">
               <template v-slot:link="{ clicked }: { clicked: () => void }">
-                <a class="events__details" @click="clicked">
+                <a class="table-list__link" @click="clicked">
                   <span>{{ getShortDate(event.startDate) }}</span>
                   {{ event.title }}</a>
               </template>
@@ -37,7 +37,7 @@
           <li v-for="event in shows" :key="event.url">
             <Modal :id="event.url">
               <template v-slot:link="{ clicked }: { clicked: () => void }">
-                <a class="events__details" @click="clicked">
+                <a class="table-list__link" @click="clicked">
                   <span>{{ getShortDate(event.startDate) }}</span>
                   {{ event.title }}</a>
               </template>
