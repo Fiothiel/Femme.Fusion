@@ -1,9 +1,17 @@
 import { EventType } from "@/constants";
 
+export type IEventImage = {
+  src: string;
+  alt: string;
+  photographer?: string;
+};
+
 export type IEvent = {
+  id: string;
   title: string;
-  description: string;
-  level: string;
+  shortDescription: string;
+  longDescription: string | null;
+  level: string | null;
   address: string;
   startDate: string;
   endDate: string;
@@ -11,7 +19,8 @@ export type IEvent = {
   url: string;
   type: EventType;
   numOccasions: number;
-  dayAndTimeInfo: string;  
+  dayAndTimeInfo: string;
   price: number;
   buttonText: string;
+  image: IEventImage | null;
 };

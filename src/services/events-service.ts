@@ -47,7 +47,8 @@ export const useEvents = () => {
   function mapLocal(d: IEvent): IEvent {
     return {
       title: d.title,
-      description: d.description ?? "",
+      shortDescription: d.shortDescription ?? "",
+      longDescription: d.longDescription ?? null,
       level: d.level,
       address: d.address,
       startDate: d.startDate,
@@ -59,6 +60,7 @@ export const useEvents = () => {
       type: getType(d.type as string),
       price: d.price,
       buttonText: d.buttonText ?? SIGNUP,
+      image: d.image ?? null,
     };
   }
 
