@@ -84,17 +84,14 @@
 
 
 <script setup lang="ts">
-import { ref, Ref, onMounted } from 'vue'
-import { Splide, SplideSlide } from '@splidejs/vue-splide'
-import '@splidejs/vue-splide/css'
-import IImageInfo from '@/interfaces/IImageInfo'
+import { ref  } from 'vue';
+import type { Ref } from 'vue';
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import '@splidejs/vue-splide/css';
+import type IImageInfo from '@/interfaces/IImageInfo'
 import { useTestimonials } from '~/services/testimonials-service';
-import { useEvents } from '~/services/events-service';
-import { useUtils } from '~/utils';
 
-const { getShortDate } = useUtils();
 const testimonials = useTestimonials().getDanceclass();
-const { data: workshops } = await useAsyncData('workshops', () => useEvents().getCourses(2));
 
 const options = JSON.stringify({
     type: 'loop',

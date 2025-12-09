@@ -25,6 +25,7 @@
   "devDependencies": {
     "@nuxtjs/sitemap": "^7.4.3",
     "@types/node": "^24.2.0",
+    "baseline-browser-mapping": "^2.9.5",
     "sass": "^1.90.0",
     "typescript": "^5.9.2"
   }

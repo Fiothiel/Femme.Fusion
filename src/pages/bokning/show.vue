@@ -67,10 +67,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref } from "vue";
+import { ref } from "vue";
+import type { Ref } from "vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
-import IImageInfo from "../../interfaces/IImageInfo";
+import type IImageInfo from "../../interfaces/IImageInfo";
 
 const canonicalUrl = 'https://femmefusion.se/bokning/show'
 

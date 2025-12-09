@@ -1,15 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import eventsData from "./public/data/events.json";
+
+const workshopUrls = (eventsData as any[])
+  .filter((e) => e.id) // Only events with an id
+  .map((e) => `/workshops/${e.id}`);
+  
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/image", "@nuxtjs/sitemap"],
+  modules: ["@nuxt/image", "@nuxtjs/sitemap"],  
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://femmefusion.se'
   },
   sitemap: {
     siteUrl: 'https://femmefusion.se',
     // add routes that aren’t easily discoverable:
-    urls: ['/workshop-streetdance'],
+    urls: [...workshopUrls],
     defaults: { changefreq: 'monthly', priority: 0.7 }
   },
   image: {
@@ -20,7 +26,7 @@ export default defineNuxtConfig({
     preset: "static",
     prerender: {
       // Nuxt will crawl links by default; list extra routes if needed:
-      routes: ["/bokning/show", "/bokning/dansklass"],
+      routes: ["/bokning/show", "/bokning/dansklass", ...workshopUrls,],
     },
   },
 

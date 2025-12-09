@@ -24,9 +24,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref } from "vue";
-import { Splide, SplideSlide } from "@splidejs/vue-splide";
-import IImageInfo from "../../interfaces/IImageInfo";
+import { ref } from 'vue';
+import type { Ref } from 'vue';
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import type IImageInfo from '@/interfaces/IImageInfo';
 
 const options = JSON.stringify({
   type: "loop",
