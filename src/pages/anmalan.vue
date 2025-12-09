@@ -106,12 +106,10 @@ onMounted(async () => {
 });
 
 function getWorkshopLink(event: IEvent): string {
-  const match = event.description?.match(/href="([^"]+)"/);
-  return match ? match[1] : "#";
+  return `/workshops/${event.id}`;
 }
 
 const onSubmit = handleSubmit(() => {
-    // Validate workshops
     if (selectedWorkshops.value.length === 0) {
         workshopError.value = "Du måste välja minst en workshop.";
         return;
@@ -119,33 +117,28 @@ const onSubmit = handleSubmit(() => {
         workshopError.value = null;
     }
 
-    console.log(selectedWorkshops.value);
-    return;
     sendEmail();
 });
 
 const sendEmail = () => {
     loading.value = true;
+    const classes = selectedWorkshops.value.join("\n");
 
     emailjs
         .send(
             "service_3vexa7i",
-            "template_contactform",
-            {
-                from_name: name.value,
-                message: `
-                WORKSHOPS:
-                ${selectedWorkshops.value.join(", ")}
-
-                Meddelande:
-                ${message.value}
-
-                Adress:
-                ${address.value}
-                ${postalCode.value} ${city.value}
-        `,
-                reply_to: `${email.value}, ${phone.value}`
-            },
+            "template_class_signup",
+      {
+        from_name: name.value,
+        user_email: email.value,
+        user_phone: phone.value,
+        classes,
+        address: address.value,
+        postal_code: postalCode.value,
+        city: city.value,
+        message: message.value,
+        reply_to: email.value // optional, useful for quick reply
+      },
             "2V1Svme8xyPiol8YX"
         )
         .then(() => {

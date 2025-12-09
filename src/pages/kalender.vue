@@ -9,7 +9,6 @@
     <section class="section">
       <div class="section__content">
         <h2>Kurser och workshops</h2>
-        <Loader v-if="loading" :large="true" :label="true" />
         <ul v-if="courses.length > 0" class="table-list">
           <li v-for="event in courses" :key="event.url">
             <Modal :id="event.url">
@@ -24,7 +23,7 @@
             </Modal>
           </li>
         </ul>
-        <p v-else-if="courses.length === 0 && !loading">
+        <p v-else-if="courses.length === 0">
           Inga kurser eller workshops planerade för tillfället. Boka en lektion?
         </p>
       </div>
@@ -32,7 +31,6 @@
     <section v-if="shows.length > 0" class="section">
       <div class="section__content">
         <h2>Shower</h2>
-        <Loader v-if="loading" :large="true" :label="true" />
         <ul class="table-list">
           <li v-for="event in shows" :key="event.url">
             <Modal :id="event.url">
@@ -53,14 +51,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref, onMounted } from "vue";
+import { computed } from "vue";
 import { useUtils } from "@/utils";
 import { useEvents } from "@/services/events-service";
+import type { Ref } from "vue";
 import type { IEvent } from '@/types/IEvent';
 import EventInfo from "@/components/eventinfo/EventInfo.vue";
-import Loader from "@/components/loader/Loader.vue";
 import Modal from "@/components/modal/Modal.vue";
-import { EventType } from "@/constants";
 
 definePageMeta({
   displayInMenu: true,

@@ -70,7 +70,8 @@ const sendEmail = () => {
       {
         from_name: name.value,
         message: message.value,
-        reply_to: `${email.value}, ${phone.value}`,
+        reply_to: email.value,
+        phone: phone.value
       },
       "2V1Svme8xyPiol8YX"
     )
