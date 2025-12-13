@@ -14,7 +14,7 @@
                         workshop.</label>
                     <div class="signup__options">
                         <label v-for="event in courses" :key="event.url" class="signup__option">
-                            <input type="checkbox" :value="event.title + ' - ' + event.dayAndTimeInfo"
+                            <input type="checkbox" :value="event.title + ' - ' + useUtils().getShortDate(event.startDate) + ', ' + event.dayAndTimeInfo"
                                 v-model="selectedWorkshops" />
                             <div class="signup__option-content">
                                 <a class="signup__option-title" :href="getWorkshopLink(event)" target="_blank"
@@ -22,7 +22,7 @@
                                     {{ event.title }}
                                 </a>
                                 <span class="signup__option-meta">
-                                    {{ event.dayAndTimeInfo }}
+                                    {{ useUtils().getShortDate(event.startDate) }} {{ event.dayAndTimeInfo }} 
                                 </span>
                             </div>
                         </label>
@@ -91,6 +91,7 @@ import Loader from "@/components/loader/Loader.vue";
 import { useEvents } from "@/services/events-service";
 import type { IEvent } from "~/types/IEvent";
 import { useEmail } from '@/services/email-service';
+import { useUtils } from "@/utils";
 
 const { sendMessageEmail, sendConfirmationEmail, loading } = useEmail();
 const displayMessage = ref(false);
@@ -137,7 +138,7 @@ const sendEmail = async () => {
     const selectedSnapshot = [...selectedWorkshops.value]
     const classesHtml = selectedSnapshot.map(w => `<li>${w}</li>`).join('')
 
-    // 1. Mail till er (FF)
+    // 1. Mail till FF
     await sendMessageEmail({
         subject: 'Ny workshopanmälan',
         message: 'Ny anmälan via anmälningsformuläret.',
