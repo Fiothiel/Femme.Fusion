@@ -1,5 +1,5 @@
 <template>
-  <div class="calendar content">
+  <div class="terms content">
     <section class="section">
       <div class="section__content">
         <h1>Anmälnings- och betalningsvillkor</h1>
@@ -12,18 +12,25 @@
 
         <h2>Betalning</h2>
         <p>
-          Betalning ska göras senast det datum som anges på fakturan. Vid utebliven betalning kan platsen
-          erbjudas till annan deltagare.
+          Betalning sker mot faktura via Frilans Finans. Fakturan har 30 dagars betalningsfrist.
         </p>
-
-        <h2>Ångerrätt och avbokning</h2>
         <p>
-          Du har 14 dagars ångerrätt enligt distansavtalslagen, räknat från dagen du får antagningsbeskedet.
+          Vid utebliven betalning kan Frilans Finans ta ut påminnelseavgift och dröjsmålsränta
+          enligt sina villkor.
         </p>
 
+        <h2>Ångerrätt</h2>
+        <p>
+          Enligt distansavtalslagen gäller normalt 14 dagars ångerrätt vid köp på distans.
+          Ångerrätten gäller dock inte för våra kurser och workshops, eftersom de är fritidsaktiviteter
+          som äger rum på ett bestämt datum. Genom att anmäla dig godkänner du att ångerrätten inte gäller.
+        </p>
+
+        <h2>Avbokning</h2>
+        <p>Efter anmälan gäller följande avbokningsregler:</p>
         <ul>
-          <li>Avbokning senast 7 dagar innan workshop: 50 procent av avgiften debiteras.</li>
-          <li>Avbokning senare än 7 dagar innan workshop: Ingen återbetalning.</li>
+          <li>Avbokning senast 7 dagar före workshop: 50 procent av avgiften debiteras.</li>
+          <li>Avbokning senare än 7 dagar före workshop: Ingen återbetalning sker.</li>
         </ul>
 
         <h2>Sjukdom</h2>
@@ -31,7 +38,6 @@
           Vid sjukdom återbetalas avgiften endast mot uppvisande av läkarintyg. Andra typer av intyg godkänns inte. Du
           är alltid välkommen att överlåta din plats till någon annan om du själv inte kan delta eller byta till en
           annan workshop.
-
         </p>
 
         <h2>Byte av deltagare</h2>
@@ -101,7 +107,7 @@ useHead({
             acceptedAnswer: {
               "@type": "Answer",
               text:
-                "Betalning ska göras senast det datum som anges på fakturan. Vid utebliven betalning kan platsen erbjudas till annan deltagare.",
+                "Betalning sker mot faktura via Frilans Finans. Fakturan har 30 dagars betalningsfrist.",
             },
           },
           {
@@ -110,8 +116,8 @@ useHead({
             acceptedAnswer: {
               "@type": "Answer",
               text:
-                "Du har 14 dagars ångerrätt enligt distansavtalslagen, räknat från dagen du får antagningsbeskedet.",
-            },
+                "Enligt distansavtalslagen gäller normalt 14 dagars ångerrätt vid köp på distans. Ångerrätten gäller dock inte för Femme Fusions kurser och workshops, eftersom det är fritidsaktiviteter på bestämda datum. Genom att anmäla dig godkänner du att ångerrätten inte gäller."
+            }
           },
           {
             "@type": "Question",
@@ -119,8 +125,8 @@ useHead({
             acceptedAnswer: {
               "@type": "Answer",
               text:
-                "Avbokning senast 7 dagar innan workshop debiteras med 50 procent av avgiften. Avbokning senare än 7 dagar innan workshop återbetalas inte.",
-            },
+                "Efter anmälan gäller följande avbokningsregler: Avbokning senast 7 dagar före workshop debiteras med 50 procent av avgiften. Avbokning senare än 7 dagar före workshop ger ingen återbetalning."
+            }
           },
           {
             "@type": "Question",

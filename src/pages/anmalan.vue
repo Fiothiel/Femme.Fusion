@@ -33,12 +33,16 @@
                     <input type="text" name="name" v-model="name" />
                     <div class="form__error" v-if="nameError">{{ nameError }}</div>
 
+                    <label>Personnummer</label>
+                    <input type="text" name="personalNumber" v-model="personalNumber" />
+                    <div class="form__error" v-if="personalNumberError">{{ personalNumberError }}</div>
+
                     <label>Email</label>
                     <input type="email" name="email" v-model="email" />
                     <div class="form__error" v-if="emailError">{{ emailError }}</div>
 
                     <label>Telefonnummer</label>
-                    <input type="telephone" name="phone" v-model="phone" />
+                    <input type="tel" name="phone" v-model="phone" />
 
                     <label>Adress</label>
                     <input type="text" name="address" v-model="address" />
@@ -84,12 +88,11 @@
 import { ref, onMounted } from "vue";
 import { useField, useForm } from "vee-validate";
 import Loader from "@/components/loader/Loader.vue";
-import emailjs from "@emailjs/browser";
 import { useEvents } from "@/services/events-service";
 import type { IEvent } from "~/types/IEvent";
-    
-const form = ref();
-const loading = ref(false);
+import { useEmail } from '@/services/email-service';
+
+const { sendMessageEmail, sendConfirmationEmail, loading } = useEmail();
 const displayMessage = ref(false);
 
 const { handleSubmit, resetForm } = useForm();
@@ -101,13 +104,14 @@ const selectedWorkshops = ref<string[]>([]);
 const workshopError = ref<string | null>(null);
 
 const { value: name, errorMessage: nameError } = useField<string>("name", "required");
+const { value: personalNumber, errorMessage: personalNumberError } = useField<string>('personalNumber', 'required')
 const { value: email, errorMessage: emailError } = useField<string>("email", "required|email");
 const { value: phone } = useField<string>("phone");
 const { value: address, errorMessage: addressError } = useField<string>("address", "required");
 const { value: postalCode, errorMessage: postalCodeError } = useField<string>("postalCode", "required|numeric");
 const { value: city, errorMessage: cityError } = useField<string>("city", "required");
 const { value: message } = useField<string>("message");
-const { value: acceptedTerms, errorMessage: termsError } = useField<boolean>( "acceptedTerms", value => (value ? true : "Du måste godkänna villkoren.")
+const { value: acceptedTerms, errorMessage: termsError } = useField<boolean>("acceptedTerms", value => (value ? true : "Du måste godkänna villkoren.")
 );
 
 onMounted(() => {
@@ -118,7 +122,7 @@ function getWorkshopLink(event: IEvent): string {
     return `/workshops/${event.id}`;
 }
 
-const onSubmit = handleSubmit(() => {
+const onSubmit = handleSubmit(async () => {
     if (selectedWorkshops.value.length === 0) {
         workshopError.value = "Du måste välja minst en workshop.";
         return;
@@ -126,40 +130,52 @@ const onSubmit = handleSubmit(() => {
         workshopError.value = null;
     }
 
-    sendEmail();
+    await sendEmail();
 });
 
-const sendEmail = () => {
-    loading.value = true;
-    const classes = selectedWorkshops.value.join("\n");
+const sendEmail = async () => {
+    const selectedSnapshot = [...selectedWorkshops.value]
+    const classesHtml = selectedSnapshot.map(w => `<li>${w}</li>`).join('')
 
-    emailjs
-        .send(
-            "service_3vexa7i",
-            "template_class_signup",
-            {
-                from_name: name.value,
-                user_email: email.value,
-                user_phone: phone.value,
-                classes,
-                address: address.value,
-                postal_code: postalCode.value,
-                city: city.value,
-                message: message.value,
-                reply_to: email.value // optional, useful for quick reply
-            },
-            "2V1Svme8xyPiol8YX"
-        )
-        .then(() => {
-            loading.value = false;
-            displayMessage.value = true;
-            selectedWorkshops.value = [];
-            resetForm();
-        })
-        .catch((error) => {
-            console.log("Fail.. ", error.text);
-        });
-};
+    // 1. Mail till er (FF)
+    await sendMessageEmail({
+        subject: 'Ny workshopanmälan',
+        message: 'Ny anmälan via anmälningsformuläret.',
+        name: name.value,
+        email: email.value,
+        phone: phone.value,
+        details: `
+      <p><strong>Namn:</strong> ${name.value}</p>
+      <p><strong>Email:</strong> ${email.value}</p>
+      <p><strong>Telefon:</strong> ${phone.value || 'Ej angivet'}</p>
+      <p><strong>Personnummer:</strong> ${personalNumber.value}</p>
+      <p><strong>Adress:</strong> ${address.value}, ${postalCode.value} ${city.value}</p>
+      <p><strong>Workshops:</strong></p>
+      <ul>${classesHtml}</ul>
+      <p><strong>Meddelande:</strong><br>${message.value || 'Inget meddelande angivet.'}</p>
+    `
+    });
+
+    displayMessage.value = true
+
+    // 2. Bekräftelsemail till deltagaren
+    await sendConfirmationEmail({
+        subject: 'Tack för din anmälan!',
+        name: name.value,
+        email: email.value,
+        details: `
+      <p>Tack för din anmälan!</p>
+      <p>Du har anmält dig till:</p>
+      <ul>${classesHtml}</ul>
+      <p>Du får ett nytt mail när vi har gått igenom anmälningarna och kan bekräfta din plats.</p>
+      <p>Vänliga hälsningar,<br>Femme Fusion</p>
+    `
+    });
+
+    // 3. Töm formulär
+    selectedWorkshops.value = [];
+    resetForm();
+}
 
 
 // SEO

@@ -16,7 +16,7 @@
     }
   ],
     "compilerOptions": {
-    "types": ["@types/node"],
+    "types": ["@types/node", "~types"],
     "include": ["src/**/*.ts", "src/**/*.vue", "src/types/global.d.ts"]
   }
 }

@@ -1,0 +1,18 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/typography' as *;
+
+.terms {
+    h1, h2 {
+        text-transform: none;
+    }
+    h2 {        
+        text-align: left;
+        font-size: 2.4rem;
+        margin-top: 3rem;
+        margin-bottom: $spacing-x-small;
+    }
+
+    p, li {
+    line-height: 1.6;
+    }
+}

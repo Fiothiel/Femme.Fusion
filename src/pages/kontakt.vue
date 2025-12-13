@@ -19,7 +19,7 @@
           <input type="email" name="email" v-model="email" />
           <div class="form__error" v-if="!!emailError">{{ emailError }}</div>
           <label>Telefonnummer</label>
-          <input type="telephone" name="phone" v-model="phone" />
+          <input type="tel" name="phone" v-model="phone" />
           <label>Meddelande</label>
           <textarea name="message" v-model="message"></textarea>
           <div class="form__error" v-if="!!messageError">{{ messageError }}</div>
@@ -37,8 +37,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useField, useForm } from "vee-validate";
-import Loader from "../../components/loader/Loader.vue";
-import emailjs from "@emailjs/browser";
+import Loader from "@/components/loader/Loader.vue";
+import { useEmail } from "@/services/email-service";
 
 definePageMeta({
   displayInMenu: true,
@@ -46,8 +46,7 @@ definePageMeta({
   order: 4
 });
 
-const form = ref();
-let loading = ref(false);
+const { sendMessageEmail, sendConfirmationEmail, loading } = useEmail()
 let displayMessage = ref(false);
 
 const { handleSubmit, resetForm } = useForm();
@@ -57,33 +56,30 @@ const { value: email, errorMessage: emailError } = useField<string>("email", "re
 const { value: phone } = useField<string>("phone");
 const { value: message, errorMessage: messageError } = useField<string>("message", "required");
 
-const onSubmit = handleSubmit(() => {
-  sendEmail();
-});
+const onSubmit = handleSubmit(async () => {
+  await sendMessageEmail({
+    subject: 'Nytt meddelande',
+    message: 'Nytt meddelande från kontaktformulär.',
+    name: name.value,
+    email: email.value,
+    phone: phone.value,
+    details: message.value
+  });
 
-const sendEmail = () => {
-  loading.value = true;
-  emailjs
-    .send(
-      "service_3vexa7i",
-      "template_contactform",
-      {
-        from_name: name.value,
-        message: message.value,
-        reply_to: email.value,
-        phone: phone.value
-      },
-      "2V1Svme8xyPiol8YX"
-    )
-    .then(() => {
-      loading.value = false;
-      displayMessage.value = true;
-      resetForm();
-    })
-    .catch((error: any) => {
-      console.log("Fail.. ", error.text);
-    });
-};
+  displayMessage.value = true;  
+
+  await sendConfirmationEmail({
+    subject: "Tack för ditt meddelande!",
+    name: name.value,
+    email: email.value,
+    details: `
+      <p>Tack för ditt meddelande! Vi hör av oss så snart vi kan.</p>
+      <p>Vänliga hälsningar.<br>Femme Fusion</p>
+      <p><strong>Ditt meddelande:</strong><br><i>${message.value}</i></p>
+    `});
+
+  resetForm();
+});
 
 const canonicalUrl = 'https://femmefusion.se/kontakt';
 
