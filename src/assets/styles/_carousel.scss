@@ -28,18 +28,6 @@
     }
   }
 
-  figcaption {
-    text-align: right;
-    font-size: $font-size-button;
-    margin-top: $spacing-small;
-
-    // temporary
-    @include for-phone-only {
-      text-align: center;
-    }
-  }
-
-
   .splide__slide {
     width: 900px;
 

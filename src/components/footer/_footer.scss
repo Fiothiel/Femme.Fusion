@@ -8,12 +8,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    column-gap: 2rem;
+    gap: $spacing-large;
     padding: $spacing-large $spacing-xx-large;
     
     ul {
         @include no-style-list();
-    }    
+    }
+
+    ul, p {
+        margin: 0;
+    }
 
     @include for-tablet-landscape-down {
         padding: $spacing-large;
@@ -23,6 +27,7 @@
     h2 {
         text-transform: none;
         white-space: nowrap;
+        margin: 0 0 $spacing-small 0;
     }
 
     &__content {
@@ -30,6 +35,7 @@
         max-width: 2000px;
         display: flex;
         flex-wrap: wrap;
+        gap: $spacing-medium;
 
         @include for-tablet-landscape-down {
             flex-direction: column;

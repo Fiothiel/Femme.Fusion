@@ -37,6 +37,52 @@ const plainDescription = computed(() => {
   return html.replace(/<[^>]+>/g, "").slice(0, 155);
 });
 
+function buildEventSchema(event: IEvent) {
+  const siteUrl = "https://femmefusion.se";
+
+  // basic parsing of address – you can refine later if you want
+  const [streetAddress, cityMaybe] = (event.address || "").split(",").map(p => p.trim());
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: event.title,
+    startDate: event.startDate,
+    endDate: event.endDate,
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: {
+      "@type": "Place",
+      name: cityMaybe ? cityMaybe : "Skylten",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: streetAddress || event.address,
+        addressLocality: cityMaybe || "Linköping",
+        addressCountry: "SE"
+      }
+    },
+    image: event.image
+      ? `${siteUrl}${event.image.src}`
+      : `${siteUrl}/images/meta.jpg`,
+    description:
+      event.longDescription
+        ? event.longDescription.replace(/<[^>]+>/g, "")
+        : event.shortDescription.replace(/<[^>]+>/g, ""),
+    organizer: {
+      "@type": "Organization",
+      name: "Femme Fusion",
+      url: siteUrl
+    },
+    offers: {
+      "@type": "Offer",
+      price: String(event.price ?? 0),
+      priceCurrency: "SEK",
+      availability: "https://schema.org/InStock",
+      url: `${siteUrl}/anmalan`
+    }
+  };
+}
+
 useSeoMeta({
   title: seoTitle.value,
   description: plainDescription.value,
@@ -47,7 +93,14 @@ useSeoMeta({
   twitterCard: "summary_large_image",
 });
 
+const eventSchema = computed(() => buildEventSchema(workshop.value!));
 useHead({
   link: [{ rel: "canonical", href: canonicalUrl.value }],
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(eventSchema.value)
+    }
+  ],
 });
 </script>

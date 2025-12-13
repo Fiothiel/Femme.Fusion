@@ -1,6 +1,6 @@
 <template>
   <div class="about content">    
-    <section class="section">
+    <section class="section section--airy">
       <div class="section__content">
         <h1 class="about__title">Femme Fusion - <span>burlesque-inspirerad showgrupp i Linköping</span></h1>
         <p class="about__intro">
@@ -12,7 +12,7 @@
       </div>
     </section>
 
-    <section class="section section--darkred">
+    <section class="section section--airy section--darkred">
       <div class="section__content">
         <h2>Vad vi levererar</h2>
         <p>
@@ -29,7 +29,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--airy">
       <div class="section__content">
         <h2>Varför boka Femme Fusion?</h2>
         <p>

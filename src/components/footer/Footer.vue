@@ -19,6 +19,9 @@
             <NuxtLink to="/om-oss">Om oss</NuxtLink>
           </li>
           <li>
+            <NuxtLink to="/kalender">Kalender</NuxtLink>
+          </li>
+          <li>
             <NuxtLink to="/kontakt">Kontakt</NuxtLink>
           </li>
         </ul>

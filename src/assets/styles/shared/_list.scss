@@ -12,23 +12,28 @@
   &__link {
     display: block;
     padding: $spacing-small;
+          cursor: pointer;
+
+          &:hover {
+      color: $grey-light;
+    }
   }
 
   li {
     list-style: none;
     transition: 0.2s ease-in all;
 
-    a {
+/*     a {
       cursor: pointer;
-    }
+    } */
 
     &:hover {
       background-color: $wine !important;
     }
 
-    a:hover {
+/*     a:hover {
       color: $grey-light;
-    }
+    } */
 
     span {
       margin-right: $spacing-medium;

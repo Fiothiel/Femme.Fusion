@@ -1,6 +1,6 @@
-@use '../../assets/styles/variables'   as *;
-@use '../../assets/styles/mixins'   as *;
-
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/typography' as *;
 
 .image {
     object-fit: cover;
@@ -24,6 +24,19 @@
 
         @include for-tablet-landscape-down {
             height: 300px;
+        }
+    }
+}
+
+figure {
+    figcaption {
+        text-align: right;
+        font-size: $font-size-button;
+        margin-top: $spacing-small;
+
+        // temporary
+        @include for-phone-only {
+            text-align: center;
         }
     }
 }

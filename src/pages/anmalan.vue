@@ -10,7 +10,8 @@
                 </p>
 
                 <form class="form" ref="form" @submit="onSubmit">
-                    <label>Välj de workshops du vill anmäla dig till. Klicka på namnet för att läsa mer om en specifik workshop.</label>
+                    <label>Välj de workshops du vill anmäla dig till. Klicka på namnet för att läsa mer om en specifik
+                        workshop.</label>
                     <div class="signup__options">
                         <label v-for="event in courses" :key="event.url" class="signup__option">
                             <input type="checkbox" :value="event.title + ' - ' + event.dayAndTimeInfo"
@@ -52,7 +53,19 @@
                     <div class="form__error" v-if="cityError">{{ cityError }}</div>
 
                     <label>Meddelande</label>
-                    <textarea name="message" v-model="message" rows="4" placeholder="T.ex. om du har funderingar, önskemål eller vill anmäla fler personer."></textarea>
+                    <textarea name="message" v-model="message" rows="4"
+                        placeholder="T.ex. om du har funderingar, önskemål eller vill anmäla fler personer."></textarea>
+
+                    <label class="signup__terms">
+                        <input type="checkbox" v-model="acceptedTerms" />
+                        <span>
+                            Jag har läst och godkänner
+                            <NuxtLink to="/anmalningsvillkor" target="_blank" class="link">
+                                anmälnings- och betalningsvillkoren
+                            </NuxtLink>.
+                        </span>
+                    </label>
+                    <div class="form__error" v-if="termsError">{{ termsError }}</div>
 
                     <button v-if="!loading" type="submit" class="button">Skicka</button>
                     <button v-else disabled class="button">
@@ -74,13 +87,7 @@ import Loader from "@/components/loader/Loader.vue";
 import emailjs from "@emailjs/browser";
 import { useEvents } from "@/services/events-service";
 import type { IEvent } from "~/types/IEvent";
-
-definePageMeta({
-    displayInMenu: true,
-    menuLabel: "Anmälan till workshops",
-    order: 4
-});
-
+    
 const form = ref();
 const loading = ref(false);
 const displayMessage = ref(false);
@@ -100,13 +107,15 @@ const { value: address, errorMessage: addressError } = useField<string>("address
 const { value: postalCode, errorMessage: postalCodeError } = useField<string>("postalCode", "required|numeric");
 const { value: city, errorMessage: cityError } = useField<string>("city", "required");
 const { value: message } = useField<string>("message");
+const { value: acceptedTerms, errorMessage: termsError } = useField<boolean>( "acceptedTerms", value => (value ? true : "Du måste godkänna villkoren.")
+);
 
-onMounted(async () => {
-    courses.value = await getCourses();
+onMounted(() => {
+    courses.value = getCourses();
 });
 
 function getWorkshopLink(event: IEvent): string {
-  return `/workshops/${event.id}`;
+    return `/workshops/${event.id}`;
 }
 
 const onSubmit = handleSubmit(() => {
@@ -128,17 +137,17 @@ const sendEmail = () => {
         .send(
             "service_3vexa7i",
             "template_class_signup",
-      {
-        from_name: name.value,
-        user_email: email.value,
-        user_phone: phone.value,
-        classes,
-        address: address.value,
-        postal_code: postalCode.value,
-        city: city.value,
-        message: message.value,
-        reply_to: email.value // optional, useful for quick reply
-      },
+            {
+                from_name: name.value,
+                user_email: email.value,
+                user_phone: phone.value,
+                classes,
+                address: address.value,
+                postal_code: postalCode.value,
+                city: city.value,
+                message: message.value,
+                reply_to: email.value // optional, useful for quick reply
+            },
             "2V1Svme8xyPiol8YX"
         )
         .then(() => {
