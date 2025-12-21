@@ -59,12 +59,6 @@ import type { IEvent } from '@/types/IEvent';
 import EventInfo from "@/components/eventinfo/EventInfo.vue";
 import Modal from "@/components/modal/Modal.vue";
 
-definePageMeta({
-  displayInMenu: true,
-  menuLabel: 'Kalender',
-  order: 3
-});
-
 const { getShortDate } = useUtils();
 const { getCourses, getShows } = useEvents();
 

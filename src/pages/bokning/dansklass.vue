@@ -22,13 +22,13 @@
             </div>
         </section>
 
-        <section class="section section--full-width">
+        <section class="section section--full-width section--carousel">
             <div class="section__content">
                 <Splide :data-splide="options" class="carousel carousel--vertical">
-                    <SplideSlide v-for="image in images" :key="image.imageName">
+                    <SplideSlide v-for="image in images" :key="image.src">
                         <figure>
-                            <NuxtImg class="book__image" :src="image.imageName" sizes="md:960px 100vw"
-                                :alt="image.description" />
+                            <NuxtImg class="book__image image" :src="image.src" sizes="md:960px 100vw"
+                                :alt="image.alt" />
                             <figcaption>Foto: {{ image.photographer }}</figcaption>
                         </figure>
                     </SplideSlide>
@@ -105,9 +105,9 @@ const options = JSON.stringify({
 });
 
 const images: Ref<IImageInfo[]> = ref([
-    { imageName: '/images/great-gatsby.jpg', photographer: 'Mattias Kannerstål', description: 'Gatsbyvibbar med flapper' },
-    { imageName: '/images/groupbooking-burlesque.jpg', photographer: 'Mattias Kannerstål', description: 'Burlesque och korsetter' },
-    { imageName: '/images/groupbooking-heels.jpg', photographer: 'Daniel Häggmyr', description: 'Höga pleaser shoes i sensual heels' }
+    { src: '/images/great-gatsby.jpg', photographer: 'Mattias Kannerstål', alt: 'Gatsbyvibbar med flapper' },
+    { src: '/images/groupbooking-burlesque.jpg', photographer: 'Mattias Kannerstål', alt: 'Burlesque och korsetter' },
+    { src: '/images/groupbooking-heels.jpg', photographer: 'Daniel Häggmyr', alt: 'Höga pleaser shoes i sensual heels' }
 ]);
 
 // SEO

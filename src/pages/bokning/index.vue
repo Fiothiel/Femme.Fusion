@@ -69,9 +69,4 @@ useSeoMeta({
 
 useHead({ link: [{ rel: 'canonical', href: canonicalUrl }] });
 
-definePageMeta({
-    displayInMenu: true,
-    menuLabel: 'Bokning',
-    order: 2
-});
 </script>

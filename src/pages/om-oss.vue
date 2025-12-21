@@ -49,7 +49,7 @@
       <h2>Medlemmar</h2>
       <div class="about__members">
         <figure v-for="m in members" :key="m.name" class="about__member" :class="m.align">
-          <NuxtImg :src="m.src" :alt="`Porträtt av ${m.name}, dansare i Femme Fusion`"
+          <NuxtImg :src="m.src" :alt="`Porträtt av ${m.name}, dansare i Femme Fusion`" class="image"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 48vw, 520px" format="webp" loading="lazy" />
           <figcaption>
             <strong>{{ m.name }}</strong>
@@ -65,12 +65,6 @@
 </template>
 
 <script setup lang="ts">
-
-definePageMeta({
-  displayInMenu: true,
-  menuLabel: "Om oss",
-  order: 1,
-});
 
 const members = [
   { name: "Ella", role: "Dans", src: "/images/profile/ella.jpg", align: "about__member--left" },

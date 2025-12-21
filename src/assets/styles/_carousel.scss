@@ -4,15 +4,9 @@
 
 .carousel {
   // horizontal by default
-  width: 70vw;
+  width: 100%;
   margin: $spacing-large auto;
   overflow: visible;
-
-  @include for-big-desktop-down {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-  }
 
   &--vertical {
     .splide__slide {
@@ -34,6 +28,10 @@
     @include for-tablet-landscape-down {
       width: 600px;
     }
+  }
+
+  figure {
+    margin: $spacing-large;
   }
 }
 

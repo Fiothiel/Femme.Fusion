@@ -40,12 +40,6 @@ import { useField, useForm } from "vee-validate";
 import Loader from "@/components/loader/Loader.vue";
 import { useEmail } from "@/services/email-service";
 
-definePageMeta({
-  displayInMenu: true,
-  menuLabel: 'Kontakt',
-  order: 4
-});
-
 const { sendMessageEmail, sendConfirmationEmail, loading } = useEmail()
 let displayMessage = ref(false);
 

@@ -59,6 +59,13 @@
     }
   }
 
+  &--carousel &__content {
+    @include for-phone-only {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   &:last-child &__content {
     padding-bottom: 0;
   }
@@ -76,8 +83,21 @@
 
     @include for-phone-only {
       flex-direction: column;
-      .button {        
+
+      .button {
         width: 100%;
+      }
+    }
+  }
+}
+
+.content {
+  >.section.section--airy:first-child {
+    .section__content {
+      padding-top: 0;
+
+      @include for-phone-only {
+        padding-top: 0;
       }
     }
   }

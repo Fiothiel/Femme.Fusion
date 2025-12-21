@@ -14,8 +14,8 @@
       <nav class="menu__nav">
         <h1>Meny</h1>
         <ul>
-          <li v-for="item in navItems" :key="item.path">
-            <NuxtLink :to="item.path" @click="onRouteClick">
+          <li v-for="item in navItems" :key="item.id">
+            <NuxtLink :to="item.to" @click="onRouteClick">
               {{ item.label }}
             </NuxtLink>
           </li>
@@ -27,38 +27,28 @@
   
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { useRouter } from "vue-router";
+import { menuItems } from '@/data/menu';
 
 import Hamburger from '@/components/hamburger/Hamburger.vue';
+import { MenuGroup } from "@/types/MenuItem";
 
-const router = useRouter();
 const burger: any = ref(null);
 let open = ref(false);
 
-const routes = ref(
-  router.options.routes.filter(
-    (route) => route.meta === undefined || route.meta.displayInMenu
-  )
-);
-
 const navItems = computed(() =>
-  router
-    .getRoutes()
-    .filter((r) => r.meta?.displayInMenu)
-    .sort((a, b) => (a.meta?.order ?? 999) - (b.meta?.order ?? 999))
-    .map((r) => ({
-      path: r.path,
-      label:
-        (r.meta as any)?.menuLabel ?? String(r.name ?? "").replace(/-/g, " "),
-    }))
+  menuItems
+    .filter(i => i.group === MenuGroup.MAIN)          // only main nav
+    .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
 );
 
 const onRouteClick = () => {
   onMenuToggle();
   burger.value.onClick();
+  setTimeout(() => {
   document.querySelector("main")?.scrollIntoView({
     behavior: "smooth",
   });
+  }, 150);
 };
 
 const onMenuToggle = () => {

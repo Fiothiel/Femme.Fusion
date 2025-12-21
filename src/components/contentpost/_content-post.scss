@@ -1,0 +1,16 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+.content-post {
+    &__published {
+        opacity: 0.8;
+    }
+
+    &__preamble {
+        font-weight: bold;
+    }
+
+    &__image {
+        height: 500px;
+    }
+}

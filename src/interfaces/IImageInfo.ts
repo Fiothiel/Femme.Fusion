@@ -1,5 +1,5 @@
 export default interface IImageInfo {
-  imageName: string;
+  src: string;
   photographer: string | null;
-  description: string | null;
+  alt: string | null;
 };

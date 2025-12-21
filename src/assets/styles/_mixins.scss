@@ -1,5 +1,11 @@
 @use './variables' as *;
 
+@mixin for-baby-screen-only {
+  @media (max-width: 430px) {
+    @content;
+  }
+}
+
 @mixin for-phone-only {
   @media (max-width: 599px) {
     @content;

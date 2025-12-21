@@ -42,11 +42,12 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        column-gap: $spacing-large;
+        gap: $spacing-large;
         font-family: $font-family-playfair;
         padding: $spacing-large $spacing-x-large;
         padding-bottom: 0;
         letter-spacing: 0.09em;
+        flex-wrap: nowrap;
 
         a {
             font-weight: 400;
@@ -59,11 +60,15 @@
         }
 
         @include for-phone-only {
-            column-gap: $spacing-small;
+            gap: $spacing-small;
 
             a {
-                font-size: 1.4rem;
+                font-size: 1.8rem;
             }
+        }
+
+        @include for-baby-screen-only {
+            flex-wrap: wrap;
         }
     }
 

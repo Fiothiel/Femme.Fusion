@@ -4,9 +4,18 @@
 
 .image {
     object-fit: cover;
-    margin: $spacing-large 0;
-    height: 500px;
     width: 100%;
+    transition: 0.3s ease;
+    margin: 0;
+    border-radius: 8px;
+    transition: transform .35s cubic-bezier(.2, .6, .2, 1), filter .35s, border-radius .35s;
+    filter: saturate(.95);
+
+    &:hover {
+        transform: translateY(-6px) scale(1.03);
+        filter: saturate(1.05) contrast(1.02);
+        border-radius: 16px;
+    }
 
     &--full-width {
         height: 900px;
@@ -16,6 +25,10 @@
 
         @include for-tablet-landscape-down {
             height: 500px;
+        }
+
+        &:hover {
+            transform: none;
         }
     }
 
@@ -29,6 +42,8 @@
 }
 
 figure {
+    margin: 3rem 0;
+
     figcaption {
         text-align: right;
         font-size: $font-size-button;
@@ -37,6 +52,18 @@ figure {
         // temporary
         @include for-phone-only {
             text-align: center;
+        }
+    }
+}
+
+@include for-phone-only {
+    .carousel {
+        .image {
+            border-radius: 0;
+            
+            &:hover {
+                border-radius: 0;
+            }
         }
     }
 }

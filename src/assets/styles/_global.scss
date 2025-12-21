@@ -51,7 +51,7 @@ body {
         font-size: 3rem;
 
         @include for-phone-only {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
         }
     }
 
@@ -94,10 +94,6 @@ body {
         display: flex;
         flex-direction: column;
         padding: $spacing-x-large 0;
-        
-        &--home {
-            padding: 0;
-        }
     }
 
     .form {

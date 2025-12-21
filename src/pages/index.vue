@@ -1,5 +1,5 @@
 <template>
-  <div class="content content--home home">
+  <div class="content content home">
     <section class="section section--airy">
       <div class="section__content">
         <h1>Femme Fusion</h1>
@@ -32,12 +32,6 @@
 
 <script setup lang="ts">
 import { useTestimonials } from '~/services/testimonials-service';
-
-definePageMeta({
-  displayInMenu: true,
-  menuLabel: 'Hem',
-  order: 0
-})
 
 const testimonials = useTestimonials().getRandom(2);
 </script>

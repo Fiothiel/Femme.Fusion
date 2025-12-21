@@ -7,15 +7,15 @@
       <nav class="hero__actions" aria-label="Snabbval">
         <NuxtLink to="/bokning" class="button button--ghost">Bokning</NuxtLink>
         <NuxtLink to="/kalender" class="button button--ghost">Kalender</NuxtLink>
-        <NuxtLink to="/kontakt" class="button button--ghost">Kontakta oss</NuxtLink>
+        <NuxtLink to="/kontakt" class="button button--ghost">Kontakt</NuxtLink>
       </nav>
     </div>
 
     <Splide :data-splide="options">
-      <SplideSlide v-for="image in images" :key="image.imageName">
+      <SplideSlide v-for="image in images" :key="image.src">
         <figure>
-          <NuxtImg class="hero__image" :src="image.imageName" sizes="xl:2500px md:1500px 100vw"
-            :alt="image.description" />
+          <NuxtImg class="hero__image" :src="image.src" sizes="xl:2500px md:1500px 100vw"
+            :alt="image.alt" />
           <figcaption>{{ image.photographer }}</figcaption>
         </figure>
       </SplideSlide>
@@ -39,39 +39,39 @@ const options = JSON.stringify({
 
 const images: Ref<IImageInfo[]> = ref([
   {
-    imageName: "/images/hero/hero-splide-0.webp",
+    src: "/images/hero/hero-splide-0.webp",
     photographer: "Foto: Kim Vestbrant",
-    description:
+    alt:
       "Sandra i spotlighten med övriga tre i bakgrunden, alla med blåglittriga toppar.",
   },
   {
-    imageName: "/images/hero/hero-splide-1.webp",
+    src: "/images/hero/hero-splide-1.webp",
     photographer: "Foto: Kim Vestbrant",
-    description:
+    alt:
       "Hanna dansar på scenen medan hon sitter på en stol under en föreställning på Kulturnatten i Norrköping.",
   },
   {
-    imageName: "/images/hero/hero-splide-4.webp",
+    src: "/images/hero/hero-splide-4.webp",
     photographer: "Foto: Mattias Åström",
-    description:
+    alt:
       "Sandra, Kristina och Ella i korsetter på Skyltens scen, Kristina sjunger.",
   },
   {
-    imageName: "/images/hero/hero-splide-3.webp",
+    src: "/images/hero/hero-splide-3.webp",
     photographer: "Foto: Kim Vestbrant",
-    description:
+    alt:
       "Ella och Sandra sitter på stolar i scenljus och showar med stora vita fjädervippor i klassisk burlesquestil.",
   },
   {
-    imageName: "/images/hero/hero-splide-2.webp",
+    src: "/images/hero/hero-splide-2.webp",
     photographer: "Foto: Kim Vestbrant",
-    description:
+    alt:
       "Kristina framför ett liveframträdande på scenen under Kulturnatten i Norrköping.",
   },
   {
-    imageName: "/images/hero/hero-splide-5.webp",
+    src: "/images/hero/hero-splide-5.webp",
     photographer: "Foto: Mattias Åström",
-    description:
+    alt:
       "Hanna, Sandra och Ella i vita fransklänningar under blått scenljus, med glamourös energi.",
   },
 ]);

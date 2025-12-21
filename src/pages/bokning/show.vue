@@ -20,11 +20,11 @@
         </section>
         <section>
             <div class="book__images">
-                <Splide :data-splide="options">
-                    <SplideSlide v-for="image in images" :key="image.imageName">
+                <Splide :data-splide="options" class="carousel">
+                    <SplideSlide v-for="image in images" :key="image.src">
                         <figure>
-                            <NuxtImg class="book__image" :src="image.imageName" sizes="md:960px 100vw"
-                                :alt="image.description" />
+                            <NuxtImg class="book__image image" :src="image.src" sizes="md:960px 100vw"
+                                :alt="image.alt" />
                             <figcaption>Foto: {{ image.photographer }}</figcaption>
                         </figure>
                     </SplideSlide>
@@ -77,16 +77,16 @@ const canonicalUrl = 'https://femmefusion.se/bokning/show'
 
 useSeoMeta({
     title: 'Boka show | Femme Fusion - underhållning i Sverige & Östergötland',
-    description:
+    alt:
         'Boka show med Femme Fusion. Glittrande nummer, temashower och kundanpassad underhållning för företagsevent och fester - i Linköping, Östergötland och hela Sverige.',
     ogTitle: 'Boka show | Femme Fusion',
-    ogDescription:
+    ogalt:
         'Kundanpassade shownummer - glitter, glamour och burlesque med modern edge. Vi uppträder i hela Sverige.',
     ogUrl: canonicalUrl,
     ogImage: 'https://femmefusion.se/images/meta.jpg',
     twitterCard: 'summary_large_image',
     twitterTitle: 'Boka show | Femme Fusion',
-    twitterDescription:
+    twitteralt:
         'Glittrande, skräddarsydd underhållning för företag och fester. Boka Femme Fusion.',
     twitterImage: 'https://femmefusion.se/images/meta.jpg'
 });
@@ -145,64 +145,64 @@ const options = JSON.stringify({
 
 const images: Ref<IImageInfo[]> = ref([
     {
-        imageName: "/images/show/show-skylten-kimv-1.webp",
+        src: "/images/show/show-skylten-kimv-1.webp",
         photographer: "Kim Vestbrant",
-        description: "Tre dansare i gula bodysuits poserar med sopkvastar – en lekfull hyllning till showgirls med städkraft och stage presence."
+        alt: "Tre dansare i gula bodysuits poserar med sopkvastar – en lekfull hyllning till showgirls med städkraft och stage presence."
     },
     {
-        imageName: "/images/show/show-skylten-kimv-2.webp",
+        src: "/images/show/show-skylten-kimv-2.webp",
         photographer: "Kim Vestbrant",
-        description: "Tre dansare i svarta byxor och glittriga toppar sitter på stolar med vita fjäderviftor – klassisk burlesque med modern edge."
+        alt: "Tre dansare i svarta byxor och glittriga toppar sitter på stolar med vita fjäderviftor – klassisk burlesque med modern edge."
     },
     {
-        imageName: "/images/show/show-skylten-kimv-3.webp",
+        src: "/images/show/show-skylten-kimv-3.webp",
         photographer: "Kim Vestbrant",
-        description: "Tre dansare i skoluniform-inspirerade outfits sträcker armarna upp i dramatisk pose – kaxigt, synkat och fullt ös."
+        alt: "Tre dansare i skoluniform-inspirerade outfits sträcker armarna upp i dramatisk pose – kaxigt, synkat och fullt ös."
     },
     {
-        imageName: "/images/show/show-skylten-kimv-4.webp",
+        src: "/images/show/show-skylten-kimv-4.webp",
         photographer: "Kim Vestbrant",
-        description: "Två dansare i vita fransklänningar lutar sig mot stolar – sensuellt, retro och med Hollywood-glamour i varje rörelse."
+        alt: "Två dansare i vita fransklänningar lutar sig mot stolar – sensuellt, retro och med Hollywood-glamour i varje rörelse."
     },
     {
-        imageName: "/images/show/show-skylten-kimv-5.webp",
+        src: "/images/show/show-skylten-kimv-5.webp",
         photographer: "Kim Vestbrant",
-        description: "En dansare i vit fransklänning interagerar med stolen i ett solo – självsäker, lekfull och strålande i scenens spotlight."
+        alt: "En dansare i vit fransklänning interagerar med stolen i ett solo – självsäker, lekfull och strålande i scenens spotlight."
     },
     {
-        imageName: "/images/show/show-skylten-må-1.webp",
+        src: "/images/show/show-skylten-må-1.webp",
         photographer: "Mattias Åström",
-        description: "Två dansare i röda korsetter och fjädrar uppträder med mikrofoner – burlesk glamour och scenisk självsäkerhet med glimten i ögat."
+        alt: "Två dansare i röda korsetter och fjädrar uppträder med mikrofoner – burlesk glamour och scenisk självsäkerhet med glimten i ögat."
     },
     {
-        imageName: "/images/show/show-skylten-må-2.webp",
+        src: "/images/show/show-skylten-må-2.webp",
         photographer: "Mattias Åström",
-        description: "Två dansare i glittriga blå toppar och svarta byxor sitter på stolar med mikrofoner i handen – ett lekfullt och självsäkert nummer där sång och flirtig charm går hand i hand."
+        alt: "Två dansare i glittriga blå toppar och svarta byxor sitter på stolar med mikrofoner i handen – ett lekfullt och självsäkert nummer där sång och flirtig charm går hand i hand."
     },
     {
-        imageName: "/images/show/show-dv-24.webp",
+        src: "/images/show/show-dv-24.webp",
         photographer: "StormPhoto",
-        description: "Fyra dansare i vita skjortor och svarta shorts framför ett koreograferat nummer utomhus – självsäkra steg med girlboss-energi mitt på stan."
+        alt: "Fyra dansare i vita skjortor och svarta shorts framför ett koreograferat nummer utomhus – självsäkra steg med girlboss-energi mitt på stan."
     },
     {
-        imageName: "/images/show/show-kulturnatten-kimv-1.webp",
+        src: "/images/show/show-kulturnatten-kimv-1.webp",
         photographer: "Kim Vestbrant",
-        description: "Tre dansare i vita sjuksköterske-outfits spelar upp en teatralisk scen där en person i hoodie ”behandlas” – en komisk och provocerande twist på sjukvård."
+        alt: "Tre dansare i vita sjuksköterske-outfits spelar upp en teatralisk scen där en person i hoodie ”behandlas” – en komisk och provocerande twist på sjukvård."
     },
     {
-        imageName: "/images/show/show-kulturnatten-kimv-2.webp",
+        src: "/images/show/show-kulturnatten-kimv-2.webp",
         photographer: "Kim Vestbrant",
-        description: "Dansare i polis- och streetkläder interagerar i en fängslande duo – dominans möter rebell i en scen med humor och edge."
+        alt: "Dansare i polis- och streetkläder interagerar i en fängslande duo – dominans möter rebell i en scen med humor och edge."
     },
     {
-        imageName: "/images/show/show-kulturnatten-kimv-3.webp",
+        src: "/images/show/show-kulturnatten-kimv-3.webp",
         photographer: "Kim Vestbrant",
-        description: "En dansare fångad i ett uttrycksfullt ögonblick, bakåtlutad med håret i rörelse – rå känsla och frihet i svartvitt."
+        alt: "En dansare fångad i ett uttrycksfullt ögonblick, bakåtlutad med håret i rörelse – rå känsla och frihet i svartvitt."
     },
     {
-        imageName: "/images/show/show-kulturnatten-kimv-4.webp",
+        src: "/images/show/show-kulturnatten-kimv-4.webp",
         photographer: "Kim Vestbrant",
-        description: "Tre dansare i glittrande scenkläder i en laddad formation – kroppar i synk, ansiktsuttryck i extas och rörelser med känsla."
+        alt: "Tre dansare i glittrande scenkläder i en laddad formation – kroppar i synk, ansiktsuttryck i extas och rörelser med känsla."
     },
 ]);
 </script>

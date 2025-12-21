@@ -26,14 +26,14 @@
         flex-direction: column;
         justify-content: space-between;
         padding: $spacing-medium;
-        border: 1px solid $wine-damp;
-        background: $wine-darker;
+        border: 2px solid $wine-damp;
+        background: linear-gradient(to bottom, $wine-light, $wine);
         transition: border-color 0.2s ease, transform 0.15s ease;
 
         &:hover {
             border-color: $wine;
             transform: translateY(-4px);
-            color: $wine-contrast;
+            color: $white;
         }
     }
 
