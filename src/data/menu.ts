@@ -2,6 +2,7 @@ import type { MenuItem } from "@/types/MenuItem";
 import { MenuGroup } from "@/types/MenuItem";
 
 export const menuItems: MenuItem[] = [
+   /* Main menu */
   {
     id: "home",
     label: "Hem",
@@ -48,6 +49,39 @@ export const menuItems: MenuItem[] = [
     to: "/kontakt",
     order: 50,
     group: MenuGroup.MAIN,
+    showOnMobile: true,
+  },
+  /* Footer */
+  {
+    id: "booking",
+    label: "Bokning",
+    to: "/bokning",
+    order: 10,
+    group: MenuGroup.FOOTER,
+    showOnMobile: true,
+  },
+  {
+    id: "calendar",
+    label: "Kalender",
+    to: "/kalender",
+    order: 20,
+    group: MenuGroup.FOOTER,
+    showOnMobile: true,
+  },
+  {
+    id: "about-us",
+    label: "Om oss",
+    to: "/om-oss",
+    order: 30,
+    group: MenuGroup.FOOTER,
+    showOnMobile: true,
+  },
+  {
+    id: "contact",
+    label: "Kontakt",
+    to: "/kontakt",
+    order: 40,
+    group: MenuGroup.FOOTER,
     showOnMobile: true,
   },
 ];

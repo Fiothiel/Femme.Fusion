@@ -28,9 +28,8 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { menuItems } from '@/data/menu';
-
-import Hamburger from '@/components/hamburger/Hamburger.vue';
 import { MenuGroup } from "@/types/MenuItem";
+import Hamburger from '@/components/hamburger/Hamburger.vue';
 
 const burger: any = ref(null);
 let open = ref(false);

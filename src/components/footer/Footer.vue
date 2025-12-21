@@ -12,17 +12,10 @@
       <nav aria-labelledby="footer-links" class="footer__column footer__column--right">
         <h2 id="footer-links">Snabblänkar</h2>
         <ul>
-          <li>
-            <NuxtLink to="/">Hem</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/om-oss">Om oss</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/kalender">Kalender</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/kontakt">Kontakt</NuxtLink>
+          <li v-for="item in navItems" :key="item.id">
+            <NuxtLink :to="item.to" @click="onRouteClick">
+              {{ item.label }}
+            </NuxtLink>
           </li>
         </ul>
       </nav>
@@ -105,7 +98,23 @@
 </template>
 
 <script setup lang="ts">
-
+import { computed, ref } from "vue";
+import { menuItems } from '@/data/menu';
+import { MenuGroup } from "@/types/MenuItem";
 const year = new Date().getFullYear();
+
+const navItems = computed(() =>
+  menuItems
+    .filter(i => i.group === MenuGroup.FOOTER)          // only main nav
+    .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
+);
+
+const onRouteClick = () => {
+  setTimeout(() => {
+  document.querySelector("main")?.scrollIntoView({
+    behavior: "smooth",
+  });
+  }, 150);
+};
 
 </script>
