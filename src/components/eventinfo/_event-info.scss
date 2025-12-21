@@ -57,4 +57,9 @@
             margin: 0;
         }
     }
+
+    &__read-more {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
 }

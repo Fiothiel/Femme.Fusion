@@ -33,10 +33,6 @@
                     <input type="text" name="name" v-model="name" />
                     <div class="form__error" v-if="nameError">{{ nameError }}</div>
 
-                    <label>Personnummer</label>
-                    <input type="text" name="personalNumber" v-model="personalNumber" />
-                    <div class="form__error" v-if="personalNumberError">{{ personalNumberError }}</div>
-
                     <label>Email</label>
                     <input type="email" name="email" v-model="email" />
                     <div class="form__error" v-if="emailError">{{ emailError }}</div>
@@ -55,6 +51,10 @@
                     <label>Stad</label>
                     <input type="text" name="city" v-model="city" />
                     <div class="form__error" v-if="cityError">{{ cityError }}</div>
+
+                    <label>Personnummer (för fakturering, 10–12 siffror)</label>
+                    <input type="text" name="personalNumber" v-model="personalNumber" />
+                    <div class="form__error" v-if="personalNumberError">{{ personalNumberError }}</div>
 
                     <label>Meddelande</label>
                     <textarea name="message" v-model="message" rows="4"
@@ -105,7 +105,7 @@ const selectedWorkshops = ref<string[]>([]);
 const workshopError = ref<string | null>(null);
 
 const { value: name, errorMessage: nameError } = useField<string>("name", "required");
-const { value: personalNumber, errorMessage: personalNumberError } = useField<string>('personalNumber', 'required')
+const { value: personalNumber, errorMessage: personalNumberError } = useField<string>('personalNumber', 'required|personalnumber')
 const { value: email, errorMessage: emailError } = useField<string>("email", "required|email");
 const { value: phone } = useField<string>("phone");
 const { value: address, errorMessage: addressError } = useField<string>("address", "required");

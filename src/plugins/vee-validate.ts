@@ -19,3 +19,16 @@ export default defineNuxtPlugin(() => {
     }),
   });
 });
+
+defineRule("personalnumber", (value: string) => {
+  if (!value) return false;
+
+  const digits = value.replace(/\D/g, "");
+
+  // YYMMDDXXXX (10) or YYYYMMDDXXXX (12)
+  if (digits.length !== 10 && digits.length !== 12) {
+    return "Ange ett fullständigt personnummer (10 eller 12 siffror).";
+  }
+
+  return true;
+});

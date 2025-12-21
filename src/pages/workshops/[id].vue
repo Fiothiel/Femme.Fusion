@@ -12,8 +12,10 @@ import WorkshopPage from "@/components/workshops/WorkshopPage.vue";
 const route = useRoute();
 const { getById } = useEvents();
 
+const id = route.params.id as string;
+
 const workshop = computed<IEvent | undefined>(() =>
-  getById(route.params.id as string)
+  getById(id)
 );
 
 if (!workshop.value) {
@@ -81,7 +83,9 @@ function buildEventSchema(event: IEvent) {
       url: `${siteUrl}/anmalan`
     }
   };
-}
+};
+
+
 
 useSeoMeta({
   title: seoTitle.value,
@@ -89,7 +93,7 @@ useSeoMeta({
   ogTitle: seoTitle.value,
   ogDescription: plainDescription.value,
   ogUrl: canonicalUrl.value,
-  ogImage: "https://femmefusion.se/images/meta.jpg",
+  ogImage: `/images/workshop/${id}_meta.webp`,
   twitterCard: "summary_large_image",
 });
 

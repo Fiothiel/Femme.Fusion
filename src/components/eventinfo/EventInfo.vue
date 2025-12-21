@@ -34,7 +34,7 @@
       </div>
       <div>
         <p v-html="event.shortDescription"></p>
-        <p v-if="event.id">
+        <p v-if="event.id" class="event-info__read-more">
           <NuxtLink :to="`/workshops/${event.id}`">Läs mer</NuxtLink>
         </p>
       </div>
