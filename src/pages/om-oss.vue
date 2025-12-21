@@ -65,6 +65,11 @@
 </template>
 
 <script setup lang="ts">
+import { useUtils } from '@/utils';
+
+onMounted(() => {
+    useUtils().scrollToMain();
+});
 
 const members = [
   { name: "Ella", role: "Dans", src: "/images/profile/ella.jpg", align: "about__member--left" },

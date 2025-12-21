@@ -13,7 +13,7 @@
         <h2 id="footer-links">Snabblänkar</h2>
         <ul>
           <li v-for="item in navItems" :key="item.id">
-            <NuxtLink :to="item.to" @click="onRouteClick">
+            <NuxtLink :to="item.to">
               {{ item.label }}
             </NuxtLink>
           </li>
@@ -108,13 +108,5 @@ const navItems = computed(() =>
     .filter(i => i.group === MenuGroup.FOOTER)          // only main nav
     .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
 );
-
-const onRouteClick = () => {
-  setTimeout(() => {
-  document.querySelector("main")?.scrollIntoView({
-    behavior: "smooth",
-  });
-  }, 150);
-};
 
 </script>

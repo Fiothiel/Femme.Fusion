@@ -43,11 +43,6 @@ const navItems = computed(() =>
 const onRouteClick = () => {
   onMenuToggle();
   burger.value.onClick();
-  setTimeout(() => {
-  document.querySelector("main")?.scrollIntoView({
-    behavior: "smooth",
-  });
-  }, 150);
 };
 
 const onMenuToggle = () => {

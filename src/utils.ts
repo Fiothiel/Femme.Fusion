@@ -14,8 +14,17 @@ export const useUtils = () => {
     });
   };
 
+  const scrollToMain = () => {
+    setTimeout(() => {
+      document.querySelector("main")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }, 150);
+  };
+
   return {
     getShortDate,
-    getLongDate
+    getLongDate,
+    scrollToMain,
   };
 };

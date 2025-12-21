@@ -72,6 +72,11 @@ import type { Ref } from "vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
 import type IImageInfo from "../../interfaces/IImageInfo";
+import { useUtils } from "@/utils";
+
+onMounted(() => {
+    useUtils().scrollToMain();
+});
 
 const canonicalUrl = 'https://femmefusion.se/bokning/show'
 

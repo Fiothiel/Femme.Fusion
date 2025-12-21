@@ -19,7 +19,7 @@
             </div>
         </section>
         <section class="section section--wide">
-            <div class="section__content"> 
+            <div class="section__content">
                 <ul class="book__cards">
                     <li>
                         <NuxtLink to="/bokning/show" class="card">
@@ -49,6 +49,12 @@
 </template>
 
 <script setup lang="ts">
+import { useUtils } from '@/utils';
+
+onMounted(() => {
+    useUtils().scrollToMain();
+});
+
 const canonicalUrl = 'https://femmefusion.se/bokning'
 
 useSeoMeta({

@@ -63,6 +63,11 @@
 </template>
 
 <script setup lang="ts">
+import { useUtils } from '@/utils';
+
+onMounted(() => {
+    useUtils().scrollToMain();
+});
 
 const canonicalUrl = "https://femmefusion.se/anmalningsvillkor"
 

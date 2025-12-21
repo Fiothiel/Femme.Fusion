@@ -90,6 +90,11 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
 import type IImageInfo from '@/interfaces/IImageInfo'
 import { useTestimonials } from '~/services/testimonials-service';
+import { useUtils } from '@/utils';
+
+onMounted(() => {
+    useUtils().scrollToMain();
+});
 
 const testimonials = useTestimonials().getDanceclass();
 

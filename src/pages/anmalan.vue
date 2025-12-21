@@ -116,6 +116,7 @@ const { value: acceptedTerms, errorMessage: termsError } = useField<boolean>("ac
 );
 
 onMounted(() => {
+    useUtils().scrollToMain();
     courses.value = getCourses();
 });
 

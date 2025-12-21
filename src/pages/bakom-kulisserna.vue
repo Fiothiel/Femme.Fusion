@@ -16,10 +16,13 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import type { Ref } from "vue";
+import { useUtils } from "@/utils";
 import postsData from "@/public/data/posts.json";
-import type IContentPost from "~/interfaces/IContentPost";
 import ContentPost from "@/components/contentpost/ContentPost.vue";
+
+onMounted(() => {
+    useUtils().scrollToMain();
+});
 
 const posts = computed(() =>
   [...postsData].sort((a, b) =>
