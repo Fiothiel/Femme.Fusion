@@ -1,5 +1,5 @@
 <template>
-  <div class="content content home">
+  <div class="content home">
     <section class="section section--airy">
       <div class="section__content">
         <h1>Femme Fusion</h1>
