@@ -94,6 +94,7 @@ import '@splidejs/vue-splide/css';
 import type IImageInfo from '@/interfaces/IImageInfo'
 import { useTestimonials } from '~/services/testimonials-service';
 import { useUtils } from '@/utils';
+import { applyPageSeo } from '~/services/seo-service';
 
 onMounted(() => {
     useUtils().scrollToMain();
@@ -161,68 +162,45 @@ const images: Ref<IImageInfo[]> = ref([
 ]);
 
 
-// SEO
-const canonicalUrl = 'https://femmefusion.se/bokning/dansklass';
-
-useSeoMeta({
-    title: 'Boka dansklass | Femme Fusion - workshop & prova på för event',
+applyPageSeo({
+    title: "Boka dansklass | Femme Fusion - workshop & prova på för event",
     description:
-                'Boka dansklass med Femme Fusion för möhippa, födelsedag, kickoff eller teambuilding. Välj burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix. Vi anpassar nivå och upplägg – i Linköping och i hela Sverige.',
-    ogTitle: 'Boka dansklass | Femme Fusion',
+        "Boka dansklass med Femme Fusion för möhippa, födelsedag, kickoff eller teambuilding. Välj burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix. Vi anpassar nivå och upplägg i Linköping och i hela Sverige.",
+    path: "/bokning/dansklass",
+    ogTitle: "Boka dansklass | Femme Fusion",
     ogDescription:
-                'Dansworkshop för grupper eller privatlektion - burlesque, heels, street, cabaret, feminine vibe eller mix. Tryggt, roligt och anpassat efter er. Vi kommer till er i hela Sverige.',
-    ogUrl: canonicalUrl,
-    ogImage: 'https://femmefusion.se/images/meta.jpg',
-    twitterCard: 'summary_large_image',
-    twitterTitle: 'Boka dansklass | Femme Fusion',
+        "Dansworkshop för grupper eller privatlektion. Burlesque, heels, street, cabaret, feminine vibe eller mix. Tryggt, roligt och anpassat efter er. Vi kommer till er i hela Sverige.",
+    twitterTitle: "Boka dansklass | Femme Fusion",
     twitterDescription:
-        'Rolig, inkluderande dansworkshop för grupper, möhippor och företag. Skicka förfrågan idag.',
-    twitterImage: 'https://femmefusion.se/images/meta.jpg'
-})
-
-useHead({
-    link: [{ rel: 'canonical', href: canonicalUrl }],
-    script: [{
-        type: 'application/ld+json',
-        innerHTML: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Kan vi boka en dansklass även om vi aldrig har dansat förut?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Självklart! Vi anpassar nivå, tempo och känsla efter gruppens erfarenhet, så att alla kan vara med och ha roligt."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Erbjuder ni privatlektioner?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Ja! Förutom gruppbokningar kan du boka en privatlektion där vi fokuserar helt på dina mål och önskemål."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Vilka dansstilar kan vi välja?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Ni kan välja mellan burlesque, feminine vibe, heels (även high heels), street, cabaret, musikal eller en skräddarsydd mix."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Hur lång är en klass?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Vanligtvis är våra klasser 60-90 minuter, men vi anpassar längden efter era behov."
-                    }
-                }
-            ]
-        })
-    }]
+        "Rolig, inkluderande dansworkshop för grupper, möhippor och företag. Skicka förfrågan idag.",
+    image: "https://femmefusion.se/images/danceclass/danceclass-02.webp",
+    faqKey: "faq-dansklass",
+    faq: [
+        {
+            question: "Kan vi boka en dansklass även om vi aldrig har dansat förut?",
+            answer:
+                "Självklart! Vi anpassar nivå, tempo och känsla efter gruppens erfarenhet, så att alla kan vara med och ha roligt.",
+        },
+        {
+            question: "Erbjuder ni privatlektioner?",
+            answer:
+                "Ja! Förutom gruppbokningar kan du boka en privatlektion där vi fokuserar helt på dina mål och önskemål.",
+        },
+        {
+            question: "Vilka dansstilar kan vi välja?",
+            answer:
+                "Ni kan välja mellan burlesque, feminine vibe, heels (även high heels), street, cabaret, musikal eller en skräddarsydd mix.",
+        },
+        {
+            question: "Hur lång är en klass?",
+            answer:
+                "Vanligtvis är våra klasser 60-90 minuter, men vi anpassar längden efter era behov.",
+        },
+    ],
+    breadcrumbs: [
+        { name: "Bokning", path: "/bokning" },
+        { name: "Boka dansklass", path: "/bokning/dansklass" },
+    ],
 });
 
 </script>

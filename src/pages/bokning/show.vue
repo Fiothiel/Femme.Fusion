@@ -46,10 +46,10 @@
                     Vart ni än är, kan vi skapa en upplevelse som lyfter ert event.
                 </p>
             </div>
-        </section>        
+        </section>
         <section class="section section--airy" id="testimonials">
             <div class="section__content">
-                <Testimonials heading="Vad våra kunder säger" :testimonials="testimonials" />
+                <Testimonials heading="Röster från deltagare" :testimonials="testimonials" />
             </div>
         </section>
         <section class="section" aria-labelledby="show-next">
@@ -74,65 +74,13 @@ import "@splidejs/vue-splide/css";
 import type IImageInfo from "../../interfaces/IImageInfo";
 import { useUtils } from "@/utils";
 import { useTestimonials } from '~/services/testimonials-service';
+import { applyPageSeo } from "~/services/seo-service";
 
 onMounted(() => {
     useUtils().scrollToMain();
 });
 
 const testimonials = useTestimonials().getShow();
-
-const canonicalUrl = 'https://femmefusion.se/bokning/show'
-
-useSeoMeta({
-    title: 'Boka show | Femme Fusion - showartister för event i hela Sverige',
-    description:
-        'Boka show med Femme Fusion. Show med dans, sång och glamour. Kundanpassade nummer och temashower för företagsevent, bröllop, möhippor och privata fester i Linköping, Östergötland och hela Sverige.',
-    ogTitle: 'Boka show | Femme Fusion',
-    ogDescription:
-        'Show med dans, sång och stark scennärvaro. Kundanpassade nummer och temashower för event i hela Sverige.',
-    ogUrl: canonicalUrl,
-    ogImage: 'https://femmefusion.se/images/meta.jpg',
-    twitterCard: 'summary_large_image',
-    twitterTitle: 'Boka show | Femme Fusion',
-    twitterDescription:
-        'Boka show med dans, sång och glamour. Kundanpassade nummer för företagsevent och fester i hela Sverige.',
-    twitterImage: 'https://femmefusion.se/images/meta.jpg',
-});
-
-useHead({ link: [{ rel: 'canonical', href: canonicalUrl }] });
-
-const faq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-        {
-            '@type': 'Question',
-            name: 'Kan ni skräddarsy ett tema för vårt event?',
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Ja! Vi anpassar nummer, kostym och musik efter ert varumärke, publik och scen.'
-            }
-        },
-        {
-            '@type': 'Question',
-            name: 'Uppträder ni utanför Linköping?',
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Absolut. Vi utgår från Linköping men uppträder i hela Östergötland och i övriga Sverige.'
-            }
-        }
-    ]
-};
-
-useHead({
-    script: [
-        {
-            key: 'faq-show',
-            type: 'application/ld+json',
-            innerHTML: JSON.stringify(faq)
-        }
-    ]
-});
 
 const options = JSON.stringify({
     type: "loop",
@@ -206,4 +154,35 @@ const images: Ref<IImageInfo[]> = ref([
         alt: "Två showartister uppträder på stolar i glittrande scenkostymer under en elegant danssekvens."
     },
 ]);
+
+applyPageSeo({
+    title: "Boka show | Femme Fusion - showartister för event i hela Sverige",
+    description:
+        "Boka show med Femme Fusion. Show med dans, sång och glamour. Kundanpassade nummer och temashower för företagsevent, bröllop, möhippor och privata fester i Linköping, Östergötland och hela Sverige.",
+    path: "/bokning/show",
+    ogTitle: "Boka show | Femme Fusion",
+    ogDescription:
+        "Show med dans, sång och stark scennärvaro. Kundanpassade nummer och temashower för event i hela Sverige.",
+    twitterTitle: "Boka show | Femme Fusion",
+    twitterDescription:
+        "Boka show med dans, sång och glamour. Kundanpassade nummer för företagsevent och fester i hela Sverige.",
+    faqKey: "faq-show",
+    faq: [
+        {
+            question: "Kan ni skräddarsy ett tema för vårt event?",
+            answer:
+                "Ja! Vi anpassar nummer, kostym och musik efter ert varumärke, publik och scen.",
+        },
+        {
+            question: "Uppträder ni utanför Linköping?",
+            answer:
+                "Absolut. Vi utgår från Linköping men uppträder på event och scener i hela Sverige.",
+        },
+    ],
+    breadcrumbs: [
+        { name: "Bokning", path: "/bokning" },
+        { name: "Boka show", path: "/bokning/show" },
+    ],
+});
+
 </script>

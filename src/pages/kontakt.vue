@@ -40,9 +40,10 @@ import { useField, useForm } from "vee-validate";
 import Loader from "@/components/loader/Loader.vue";
 import { useEmail } from "@/services/email-service";
 import { useUtils } from "@/utils";
+import { applyPageSeo } from "~/services/seo-service";
 
 onMounted(() => {
-    useUtils().scrollToMain();
+  useUtils().scrollToMain();
 });
 
 const { sendMessageEmail, sendConfirmationEmail, loading } = useEmail()
@@ -65,7 +66,7 @@ const onSubmit = handleSubmit(async () => {
     details: message.value
   });
 
-  displayMessage.value = true;  
+  displayMessage.value = true;
 
   await sendConfirmationEmail({
     subject: "Tack för ditt meddelande!",
@@ -80,23 +81,21 @@ const onSubmit = handleSubmit(async () => {
   resetForm();
 });
 
-const canonicalUrl = 'https://femmefusion.se/kontakt';
 
-useSeoMeta({
-  title: 'Kontakt | Femme Fusion - boka show eller dansklass',
+applyPageSeo({
+  title: "Kontakt | Femme Fusion - boka show eller dansklass",
   description:
-    'Kontakta Femme Fusion för bokning av show, dansklass eller workshop. Vi utgår från Linköping och arbetar i hela Sverige.',
-  ogTitle: 'Kontakt | Femme Fusion',
+    "Kontakta Femme Fusion för bokning av show, dansklass eller workshop. Vi utgår från Linköping och jobbar i hela Sverige. Skicka en förfrågan så återkommer vi med förslag och offert.",
+  path: "/kontakt",
+  ogTitle: "Kontakt | Femme Fusion",
   ogDescription:
-    'Hör av dig för offert och bokning - vi skräddarsyr underhållning för ert event.',
-  ogUrl: canonicalUrl,
-  ogImage: 'https://femmefusion.se/images/meta.jpg',
-  twitterCard: 'summary_large_image',
-  twitterTitle: 'Kontakt | Femme Fusion',
+    "Hör av dig för offert och bokning. Vi skräddarsyr underhållning för ert event i hela Sverige.",
+  twitterTitle: "Kontakt | Femme Fusion",
   twitterDescription:
-    'Maila oss för bokning av show, dansklass eller workshop. Snabb återkoppling.',
-  twitterImage: 'https://femmefusion.se/images/meta.jpg'
+    "Skicka förfrågan om show, dansklass eller workshop. Vi återkommer så snart vi kan.",
+  breadcrumbs: [
+    { name: "Kontakt", path: "/kontakt" },
+  ],
 });
 
-useHead({ link: [{ rel: 'canonical', href: canonicalUrl }] });
 </script>

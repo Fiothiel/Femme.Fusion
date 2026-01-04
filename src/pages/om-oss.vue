@@ -66,6 +66,7 @@
 
 <script setup lang="ts">
 import { useUtils } from '@/utils';
+import { applyPageSeo } from '~/services/seo-service';
 
 onMounted(() => {
   useUtils().scrollToMain();
@@ -78,88 +79,50 @@ const members = [
   { name: "Sandra", role: "Dans", src: "/images/profile/sandra.jpg", align: "" },
 ];
 
-const canonicalUrl = "https://femmefusion.se/om-oss"
-
-useSeoMeta({
-  title: 'Femme Fusion - Om oss | Showgrupp från Linköping för event',
+applyPageSeo({
+  title: "Femme Fusion - Om oss | Showgrupp från Linköping för event",
   description:
-    'Femme Fusion är en professionell showgrupp från Linköping. Vi levererar show med dans, sång och glamour för företagsevent, bröllop, möhippor och privata fester.',
-  ogTitle: 'Femme Fusion - Om oss',
-  ogDescription:
-    'Professionell showgrupp med dans, sång och stark scennärvaro. Vi uppträder i Linköping, Östergötland och hela Sverige.',
-  ogUrl: canonicalUrl,
-  ogImage: 'https://femmefusion.se/images/meta.jpg',
-  twitterCard: 'summary_large_image',
-  twitterTitle: 'Femme Fusion - Om oss',
-  twitterDescription:
-    'Lär känna showgruppen från Linköping som levererar dans, glamour och scenglans för event i hela Sverige.',
-  twitterImage: 'https://femmefusion.se/images/meta.jpg'
-});
+    "Femme Fusion är en professionell showgrupp från Linköping. Vi levererar dynamiska shower med dans, sång och stark scennärvaro för företagsevent, bröllop, möhippor och privata fester i hela Sverige.",
+  path: "/om-oss",
 
-useHead({
-  link: [{ rel: "canonical", href: canonicalUrl }],
-  script: [
+  breadcrumbs: [
+    { name: "Om oss", path: "/om-oss" },
+  ],
+
+  ogTitle: "Femme Fusion - Om oss",
+  ogDescription:
+    "Professionell showgrupp med dans, sång och stark scennärvaro. Vi uppträder i hela Sverige.",
+
+  twitterTitle: "Femme Fusion - Om oss",
+  twitterDescription:
+    "Lär känna showgruppen från Linköping som levererar dans, glamour och scenglans för event i hela Sverige.",
+
+  faqKey: "faq-om-oss",
+  faq: [
     {
-      type: "application/ld+json",
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Hem", item: "https://femmefusion.se/" },
-          { "@type": "ListItem", position: 2, name: "Om oss", item: canonicalUrl },
-        ],
-      }),
+      question: "Vad erbjuder ni?",
+      answer:
+        "Vi erbjuder scenunderhållning med dans, sång och showinslag för event. Vi håller även dansklasser och workshops.",
     },
     {
-      type: "application/ld+json",
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Vad erbjuder ni?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text:
-                'Vi erbjuder scenunderhållning med dans, sång och showinslag för event. Vi håller även dansklasser och workshops.',
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Var uppträder ni?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Främst i Linköping och Östergötland. Vi reser gärna i hela Sverige.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Hur lång är en show?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Vi är väldigt anpassningsbara. Vi har kört korta shower à 2:30 minuter till helkvällar med 3 x 20 minuter. Vi anpassar oss efter vad ni behöver!",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Vad behöver ni på plats?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Fri golvyta, fungerande ljud och mikrofon. Omklädningsmöjlighet och mer än en trådlös mikrofon är bra. Specificeras i bokningsbekräftelsen.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Hur bokar vi?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text:
-                "Använd bokningsformuläret eller kontakta oss via mail eller våra sociala medier. Beskriv datum, plats, publik och önskat upplägg.",
-            },
-          },
-        ],
-      }),
+      question: "Var uppträder ni?",
+      answer:
+        "Vi utgår från Linköping men uppträder på event och scener i hela Sverige.",
+    },
+    {
+      question: "Hur lång är en show?",
+      answer:
+        "Upplägget anpassas efter ert event. Det kan vara ett kort inslag på några minuter eller flera nummer under kvällen.",
+    },
+    {
+      question: "Vad behöver ni på plats?",
+      answer:
+        "Fri golvyta och fungerande ljud. Omklädningsmöjlighet är uppskattat. Exakta behov specificeras i bokningsbekräftelsen.",
+    },
+    {
+      question: "Hur bokar vi?",
+      answer:
+        "Skicka en förfrågan via kontaktformuläret och beskriv datum, plats, publik och önskat upplägg så återkommer vi med förslag och offert.",
     },
   ],
 });

@@ -20,6 +20,7 @@ import { useUtils } from "@/utils";
 import { useRoute } from "vue-router";
 import postsData from "@/public/data/posts.json";
 import ContentPost from "@/components/contentpost/ContentPost.vue";
+import { applyPageSeo } from "~/services/seo-service";
 
 const route = useRoute();
 
@@ -33,18 +34,9 @@ const posts = computed(() =>
   )
 );
 
+const latestPost = computed(() => posts.value[0]);
 
-const latestPost = computed(() => {
-  return posts.value[0];
-});
-
-const canonicalUrl = computed(() => {
-  return `https://femmefusion.se${route.path}`;
-});
-
-const seoTitle = computed(() => {
-  return "Bakom kulisserna | Femme Fusion";
-});
+const seoTitle = computed(() => "Bakom kulisserna | Femme Fusion");
 
 const plainDescription = computed(() => {
   const fallback =
@@ -81,6 +73,24 @@ const ogImage = computed(() => {
   return `https://femmefusion.se/${src}`;
 });
 
+applyPageSeo({
+  title: seoTitle,
+  description: plainDescription,
+  path: "/bakom-kulisserna",
+
+  ogTitle: seoTitle,
+  ogDescription: plainDescription,
+  image: ogImage,
+  ogType: "website",
+
+  twitterTitle: seoTitle,
+  twitterDescription: plainDescription,
+
+  breadcrumbs: [
+    { name: "Bakom kulisserna", path: "/bakom-kulisserna" },
+  ],
+});
+
 function buildBehindTheScenesSchema() {
   const siteUrl = "https://femmefusion.se";
 
@@ -94,38 +104,19 @@ function buildBehindTheScenesSchema() {
     publisher: {
       "@type": "Organization",
       name: "Femme Fusion",
-      url: siteUrl
-    }
+      url: siteUrl,
+    },
   };
 }
 
-useSeoMeta({
-  title: seoTitle.value,
-  description: plainDescription.value,
-
-  ogTitle: seoTitle.value,
-  ogDescription: plainDescription.value,
-  ogUrl: canonicalUrl.value,
-  ogImage: ogImage.value,
-
-  twitterCard: "summary_large_image",
-  twitterTitle: seoTitle.value,
-  twitterDescription: plainDescription.value,
-  twitterImage: ogImage.value,
-});
-
-const blogSchema = computed(() => {
-  return buildBehindTheScenesSchema();
-});
-
 useHead({
-  link: [{ rel: "canonical", href: canonicalUrl.value }],
   script: [
     {
+      key: "schema-bakom-kulisserna",
       type: "application/ld+json",
-      innerHTML: JSON.stringify(blogSchema.value)
-    }
-  ]
+      innerHTML: JSON.stringify(buildBehindTheScenesSchema()),
+    },
+  ],
 });
 
 </script>

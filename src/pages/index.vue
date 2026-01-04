@@ -32,6 +32,7 @@
 
 <script setup lang="ts">
 import { TestimonialCategory } from '~/constants';
+import { applyPageSeo } from '~/services/seo-service';
 import { useTestimonials } from '~/services/testimonials-service';
 
 const { getRandom } = useTestimonials();
@@ -40,4 +41,17 @@ const testimonials = [
   ...getRandom(1, TestimonialCategory.DanceClass),
   ...getRandom(1, TestimonialCategory.Show),
 ];
+
+applyPageSeo({
+  title: "Femme Fusion | Show med dans och sång för event i hela Sverige",
+  description:
+    "Femme Fusion är en professionell showgrupp med dans, sång och stark scennärvaro. Vi skapar dynamiska, varierade shower för företagsevent, bröllop, middagar, möhippor och privata fester i Linköping och i hela Sverige.",
+  path: "/",
+  ogTitle: "Femme Fusion | Show för event",
+  ogDescription:
+    "Dynamiska shower med dans och sång. Kundanpassat för event i hela Sverige.",
+  twitterTitle: "Femme Fusion",
+  twitterDescription:
+    "Show med dans och sång för företagsevent, bröllop och fester i hela Sverige.",
+});
 </script>

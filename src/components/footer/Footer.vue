@@ -87,7 +87,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed } from "vue";
 import { menuItems } from '@/data/menu';
 import { MenuGroup } from "@/types/MenuItem";
 const year = new Date().getFullYear();

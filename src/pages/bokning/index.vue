@@ -50,29 +50,26 @@
 
 <script setup lang="ts">
 import { useUtils } from '@/utils';
+import { applyPageSeo } from '~/services/seo-service';
 
 onMounted(() => {
     useUtils().scrollToMain();
 });
 
-const canonicalUrl = 'https://femmefusion.se/bokning'
-
-useSeoMeta({
-    title: 'Bokning | Femme Fusion - show, dansklass & workshops',
+applyPageSeo({
+    title: "Bokning | Femme Fusion - boka show eller dansklass i hela Sverige",
     description:
-        'Skicka förfrågan för show, dansklass eller workshop. Vi skräddarsyr upplägg för företagsevent, bröllop och privata fester - i Linköping, Östergötland och hela Sverige.',
-    ogTitle: 'Bokning | Femme Fusion',
+        "Boka show eller dansklass med Femme Fusion. Vi skräddarsyr upplägg för företagsevent, bröllop, möhippor, middagar och privata fester. Vi utgår från Linköping och kommer till er i hela Sverige.",
+    path: "/bokning",
+    ogTitle: "Bokning | Femme Fusion",
     ogDescription:
-        'Boka show, dansklass eller workshop - vi anpassar allt efter publik, tema och scen.',
-    ogUrl: canonicalUrl,
-    ogImage: 'https://femmefusion.se/images/meta.jpg',
-    twitterCard: 'summary_large_image',
-    twitterTitle: 'Bokning | Femme Fusion',
+        "Boka show eller dansklass. Vi anpassar upplägg efter publik, tema och plats i hela Sverige.",
+    twitterTitle: "Bokning | Femme Fusion",
     twitterDescription:
-        'Skicka förfrågan för show, dansklass eller workshop. Vi uppträder i hela Sverige.',
-    twitterImage: 'https://femmefusion.se/images/meta.jpg'
-})
-
-useHead({ link: [{ rel: 'canonical', href: canonicalUrl }] });
+        "Skicka förfrågan för show eller dansklass. Vi utgår från Linköping och jobbar i hela Sverige.",
+    breadcrumbs: [
+        { name: "Bokning", path: "/bokning" },
+    ],
+});
 
 </script>

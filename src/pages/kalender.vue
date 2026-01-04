@@ -58,9 +58,10 @@ import type { Ref } from "vue";
 import type { IEvent } from '@/types/IEvent';
 import EventInfo from "@/components/eventinfo/EventInfo.vue";
 import Modal from "@/components/modal/Modal.vue";
+import { applyPageSeo } from "~/services/seo-service";
 
 onMounted(() => {
-    useUtils().scrollToMain();
+  useUtils().scrollToMain();
 });
 
 const { getShortDate } = useUtils();
@@ -68,5 +69,21 @@ const { getCourses, getShows } = useEvents();
 
 const courses: Ref<IEvent[]> = computed(() => getCourses());
 const shows: Ref<IEvent[]> = computed(() => getShows());
+
+applyPageSeo({
+  title: "Kalender | Femme Fusion - kommande dansklasser och shower",
+  description:
+    "Här hittar du kommande dansklasser, workshops och shower med Femme Fusion. Se datum och info om vad som är på gång och skicka förfrågan om du vill boka oss.",
+  path: "/kalender",
+  ogTitle: "Kalender | Femme Fusion",
+  ogDescription:
+    "Kommande dansklasser, workshops och shower. Se datum och vad som är på gång.",
+  twitterTitle: "Kalender | Femme Fusion",
+  twitterDescription:
+    "Se kommande dansklasser, workshops och shower med Femme Fusion.",
+  breadcrumbs: [
+    { name: "Kalender", path: "/kalender" },
+  ],
+});
 
 </script>
