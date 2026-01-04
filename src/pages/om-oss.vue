@@ -1,13 +1,13 @@
 <template>
-  <div class="about content">    
+  <div class="about content">
     <section class="section section--airy">
       <div class="section__content">
-        <h1 class="about__title">Femme Fusion - <span>burlesque-inspirerad showgrupp i Linköping</span></h1>
+        <h1 class="about__title">Femme Fusion - showgrupp i Linköping</h1>
         <p class="about__intro">
-          Vi är <strong>Femme Fusion</strong>, en professionell showgrupp som levererar dansshow med burlesque-känsla.
-          Basen är Linköping i Östergötland, men vi reser dit bokningarna tar oss. Vår mix av sensualitet, humor och
-          glamour skapar
-          minnesvärd underhållning för företagsevent, bröllop, möhippor och privata fester.
+          Vi är <strong>Femme Fusion</strong>, en professionell showgrupp som levererar dynamiska shower med dans, sång
+          och stark scennärvaro.
+          Vi utgår från Linköping i Östergötland, men reser dit bokningarna tar oss. Med en mix av energi, uttryck och
+          glamour skapar vi minnesvärd underhållning för företagsevent, bröllop, möhippor och privata fester.
         </p>
       </div>
     </section>
@@ -24,7 +24,7 @@
         <ul class="about__bullets">
           <li><strong>Flexibla upplägg.</strong> Fristående nummer eller sammanhållen show.</li>
           <li><strong>Passar många sammanhang.</strong> Företagsfest, gala, after work, bröllop, privata events.</li>
-          <li><strong>Dansfokuserad neoburlesque.</strong> Fusion av stilar. Alltid stilfullt och underhållande.</li>
+          <li><strong>Fusion av stilar.</strong> Alltid stilfullt och underhållande.</li>
         </ul>
       </div>
     </section>
@@ -38,7 +38,7 @@
           och teknik.
         </p>
         <p>
-          Behöver ni även <NuxtLink to="/bokning/dansklass" class="link">dansklass eller workshop</NuxtLink> för
+          Behöver ni även <NuxtLink to="/bokning/dansklass" class="link">en dansklass</NuxtLink> för
           gruppen?
           Vi håller korta <strong>prova på-pass</strong> som värmer upp publiken och skapar energi i rummet.
         </p>
@@ -68,7 +68,7 @@
 import { useUtils } from '@/utils';
 
 onMounted(() => {
-    useUtils().scrollToMain();
+  useUtils().scrollToMain();
 });
 
 const members = [
@@ -81,12 +81,12 @@ const members = [
 const canonicalUrl = "https://femmefusion.se/om-oss"
 
 useSeoMeta({
-  title: 'Femme Fusion - Om oss | Burlesque-inspirerad showgrupp i Linköping',
+  title: 'Femme Fusion - Om oss | Showgrupp från Linköping för event',
   description:
-    'Femme Fusion är en professionell showgrupp från Linköping. Dansshow med burlesque-känsla för företagsevent, bröllop, möhippor och privata fester.',
+    'Femme Fusion är en professionell showgrupp från Linköping. Vi levererar show med dans, sång och glamour för företagsevent, bröllop, möhippor och privata fester.',
   ogTitle: 'Femme Fusion - Om oss',
   ogDescription:
-    'Professionell showgrupp med dansfokuserad neoburlesque. Vi uppträder i Linköping, Östergötland och hela Sverige.',
+    'Professionell showgrupp med dans, sång och stark scennärvaro. Vi uppträder i Linköping, Östergötland och hela Sverige.',
   ogUrl: canonicalUrl,
   ogImage: 'https://femmefusion.se/images/meta.jpg',
   twitterCard: 'summary_large_image',
@@ -122,7 +122,7 @@ useHead({
             acceptedAnswer: {
               "@type": "Answer",
               text:
-                "Dansnummer och burlesque-inspirerade shownummer för event. Vi erbjuder även dansklasser och håller i workshops.",
+                'Vi erbjuder scenunderhållning med dans, sång och showinslag för event. Vi håller även dansklasser och workshops.',
             },
           },
           {

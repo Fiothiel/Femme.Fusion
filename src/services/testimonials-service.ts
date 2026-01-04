@@ -32,6 +32,7 @@ export const useTestimonials = () => {
     return shuffle(pool).slice(0, count);
   };
 
+  
   return {
     testimonials,
     getDanceclass,

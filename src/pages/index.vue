@@ -5,8 +5,8 @@
         <h1>Femme Fusion</h1>
         <p>
           Femme Fusion är en showgrupp som erbjuder underhållning, sång och dans
-          för fester, middagar och event. Artisterna levererar shower där en
-          variation av olika dansstilar möter inspiration av burlesque. Låt Femme
+          för fester, middagar och event. Deras shower är dynamiska och varierade, med flera dansstilar, tydliga uttryck
+          och stark scennärvaro, anpassade för att passa just ert event. Låt Femme
           Fusion skapa magi på ditt evenemang - för en unik och
           minnesvärd upplevelse!
           <NuxtLink to="/kontakt" class="button button--cta">
@@ -31,7 +31,13 @@
 </template>
 
 <script setup lang="ts">
+import { TestimonialCategory } from '~/constants';
 import { useTestimonials } from '~/services/testimonials-service';
 
-const testimonials = useTestimonials().getRandom(2);
+const { getRandom } = useTestimonials();
+
+const testimonials = [
+  ...getRandom(1, TestimonialCategory.DanceClass),
+  ...getRandom(1, TestimonialCategory.Show),
+];
 </script>

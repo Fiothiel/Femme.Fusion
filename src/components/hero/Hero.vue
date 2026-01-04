@@ -42,37 +42,37 @@ const images: Ref<IImageInfo[]> = ref([
     src: "/images/hero/hero-splide-0.webp",
     photographer: "Foto: Kim Vestbrant",
     alt:
-      "Sandra i spotlighten med övriga tre i bakgrunden, alla med blåglittriga toppar.",
+      "Tre showartister uppträder i synkron koreografi med utsträckta armar under en energifylld scenföreställning.",
   },
   {
     src: "/images/hero/hero-splide-1.webp",
     photographer: "Foto: Kim Vestbrant",
     alt:
-      "Hanna dansar på scenen medan hon sitter på en stol under en föreställning på Kulturnatten i Norrköping.",
+      "Showartist sitter på stol i ett uttrycksfullt scenmoment med stark närvaro och dramatisk ljussättning.",
   },
   {
     src: "/images/hero/hero-splide-4.webp",
-    photographer: "Foto: Mattias Åström",
+    photographer: "Foto: Fotograferna Hoog",
     alt:
-      "Sandra, Kristina och Ella i korsetter på Skyltens scen, Kristina sjunger.",
+      "",
   },
   {
     src: "/images/hero/hero-splide-3.webp",
     photographer: "Foto: Kim Vestbrant",
     alt:
-      "Ella och Sandra sitter på stolar i scenljus och showar med stora vita fjädervippor i klassisk burlesquestil.",
+      "Två showartister uppträder med fjäderfantasier i en elegant och lekfull scenkoreografi.",
   },
   {
     src: "/images/hero/hero-splide-2.webp",
     photographer: "Foto: Kim Vestbrant",
     alt:
-      "Kristina framför ett liveframträdande på scenen under Kulturnatten i Norrköping.",
+      "Showartist sjunger live på scen med mikrofon under en professionell scenföreställning.",
   },
   {
     src: "/images/hero/hero-splide-5.webp",
     photographer: "Foto: Mattias Åström",
     alt:
-      "Hanna, Sandra och Ella i vita fransklänningar under blått scenljus, med glamourös energi.",
+      "Tre showartister i ljusa scenkostymer poserar leende på scen i blått ljus under en professionell show.",
   },
 ]);
 </script>

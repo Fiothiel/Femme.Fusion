@@ -36,20 +36,20 @@
                 <h2 id="show-offer">Vad vi erbjuder</h2>
                 <p>
                     Ingen show är den andra lik, och det är precis så vi vill ha det. Ibland gör vi ett kort inslag på
-                    ett
-                    par
-                    minuter som blir kvällens överraskning, ibland bygger vi upp en hel kväll med flera nummer och olika
-                    teman.
-                    Oavsett om ni önskar glitter och glamour, burlesque med humoristisk twist eller något helt
-                    skräddarsytt,
-                    så
-                    formar vi showen efter era behov och publik.
+                    ett par minuter som blir kvällens överraskning, ibland bygger vi upp en hel kväll med flera nummer
+                    och olika teman. Oavsett om ni önskar glitter och glamour, humor och energi eller ett mer stilrent
+                    scenuttryck formar vi showen efter era behov, er publik och er scen.
                 </p>
 
                 <p>
                     Vi utgår från Linköping men tar våra shower till scener, företag och fester i hela Sverige.
                     Vart ni än är, kan vi skapa en upplevelse som lyfter ert event.
                 </p>
+            </div>
+        </section>        
+        <section class="section section--airy" id="testimonials">
+            <div class="section__content">
+                <Testimonials heading="Vad våra kunder säger" :testimonials="testimonials" />
             </div>
         </section>
         <section class="section" aria-labelledby="show-next">
@@ -73,29 +73,31 @@ import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
 import type IImageInfo from "../../interfaces/IImageInfo";
 import { useUtils } from "@/utils";
+import { useTestimonials } from '~/services/testimonials-service';
 
 onMounted(() => {
     useUtils().scrollToMain();
 });
 
+const testimonials = useTestimonials().getShow();
+
 const canonicalUrl = 'https://femmefusion.se/bokning/show'
 
 useSeoMeta({
-    title: 'Boka show | Femme Fusion - underhållning i Sverige & Östergötland',
-    alt:
-        'Boka show med Femme Fusion. Glittrande nummer, temashower och kundanpassad underhållning för företagsevent och fester - i Linköping, Östergötland och hela Sverige.',
+    title: 'Boka show | Femme Fusion - showartister för event i hela Sverige',
+    description:
+        'Boka show med Femme Fusion. Show med dans, sång och glamour. Kundanpassade nummer och temashower för företagsevent, bröllop, möhippor och privata fester i Linköping, Östergötland och hela Sverige.',
     ogTitle: 'Boka show | Femme Fusion',
-    ogalt:
-        'Kundanpassade shownummer - glitter, glamour och burlesque med modern edge. Vi uppträder i hela Sverige.',
+    ogDescription:
+        'Show med dans, sång och stark scennärvaro. Kundanpassade nummer och temashower för event i hela Sverige.',
     ogUrl: canonicalUrl,
     ogImage: 'https://femmefusion.se/images/meta.jpg',
     twitterCard: 'summary_large_image',
     twitterTitle: 'Boka show | Femme Fusion',
-    twitteralt:
-        'Glittrande, skräddarsydd underhållning för företag och fester. Boka Femme Fusion.',
-    twitterImage: 'https://femmefusion.se/images/meta.jpg'
+    twitterDescription:
+        'Boka show med dans, sång och glamour. Kundanpassade nummer för företagsevent och fester i hela Sverige.',
+    twitterImage: 'https://femmefusion.se/images/meta.jpg',
 });
-
 
 useHead({ link: [{ rel: 'canonical', href: canonicalUrl }] });
 
@@ -132,7 +134,6 @@ useHead({
     ]
 });
 
-
 const options = JSON.stringify({
     type: "loop",
     autoplay: false,
@@ -150,64 +151,59 @@ const options = JSON.stringify({
 
 const images: Ref<IImageInfo[]> = ref([
     {
-        src: "/images/show/show-skylten-kimv-1.webp",
-        photographer: "Kim Vestbrant",
-        alt: "Tre dansare i gula bodysuits poserar med sopkvastar – en lekfull hyllning till showgirls med städkraft och stage presence."
-    },
-    {
         src: "/images/show/show-skylten-kimv-2.webp",
         photographer: "Kim Vestbrant",
-        alt: "Tre dansare i svarta byxor och glittriga toppar sitter på stolar med vita fjäderviftor – klassisk burlesque med modern edge."
-    },
-    {
-        src: "/images/show/show-skylten-kimv-3.webp",
-        photographer: "Kim Vestbrant",
-        alt: "Tre dansare i skoluniform-inspirerade outfits sträcker armarna upp i dramatisk pose – kaxigt, synkat och fullt ös."
-    },
-    {
-        src: "/images/show/show-skylten-kimv-4.webp",
-        photographer: "Kim Vestbrant",
-        alt: "Två dansare i vita fransklänningar lutar sig mot stolar – sensuellt, retro och med Hollywood-glamour i varje rörelse."
-    },
-    {
-        src: "/images/show/show-skylten-kimv-5.webp",
-        photographer: "Kim Vestbrant",
-        alt: "En dansare i vit fransklänning interagerar med stolen i ett solo – självsäker, lekfull och strålande i scenens spotlight."
-    },
-    {
-        src: "/images/show/show-skylten-må-1.webp",
-        photographer: "Mattias Åström",
-        alt: "Två dansare i röda korsetter och fjädrar uppträder med mikrofoner – burlesk glamour och scenisk självsäkerhet med glimten i ögat."
+        alt: "Tre showartister uppträder på stolar med fjäderfantasier under en professionell scenföreställning."
     },
     {
         src: "/images/show/show-skylten-må-2.webp",
         photographer: "Mattias Åström",
-        alt: "Två dansare i glittriga blå toppar och svarta byxor sitter på stolar med mikrofoner i handen – ett lekfullt och självsäkert nummer där sång och flirtig charm går hand i hand."
+        alt: "Två showartister sjunger live på scen med mikrofoner under en energifylld show."
+    },
+    {
+        src: "/images/show/show-todecay-kulturnatten-hoog-1.webp",
+        photographer: "Fotograferna Hoog",
+        alt: "Showartister uppträder i ett koreograferat nummer på scen under en liveföreställning."
+    },
+    {
+        src: "/images/show/show-arbis-hoog-2.webp",
+        photographer: "Fotograferna Hoog",
+        alt: "Två showartister uppträder på stolar i glittrande scenkostymer, upplysta av rosa och lila scenljus under en professionell show."
     },
     {
         src: "/images/show/show-dv-24.webp",
         photographer: "StormPhoto",
-        alt: "Fyra dansare i vita skjortor och svarta shorts framför ett koreograferat nummer utomhus – självsäkra steg med girlboss-energi mitt på stan."
+        alt: "Fyra showartister uppträder utomhus med sång och koreografi under en energifylld scenföreställning."
     },
     {
-        src: "/images/show/show-kulturnatten-kimv-1.webp",
+        src: "/images/show/show-skylten-kimv-5.webp",
         photographer: "Kim Vestbrant",
-        alt: "Tre dansare i vita sjuksköterske-outfits spelar upp en teatralisk scen där en person i hoodie ”behandlas” – en komisk och provocerande twist på sjukvård."
+        alt: "Showartist uppträder i ett solonummer med stol under en professionell scenföreställning."
     },
     {
-        src: "/images/show/show-kulturnatten-kimv-2.webp",
-        photographer: "Kim Vestbrant",
-        alt: "Dansare i polis- och streetkläder interagerar i en fängslande duo – dominans möter rebell i en scen med humor och edge."
+        src: "/images/show/show-todecay-kulturnatten-hoog-2.webp",
+        photographer: "Fotograferna Hoog",
+        alt: "Två showartister uppträder i duo på scen med tydlig koreografi och scennärvaro."
     },
     {
-        src: "/images/show/show-kulturnatten-kimv-3.webp",
-        photographer: "Kim Vestbrant",
-        alt: "En dansare fångad i ett uttrycksfullt ögonblick, bakåtlutad med håret i rörelse – rå känsla och frihet i svartvitt."
+        src: "/images/show/show-arbis-hoog-3.webp",
+        photographer: "Fotograferna Hoog",
+        alt: "Två showartister sjunger och uppträder på scen med mikrofon, fångade i ett live-ögonblick med tydlig scennärvaro."
     },
     {
-        src: "/images/show/show-kulturnatten-kimv-4.webp",
+        src: "/images/show/show-arbis-hoog-1.webp",
+        photographer: "Fotograferna Hoog",
+        alt: "Showartist sjunger live på scen i svartvitt foto, sittande vid en stol med stark scenkänsla och fokus på sång."
+    },
+    {
+        src: "/images/show/show-todecay-kulturnatten-hoog-3.webp",
+        photographer: "Fotograferna Hoog",
+        alt: "Showartister uppträder i ett sceniskt nummer under en professionell liveföreställning."
+    },
+    {
+        src: "/images/show/show-skylten-kimv-4.webp",
         photographer: "Kim Vestbrant",
-        alt: "Tre dansare i glittrande scenkläder i en laddad formation – kroppar i synk, ansiktsuttryck i extas och rörelser med känsla."
+        alt: "Två showartister uppträder på stolar i glittrande scenkostymer under en elegant danssekvens."
     },
 ]);
 </script>

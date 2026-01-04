@@ -13,7 +13,9 @@
                     Vi anpassar nivå, tempo och känsla efter just er grupp eller dina individuella mål.
                 </p>
                 <p>
-                    <NuxtLink class="link link--accent" to="/kontakt">Kontakta oss</NuxtLink> för förslag och bokning, eller kolla i vår <NuxtLink class="link link--accent" to="/kalender">kalender</NuxtLink> för kommande datum på öppna klasser.
+                    <NuxtLink class="link link--accent" to="/kontakt">Kontakta oss</NuxtLink> för förslag och bokning,
+                    eller kolla i vår <NuxtLink class="link link--accent" to="/kalender">kalender</NuxtLink> för
+                    kommande datum på öppna klasser.
                 </p>
                 <p>
                     Är ni ute efter underhållning på scen istället? Läs mer om våra
@@ -27,7 +29,7 @@
                 <Splide :data-splide="options" class="carousel carousel--vertical">
                     <SplideSlide v-for="image in images" :key="image.src">
                         <figure>
-                            <NuxtImg class="book__image image" :src="image.src" sizes="md:960px 100vw"
+                            <NuxtImg class="book__image image" :src="image.src" sizes="md:1280px 100vw"
                                 :alt="image.alt" />
                             <figcaption>Foto: {{ image.photographer }}</figcaption>
                         </figure>
@@ -71,7 +73,8 @@
                     Vill du dansa med oss? Anmäl dig till en av våra kommande workshops eller boka en egen dansklass för
                     din grupp.
                     Osäker på vad som passar? Hör av dig så guidar vi dig rätt.
-                    För bokning av egen dansklass – skriv gärna datum, plats, antal deltagare och önskad stil, så återkommer vi med ett upplägg och prisförslag.
+                    För bokning av egen dansklass – skriv gärna datum, plats, antal deltagare och önskad stil, så
+                    återkommer vi med ett upplägg och prisförslag.
                 </p>
                 <div class="section__buttons">
                     <NuxtLink to="/kontakt" class="button">Skicka förfrågan</NuxtLink>
@@ -84,7 +87,7 @@
 
 
 <script setup lang="ts">
-import { ref  } from 'vue';
+import { ref } from 'vue';
 import type { Ref } from 'vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
@@ -110,21 +113,64 @@ const options = JSON.stringify({
 });
 
 const images: Ref<IImageInfo[]> = ref([
-    { src: '/images/great-gatsby.jpg', photographer: 'Mattias Kannerstål', alt: 'Gatsbyvibbar med flapper' },
-    { src: '/images/groupbooking-burlesque.jpg', photographer: 'Mattias Kannerstål', alt: 'Burlesque och korsetter' },
-    { src: '/images/groupbooking-heels.jpg', photographer: 'Daniel Häggmyr', alt: 'Höga pleaser shoes i sensual heels' }
+    {
+        src: '/images/danceclass/danceclass-01.webp',
+        photographer: 'Hampus Zetterblom',
+        alt: 'Deltagare på dansklass utför koreografi i grupp i ljus dansstudio.'
+    },
+    {
+        src: '/images/danceclass/danceclass-02.webp',
+        photographer: 'Hampus Zetterblom',
+        alt: 'Dansklass med flera deltagare som tränar rörelser och steg i spegelsal.'
+    },
+    {
+        src: '/images/danceclass/danceclass-03.webp',
+        photographer: 'Hampus Zetterblom',
+        alt: 'Deltagare på dansklass övar armrörelser och uttryck i gemensam koreografi.'
+    },
+    {
+        src: '/images/danceclass/danceclass-04.webp',
+        photographer: 'Hampus Zetterblom',
+        alt: 'Gruppdansklass där deltagare tränar koreografi tillsammans i studio.'
+    },
+    {
+        src: '/images/danceclass/danceclass-05.webp',
+        photographer: 'Hampus Zetterblom',
+        alt: 'Dansklass med fokus på rörelse, koordination och scennärvaro.'
+    },
+    {
+        src: '/images/danceclass/danceclass-06.webp',
+        photographer: 'Hampus Zetterblom',
+        alt: 'Deltagare på dansklass följer koreograferade instruktioner i grupp.'
+    },
+    {
+        src: '/images/danceclass/danceclass-07.webp',
+        photographer: 'Hampus Zetterblom',
+        alt: 'Dansklass i studio med gemensam uppvärmning och rörelseövningar.'
+    },
+    {
+        src: '/images/danceclass/danceclass-08.webp',
+        photographer: 'Hampus Zetterblom',
+        alt: 'Deltagare på dansklass tränar koreografi i inspirerande och trygg miljö.'
+    },
+    {
+        src: '/images/danceclass/danceclass-09.webp',
+        photographer: 'Hampus Zetterblom',
+        alt: 'Gruppdansklass där deltagare utvecklar teknik, uttryck och rörelse.'
+    },
 ]);
+
 
 // SEO
 const canonicalUrl = 'https://femmefusion.se/bokning/dansklass';
 
 useSeoMeta({
-    title: 'Boka dansklass | Femme Fusion – workshop & prova på för event',
+    title: 'Boka dansklass | Femme Fusion - workshop & prova på för event',
     description:
-        'Boka dansklass eller prova på med Femme Fusion. Energigivande workshop med burlesque-inspiration för kickoff, möhippa och företagsevent – i Linköping, Östergötland och i hela Sverige.',
+                'Boka dansklass med Femme Fusion för möhippa, födelsedag, kickoff eller teambuilding. Välj burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix. Vi anpassar nivå och upplägg – i Linköping och i hela Sverige.',
     ogTitle: 'Boka dansklass | Femme Fusion',
     ogDescription:
-        'Prova på-pass och skräddarsydda workshops som höjer stämningen på ert event. Vi kommer till er – i hela Sverige.',
+                'Dansworkshop för grupper eller privatlektion - burlesque, heels, street, cabaret, feminine vibe eller mix. Tryggt, roligt och anpassat efter er. Vi kommer till er i hela Sverige.',
     ogUrl: canonicalUrl,
     ogImage: 'https://femmefusion.se/images/meta.jpg',
     twitterCard: 'summary_large_image',
@@ -163,7 +209,7 @@ useHead({
                     "name": "Vilka dansstilar kan vi välja?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": " Ni kan välja mellan burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix."
+                        "text": "Ni kan välja mellan burlesque, feminine vibe, heels (även high heels), street, cabaret, musikal eller en skräddarsydd mix."
                     }
                 },
                 {

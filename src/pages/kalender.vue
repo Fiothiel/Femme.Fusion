@@ -8,7 +8,7 @@
     </section>
     <section class="section">
       <div class="section__content">
-        <h2>Kurser och workshops</h2>
+        <h2>Dansklasser</h2>
         <ul v-if="courses.length > 0" class="table-list">
           <li v-for="event in courses" :key="event.url">
             <Modal :id="event.url">
@@ -24,7 +24,7 @@
           </li>
         </ul>
         <p v-else-if="courses.length === 0">
-          Inga kurser eller workshops planerade för tillfället. Boka en lektion?
+          Inga dansklasser planerade för tillfället. Boka en lektion?
         </p>
       </div>
     </section>

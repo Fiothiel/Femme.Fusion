@@ -5,8 +5,8 @@
         <h2 id="footer-about">Om Femme Fusion</h2>
         <p>
           Femme Fusion är en showgrupp från Linköping som levererar skräddarsydda
-          shower, dans och workshops för företagsevent, fester och scener i
-          Östergötland och i hela Sverige.
+          shower, dans och dansklasser för företagsevent, fester och scener i
+          Östergötland och i hela Sverige. Följ oss för klipp från shower och dansklasser.
         </p>
       </section>
       <nav aria-labelledby="footer-links" class="footer__column footer__column--right">

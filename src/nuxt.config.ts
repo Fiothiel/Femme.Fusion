@@ -33,20 +33,20 @@ export default defineNuxtConfig({
   app: {
     head: {
       __dangerouslyDisableSanitizers: ["script"],
-      title: "Femme Fusion",
+      title: "Femme Fusion | Show med dans och sång",
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
           name: "description",
           content:
-            "En showgrupp som erbjuder dans och sång med burlesque-inspiration.",
+                "Femme Fusion är en professionell showgrupp som erbjuder underhållning med dans, sång och scenuttryck för event, fester och företag.",
         },
 
         // Twitter
         { name: "twitter:title", content: "Femme Fusion" },
         {
           name: "twitter:description",
-          content: "En showgrupp som erbjuder dans och sång…",
+          content: "Showgrupp med dans, sång och scenuttryck för event, företag och fester i hela Sverige.",
         },
         { name: "twitter:image", content: "https://femmefusion.se/images/meta.jpg" },
 
@@ -55,7 +55,7 @@ export default defineNuxtConfig({
         { property: "og:title", content: "Femme Fusion" },
         {
           property: "og:description",
-          content: "En showgrupp som erbjuder dans och sång…",
+          content:  "Professionell showgrupp med dans, sång och stark scennärvaro för event och fester i hela Sverige.",
         },
         { property: "og:image", content: "https://femmefusion.se/images/meta.jpg" },
         { property: "og:type", content: "website" },
