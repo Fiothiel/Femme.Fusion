@@ -51,10 +51,10 @@ const images: Ref<IImageInfo[]> = ref([
       "Showartist sitter på stol i ett uttrycksfullt scenmoment med stark närvaro och dramatisk ljussättning.",
   },
   {
-    src: "/images/hero/hero-splide-4.webp",
+    src: "/images/hero/hero-splide-6.webp",
     photographer: "Foto: Fotograferna Hoog",
     alt:
-      "",
+      "Tre dansare på scen i dramatisk blå och lila ljussättning, mitt i en kraftfull koreografisk rörelse med hår i rörelse och starkt scenuttryck.",
   },
   {
     src: "/images/hero/hero-splide-3.webp",

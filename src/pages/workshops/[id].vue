@@ -8,6 +8,7 @@ import { useRoute, createError } from "#imports";
 import { useEvents } from "@/services/events-service";
 import type { IEvent } from "@/types/IEvent";
 import WorkshopPage from "@/components/workshops/WorkshopPage.vue";
+import { applyPageSeo } from "~/services/seo-service";
 
 const route = useRoute();
 const { getById } = useEvents();
@@ -25,25 +26,42 @@ if (!workshop.value) {
   });
 }
 
-const canonicalUrl = computed(
-  () => `https://femmefusion.se/workshops/${route.params.id}`
-);
-
 const seoTitle = computed(() => `${workshop.value!.title} | Femme Fusion`);
 
 const plainDescription = computed(() => {
   const html =
-    workshop.value!.longDescription ||
-    workshop.value!.shortDescription ||
-    "";
+    workshop.value!.longDescription || workshop.value!.shortDescription || "";
   return html.replace(/<[^>]+>/g, "").slice(0, 155);
+});
+
+const ogImage = computed(() => {
+  return `https://femmefusion.se/images/workshop/${id}_meta.webp`;
+});
+
+applyPageSeo({
+  title: seoTitle,
+  description: plainDescription,
+  path: `/workshops/${id}`,
+
+  ogTitle: seoTitle,
+  ogDescription: plainDescription,
+  image: ogImage,
+  ogType: "article",
+
+  twitterTitle: seoTitle,
+  twitterDescription: plainDescription,
+
+  breadcrumbs: [
+    { name: "Kalender", path: "/kalender" },
+    { name: workshop.value!.title, path: `/workshops/${id}` },
+  ],
 });
 
 function buildEventSchema(event: IEvent) {
   const siteUrl = "https://femmefusion.se";
-
-  // basic parsing of address – you can refine later if you want
-  const [streetAddress, cityMaybe] = (event.address || "").split(",").map(p => p.trim());
+  const [streetAddress, cityMaybe] = (event.address || "")
+    .split(",")
+    .map((p) => p.trim());
 
   return {
     "@context": "https://schema.org",
@@ -60,51 +78,36 @@ function buildEventSchema(event: IEvent) {
         "@type": "PostalAddress",
         streetAddress: streetAddress || event.address,
         addressLocality: cityMaybe || "Linköping",
-        addressCountry: "SE"
-      }
+        addressCountry: "SE",
+      },
     },
-    image: event.image
-      ? `${siteUrl}${event.image.src}`
-      : `${siteUrl}/images/meta.jpg`,
-    description:
-      event.longDescription
-        ? event.longDescription.replace(/<[^>]+>/g, "")
-        : event.shortDescription.replace(/<[^>]+>/g, ""),
+    image: event.image ? `${siteUrl}${event.image.src}` : `${siteUrl}/images/meta.jpg`,
+    description: (event.longDescription || event.shortDescription || "")
+      .replace(/<[^>]+>/g, ""),
     organizer: {
       "@type": "Organization",
       name: "Femme Fusion",
-      url: siteUrl
+      url: siteUrl,
     },
     offers: {
       "@type": "Offer",
       price: String(event.price ?? 0),
       priceCurrency: "SEK",
       availability: "https://schema.org/InStock",
-      url: `${siteUrl}/anmalan`
-    }
+      url: `${siteUrl}/anmalan`,
+    },
   };
-};
-
-
-
-useSeoMeta({
-  title: seoTitle.value,
-  description: plainDescription.value,
-  ogTitle: seoTitle.value,
-  ogDescription: plainDescription.value,
-  ogUrl: canonicalUrl.value,
-  ogImage: `/images/workshop/${id}_meta.webp`,
-  twitterCard: "summary_large_image",
-});
+}
 
 const eventSchema = computed(() => buildEventSchema(workshop.value!));
+
 useHead({
-  link: [{ rel: "canonical", href: canonicalUrl.value }],
   script: [
     {
+      key: `schema-event-${id}`,
       type: "application/ld+json",
-      innerHTML: JSON.stringify(eventSchema.value)
-    }
+      innerHTML: JSON.stringify(eventSchema.value),
+    },
   ],
 });
 </script>
