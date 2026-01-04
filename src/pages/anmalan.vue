@@ -190,7 +190,7 @@ useSeoMeta({
     ogTitle: "Anmälan | Femme Fusion",
     ogDescription: "Boka din plats på vårens workshops. Dansglädje, uttryck och energi.",
     ogUrl: canonicalUrl,
-    ogImage: "https://femmefusion.se/images/meta.jpg",
+    ogImage: "https://femmefusion.se/images/meta-2026.jpg",
     twitterCard: "summary_large_image"
 });
 

@@ -81,7 +81,7 @@ function buildEventSchema(event: IEvent) {
         addressCountry: "SE",
       },
     },
-    image: event.image ? `${siteUrl}${event.image.src}` : `${siteUrl}/images/meta.jpg`,
+    image: event.image ? `${siteUrl}${event.image.src}` : `${siteUrl}/images/meta-2026.jpg`,
     description: (event.longDescription || event.shortDescription || "")
       .replace(/<[^>]+>/g, ""),
     organizer: {

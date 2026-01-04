@@ -59,7 +59,7 @@ const ogImage = computed(() => {
   const src = latestPost.value?.image?.src;
 
   if (!src) {
-    return "https://femmefusion.se/images/meta.jpg";
+    return "https://femmefusion.se/images/meta-2026.jpg";
   }
 
   if (src.startsWith("http")) {

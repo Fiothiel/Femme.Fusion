@@ -48,7 +48,7 @@ export default defineNuxtConfig({
           name: "twitter:description",
           content: "Showgrupp med dans, sång och scenuttryck för event, företag och fester i hela Sverige.",
         },
-        { name: "twitter:image", content: "https://femmefusion.se/images/meta.jpg" },
+        { name: "twitter:image", content: "https://femmefusion.se/images/meta-2026.jpg" },
 
         // OG
         { property: "og:url", content: "https://femmefusion.se" },
@@ -57,7 +57,7 @@ export default defineNuxtConfig({
           property: "og:description",
           content:  "Professionell showgrupp med dans, sång och stark scennärvaro för event och fester i hela Sverige.",
         },
-        { property: "og:image", content: "https://femmefusion.se/images/meta.jpg" },
+        { property: "og:image", content: "https://femmefusion.se/images/meta-2026.jpg" },
         { property: "og:type", content: "website" },
 
         // Theme

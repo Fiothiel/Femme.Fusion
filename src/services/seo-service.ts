@@ -5,7 +5,7 @@ export const applyPageSeo = (input: PageSeoInput) => {
     (config.public.siteUrl as string | undefined) ?? "https://femmefusion.se";
 
   const canonicalUrl = `${siteUrl}${input.path}`;
-  const imageUrl = input.image ?? `${siteUrl}/images/meta.jpg`;
+  const imageUrl = input.image ?? `${siteUrl}/images/meta-2026.jpg`;
 
   useSeoMeta({
     title: input.title,

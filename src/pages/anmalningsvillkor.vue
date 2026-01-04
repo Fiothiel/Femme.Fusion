@@ -79,12 +79,12 @@ useSeoMeta({
   ogDescription:
     "Information om anmälan, betalning, ångerrätt, sjukdom och avbokning för Femme Fusions kurser och workshops.",
   ogUrl: canonicalUrl,
-  ogImage: "https://femmefusion.se/images/meta.jpg",
+  ogImage: "https://femmefusion.se/images/meta-2026.jpg",
   twitterCard: "summary_large_image",
   twitterTitle: "Anmälningsvillkor förkurser och workshops",
   twitterDescription:
     "Så funkar anmälan och betalning till Femme Fusions kurser och workshops.",
-  twitterImage: "https://femmefusion.se/images/meta.jpg",
+  twitterImage: "https://femmefusion.se/images/meta-2026.jpg",
 })
 
 useHead({
