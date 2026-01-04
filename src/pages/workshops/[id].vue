@@ -39,17 +39,17 @@ const ogImage = computed(() => {
 });
 
 applyPageSeo({
-  title: seoTitle,
-  description: plainDescription,
+  title: seoTitle.value,
+  description: plainDescription.value,
   path: `/workshops/${id}`,
 
-  ogTitle: seoTitle,
-  ogDescription: plainDescription,
-  image: ogImage,
+  ogTitle: seoTitle.value,
+  ogDescription: plainDescription.value,
+  image: ogImage.value,
   ogType: "article",
 
-  twitterTitle: seoTitle,
-  twitterDescription: plainDescription,
+  twitterTitle: seoTitle.value,
+  twitterDescription: plainDescription.value,
 
   breadcrumbs: [
     { name: "Kalender", path: "/kalender" },
