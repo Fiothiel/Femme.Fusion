@@ -20,7 +20,7 @@
   justify-content: center;
   min-width: 12rem;
   width: max-content;
-  
+
   &--large {
     font-size: 2.5rem;
     padding: $spacing-small $spacing-large;
@@ -66,14 +66,27 @@
     }
   }
 
+  &--header {
+    padding: var(--spacing-xs) var(--spacing-lg);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    min-width: 0;
+
+    &:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: $white;
+    }
+  }
+
   &--ghost {
-    background: rgba(0,0,0,.25);             /* bättre läsbarhet över foto */
-    border-color: rgba(255,255,255,.9);
+    background: rgba(0, 0, 0, .25);    /* bättre läsbarhet över foto */
+    border-color: rgba(255, 255, 255, .9);
     backdrop-filter: blur(6px) saturate(130%);
     color: $white;
 
     &:hover {
-      background: rgba(255,255,255,.12);     /* håll den “ghost”, byt inte till vinröd */
+      background: rgba(255, 255, 255, .12);      /* håll den “ghost”, byt inte till vinröd */
       border-color: $white;
       color: $white;
     }

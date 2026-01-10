@@ -3,7 +3,6 @@
     <div class="hamburger__bar hamburger__bar-1"></div>
     <div class="hamburger__bar hamburger__bar-2"></div>
     <div class="hamburger__bar hamburger__bar-3"></div>
-    <div>Meny</div>
   </div>
 </template>
   
