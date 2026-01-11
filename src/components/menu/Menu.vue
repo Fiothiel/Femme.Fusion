@@ -1,72 +1,41 @@
 <template>
-  <div>
-    <Hamburger
-      @click="onMenuToggle"
-      @keypress.enter="onMenuToggle"
-      ref="burger"
-    />
-    <div
-      class="menu"
-      :class="{ 'menu--open': open }"
-      @click.self="closeMenu"
-      role="dialog"
-      aria-modal="true">
-      <nav class="menu__nav">
-        <h1>Meny</h1>
-        <ul>
+    <nav :aria-label="ariaLabel" class="menu" :class="{'menu--mobile': mobile, 'menu--open': mobile && open}">
+        <ul class="menu__list">
           <li v-for="item in navItems" :key="item.id">
-            <NuxtLink :to="item.to" @click="onRouteClick">
+            <NuxtLink :to="item.to" class="menu__item" @click="onNavigate">
               {{ item.label }}
             </NuxtLink>
           </li>
         </ul>
-      </nav>
-    </div>
-  </div>
+    </nav>
 </template>
   
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { menuItems } from '@/data/menu';
 import { MenuGroup } from "@/types/MenuItem";
-import Hamburger from '@/components/hamburger/Hamburger.vue';
 
-const burger: any = ref(null);
-let open = ref(false);
+const props = defineProps<{
+  mobile: boolean;
+  open: boolean; // for mobile
+}>();
+
+const emit = defineEmits<{
+  (e: "navigate"): void;
+}>();
+
+const ariaLabel = ref(props.mobile ? "Mobilmeny" : "Huvudmeny");
 
 const navItems = computed(() =>
   menuItems
-    .filter(i => i.group === MenuGroup.MAIN)          // only main nav
+    .filter(i => i.group === MenuGroup.MAIN)
     .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
 );
 
-const onRouteClick = () => {
-  onMenuToggle();
-  burger.value.onClick();
-};
-
-const onMenuToggle = () => {
-  open.value = !open.value;
-
-  if (open.value) {
-    document.body.classList.add("no-scroll");
-    document.body.addEventListener("keydown", onKeyPress);
-  } else {
-    document.body.classList.remove("no-scroll");
-    document.body.removeEventListener("keydown", onKeyPress);
+const onNavigate = () => {
+  if (props.mobile) {
+    emit("navigate");
   }
 };
 
-const onKeyPress = (e: KeyboardEvent) => {
-  if (e.key === "Escape") {
-    closeMenu();
-  }
-};
-
-const closeMenu = () => {
-  onMenuToggle();
-    if (burger && burger.value) {
-      burger.value.onClick();
-    }
-}
 </script>

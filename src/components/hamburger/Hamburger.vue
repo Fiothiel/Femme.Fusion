@@ -1,22 +1,22 @@
 <template>
-  <div tabindex="0" class="hamburger" :class="{'hamburger--open': open}" @click="onClick" @keypress.enter="onClick">
+  <button
+    class="hamburger"
+    :class="{ 'hamburger--open': open }"
+    aria-controls="mobile-menu"
+    :aria-expanded="open ? 'true' : 'false'"
+    @click="$emit('toggle')">
     <div class="hamburger__bar hamburger__bar-1"></div>
     <div class="hamburger__bar hamburger__bar-2"></div>
     <div class="hamburger__bar hamburger__bar-3"></div>
-  </div>
+</button>
 </template>
-  
+
 <script setup lang="ts">
-import { ref } from 'vue';
+defineProps<{
+  open: boolean;
+}>();
 
-const open = ref(false);
-
-const onClick = () => {
-    open.value = !open.value;
-}
-
-defineExpose({
-  onClick
-});
-
+defineEmits<{
+  (e: "toggle"): void;
+}>();
 </script>

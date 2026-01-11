@@ -1,33 +1,21 @@
 <template>
   <header class="header" :class="{ 'header--sticky': isSticky }">
     <a href="/"><img src="/logo-white.svg" class="header__logo"></a>
-    <nav aria-label="Huvudmeny">
-        <ul class="header__menu header__menu--desktop">
-          <li v-for="item in navItems" :key="item.id">
-            <NuxtLink :to="item.to" class="menu-item">
-              {{ item.label }}
-            </NuxtLink>
-          </li>
-        </ul>
-    </nav>
-    <NuxtLink to="/bokning" class="button button--secondary button--header header__book header__book--desktop">Boka</NuxtLink>
-    <Hamburger />
+    <Menu :mobile="false" :open="false" />
+    <NuxtLink to="/bokning" class="button button--secondary button--header header__book header__book--desktop">Boka
+    </NuxtLink>
+    <Hamburger :open="menuOpen" @toggle="toggleMenu" />
   </header>
+  <Menu :mobile="true" :open="menuOpen" @navigate="closeMenu" />
 </template>
-  
-<script setup lang="ts">
-import { computed, ref } from "vue";
-import { menuItems } from '@/data/menu';
-import { MenuGroup } from "@/types/MenuItem";
-import Hamburger from "../hamburger/Hamburger.vue";
 
-const navItems = computed(() =>
-  menuItems
-    .filter(i => i.group === MenuGroup.MAIN)          // only main nav
-    .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
-);
+<script setup lang="ts">
+import { ref } from "vue";
+import Hamburger from "../hamburger/Hamburger.vue";
+import Menu from "../menu/Menu.vue";
 
 const isSticky = ref(false);
+const menuOpen = ref(false);
 
 const onScroll = () => {
   isSticky.value = window.scrollY > 40;
@@ -35,10 +23,33 @@ const onScroll = () => {
 
 onMounted(() => {
   window.addEventListener("scroll", onScroll);
+  window.addEventListener("keydown", onKeyDown);
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", onScroll);
+  window.removeEventListener("keydown", onKeyDown);
 });
+
+const toggleMenu = () => {
+  menuOpen.value ? closeMenu() : openMenu();
+}
+
+const closeMenu = () => {
+  menuOpen.value = false;
+  document.body.style.overflow = "";
+};
+
+const openMenu = () => {
+  menuOpen.value = true;
+  document.body.style.overflow = "hidden";
+};
+
+const onKeyDown = (e: KeyboardEvent) => {
+  if (e.key === "Escape" && menuOpen.value) {
+    closeMenu();
+  }
+};
+
 
 </script>

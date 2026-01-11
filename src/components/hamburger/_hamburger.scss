@@ -1,6 +1,7 @@
 @use '../../assets/styles/variables' as *;
 
 .hamburger {
+  border: none;
   height: var(--header-height-mobile);
   width: 5rem;
   cursor: pointer;
