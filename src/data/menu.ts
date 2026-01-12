@@ -4,14 +4,6 @@ import { MenuGroup } from "@/types/MenuItem";
 export const menuItems: MenuItem[] = [
    /* Main menu */
   {
-    id: "home",
-    label: "Hem",
-    to: "/",
-    order: 0,
-    group: MenuGroup.MAIN,
-    showOnMobile: true,
-  },
-  {
     id: "booking",
     label: "Bokning",
     to: "/bokning",
