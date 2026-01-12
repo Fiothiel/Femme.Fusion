@@ -9,9 +9,11 @@ export const useEvents = () => {
     const events: IEvent[] = localEvents.map(mapLocal);
 
     const now = new Date();
-    const upcomingEvents = events.filter(
-      (event) => new Date(event.startDate) >= now
-    );
+
+    const upcomingEvents = events.filter((event) => {
+      const end = new Date(event.endDate ?? event.startDate);
+      return end >= now;
+    });
 
     return upcomingEvents.sort(sort);
   }
@@ -62,7 +64,7 @@ export const useEvents = () => {
   function getById(id: string): IEvent | undefined {
     const all = getEvents();
     return (all as IEvent[]).find((e) => e.id === id);
-}
+  }
 
   return {
     getEvents,

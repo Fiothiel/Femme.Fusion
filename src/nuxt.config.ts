@@ -1,8 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import eventsData from "./public/data/events.json";
 
+
+const now = new Date();
+
 const workshopUrls = (eventsData as any[])
-  .filter((e) => e.id) // Only events with an id
+  .filter((e) => {
+    if (!e.id || !e.startDate) {
+      return false;
+    }
+
+    const isWorkshop = e.type === "course"; // justera om du även har "workshop"
+    const isUpcoming = new Date(e.startDate) >= now;
+
+    return isWorkshop && isUpcoming;
+  })
   .map((e) => `/workshops/${e.id}`);
   
 export default defineNuxtConfig({
