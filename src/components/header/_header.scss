@@ -34,6 +34,10 @@
         height: var(--header-height-mobile);
         padding: 0 0 0 var(--spacing-sm);
 
+        &--menu-open {
+            background: rgba(0, 0, 0, 0.96);
+        }
+
         &__logo {
             height: 3rem;
         }

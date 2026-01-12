@@ -1,12 +1,12 @@
 <template>
-  <header class="header" :class="{ 'header--sticky': isSticky }">
+  <header class="header" :class="{ 'header--sticky': isSticky, 'header--menu-open': menuOpen }">
     <a href="/"><img src="/logo-white.svg" class="header__logo"></a>
     <Menu :mobile="false" :open="false" />
     <NuxtLink to="/bokning" class="button button--secondary button--header header__book header__book--desktop">Boka
     </NuxtLink>
     <Hamburger :open="menuOpen" @toggle="toggleMenu" />
   </header>
-  <Menu :mobile="true" :open="menuOpen" @navigate="closeMenu" />
+  <Menu :mobile="true" :open="menuOpen" @navigate="closeMenu" @close="closeMenu" />
 </template>
 
 <script setup lang="ts">
