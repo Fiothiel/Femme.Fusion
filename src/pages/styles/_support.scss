@@ -1,0 +1,12 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/typography' as *;
+@use '../../assets/styles/mixins' as *;
+
+.support {
+    &__cards {
+        margin-top: var(--spacing-lg);
+        @include no-style-list();
+        display: flex;
+        gap: var(--spacing-lg);        /* flex-wrap: wrap; */
+    }
+}
