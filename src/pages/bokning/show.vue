@@ -49,7 +49,7 @@
         </section>
         <section class="section section--airy" id="testimonials">
             <div class="section__content">
-                <Testimonials heading="Röster från deltagare" :testimonials="testimonials" />
+                <Testimonials heading="Ord från våra kunder" :testimonials="testimonials" />
             </div>
         </section>
         <section class="section" aria-labelledby="show-next">

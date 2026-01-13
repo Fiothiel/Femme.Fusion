@@ -5,7 +5,7 @@
         <h1>Stötta Femme Fusion</h1>
         <p>Bakom varje show ligger repetitioner, koreografi, kostymarbete, musikval och ett gediget arbete med sceniskt
           uttryck. Om du
-          vill vara med och backa det vi gör kan du stötta oss via Patreon eller Buy Me a Coffee.</p>
+          vill vara med och supporta det vi gör kan du stötta oss via Patreon eller Buy Me a Coffee.</p>
       </div>
     </section>
     <section class="section section--airy section--darkred">
@@ -66,7 +66,7 @@ onMounted(() => {
 applyPageSeo({
   title: "Stötta Femme Fusion | Patreon och Buy Me a Coffee",
   description:
-    "Vill du stötta Femme Fusion? Backa vårt skapande via Patreon eller Buy Me a Coffee och hjälp oss fortsätta skapa shower med dans, sång och scenmagi.",
+    "Vill du stötta Femme Fusion? Supporta vårt skapande via Patreon eller Buy Me a Coffee och hjälp oss fortsätta skapa shower med dans, sång och scenmagi.",
 
   path: "/stotta-oss",
 
