@@ -7,6 +7,7 @@
 
 // Components
 @use '../../components/accordion/accordion';
+@use '../../components/cardlink/card-link';
 @use '../../components/contentpost/content-post';
 @use '../../components/footer/footer';
 @use '../../components/hamburger/hamburger';
@@ -28,4 +29,5 @@
 @use '../../pages/styles/events';
 @use '../../pages/styles/home';
 @use '../../pages/styles/terms';
+@use '../../pages/styles/support';
 @use '../../pages/bokning/styles/booking';

@@ -76,4 +76,12 @@ export const menuItems: MenuItem[] = [
     group: MenuGroup.FOOTER,
     showOnMobile: true,
   },
+    {
+    id: "support-us",
+    label: "Stötta oss",
+    to: "/stotta-oss",
+    order: 50,
+    group: MenuGroup.FOOTER,
+    showOnMobile: true,
+  },
 ];

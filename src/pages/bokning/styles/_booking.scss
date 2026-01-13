@@ -21,22 +21,6 @@
         }
     }
 
-    .card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: $spacing-medium;
-        border: 2px solid $wine-damp;
-        background: linear-gradient(to bottom, $wine-light, $wine);
-        transition: border-color 0.2s ease, transform 0.15s ease;
-
-        &:hover {
-            border-color: $wine;
-            transform: translateY(-4px);
-            color: $white;
-        }
-    }
-
     &__image {
         object-fit: cover;
         height: 600px;

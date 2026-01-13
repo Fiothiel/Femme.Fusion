@@ -4,6 +4,7 @@
       <div class="section__content">
         <h1>Bakom kulisserna</h1>
         <p>Här delar vi med oss av små glimtar av vårt arbete, våra tankar och vår process.</p>
+        <p>Vill du vara med och backa vårt arbete bakom kulisserna? <NuxtLink to="/stotta-oss">Läs mer om hur du kan stötta oss.</NuxtLink></p>
       </div>
     </section>
     <section class="section" v-for="post in posts" :key="post.id">

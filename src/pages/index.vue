@@ -16,8 +16,8 @@
       </div>
     </section>
     <section class="section" id="sizzle-reel">
-      <video class="home__video" controls autoplay muted poster="/images/trailer-thumbnail.png">
-        <source src="/trailer.mp4" type="video/mp4" />
+      <video class="home__video" controls autoplay muted poster="/images/sizzle-reel-thumbnail.png">
+        <source src="/femme-fusion-sizzle-reel-2026.mp4" type="video/mp4" />
       </video>
     </section>
     <section class="section section--wide section--red section--airy" id="testimonials">

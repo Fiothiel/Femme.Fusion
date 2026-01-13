@@ -22,16 +22,16 @@
             <div class="section__content">
                 <ul class="book__cards">
                     <li>
-                        <NuxtLink to="/bokning/show" class="card">
+                        <CardLink to="/bokning/show" :external="false">
                             <h2>Boka show</h2>
                             <p>Skräddarsydd underhållning för företagsevent, fester och scener.</p>
-                        </NuxtLink>
+                        </CardLink>
                     </li>
                     <li>
-                        <NuxtLink to="/bokning/dansklass" class="card">
+                        <CardLink to="/bokning/dansklass" :external="false">
                             <h2>Boka dansklass</h2>
                             <p>Perfekt för möhippa, födelsedag eller teambuilding - alla nivåer.</p>
-                        </NuxtLink>
+                        </CardLink>
                     </li>
                 </ul>
             </div>
@@ -50,6 +50,7 @@
 
 <script setup lang="ts">
 import { useUtils } from '@/utils';
+import CardLink from '~/components/cardlink/CardLink.vue';
 import { applyPageSeo } from '~/services/seo-service';
 
 onMounted(() => {

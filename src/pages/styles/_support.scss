@@ -1,0 +1,36 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/typography' as *;
+@use '../../assets/styles/mixins' as *;
+
+.support {
+    &__cards {
+        margin-top: var(--spacing-lg);
+        @include no-style-list();
+        display: flex;
+        column-gap: var(--spacing-lg);
+        row-gap: var(--spacing-xl);
+
+        @include for-tablet-landscape-down {
+            flex-direction: column;
+        }
+    }
+
+    &__link-card {
+        &--patreon {
+            .card__icon {
+                height: 4.8rem;
+            }
+        }
+    }
+
+    h3 {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    &__patreons {
+        text-align: center;
+    }
+}

@@ -1,0 +1,22 @@
+@use '../../assets/styles/variables' as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-medium;
+    border: 2px solid $wine-damp;
+    background: linear-gradient(to bottom, $wine-light, $wine);
+    transition: border-color 0.2s ease, transform 0.15s ease;
+
+    &:hover {
+        border-color: $wine;
+        transform: translateY(-4px);
+        color: $white;
+    }
+
+    &__icon {
+        height: 5rem;
+    }
+}
