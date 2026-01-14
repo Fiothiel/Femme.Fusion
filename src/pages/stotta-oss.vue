@@ -47,7 +47,7 @@
     <section class="section">
       <div class="section__content">
         <h2>Tack till våra Patreons</h2>
-        <p class="support__patreons">Vi har inga patreons än, blir du vår första?</p>
+        <p class="support__patreons">Henrik P.</p>
       </div>
     </section>
   </div>
