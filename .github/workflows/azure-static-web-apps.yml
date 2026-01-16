@@ -28,9 +28,11 @@ jobs:
           cache: yarn
 
       - name: Install
+        working-directory: src
         run: yarn install --frozen-lockfile
 
       - name: Generate
+        working-directory: src
         run: yarn generate
 
       - name: Deploy
@@ -41,7 +43,7 @@ jobs:
           action: "upload"
           app_location: "/"
           api_location: ""
-          output_location: ".output/public"
+          output_location: "src/.output/public"
           skip_app_build: true
 
   close_pull_request_job:
