@@ -3,11 +3,10 @@
 @use '../../assets/styles/typography' as *;
 
 .testimonials {
-    font-family: $font-family-playfair;
-    font-size: clamp(2rem, 1.8vw, 2.5rem);
-    line-height: 1.6;
-    font-weight: 200;
-
+    &__preamble {
+        text-align: center;
+    }
+    
     &__list {
         @include no-style-list();
         display: flex;
@@ -42,6 +41,11 @@
     }
 
     &__item {
+        font-family: $font-family-playfair;
+        font-size: clamp(2rem, 1.8vw, 2.5rem);
+        line-height: 1.6;
+        font-weight: 200;
+
         width: 80%;
         background-color: $wine;
         padding: $spacing-large;

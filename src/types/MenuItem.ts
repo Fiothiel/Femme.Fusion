@@ -5,6 +5,7 @@ export type MenuItem = {
   order?: number;
   group?: MenuGroup;
   showOnMobile?: boolean;
+  children?: MenuItem[];
 };
 
 export const MenuGroup = {

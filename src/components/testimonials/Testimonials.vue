@@ -1,6 +1,7 @@
 <template>
   <div class="testimonials">
     <h2 v-if="heading">{{ heading }}</h2>
+    <p v-if="preamble" class="testimonials__preamble">{{ preamble }}</p>
 
     <Splide class="testimonials__carousel" :data-splide="carouselOptions">
       <SplideSlide v-for="(group, groupIndex) in groupedTestimonials" :key="groupIndex">
@@ -25,6 +26,7 @@ import '@splidejs/vue-splide/css';
 
 const props = defineProps<{
   heading?: string;
+  preamble?: string;
   testimonials: Testimonial[];
 }>();
 

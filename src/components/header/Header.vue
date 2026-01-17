@@ -2,7 +2,7 @@
   <header class="header" :class="{ 'header--sticky': isSticky, 'header--menu-open': menuOpen }">
     <a href="/"><img src="/logo-white.svg" class="header__logo"></a>
     <Menu :mobile="false" :open="false" />
-    <NuxtLink to="/bokning" class="button button--secondary button--header header__book header__book--desktop">Boka
+    <NuxtLink to="/bokning" class="button button--secondary button--header header__book header__book--desktop">Skicka förfrågan
     </NuxtLink>
     <Hamburger :open="menuOpen" @toggle="toggleMenu" />
   </header>
