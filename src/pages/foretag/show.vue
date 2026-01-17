@@ -87,7 +87,9 @@
 
         <section class="section section--airy" id="testimonials">
             <div class="section__content">
-                <Testimonials heading="Ord från våra kunder" preamble="Så här beskriver våra kunder upplevelsen av att arbeta med oss." :testimonials="testimonials" />
+                <Testimonials heading="Ord från våra kunder"
+                    preamble="Så här beskriver våra kunder upplevelsen av att arbeta med oss."
+                    :testimonials="testimonials" />
             </div>
         </section>
 
@@ -139,27 +141,42 @@ const images: Ref<IImageInfo[]> = ref([
     {
         src: "/images/show/show-skylten-kimv-2.webp",
         photographer: "Kim Vestbrant",
-        alt: "Tre showartister uppträder på stolar med fjäderfantasier under en professionell scenföreställning."
-    },
-    {
-        src: "/images/show/show-skylten-må-2.webp",
-        photographer: "Mattias Åström",
-        alt: "Två showartister sjunger live på scen med mikrofoner under en energifylld show."
-    },
-    {
-        src: "/images/show/show-todecay-kulturnatten-hoog-1.webp",
-        photographer: "Fotograferna Hoog",
-        alt: "Showartister uppträder i ett koreograferat nummer på scen under en liveföreställning."
+        alt: "Tre showartister uppträder i ett synkroniserat stolnummer med fjäderfantasier under en professionell scenföreställning."
     },
     {
         src: "/images/show/show-arbis-hoog-2.webp",
         photographer: "Fotograferna Hoog",
-        alt: "Två showartister uppträder på stolar i glittrande scenkostymer, upplysta av rosa och lila scenljus under en professionell show."
+        alt: "Två showartister uppträder på stolar i glittrande scenkostymer, upplysta av rosa och lila scenljus under ett elegant nummer."
+    },
+    {
+        src: "/images/show/show-skylten-kimv-4.webp",
+        photographer: "Kim Vestbrant",
+        alt: "Två showartister genomför ett stilrent och kontrollerat stolnummer under en professionell scenproduktion."
+    },
+    {
+        src: "/images/show/show-skylten-må-2.webp",
+        photographer: "Mattias Åström",
+        alt: "Två showartister sjunger live på scen med mikrofoner under en välproducerad scenföreställning."
+    },
+    {
+        src: "/images/show/show-arbis-hoog-3.webp",
+        photographer: "Fotograferna Hoog",
+        alt: "Två showartister sjunger och uppträder i duo på scen med tydlig scennärvaro och publikfokus."
+    },
+    {
+        src: "/images/show/show-todecay-kulturnatten-hoog-1.webp",
+        photographer: "Fotograferna Hoog",
+        alt: "Showartister uppträder i ett koreograferat gruppnummer på scen under en energifylld men kontrollerad föreställning."
+    },
+    {
+        src: "/images/show/show-todecay-kulturnatten-hoog-3.webp",
+        photographer: "Fotograferna Hoog",
+        alt: "Showartister genomför ett sceniskt gruppnummer med tydlig koreografi och scenljus."
     },
     {
         src: "/images/show/show-dv-24.webp",
         photographer: "StormPhoto",
-        alt: "Fyra showartister uppträder utomhus med sång och koreografi under en energifylld scenföreställning."
+        alt: "Fyra showartister uppträder utomhus med sång och koreografi under ett större event."
     },
     {
         src: "/images/show/show-skylten-kimv-5.webp",
@@ -167,31 +184,17 @@ const images: Ref<IImageInfo[]> = ref([
         alt: "Showartist uppträder i ett solonummer med stol under en professionell scenföreställning."
     },
     {
-        src: "/images/show/show-todecay-kulturnatten-hoog-2.webp",
-        photographer: "Fotograferna Hoog",
-        alt: "Två showartister uppträder i duo på scen med tydlig koreografi och scennärvaro."
-    },
-    {
-        src: "/images/show/show-arbis-hoog-3.webp",
-        photographer: "Fotograferna Hoog",
-        alt: "Två showartister sjunger och uppträder på scen med mikrofon, fångade i ett live-ögonblick med tydlig scennärvaro."
-    },
-    {
         src: "/images/show/show-arbis-hoog-1.webp",
         photographer: "Fotograferna Hoog",
-        alt: "Showartist sjunger live på scen i svartvitt foto, sittande vid en stol med stark scenkänsla och fokus på sång."
+        alt: "Showartist sjunger live på scen i ett svartvitt foto med fokus på sång och scennärvaro."
     },
     {
-        src: "/images/show/show-todecay-kulturnatten-hoog-3.webp",
+        src: "/images/show/show-todecay-kulturnatten-hoog-2.webp",
         photographer: "Fotograferna Hoog",
-        alt: "Showartister uppträder i ett sceniskt nummer under en professionell liveföreställning."
-    },
-    {
-        src: "/images/show/show-skylten-kimv-4.webp",
-        photographer: "Kim Vestbrant",
-        alt: "Två showartister uppträder på stolar i glittrande scenkostymer under en elegant danssekvens."
-    },
+        alt: "Två showartister uppträder i ett mer uttrycksfullt duo-nummer med tydlig attityd och energi."
+    }
 ]);
+
 
 applyPageSeo({
     title: "Show till företagsevent | Femme Fusion",
