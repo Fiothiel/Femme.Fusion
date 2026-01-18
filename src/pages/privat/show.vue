@@ -15,7 +15,7 @@
                     vi hjälper er hitta ett upplägg som känns rätt.
                 </p>
                 <p>
-                    <NuxtLink class="link link--accent" to="/bokning">
+                    <NuxtLink class="link link--accent" to="/kontakt">
                         Skicka förfrågan
                     </NuxtLink>
                     så guidar vi er vidare.
@@ -80,7 +80,7 @@
         <!-- CTA -->
         <section class="section section--airy" aria-labelledby="private-show-cta">
             <div class="section__content">
-                <NuxtLink to="/bokning" class="button button--cta">
+                <NuxtLink to="/kontakt" class="button button--cta">
                     Skicka förfrågan
                 </NuxtLink>
             </div>
@@ -105,7 +105,7 @@
                     Berätta lite om festen, när den äger rum och vilken känsla ni vill skapa,
                     så återkommer vi med ett förslag som passar just er.
                 </p>
-                <NuxtLink to="/bokning" class="button button--cta">
+                <NuxtLink to="/kontakt" class="button button--cta">
                     Skicka förfrågan
                 </NuxtLink>
             </div>
