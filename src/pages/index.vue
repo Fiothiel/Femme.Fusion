@@ -35,7 +35,7 @@
           Vi söker dig som vill showa tillsammans med Femme Fusion.
         </p>
 
-        <a class="link" href="/om-oss/sta-pa-scenen">
+        <a class="link" href="/sta-pa-scenen">
           Stå på scenen med oss
         </a>
       </div>
