@@ -9,24 +9,35 @@
                     Vi skickar en bekräftelse via e-post.
                 </p>
 
-                <form class="form" ref="form" @submit="onSubmit">
-                    <label>Välj de workshops du vill anmäla dig till. Klicka på namnet för att läsa mer om en specifik
-                        workshop.</label>
+                <form class="form" ref="form" @submit.prevent="onSubmit">
+                    <label>
+                        Välj de workshops du vill anmäla dig till. Klicka på namnet för att läsa mer om en specifik
+                        workshop.
+                    </label>
+
                     <div class="signup__options">
                         <label v-for="event in courses" :key="event.url" class="signup__option">
-                            <input type="checkbox" :value="event.title + ' - ' + useUtils().getShortDate(event.startDate) + ', ' + event.dayAndTimeInfo"
-                                v-model="selectedWorkshops" />
+                            <input
+                                type="checkbox"
+                                :value="event.title + ' - ' + useUtils().getShortDate(event.startDate) + ', ' + event.dayAndTimeInfo"
+                                v-model="selectedWorkshops"
+                            />
                             <div class="signup__option-content">
-                                <a class="signup__option-title" :href="getWorkshopLink(event)" target="_blank"
-                                    rel="noopener">
+                                <a
+                                    class="signup__option-title"
+                                    :href="getWorkshopLink(event)"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
                                     {{ event.title }}
                                 </a>
                                 <span class="signup__option-meta">
-                                    {{ useUtils().getShortDate(event.startDate) }} {{ event.dayAndTimeInfo }} 
+                                    {{ useUtils().getShortDate(event.startDate) }} {{ event.dayAndTimeInfo }}
                                 </span>
                             </div>
                         </label>
                     </div>
+
                     <div class="form__error" v-if="workshopError">{{ workshopError }}</div>
 
                     <label>Namn</label>
@@ -57,8 +68,12 @@
                     <div class="form__error" v-if="personalNumberError">{{ personalNumberError }}</div>
 
                     <label>Meddelande</label>
-                    <textarea name="message" v-model="message" rows="4"
-                        placeholder="T.ex. om du har funderingar, önskemål eller vill anmäla fler personer."></textarea>
+                    <textarea
+                        name="message"
+                        v-model="message"
+                        rows="4"
+                        placeholder="T.ex. om du har funderingar, önskemål eller vill anmäla fler personer."
+                    ></textarea>
 
                     <label class="signup__terms">
                         <input type="checkbox" v-model="acceptedTerms" />
@@ -78,7 +93,6 @@
 
                     <div v-if="displayMessage">Tack för din anmälan!</div>
                 </form>
-
             </div>
         </section>
     </div>
@@ -90,8 +104,10 @@ import { useField, useForm } from "vee-validate";
 import Loader from "@/components/loader/Loader.vue";
 import { useEvents } from "@/services/events-service";
 import type { IEvent } from "~/types/IEvent";
-import { useEmail } from '@/services/email-service';
+import { useEmail } from "@/services/email-service";
 import { useUtils } from "@/utils";
+
+const form = ref<HTMLFormElement | null>(null);
 
 const { sendMessageEmail, sendConfirmationEmail, loading } = useEmail();
 const displayMessage = ref(false);
@@ -105,14 +121,16 @@ const selectedWorkshops = ref<string[]>([]);
 const workshopError = ref<string | null>(null);
 
 const { value: name, errorMessage: nameError } = useField<string>("name", "required");
-const { value: personalNumber, errorMessage: personalNumberError } = useField<string>('personalNumber', 'required|personalnumber')
+const { value: personalNumber, errorMessage: personalNumberError } = useField<string>("personalNumber", "required|personalnumber");
 const { value: email, errorMessage: emailError } = useField<string>("email", "required|email");
 const { value: phone } = useField<string>("phone");
 const { value: address, errorMessage: addressError } = useField<string>("address", "required");
 const { value: postalCode, errorMessage: postalCodeError } = useField<string>("postalCode", "required|numeric");
 const { value: city, errorMessage: cityError } = useField<string>("city", "required");
 const { value: message } = useField<string>("message");
-const { value: acceptedTerms, errorMessage: termsError } = useField<boolean>("acceptedTerms", value => (value ? true : "Du måste godkänna villkoren.")
+const { value: acceptedTerms, errorMessage: termsError } = useField<boolean>(
+    "acceptedTerms",
+    (value) => (value ? true : "Du måste godkänna villkoren.")
 );
 
 onMounted(() => {
@@ -124,45 +142,75 @@ function getWorkshopLink(event: IEvent): string {
     return `/workshops/${event.id}`;
 }
 
-const onSubmit = handleSubmit(async () => {
-    if (selectedWorkshops.value.length === 0) {
-        workshopError.value = "Du måste välja minst en workshop.";
-        return;
-    } else {
-        workshopError.value = null;
-    }
+function scrollToFirstError(): void {
+    setTimeout(() => {
+        const root = form.value ?? document;
 
-    await sendEmail();
-});
+        const errors = Array.from(root.querySelectorAll<HTMLElement>(".form__error")).filter((el) => {
+            return (el.textContent ?? "").trim().length > 0;
+        });
+
+        if (errors.length === 0) {
+            return;
+        }
+
+        errors.sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
+
+        const firstError = errors[0];
+        firstError.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        const fieldWrapper = firstError.parentElement;
+        const input = fieldWrapper?.querySelector<HTMLElement>("input, textarea, select");
+        if (input && "focus" in input) {
+            (input as HTMLInputElement).focus({ preventScroll: true });
+        }
+    }, 0);
+}
+
+const onSubmit = handleSubmit(
+    async () => {
+        if (selectedWorkshops.value.length === 0) {
+            workshopError.value = "Du måste välja minst en workshop.";
+            scrollToFirstError();
+            return;
+        }
+
+        workshopError.value = null;
+        await sendEmail();
+    },
+    async () => {
+        scrollToFirstError();
+    }
+);
 
 const sendEmail = async () => {
-    const selectedSnapshot = [...selectedWorkshops.value]
-    const classesHtml = selectedSnapshot.map(w => `<li>${w}</li>`).join('')
+    const selectedSnapshot = [...selectedWorkshops.value];
+    const classesHtml = selectedSnapshot.map((w) => `<li>${w}</li>`).join("");
 
     // 1. Mail till FF
     await sendMessageEmail({
-        subject: 'Ny workshopanmälan',
-        message: 'Ny anmälan via anmälningsformuläret.',
+        subject: "Ny workshopanmälan",
+        message: "Ny anmälan via anmälningsformuläret.",
         name: name.value,
         email: email.value,
         phone: phone.value,
         details: `
       <p><strong>Namn:</strong> ${name.value}</p>
       <p><strong>Email:</strong> ${email.value}</p>
-      <p><strong>Telefon:</strong> ${phone.value || 'Ej angivet'}</p>
+      <p><strong>Telefon:</strong> ${phone.value || "Ej angivet"}</p>
       <p><strong>Personnummer:</strong> ${personalNumber.value}</p>
       <p><strong>Adress:</strong> ${address.value}, ${postalCode.value} ${city.value}</p>
       <p><strong>Workshops:</strong></p>
       <ul>${classesHtml}</ul>
-      <p><strong>Meddelande:</strong><br>${message.value || 'Inget meddelande angivet.'}</p>
-    `
+      <p><strong>Meddelande:</strong><br>${message.value || "Inget meddelande angivet."}</p>
+    `,
     });
 
-    displayMessage.value = true
+    displayMessage.value = true;
 
     // 2. Bekräftelsemail till deltagaren
     await sendConfirmationEmail({
-        subject: 'Tack för din anmälan!',
+        subject: "Tack för din anmälan!",
         name: name.value,
         email: email.value,
         details: `
@@ -171,14 +219,13 @@ const sendEmail = async () => {
       <ul>${classesHtml}</ul>
       <p>Du får ett nytt mail när vi har gått igenom anmälningarna och kan bekräfta din plats.</p>
       <p>Vänliga hälsningar,<br>Femme Fusion</p>
-    `
+    `,
     });
 
     // 3. Töm formulär
     selectedWorkshops.value = [];
     resetForm();
-}
-
+};
 
 // SEO
 const canonicalUrl = "https://femmefusion.se/anmalan";
@@ -191,7 +238,7 @@ useSeoMeta({
     ogDescription: "Boka din plats på vårens workshops. Dansglädje, uttryck och energi.",
     ogUrl: canonicalUrl,
     ogImage: "https://femmefusion.se/images/meta-2026.jpg",
-    twitterCard: "summary_large_image"
+    twitterCard: "summary_large_image",
 });
 
 useHead({ link: [{ rel: "canonical", href: canonicalUrl }] });

@@ -25,8 +25,12 @@
         <Testimonials heading="Sagt om oss" :testimonials="testimonials" />
       </div>
     </section>
-    <NuxtImg src="/images/loboutin.jpg" sizes="xl:2500px md:1500px 100vw"
-      alt="Louboutinsko i svart lack mot en parkeringshusvägg" class="image image--full-width" />
+    <section class="section section--airy" id="dance-with-femme-fusion">
+      <div class="section__content">
+        <h2 id="dance-with-femme-fusion">Dansa med oss?</h2>
+        <p>Text text text</p>
+      </div>
+    </section>
   </div>
 </template>
 

@@ -15,18 +15,45 @@
             <div class="section__content">
                 <ul class="show-hub__cards">
                     <li>
-                        <CardLink to="/foretag/show" :external="false">
+                        <CardLink to="/foretag/show" :external="false" :icon="null">
                             <h2>Show till företagsevent</h2>
                             <p>Kickoff, middag, konferens eller lansering. Proffsigt, snyggt och lätt att planera.</p>
                         </CardLink>
                     </li>
                     <li>
-                        <CardLink to="/privat/show" :external="false">
+                        <CardLink to="/privat/show" :external="false" :icon="null">
                             <h2>Show till privata tillfällen</h2>
                             <p>Födelsedag, jubileum eller fest. Ett wow-nummer eller en hel show, ni väljer känslan.</p>
                         </CardLink>
                     </li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__content">
+                <h2>Kommande shower</h2>
+
+                <ul v-if="upcomingShows.length > 0" class="table-list">
+                    <li v-for="event in upcomingShows" :key="event.url">
+                        <Modal :id="event.url">
+                            <template v-slot:link="{ clicked }: { clicked: () => void }">
+                                <a class="table-list__link" @click="clicked">
+                                    <span>{{ getShortDate(event.startDate) }}</span>
+                                    {{ event.title }}
+                                </a>
+                            </template>
+                            <template v-slot:content>
+                                <EventInfo :event="event" />
+                            </template>
+                        </Modal>
+                    </li>
+                </ul>
+
+                <p v-else>
+                    Inga publika datum ute just nu. Vill du boka ett nummer eller en hel show?
+                    <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink>.
+                </p>
             </div>
         </section>
 
@@ -42,12 +69,25 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useUtils } from '@/utils';
 import CardLink from '@/components/cardlink/CardLink.vue';
 import { applyPageSeo } from '@/services/seo-service';
+import { useEvents } from '@/services/events-service';
+import type { Ref } from 'vue';
+import type { IEvent } from '@/types/IEvent';
+import EventInfo from '@/components/eventinfo/EventInfo.vue';
+import Modal from '@/components/modal/Modal.vue';
 
 onMounted(() => {
     useUtils().scrollToMain();
+});
+
+const { getShortDate } = useUtils();
+const { getShows } = useEvents();
+
+const upcomingShows: Ref<IEvent[]> = computed(() => {
+    return getShows().slice(0, 5);
 });
 
 applyPageSeo({

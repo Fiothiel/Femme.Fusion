@@ -4,16 +4,20 @@
             <div class="section__content">
                 <h1 id="dance-title">Dansklass för företag</h1>
                 <p>
-                    Ge teamet en aktivitet som höjer energin direkt. Våra <strong>dansklasser</strong> passar perfekt för
-                    kickoff, konferens, afterwork och teambuilding. Upplägget är lättsamt, tryggt och anpassat för blandade
+                    Ge teamet en aktivitet som höjer energin direkt. Våra <strong>dansklasser</strong> passar perfekt
+                    för
+                    kickoff, konferens, afterwork och teambuilding. Upplägget är lättsamt, tryggt och anpassat för
+                    blandade
                     nivåer så att alla kan vara med.
                 </p>
                 <p>
-                    Välj en stil som matchar ert event, till exempel feminine vibe, cabaret, street eller en skräddarsydd mix.
+                    Välj en stil som matchar ert event, till exempel feminine vibe, cabaret, street eller en
+                    skräddarsydd mix.
                     Vi leder tydligt, tar hand om gruppen och ser till att det känns proffsigt hela vägen.
                 </p>
                 <p>
-                    <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink> med datum, plats och
+                    <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink> med datum, plats
+                    och
                     ungefärligt antal deltagare, så återkommer vi med upplägg och pris. Du kan också kika i vår
                     <NuxtLink class="link link--accent" to="/kalender">kalender</NuxtLink> för öppna klasser.
                 </p>
@@ -29,7 +33,8 @@
                 <Splide :data-splide="options" class="carousel carousel--vertical">
                     <SplideSlide v-for="image in images" :key="image.src">
                         <figure>
-                            <NuxtImg class="book__image image" :src="image.src" sizes="md:1280px 100vw" :alt="image.alt" />
+                            <NuxtImg class="book__image image" :src="image.src" sizes="md:1280px 100vw"
+                                :alt="image.alt" />
                             <figcaption>Foto: {{ image.photographer }}</figcaption>
                         </figure>
                     </SplideSlide>
@@ -41,15 +46,18 @@
             <div class="section__content">
                 <h2>Så funkar en dansklass med oss</h2>
                 <p>
-                    Vi skapar en stund där alla känner sig inkluderade och trygga, oavsett erfarenhet. Fokus ligger på energi,
+                    Vi skapar en stund där alla känner sig inkluderade och trygga, oavsett erfarenhet. Fokus ligger på
+                    energi,
                     samspel och rörelseglädje. Ni behöver inte kunna dansa för att få ut massor av upplevelsen.
                 </p>
                 <p>
-                    Vi börjar med en enkel uppvärmning och går sedan över till koreografi som anpassas efter gruppen. Om ni vill
+                    Vi börjar med en enkel uppvärmning och går sedan över till koreografi som anpassas efter gruppen. Om
+                    ni vill
                     filma en kort del på slutet löser vi det, perfekt som minne eller internt content.
                 </p>
                 <p>
-                    Vi utgår från Linköping men håller <strong>dansklasser i hela Sverige</strong>, i er lokal eller i en lokal vi
+                    Vi utgår från Linköping men håller <strong>dansklasser i hela Sverige</strong>, i er lokal eller i
+                    en lokal vi
                     hjälper till att ordna.
                 </p>
             </div>
@@ -65,8 +73,10 @@
             <div class="section__content">
                 <h2>Boka dansklass för företag</h2>
                 <p>
-                    Vill ni boka en dansklass till er kickoff eller teambuilding? Skriv gärna datum, plats, antal deltagare och
-                    vilken känsla ni vill ha så återkommer vi med ett tydligt upplägg och prisförslag. Osäker på vad som passar?
+                    Vill ni boka en dansklass till er kickoff eller teambuilding? Skriv gärna datum, plats, antal
+                    deltagare och
+                    vilken känsla ni vill ha så återkommer vi med ett tydligt upplägg och prisförslag. Osäker på vad som
+                    passar?
                     Hör av er så guidar vi er rätt.
                 </p>
                 <div class="section__buttons">
@@ -112,29 +122,9 @@ const images: Ref<IImageInfo[]> = ref([
         alt: 'Deltagare på dansklass utför koreografi i grupp i ljus dansstudio.'
     },
     {
-        src: '/images/danceclass/danceclass-02.webp',
-        photographer: 'Hampus Zetterblom',
-        alt: 'Dansklass med flera deltagare som tränar rörelser och steg i spegelsal.'
-    },
-    {
-        src: '/images/danceclass/danceclass-03.webp',
-        photographer: 'Hampus Zetterblom',
-        alt: 'Deltagare på dansklass övar armrörelser och uttryck i gemensam koreografi.'
-    },
-    {
         src: '/images/danceclass/danceclass-04.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Gruppdansklass där deltagare tränar koreografi tillsammans i studio.'
-    },
-    {
-        src: '/images/danceclass/danceclass-05.webp',
-        photographer: 'Hampus Zetterblom',
-        alt: 'Dansklass med fokus på rörelse, koordination och scennärvaro.'
-    },
-    {
-        src: '/images/danceclass/danceclass-06.webp',
-        photographer: 'Hampus Zetterblom',
-        alt: 'Deltagare på dansklass följer koreograferade instruktioner i grupp.'
     },
     {
         src: '/images/danceclass/danceclass-07.webp',
@@ -150,6 +140,11 @@ const images: Ref<IImageInfo[]> = ref([
         src: '/images/danceclass/danceclass-09.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Gruppdansklass där deltagare utvecklar teknik, uttryck och rörelse.'
+    },
+    {
+        src: '/images/danceclass/danceclass-05.webp',
+        photographer: 'Hampus Zetterblom',
+        alt: 'Dansklass med fokus på rörelse, koordination och scennärvaro.'
     },
 ]);
 

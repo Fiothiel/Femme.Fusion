@@ -34,7 +34,7 @@
         <h2>Varför boka Femme Fusion?</h2>
         <p>
           Ni får <strong>pålitliga artister</strong> som kan scen, publik och logistik. Vi hjälper gärna med
-          <strong>programförslag</strong>, tempo och placering i körschemat, och samarbetar smidigt med DJ, konferencier
+          <strong>programförslag</strong>, tempo och placering i körschemat, och samarbetar smidigt med konferencier
           och teknik.
         </p>
         <p>
