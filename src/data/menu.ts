@@ -89,9 +89,6 @@ import type { MenuItem } from "@/types/MenuItem";
 import { MenuGroup } from "@/types/MenuItem";
 
 export const menuItems: MenuItem[] = [
-  /* =====================
-     Main menu
-     ===================== */
 
   {
     id: "company",
@@ -112,7 +109,7 @@ export const menuItems: MenuItem[] = [
       {
         id: "company-dance",
         label: "Dans som kick-off & teambuilding",
-        to: "/foretag/dans",
+        to: "/foretag/dansklass",
         order: 20,
         group: MenuGroup.MAIN,
         showOnMobile: true,
@@ -147,7 +144,7 @@ export const menuItems: MenuItem[] = [
       {
         id: "group-dance",
         label: "Möhippa & gruppbokning",
-        to: "/privat/dans",
+        to: "/privat/dansklass",
         order: 20,
         group: MenuGroup.MAIN,
         showOnMobile: true,
@@ -155,7 +152,7 @@ export const menuItems: MenuItem[] = [
       {
         id: "company-dance-link",
         label: "Dans för företag",
-        to: "/foretag/dans",
+        to: "/foretag/dansklass",
         order: 30,
         group: MenuGroup.MAIN,
         showOnMobile: true,
