@@ -10,13 +10,12 @@
                     och full av scenenergi. Vi anpassar scenuttryck och tonalitet efter er publik och ert sammanhang.
                 </p>
                 <p>
-                    <NuxtLink class="link link--accent" to="/bokning">Skicka en förfrågan</NuxtLink> så föreslår vi ett
+                    <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink> så föreslår vi ett
                     upplägg som passar er kväll, er lokal och er känsla.
                 </p>
                 <p>
                     Söker ni en aktivitet i stället för ett sceninslag? Läs mer om
-                    <NuxtLink class="link link--accent" to="/foretag/dansklass">dans som kick-off &amp; teambuilding
-                    </NuxtLink>.
+                    <NuxtLink class="link link--accent" to="/foretag/dansklass">dans som kick-off &amp; teambuilding</NuxtLink>.
                 </p>
             </div>
         </section>
@@ -81,7 +80,7 @@
 
         <section class="section" aria-labelledby="company-show-next">
             <div class="section__content">
-                <NuxtLink to="/bokning" class="button button--cta">Skicka förfrågan</NuxtLink>
+                <NuxtLink to="/kontakt" class="button button--cta">Skicka förfrågan</NuxtLink>
             </div>
         </section>
 
@@ -100,7 +99,7 @@
                     Berätta datum, plats och ungefär vilken känsla ni vill skapa, så återkommer vi med ett förslag som
                     passar just er.
                 </p>
-                <NuxtLink to="/bokning" class="button button--cta">Skicka förfrågan</NuxtLink>
+                <NuxtLink to="/kontakt" class="button button--cta">Skicka förfrågan</NuxtLink>
             </div>
         </section>
     </div>

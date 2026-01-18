@@ -123,32 +123,39 @@ export const menuItems: MenuItem[] = [
     group: MenuGroup.MAIN,
     showOnMobile: true,
   },
-
-  /* =====================
-     Footer menu
-     ===================== */
+/* =====================
+   Footer menu
+   ===================== */
 
   {
-    id: "footer-booking",
-    label: "Bokning",
-    to: "/bokning",
-    order: 10,
-    group: MenuGroup.FOOTER,
-    showOnMobile: true,
-  },
-  {
-    id: "footer-calendar",
-    label: "Kalender",
-    to: "/kalender",
+    id: "footer-company",
+    label: "För företag",
+    to: "/foretag",
     order: 20,
     group: MenuGroup.FOOTER,
     showOnMobile: true,
   },
   {
-    id: "footer-about",
-    label: "Om oss",
-    to: "/om-oss",
+    id: "footer-private",
+    label: "Privat",
+    to: "/privat",
     order: 30,
+    group: MenuGroup.FOOTER,
+    showOnMobile: true,
+  },
+  {
+    id: "footer-show",
+    label: "Show",
+    to: "/show",
+    order: 40,
+    group: MenuGroup.FOOTER,
+    showOnMobile: true,
+  },
+  {
+    id: "footer-courses",
+    label: "Dans & kurser",
+    to: "/kurser",
+    order: 50,
     group: MenuGroup.FOOTER,
     showOnMobile: true,
   },
@@ -156,7 +163,7 @@ export const menuItems: MenuItem[] = [
     id: "footer-contact",
     label: "Kontakt",
     to: "/kontakt",
-    order: 40,
+    order: 60,
     group: MenuGroup.FOOTER,
     showOnMobile: true,
   },
@@ -164,8 +171,17 @@ export const menuItems: MenuItem[] = [
     id: "footer-support",
     label: "Stötta oss",
     to: "/stotta-oss",
-    order: 50,
+    order: 70,
     group: MenuGroup.FOOTER,
     showOnMobile: true,
   },
+  {
+    id: "footer-about",
+    label: "Om oss",
+    to: "/om-oss",
+    order: 80,
+    group: MenuGroup.FOOTER,
+    showOnMobile: true,
+  },
+
 ];

@@ -18,8 +18,8 @@
                 <p>
                     <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink> med datum, plats
                     och
-                    ungefärligt antal deltagare, så återkommer vi med upplägg och pris. Du kan också kika i vår
-                    <NuxtLink class="link link--accent" to="/kalender">kalender</NuxtLink> för öppna klasser.
+                    ungefärligt antal deltagare, så återkommer vi med upplägg och pris. Du kan också kolla in våra kommande
+                    <NuxtLink class="link link--accent" to="/kurser">öppna klasser</NuxtLink>.
                 </p>
                 <p>
                     Söker ni underhållning på scen? Läs mer om våra
@@ -81,7 +81,7 @@
                 </p>
                 <div class="section__buttons">
                     <NuxtLink to="/kontakt" class="button">Skicka förfrågan</NuxtLink>
-                    <NuxtLink to="/kalender" class="button button--secondary">Se alla datum</NuxtLink>
+                    <NuxtLink to="/kurser" class="button button--secondary">Se alla datum</NuxtLink>
                 </div>
             </div>
         </section>

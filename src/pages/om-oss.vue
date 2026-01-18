@@ -38,7 +38,7 @@
           och teknik.
         </p>
         <p>
-          Behöver ni även <NuxtLink to="/bokning/dansklass" class="link">en dansklass</NuxtLink> för
+          Behöver ni även <NuxtLink to="/dansklass" class="link">en dansklass</NuxtLink> för
           gruppen?
           Vi håller korta <strong>prova på-pass</strong> som värmer upp publiken och skapar energi i rummet.
         </p>
@@ -59,7 +59,7 @@
       </div>
     </section>
     <div class="about__cta">
-      <NuxtLink to="/bokning" class="button button--cta">Skicka förfrågan</NuxtLink>
+      <NuxtLink to="/kontakt" class="button button--cta">Skicka förfrågan</NuxtLink>
     </div>
   </div>
 </template>

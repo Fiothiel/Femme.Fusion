@@ -14,8 +14,8 @@
                     roligt minne att ta med er hem.
                 </p>
                 <p>
-                    <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink> för bokning, eller kolla i
-                    vår <NuxtLink class="link link--accent" to="/kalender">kalender</NuxtLink> för öppna klasser.
+                    <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink> för bokning, eller kolla in våra kommande
+                    <NuxtLink class="link link--accent" to="/kurser">öppna klasser</NuxtLink>.
                 </p>
                 <p>
                     Är ni ute efter underhållning på scen istället? Läs mer om våra
@@ -71,7 +71,7 @@
                 </p>
                 <div class="section__buttons">
                     <NuxtLink to="/kontakt" class="button">Skicka förfrågan</NuxtLink>
-                    <NuxtLink to="/kalender" class="button button--secondary">Se alla datum</NuxtLink>
+                    <NuxtLink to="/kurser" class="button button--secondary">Se alla datum</NuxtLink>
                 </div>
             </div>
         </section>
