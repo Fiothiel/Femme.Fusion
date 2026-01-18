@@ -105,14 +105,14 @@ export const menuItems: MenuItem[] = [
         group: MenuGroup.MAIN,
         showOnMobile: true,
       },
-/*       {
-        id: "faq",
-        label: "FAQ",
-        to: "/faq",
+      {
+        id: "sta-pa-scenen",
+        label: "Stå på scenen med Femme Fusion",
+        to: "/sta-pa-scenen",
         order: 30,
         group: MenuGroup.MAIN,
         showOnMobile: true,
-      }, */
+      },
     ],
   },
     {
