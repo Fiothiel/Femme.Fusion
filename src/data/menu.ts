@@ -117,7 +117,7 @@ export const menuItems: MenuItem[] = [
       {
         id: "company-booking",
         label: "Skicka förfrågan",
-        to: "/bokning",
+        to: "/kontakt",
         order: 40,
         group: MenuGroup.MAIN,
         showOnMobile: true,
