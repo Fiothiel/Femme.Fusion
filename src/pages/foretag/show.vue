@@ -15,7 +15,7 @@
                 </p>
                 <p>
                     Söker ni en aktivitet i stället för ett sceninslag? Läs mer om
-                    <NuxtLink class="link link--accent" to="/foretag/dans">dans som kick-off &amp; teambuilding
+                    <NuxtLink class="link link--accent" to="/foretag/dansklass">dans som kick-off &amp; teambuilding
                     </NuxtLink>.
                 </p>
             </div>
