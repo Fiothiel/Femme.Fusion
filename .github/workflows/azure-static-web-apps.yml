@@ -1,6 +1,12 @@
 name: Azure Static Web Apps CI/CD
 
 on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Branch eller tag att bygga (t.ex. dev)"
+        required: false
+        default: "main"
   push:
     branches: [main]
   pull_request:
@@ -16,6 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          ref: ${{ inputs.ref || github.ref }}
           fetch-depth: 0
           submodules: true
           lfs: false
