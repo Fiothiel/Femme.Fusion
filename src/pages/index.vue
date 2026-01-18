@@ -27,8 +27,17 @@
     </section>
     <section class="section section--airy" id="dance-with-femme-fusion">
       <div class="section__content">
-        <h2 id="dance-with-femme-fusion">Dansa med oss?</h2>
-        <p>Text text text</p>
+        <h2 id="dance-with-femme-fusion">Stå på scenen med oss</h2>
+
+
+        <p>
+          Vill du dansa på scen, ta plats i rampljuset och vara en del av våra shower?
+          Vi söker dig som vill showa tillsammans med Femme Fusion.
+        </p>
+
+        <a class="link" href="/om-oss/sta-pa-scenen">
+          Stå på scenen med oss
+        </a>
       </div>
     </section>
   </div>
