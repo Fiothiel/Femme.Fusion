@@ -52,7 +52,7 @@ applyPageSeo({
   twitterDescription: plainDescription.value,
 
   breadcrumbs: [
-    { name: "Kalender", path: "/kalender" },
+    { name: "Kurser", path: "/kurser" },
     { name: workshop.value!.title, path: `/workshops/${id}` },
   ],
 });
