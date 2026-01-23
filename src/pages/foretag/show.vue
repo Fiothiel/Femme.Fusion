@@ -4,10 +4,8 @@
             <div class="section__content">
                 <h1 id="company-show-title">Show till företagsevent</h1>
                 <p>
-                    Femme Fusion är en professionell showgrupp som levererar <strong>dans, sång och
-                        scenunderhållning</strong>
-                    till företagsevent, middagar och officiella sammanhang. Ni får en show som känns lyxig, välrepeterad
-                    och full av scenenergi. Vi anpassar scenuttryck och tonalitet efter er publik och ert sammanhang.
+                    En scenföreställning som känns lyxig, välrepeterad och trygg att boka. <strong>Dans, sång och
+                        scenunderhållning</strong> anpassas efter er publik och ert sammanhang.
                 </p>
                 <p>
                     <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink> så föreslår vi ett

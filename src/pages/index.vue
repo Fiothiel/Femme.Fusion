@@ -4,11 +4,8 @@
       <div class="section__content">
         <h1>Femme Fusion</h1>
         <p>
-          Femme Fusion är en showgrupp som erbjuder underhållning, sång och dans
-          för fester, middagar och event. Deras shower är dynamiska och varierade, med flera dansstilar, tydliga uttryck
-          och stark scennärvaro, anpassade för att passa just ert event. Låt Femme
-          Fusion skapa magi på ditt evenemang - för en unik och
-          minnesvärd upplevelse!
+          Femme Fusion är en professionell showgrupp från Linköping som skapar lyxiga, dynamiska sceninslag med dans, sång
+          och scenuttryck. Vi lyfter allt från företagsevent till privata fester och reser i hela Sverige.
           <NuxtLink to="/kontakt" class="button button--cta">
             Boka nu
           </NuxtLink>

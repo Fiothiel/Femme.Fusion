@@ -4,8 +4,8 @@
             <div class="section__content">
                 <h1>Företagsevent</h1>
                 <p>
-                    Femme Fusion erbjuder <strong>professionell underhållning och dansupplevelser för företag</strong>.
-                    Oavsett om ni söker en show eller en aktiv dansklass hjälper vi er skapa rätt känsla för ert event.
+                    <strong>Professionell underhållning och dansupplevelser för företag</strong>. Välj show för scen eller
+                    dansklass som aktivitet, så skapar vi rätt känsla för ert event.
                 </p>
             </div>
         </section>

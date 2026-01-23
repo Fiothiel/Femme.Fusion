@@ -4,9 +4,8 @@
             <div class="section__content">
                 <h1>Show</h1>
                 <p>
-                    Vi är Femme Fusion. Vi levererar en dynamisk <strong>scenföreställning</strong> med dans, sång och starkt
-                    scenuttryck, ofta med en liten inspiration av burlesque. Välj det spår som passar dig så guidar vi dig
-                    rätt direkt.
+                    Välj det showspår som passar ert tillfälle. Dans, sång och scenenergi anpassas efter publik, lokal och
+                    önskad känsla. Välj spår så guidar vi dig rätt.
                 </p>
             </div>
         </section>

@@ -4,8 +4,8 @@
             <div class="section__content">
                 <h1>Dansklasser</h1>
                 <p>
-                    Vi är Femme Fusion. Vi håller <strong>dansklasser med fokus på känsla, uttryck och energi</strong>,
-                    anpassade efter grupp, tillfälle och nivå. Välj det spår som passar er så guidar vi er rätt.
+                    <strong>Dansklasser med fokus på känsla, uttryck och energi</strong>, anpassade efter grupp, tillfälle
+                    och nivå. Välj det spår som passar er så guidar vi er rätt.
                 </p>
             </div>
         </section>

@@ -6,8 +6,7 @@
                 <h1 id="private-show-title">Show till privat fest</h1>
                 <p>
                     En show som överraskar, engagerar och sätter stämningen för hela kvällen.
-                    Femme Fusion levererar <strong>dans, sång och scenenergi</strong> som blir
-                    ett minne gästerna pratar om långt efter festen.
+                    <strong>Dans, sång och scenenergi</strong> som blir ett minne gästerna pratar om långt efter festen.
                 </p>
                 <p>
                     Det kan vara kvällens oväntade höjdpunkt, ett inslag som bryter av middagen
