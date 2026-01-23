@@ -60,13 +60,13 @@ const testimonials = [
 applyPageSeo({
   title: "Femme Fusion | Show med dans och sång för event i hela Sverige",
   description:
-    "Femme Fusion är en professionell showgrupp med dans, sång och stark scennärvaro. Vi skapar dynamiska, varierade shower för företagsevent, bröllop, middagar, möhippor och privata fester i Linköping och i hela Sverige.",
+    "Femme Fusion är en professionell showgrupp från Linköping som skapar lyxiga, dynamiska sceninslag med dans, sång och scenuttryck för företagsevent och privata fester i hela Sverige. Vi erbjuder också öppna dansklasser, workshops och kurser.",
   path: "/",
   ogTitle: "Femme Fusion | Show för event",
   ogDescription:
-    "Dynamiska shower med dans och sång. Kundanpassat för event i hela Sverige.",
+    "Lyxiga sceninslag med dans och sång för event i hela Sverige. Öppna dansklasser, workshops och kurser finns också.",
   twitterTitle: "Femme Fusion",
   twitterDescription:
-    "Show med dans och sång för företagsevent, bröllop och fester i hela Sverige.",
+    "Show med dans och sång för företagsevent och privata fester i hela Sverige. Öppna dansklasser, workshops och kurser.",
 });
 </script>
