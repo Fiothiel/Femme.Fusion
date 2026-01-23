@@ -6,6 +6,11 @@
         <p>
           Femme Fusion är en professionell showgrupp från Linköping som skapar lyxiga, dynamiska sceninslag med dans, sång
           och scenuttryck. Vi lyfter allt från företagsevent till privata fester och reser i hela Sverige.
+        </p>
+        <p>
+          Vi erbjuder öppna dansklasser, workshops och kurser, samt bokningsbara upplägg för företag och privata
+          sammanhang. Oavsett om ni vill dansa tillsammans eller boka en upplevelse guidar vi er till rätt nivå och
+          känsla.
           <NuxtLink to="/kontakt" class="button button--cta">
             Boka nu
           </NuxtLink>
