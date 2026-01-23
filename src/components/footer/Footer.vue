@@ -28,7 +28,7 @@
       </section>
       <section aria-labelledby="footer-social" class="footer__column">
         <h2 id="footer-social">Följ oss</h2>
-        <p>Följ oss för klipp från shower och dansklasser.</p>
+        <p>Klipp, nyheter och datum för shower och dansklasser.</p>
         <ul class="footer__socials">
           <li>
             <a href="https://www.instagram.com/femmefusionofficial/" target="_blank" rel="noopener noreferrer"
