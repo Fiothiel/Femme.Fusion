@@ -20,7 +20,7 @@ const mockPost = {
   id: "sta-pa-scenen",
   heading: "Stå på scenen med Femme Fusion",
   preamble:
-    "Har du någon gång stått i ett publikhav, sett ett riktigt glammigt shownummer och känt en djup, skärande avund? Har du mitt i nöjet av att bli underhållen av andra artister blivit distraherad av tanken: “jag vill också stå där...”? Då ska du höra av dig till oss!",
+    "Har du mitt i nöjet av att bli underhållen av andra artister blivit distraherad av tanken: “jag vill också stå där…”? Då vill vi höra från dig! ",
   image: {
     src: "/images/sta-pa-scenen.webp",
     alt: "Kattlik scenenergi med självsäker pose i rampljus.",
@@ -28,12 +28,11 @@ const mockPost = {
   },
   body: `
         <p>
-            Vi söker ibland extradansare eller showartister till specifika nummer i våra shower. Det bästa sättet att visa att du är intresserad är att säga det. Prata med oss på någon av våra workshops, så vi får chans att se hur du rör dig till musik och får en känsla för vad du skulle kunna passa i om ett tillfälle dyker upp.
-
+          Vi söker ibland extradansare eller showartister till specifika nummer i våra shower. Det bästa sättet att visa ditt intresse är att prata med oss på någon av våra dansklasser, eller skicka ett DM till oss på Instagram: <a href="https://www.instagram.com/femmefusionofficial/" target="_blank">@femmefusionofficial</a>.
         </p>
 
         <p>
-            Du behöver inte vara en fullfjädrad dansare! Kanske har du annan scenvana, utstrålning, en egen stil eller något annat vi bara inte visste att vi behövde. 
+            Du behöver inte vara en fullfjädrad dansare! Kanske har du annan scenvana, utstrålning eller något vi inte visste att vi behövde. 
         </p>
 
         <p>

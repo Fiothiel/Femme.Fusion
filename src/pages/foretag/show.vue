@@ -4,16 +4,19 @@
             <div class="section__content">
                 <h1 id="company-show-title">Show till företagsevent</h1>
                 <p>
-                    En scenföreställning som känns lyxig, välrepeterad och trygg att boka. <strong>Dans, sång och
-                        scenunderhållning</strong> anpassas efter er publik och ert sammanhang.
+                    Vi erbjuder en skräddarsydd show med dans, sång och scenunderhållning. Vi skapar
+                    välrepeterade och visuellt uttrycksfulla nummer som inkluderar olika dansstilar och uttryck, för en
+                    varierad och dynamisk helhet.
                 </p>
                 <p>
-                    <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink> så föreslår vi ett
-                    upplägg som passar er kväll, er lokal och er känsla.
+                    <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink> så tar vi fram ett
+                    upplägg som passar just ert event.
+
                 </p>
                 <p>
                     Söker ni en aktivitet i stället för ett sceninslag? Läs mer om
-                    <NuxtLink class="link link--accent" to="/foretag/dansklass">dans som kick-off &amp; teambuilding</NuxtLink>.
+                    <NuxtLink class="link link--accent" to="/foretag/dansklass">dans som kick-off &amp; teambuilding
+                    </NuxtLink>.
                 </p>
             </div>
         </section>
@@ -37,26 +40,15 @@
                 <h2 id="company-show-setup">Upplägg som passar ert event</h2>
 
                 <p>
-                    Våra shower är varierade i både uttryck och format, men alltid professionellt genomförda. Det kan
-                    vara
-                    ett elegant galatema med glitter, glamour och sång, ett 20-talsinspirerat nummer med tydliga
-                    dansreferenser,
-                    eller något däremellan. Vi anpassar innehåll och känsla efter er publik och ert sammanhang.
+                    Våra shower varierar i uttryck och format, men alltid professionellt genomförda. Vi skapar allt från
+                    moderna och rockiga nummer till 20-talsinspirerade teman, till glittriga nummer fyllda med glamour.
+                    Showen formas efter er publik, ert event och den känsla ni vill uppnå.
                 </p>
 
                 <p>
-                    Lika viktigt som <em>vad</em> som sker på scen är <em>när</em> det sker. Därför hjälper vi er att
-                    välja ett
-                    upplägg som passar kvällens tempo och helhet. Är ni osäkra på vad som blir lagom? Berätta om ert
-                    event,
-                    er publik och vilken känsla ni vill skapa, så tar vi fram ett förslag som känns tryggt och
-                    genomtänkt.
-                </p>
-
-                <p>
-                    Vi tar ansvar för helheten: kommunikation, tider och praktiska behov. Ni får en kontaktperson som
-                    guidar
-                    processen från första mail till sista nummer.
+                    Vi hjälper er att välja ett upplägg som passar kvällens tempo och helhet. Är ni osäkra på vad som
+                    blir lagom? Berätta om ert event, så tar vi fram ett genomtänkt och tryggt förslag. Ni får en
+                    dedikerad kontaktperson som guidar er genom hela processen.
                 </p>
             </div>
         </section>
@@ -65,12 +57,12 @@
             <div class="section__content">
                 <h3 id="company-show-offer">I korthet</h3>
                 <ul class="company-features">
-                    <li><strong>Passar för:</strong> konferensmiddag, gala, invigning, kundevent, julfest och kickoff.
+                    <li><strong>Passar för:</strong> konferensmiddag, gala, invigning, kundevent, julfest och kickoff
                     </li>
                     <li><strong>Format:</strong> från ett kort sceninslag till en sammanhållen show eller flera inslag
-                        under kvällen.</li>
-                    <li><strong>Uttryck:</strong> från elegant och stilrent till mer kaxigt och energifyllt.</li>
-                    <li><strong>Tryggt upplägg:</strong> vi anpassar efter scen, yta och teknik på plats.</li>
+                        under kvälle.</li>
+                    <li><strong>Uttryck:</strong> från elegant och stilrent till mer kaxigt och energifyllt</li>
+                    <li><strong>Tryggt upplägg:</strong> vi anpassar efter scen, yta och teknik på plats</li>
                 </ul>
             </div>
         </section>
