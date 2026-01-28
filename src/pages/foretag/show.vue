@@ -4,9 +4,9 @@
             <div class="section__content">
                 <h1 id="company-show-title">Show till företagsevent</h1>
                 <p>
-                    Vi erbjuder en skräddarsydd show med dans, sång och scenunderhållning. Vi skapar
-                    välrepeterade och visuellt uttrycksfulla nummer som inkluderar olika dansstilar och uttryck, för en
-                    varierad och dynamisk helhet.
+                    Vi erbjuder en skräddarsydd show med dans, sång och scenunderhållning. Våra nummer är välrepeterade,
+                    visuellt uttrycksfulla och inkluderar flera olika dansstilar, vilket skapar en varierad och dynamisk
+                    helhet.
                 </p>
                 <p>
                     <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink> så tar vi fram ett
