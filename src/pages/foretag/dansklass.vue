@@ -30,7 +30,7 @@
 
         <section class="section section--full-width section--carousel">
             <div class="section__content">
-                <Splide :data-splide="options" class="carousel carousel--vertical">
+                <Splide :data-splide="options" class="carousel">
                     <SplideSlide v-for="image in images" :key="image.src">
                         <figure>
                             <NuxtImg class="book__image image" :src="image.src" sizes="md:1280px 100vw"
