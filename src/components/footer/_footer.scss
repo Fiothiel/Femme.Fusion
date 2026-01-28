@@ -10,12 +10,13 @@
     align-items: center;
     gap: $spacing-large;
     padding: $spacing-large $spacing-xx-large;
-    
+
     ul {
         @include no-style-list();
     }
 
-    ul, p {
+    ul,
+    p {
         margin: 0;
     }
 
@@ -44,14 +45,11 @@
 
     &__column {
         @include flex-item-one-fourth();
+        text-align: center;
 
-        &--right {
-            text-align: center;
-        }
 
         @include for-desktop-down {
             @include flex-item-half();
-            text-align: center;
         }
 
         @include for-tablet-landscape-down {
@@ -63,11 +61,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        column-gap: $spacing-small;
+        column-gap: $spacing-small;        
 
         a {
             display: block;
-            height: 100%;            
+            height: 100%;
+            margin-top: var(--spacing-sm);
         }
     }
 

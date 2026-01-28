@@ -210,6 +210,23 @@
   "buttonText": "Läs mer och biljetter",
   "price": 210,
   "image": null
+},
+{
+  "id": null,
+  "title": "Privat show",
+  "shortDescription": "<p>Vi är bokade för en privat show.</p>",
+  "longDescription": null,
+  "address": "",
+  "level": null,
+  "startDate": "2026-02-07T00:00:00",
+  "endDate": "2026-02-07T00:00:00",
+  "day": "Lördag",
+  "url": "",
+  "type": "show",
+  "numOccasions": 1,
+  "dayAndTimeInfo": "Lördag",
+  "buttonText": "",
+  "price": null,
+  "image": null
 }
-
 ]

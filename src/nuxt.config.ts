@@ -38,7 +38,7 @@ export default defineNuxtConfig({
     preset: "static",
     prerender: {
       // Nuxt will crawl links by default; list extra routes if needed:
-      routes: ["/bokning/show", "/bokning/dansklass", ...workshopUrls,],
+      routes: [...workshopUrls,],
     },
   },
 

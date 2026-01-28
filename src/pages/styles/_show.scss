@@ -1,8 +1,8 @@
-@use '../../../assets/styles/variables' as *;
-@use '../../../assets/styles/mixins' as *;
-@use '../../../assets/styles/typography' as *;
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/typography' as *;
 
-.book {
+.show-hub {
     &__cards {
         @include no-style-list();
         display: flex;

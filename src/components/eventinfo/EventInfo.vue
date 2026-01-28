@@ -26,7 +26,7 @@
             <dt>Dag & tid:</dt>
             <dd>{{ event.dayAndTimeInfo }}</dd>
           </dl>
-          <dl>
+          <dl v-if="event.address">
             <dt>Adress:</dt>
             <dd>{{ event.address }}</dd>
           </dl>

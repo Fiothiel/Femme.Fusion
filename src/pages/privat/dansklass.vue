@@ -2,24 +2,24 @@
     <div class="book content">
         <section class="section" aria-labelledby="dance-title">
             <div class="section__content">
-                <h1 id="dance-title">Dansklass - gruppbokning eller privatlektion</h1>
+                <h1 id="dance-title">Dansklass för möhippa, fest eller privatlektion</h1>
                 <p>
-                    Skapa minnen med vänner eller kollegor eller unna dig en privatlektion! Våra
-                    <strong>dansklasser</strong> passar
-                    perfekt för möhippor, födelsedagar, teambuilding eller när du helt enkelt bara vill dansa.
-                    Välj mellan burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix. Prata med
-                    oss så
-                    hittar vi det som passar för dig.
-                    Vi anpassar nivå, tempo och känsla efter just er grupp eller dina individuella mål.
+                    Vill ni göra något som känns både kul och minnesvärt? Våra <strong>dansklasser</strong> passar perfekt för
+                    möhippor, födelsedagar, kompisgäng eller när du vill unna dig en privatlektion. Det blir tryggt, peppande
+                    och anpassat efter er, oavsett nivå.
                 </p>
                 <p>
-                    <NuxtLink class="link link--accent" to="/kontakt">Kontakta oss</NuxtLink> för förslag och bokning,
-                    eller kolla i vår <NuxtLink class="link link--accent" to="/kalender">kalender</NuxtLink> för
-                    kommande datum på öppna klasser.
+                    Välj mellan burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix. Ni väljer känslan
+                    så fixar vi upplägget. På slutet finns det tid om ni vill filma en del av koreografin, så att ni får ett
+                    roligt minne att ta med er hem.
+                </p>
+                <p>
+                    <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink> för bokning, eller kolla in våra kommande
+                    <NuxtLink class="link link--accent" to="/kurser">öppna klasser</NuxtLink>.
                 </p>
                 <p>
                     Är ni ute efter underhållning på scen istället? Läs mer om våra
-                    <NuxtLink class="link link--accent" to="/bokning/show">shower</NuxtLink>.
+                    <NuxtLink class="link link--accent" to="/show">shower</NuxtLink>.
                 </p>
             </div>
         </section>
@@ -29,8 +29,7 @@
                 <Splide :data-splide="options" class="carousel carousel--vertical">
                     <SplideSlide v-for="image in images" :key="image.src">
                         <figure>
-                            <NuxtImg class="book__image image" :src="image.src" sizes="md:1280px 100vw"
-                                :alt="image.alt" />
+                            <NuxtImg class="book__image image" :src="image.src" sizes="md:1280px 100vw" :alt="image.alt" />
                             <figcaption>Foto: {{ image.photographer }}</figcaption>
                         </figure>
                     </SplideSlide>
@@ -42,20 +41,17 @@
             <div class="section__content">
                 <h2>En klass med oss</h2>
                 <p>
-                    Vårt mål är att skapa en stund där alla känner sig trygga, snygga och fyllda av dansglädje, oavsett
-                    tidigare erfarenhet. Det viktigaste är inte stegen i sig, utan att ni får skratta och njuta av
-                    dansen.
+                    Vårt mål är att skapa en stund där alla känner sig trygga, snygga och fyllda av dansglädje, oavsett tidigare
+                    erfarenhet. Det viktigaste är inte stegen i sig, utan att ni får skratta, känna er fria och ha kul
+                    tillsammans.
                 </p>
                 <p>
-                    Klassen börjar med en uppvärmning för att sedan gå över till koreografi som anpassas efter er grupps
-                    nivå och önskemål. Vi ser alltid till att det finns tid på slutet om ni vill filma
-                    er dans, så att ni får ett roligt minne att ta med er hem.
+                    Klassen börjar med uppvärmning och går sedan över i koreografi som anpassas efter er grupp eller dina
+                    individuella mål. Vi hjälper er med teknik, uttryck och känsla på ett sätt som känns snällt men tydligt.
                 </p>
                 <p>
-                    Vi utgår från Linköping men håller <strong>dansklasser i hela Sverige</strong>, i er lokal eller i
-                    en
-                    lokal vi
-                    hjälper till att ordna.
+                    Vi utgår från Linköping men håller <strong>dansklasser i hela Sverige</strong>, i er lokal eller i en lokal
+                    vi hjälper till att ordna.
                 </p>
             </div>
         </section>
@@ -68,30 +64,26 @@
 
         <section class="section" id="book">
             <div class="section__content">
-                <h2>Boka din dansupplevelse</h2>
+                <h2>Boka din dansklass</h2>
                 <p>
-                    Vill du dansa med oss? Anmäl dig till en av våra kommande workshops eller boka en egen dansklass för
-                    din grupp.
-                    Osäker på vad som passar? Hör av dig så guidar vi dig rätt.
-                    För bokning av egen dansklass – skriv gärna datum, plats, antal deltagare och önskad stil, så
-                    återkommer vi med ett upplägg och prisförslag.
+                    Vill ni boka en egen dansklass? Skriv gärna datum, plats, antal deltagare och önskad stil så återkommer vi
+                    med ett upplägg och prisförslag. Osäker på vad som passar? Hör av dig så guidar vi dig rätt.
                 </p>
                 <div class="section__buttons">
                     <NuxtLink to="/kontakt" class="button">Skicka förfrågan</NuxtLink>
-                    <NuxtLink to="/kalender" class="button button--secondary">Se alla datum</NuxtLink>
+                    <NuxtLink to="/kurser" class="button button--secondary">Se alla datum</NuxtLink>
                 </div>
             </div>
         </section>
     </div>
 </template>
 
-
 <script setup lang="ts">
 import { ref } from 'vue';
 import type { Ref } from 'vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
-import type IImageInfo from '@/interfaces/IImageInfo'
+import type IImageInfo from '@/interfaces/IImageInfo';
 import { useTestimonials } from '~/services/testimonials-service';
 import { useUtils } from '@/utils';
 import { applyPageSeo } from '~/services/seo-service';
@@ -161,35 +153,34 @@ const images: Ref<IImageInfo[]> = ref([
     },
 ]);
 
-
 applyPageSeo({
-    title: "Boka dansklass | Femme Fusion - workshop & prova på för event",
+    title: "Boka dansklass | Femme Fusion - möhippa, fest & privatlektion",
     description:
-        "Boka dansklass med Femme Fusion för möhippa, födelsedag, kickoff eller teambuilding. Välj burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix. Vi anpassar nivå och upplägg i Linköping och i hela Sverige.",
-    path: "/bokning/dansklass",
+        "Boka dansklass med Femme Fusion för möhippa, födelsedag, kompisgäng eller privatlektion. Välj burlesque, feminine vibe, heels, street, cabaret eller en skräddarsydd mix. Vi anpassar nivå och upplägg i Linköping och i hela Sverige.",
+    path: "/privat/dansklass",
     ogTitle: "Boka dansklass | Femme Fusion",
     ogDescription:
-        "Dansworkshop för grupper eller privatlektion. Burlesque, heels, street, cabaret, feminine vibe eller mix. Tryggt, roligt och anpassat efter er. Vi kommer till er i hela Sverige.",
+        "Dansklass för möhippa, fest eller privatlektion. Tryggt, roligt och anpassat efter er. Vi kommer till er i hela Sverige.",
     twitterTitle: "Boka dansklass | Femme Fusion",
     twitterDescription:
-        "Rolig, inkluderande dansworkshop för grupper, möhippor och företag. Skicka förfrågan idag.",
+        "Boka dansklass för möhippa och grupper. Skicka förfrågan idag.",
     image: "https://femmefusion.se/images/danceclass/danceclass-02.webp",
-    faqKey: "faq-dansklass",
+    faqKey: "faq-dansklass-privat",
     faq: [
         {
             question: "Kan vi boka en dansklass även om vi aldrig har dansat förut?",
             answer:
-                "Självklart! Vi anpassar nivå, tempo och känsla efter gruppens erfarenhet, så att alla kan vara med och ha roligt.",
+                "Självklart. Vi anpassar nivå och tempo så att alla kan vara med och känna sig trygga.",
         },
         {
-            question: "Erbjuder ni privatlektioner?",
+            question: "Kan vi boka privatlektion?",
             answer:
-                "Ja! Förutom gruppbokningar kan du boka en privatlektion där vi fokuserar helt på dina mål och önskemål.",
+                "Ja. Privatlektion passar om du vill fokusera på teknik, uttryck eller en koreografi som känns helt rätt för dig.",
         },
         {
             question: "Vilka dansstilar kan vi välja?",
             answer:
-                "Ni kan välja mellan burlesque, feminine vibe, heels (även high heels), street, cabaret, musikal eller en skräddarsydd mix.",
+                "Ni kan välja mellan burlesque, feminine vibe, heels, street, cabaret, musikal eller en skräddarsydd mix.",
         },
         {
             question: "Hur lång är en klass?",
@@ -198,9 +189,8 @@ applyPageSeo({
         },
     ],
     breadcrumbs: [
-        { name: "Bokning", path: "/bokning" },
-        { name: "Boka dansklass", path: "/bokning/dansklass" },
+        { name: "Privat", path: "/privat" },
+        { name: "Boka dansklass", path: "/privat/dansklass" },
     ],
 });
-
 </script>

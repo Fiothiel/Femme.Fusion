@@ -17,9 +17,9 @@
     height: var(--header-height);
 
     &--sticky {
+        /* height: var(--header-height-sticky); */
         background: rgba(0, 0, 0, 0.85);
         backdrop-filter: blur(6px);
-        height: var(--header-height-sticky);
     }
 
     &__logo {

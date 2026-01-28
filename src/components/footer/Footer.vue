@@ -5,11 +5,11 @@
         <h2 id="footer-about">Om Femme Fusion</h2>
         <p>
           Femme Fusion är en showgrupp från Linköping som levererar skräddarsydda
-          shower, dans och dansklasser för företagsevent, fester och scener i
-          Östergötland och i hela Sverige. Följ oss för klipp från shower och dansklasser.
+          shower och dansklasser för företag och privatpersoner i 
+          Östergötland och i hela Sverige.
         </p>
       </section>
-      <nav aria-labelledby="footer-links" class="footer__column footer__column--right">
+      <nav aria-labelledby="footer-links" class="footer__column">
         <h2 id="footer-links">Snabblänkar</h2>
         <ul>
           <li v-for="item in navItems" :key="item.id">
@@ -19,16 +19,16 @@
           </li>
         </ul>
       </nav>
-      <section aria-labelledby="footer-contact" class="footer__column footer__column--right">
+      <section aria-labelledby="footer-contact" class="footer__column">
         <h2 id="footer-contact">Kontakt</h2>
         <address>
           <div>Femme Fusion</div>
           <div><a href="mailto:info@femmefusion.se">info@femmefusion.se</a></div>
-          <div>Linköping, Sverige</div>
         </address>
       </section>
-      <section aria-labelledby="footer-social" class="footer__column footer__column--right">
+      <section aria-labelledby="footer-social" class="footer__column">
         <h2 id="footer-social">Följ oss</h2>
+        <p>Klipp, nyheter och datum för shower och dansklasser</p>
         <ul class="footer__socials">
           <li>
             <a href="https://www.instagram.com/femmefusionofficial/" target="_blank" rel="noopener noreferrer"

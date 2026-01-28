@@ -9,6 +9,8 @@
     border: 2px solid $wine-damp;
     background: linear-gradient(to bottom, $wine-light, $wine);
     transition: border-color 0.2s ease, transform 0.15s ease;
+    height: 100%;
+    text-align: center;
 
     &:hover {
         border-color: $wine;
