@@ -117,32 +117,32 @@ const options = JSON.stringify({
 
 const images: Ref<IImageInfo[]> = ref([
     {
-        src: '/images/danceclass/danceclass-01.webp',
+        src: '/images/danceclass/carousel/danceclass-01.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Deltagare på dansklass utför koreografi i grupp i ljus dansstudio.'
     },
     {
-        src: '/images/danceclass/danceclass-04.webp',
+        src: '/images/danceclass/carousel/danceclass-04.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Gruppdansklass där deltagare tränar koreografi tillsammans i studio.'
     },
     {
-        src: '/images/danceclass/danceclass-07.webp',
+        src: '/images/danceclass/carousel/danceclass-07.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Dansklass i studio med gemensam uppvärmning och rörelseövningar.'
     },
     {
-        src: '/images/danceclass/danceclass-08.webp',
+        src: '/images/danceclass/carousel/danceclass-08.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Deltagare på dansklass tränar koreografi i inspirerande och trygg miljö.'
     },
     {
-        src: '/images/danceclass/danceclass-09.webp',
+        src: '/images/danceclass/carousel/danceclass-09.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Gruppdansklass där deltagare utvecklar teknik, uttryck och rörelse.'
     },
     {
-        src: '/images/danceclass/danceclass-05.webp',
+        src: '/images/danceclass/carousel/danceclass-05.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Dansklass med fokus på rörelse, koordination och scennärvaro.'
     },
@@ -159,7 +159,7 @@ applyPageSeo({
     twitterTitle: "Dansklass för företag | Femme Fusion",
     twitterDescription:
         "Boka dansklass till kickoff och teambuilding. Skicka förfrågan idag.",
-    image: "https://femmefusion.se/images/danceclass/danceclass-02.webp",
+    image: "https://femmefusion.se/images/danceclass/carousel/danceclass-02.webp",
     faqKey: "faq-dansklass-foretag",
     faq: [
         {

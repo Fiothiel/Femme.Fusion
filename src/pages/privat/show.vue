@@ -145,57 +145,57 @@ const options = JSON.stringify({
 
 const images: Ref<IImageInfo[]> = ref([
     {
-        src: "/images/show/show-skylten-kimv-5.webp",
+        src: "/images/show/carousel/show-skylten-kimv-5.webp",
         photographer: "Kim Vestbrant",
         alt: "Showartist uppträder i ett energifyllt solonummer med stol och tydlig närvaro under en festlig scenföreställning."
     },
     {
-        src: "/images/show/show-skylten-kimv-2.webp",
+        src: "/images/show/carousel/show-skylten-kimv-2.webp",
         photographer: "Kim Vestbrant",
         alt: "Tre showartister uppträder tillsammans i ett synkroniserat stolnummer med fjäderfantasier."
     },
     {
-        src: "/images/show/show-arbis-hoog-1.webp",
+        src: "/images/show/carousel/show-arbis-hoog-1.webp",
         photographer: "Fotograferna Hoog",
         alt: "Showartist sjunger live i ett svartvitt foto som fångar ett intimt och starkt scenögonblick."
     },
     {
-        src: "/images/show/show-arbis-hoog-3.webp",
+        src: "/images/show/carousel/show-arbis-hoog-3.webp",
         photographer: "Fotograferna Hoog",
         alt: "Två showartister sjunger och dansar tillsammans i ett lekfullt och energifyllt scenmoment."
     },
     {
-        src: "/images/show/show-todecay-kulturnatten-hoog-2.webp",
+        src: "/images/show/carousel/show-todecay-kulturnatten-hoog-2.webp",
         photographer: "Fotograferna Hoog",
         alt: "Två showartister uppträder i ett uttrycksfullt duo-nummer med attityd och stark rörelse."
     },
     {
-        src: "/images/show/show-todecay-kulturnatten-hoog-3.webp",
+        src: "/images/show/carousel/show-todecay-kulturnatten-hoog-3.webp",
         photographer: "Fotograferna Hoog",
         alt: "Showartister genomför ett fartfyllt gruppnummer som skapar stark stämning på scen."
     },
     {
-        src: "/images/show/show-todecay-kulturnatten-hoog-1.webp",
+        src: "/images/show/carousel/show-todecay-kulturnatten-hoog-1.webp",
         photographer: "Fotograferna Hoog",
         alt: "Koreograferat gruppnummer med tydlig energi och publikfångande rörelse."
     },
     {
-        src: "/images/show/show-arbis-hoog-2.webp",
+        src: "/images/show/carousel/show-arbis-hoog-2.webp",
         photographer: "Fotograferna Hoog",
         alt: "Två showartister uppträder på stolar i glittrande kostymer under ett elegant men lekfullt nummer."
     },
     {
-        src: "/images/show/show-skylten-kimv-4.webp",
+        src: "/images/show/carousel/show-skylten-kimv-4.webp",
         photographer: "Kim Vestbrant",
         alt: "Två showartister uppträder tillsammans i ett stilfullt och dansant stolnummer."
     },
     {
-        src: "/images/show/show-skylten-må-2.webp",
+        src: "/images/show/carousel/show-skylten-må-2.webp",
         photographer: "Mattias Åström",
         alt: "Två showartister sjunger live på scen under ett festligt och energifyllt nummer."
     },
     {
-        src: "/images/show/show-dv-24.webp",
+        src: "/images/show/carousel/show-dv-24.webp",
         photographer: "StormPhoto",
         alt: "Fyra showartister uppträder utomhus under en stor och livfull scenföreställning."
     }

@@ -107,47 +107,47 @@ const options = JSON.stringify({
 
 const images: Ref<IImageInfo[]> = ref([
     {
-        src: '/images/danceclass/danceclass-01.webp',
+        src: '/images/danceclass/carousel/danceclass-01.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Deltagare på dansklass utför koreografi i grupp i ljus dansstudio.'
     },
     {
-        src: '/images/danceclass/danceclass-02.webp',
+        src: '/images/danceclass/carousel/danceclass-02.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Dansklass med flera deltagare som tränar rörelser och steg i spegelsal.'
     },
     {
-        src: '/images/danceclass/danceclass-03.webp',
+        src: '/images/danceclass/carousel/danceclass-03.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Deltagare på dansklass övar armrörelser och uttryck i gemensam koreografi.'
     },
     {
-        src: '/images/danceclass/danceclass-04.webp',
+        src: '/images/danceclass/carousel/danceclass-04.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Gruppdansklass där deltagare tränar koreografi tillsammans i studio.'
     },
     {
-        src: '/images/danceclass/danceclass-05.webp',
+        src: '/images/danceclass/carousel/danceclass-05.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Dansklass med fokus på rörelse, koordination och scennärvaro.'
     },
     {
-        src: '/images/danceclass/danceclass-06.webp',
+        src: '/images/danceclass/carousel/danceclass-06.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Deltagare på dansklass följer koreograferade instruktioner i grupp.'
     },
     {
-        src: '/images/danceclass/danceclass-07.webp',
+        src: '/images/danceclass/carousel/danceclass-07.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Dansklass i studio med gemensam uppvärmning och rörelseövningar.'
     },
     {
-        src: '/images/danceclass/danceclass-08.webp',
+        src: '/images/danceclass/carousel/danceclass-08.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Deltagare på dansklass tränar koreografi i inspirerande och trygg miljö.'
     },
     {
-        src: '/images/danceclass/danceclass-09.webp',
+        src: '/images/danceclass/carousel/danceclass-09.webp',
         photographer: 'Hampus Zetterblom',
         alt: 'Gruppdansklass där deltagare utvecklar teknik, uttryck och rörelse.'
     },
@@ -164,7 +164,7 @@ applyPageSeo({
     twitterTitle: "Boka dansklass | Femme Fusion",
     twitterDescription:
         "Boka dansklass för möhippa och grupper. Skicka förfrågan idag.",
-    image: "https://femmefusion.se/images/danceclass/danceclass-02.webp",
+    image: "https://femmefusion.se/images/danceclass/carousel/danceclass-02.webp",
     faqKey: "faq-dansklass-privat",
     faq: [
         {
