@@ -16,6 +16,19 @@ const workshopUrls = (eventsData as any[])
     return isWorkshop && isUpcoming;
   })
   .map((e) => `/workshops/${e.id}`);
+
+const showUrls = (eventsData as any[])
+  .filter((e) => {
+    if (!e.id || !e.startDate) {
+      return false;
+    }
+
+    const isShow = e.type === "show";
+    const isUpcoming = new Date(e.startDate) >= now;
+
+    return isShow && isUpcoming;
+  })
+  .map((e) => `/shower/${e.id}`);
   
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
@@ -27,7 +40,7 @@ export default defineNuxtConfig({
   sitemap: {
     siteUrl: 'https://femmefusion.se',
     // add routes that aren’t easily discoverable:
-    urls: [...workshopUrls],
+    urls: [...workshopUrls, ...showUrls],
     defaults: { changefreq: 'monthly', priority: 0.7 }
   },
   image: {
@@ -38,7 +51,7 @@ export default defineNuxtConfig({
     preset: "static",
     prerender: {
       // Nuxt will crawl links by default; list extra routes if needed:
-      routes: [...workshopUrls,],
+      routes: [...workshopUrls, ...showUrls],
     },
   },
 

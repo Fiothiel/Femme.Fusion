@@ -37,7 +37,7 @@
                 <div v-if="workshop.longDescription" class="workshop__body" v-html="workshop.longDescription"></div>
 
                 <p class="workshop__cta">
-                    <NuxtLink :to="workshop.url || '/anmalan'" class="button">
+                    <NuxtLink :to="ctaUrl" class="button" :target="ctaTarget" :rel="ctaRel">
                         {{ workshop.buttonText || "Anmäl dig här" }}
                     </NuxtLink>
                 </p>
@@ -86,4 +86,9 @@ const priceLabel = computed(() => {
     }
     return `${props.workshop.price} kr`;
 });
+
+const ctaUrl = computed(() => props.workshop.url || "/anmalan");
+const isExternal = computed(() => /^https?:\/\//.test(ctaUrl.value));
+const ctaTarget = computed(() => (isExternal.value ? "_blank" : undefined));
+const ctaRel = computed(() => (isExternal.value ? "noopener" : undefined));
 </script>

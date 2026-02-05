@@ -1,0 +1,19 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/typography' as *;
+
+.show {
+    &__image {
+        height: 650px;
+
+        @include for-phone-only {
+            height: 450px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: $spacing-small;
+    }
+}

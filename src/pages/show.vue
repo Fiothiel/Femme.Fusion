@@ -35,7 +35,7 @@
 
                 <ul v-if="upcomingShows.length > 0" class="table-list">
                     <li v-for="event in upcomingShows" :key="event.id">
-                        <NuxtLink class="table-list__link" :to="`/show/${event.id}`">
+                        <NuxtLink class="table-list__link" :to="`/shower/${event.id}`">
                             <span>{{ getShortDate(event.startDate) }}</span>
                             {{ event.title }}
                         </NuxtLink>
