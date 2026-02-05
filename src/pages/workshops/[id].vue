@@ -9,11 +9,16 @@ import { useEvents } from "@/services/events-service";
 import type { IEvent } from "@/types/IEvent";
 import WorkshopPage from "@/components/workshops/WorkshopPage.vue";
 import { applyPageSeo } from "~/services/seo-service";
+import { useUtils } from "@/utils";
 
 const route = useRoute();
 const { getById } = useEvents();
 
 const id = route.params.id as string;
+
+onMounted(() => {
+  useUtils().scrollToMain();
+})
 
 const workshop = computed<IEvent | undefined>(() =>
   getById(id)
@@ -35,7 +40,11 @@ const plainDescription = computed(() => {
 });
 
 const ogImage = computed(() => {
-  return `https://femmefusion.se/images/workshop/${id}_meta.webp`;
+  const image = workshop.value?.image?.src;
+  if (image) {
+    return `https://femmefusion.se${image}`;
+  }
+  return "https://femmefusion.se/images/meta-2026.jpg";
 });
 
 applyPageSeo({

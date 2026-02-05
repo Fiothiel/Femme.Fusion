@@ -3,11 +3,13 @@ import { EventType, SIGNUP } from "@/constants";
 import type { IEvent } from "@/types/IEvent";
 
 export const useEvents = () => {
-  function getEvents(): IEvent[] {
+  function getAllEvents(): IEvent[] {
     const localEvents = eventsData as IEvent[];
+    return localEvents.map(mapLocal);
+  }
 
-    const events: IEvent[] = localEvents.map(mapLocal);
-
+  function getEvents(): IEvent[] {
+    const events: IEvent[] = getAllEvents();
     const now = new Date();
 
     const upcomingEvents = events.filter((event) => {
@@ -62,11 +64,12 @@ export const useEvents = () => {
   }
 
   function getById(id: string): IEvent | undefined {
-    const all = getEvents();
+    const all = getAllEvents();
     return (all as IEvent[]).find((e) => e.id === id);
   }
 
   return {
+    getAllEvents,
     getEvents,
     getCourses,
     getShows,

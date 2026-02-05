@@ -100,7 +100,7 @@
     "buttonText": "Anmäl dig här",
     "price": 100,
     "image": {
-      "src": "/images/workshop/wicked-11-januari-2026.webp",
+      "src": "/images/danceclass/wicked-11-januari-2026.webp",
       "alt": "Person med grön hud i häxhatt, nätöverdel och korsett poserar hukande mot en mörk bakgrund.",
       "photographer": "Daniel Häggmyr"
     }
@@ -109,7 +109,7 @@
     "id": "feminine-vibe-15-mars-2026",
     "title": "Feminine Vibe",
     "shortDescription": "Vi dansar Feminine Vibe med fokus på uttryck, musikkänsla och kroppskontroll. Passar dig som dansat tidigare.",
-    "longDescription": "<p>Här får du utforska Feminine Vibe med fokus på uttryck, musikkänsla och kroppskontroll. Våra rörelser växlar mellan styrka och mjukhet för att skapa ett härligt flow. Du får chansen att utvecklas i din egen stil och bygga självsäkerhet. Workshopen hålls med ett lite snabbare tempo och passar dig som dansat förut och är sugen på en utmaning.</p><p>Workshopen leds av Ella och Hanna.</p>",
+    "longDescription": "<p>Här får du utforska Feminine Vibe med fokus på uttryck, musikkänsla och kroppskontroll. Våra rörelser växlar mellan styrka och mjukhet för att skapa ett härligt flow. Du får chansen att utvecklas i din egen stil och bygga självsäkerhet. Workshopen hålls med ett lite snabbare tempo och passar dig som dansat förut och är sugen på en utmaning.</p><p>Workshopen leds av Ella och Kristina.</p>",
     "address": "Skylten, Södra Oskarsgatan 3, Linköping",
     "level": "Fortsättning",
     "startDate": "2026-03-15T10:30:00",
@@ -122,30 +122,30 @@
     "buttonText": "Anmäl dig här",
     "price": 120,
     "image": {
-      "src": "/images/workshop/feminine-vibe-15-mars-2026.webp",
-      "alt": "Person på scen i vida byxor och linne poserar med ryggen delvis mot kameran framför en vägg med graffiti.",
-      "photographer": "Fotograferna Hoog"
+      "src": "/images/danceclass/feminine-vibe-15-mars-2026.webp",
+      "alt": "Dansare i feminine vibe framför kameran med mjukt men starkt rörelseuttryck och fokus på överkropp och armar.",
+      "photographer": "Mattias Kannerstål"
     }
   },
   {
-    "id": "jazz-cabaret-21-april-2026",
+    "id": "jazz-cabaret-23-april-2026",
     "title": "Jazz/Kabaré",
     "shortDescription": "Vi dansar kabaré med en jazzig känsla, leker med musiken och använder hatt som rekvisita. Nybörjarvänlig workshop i lugnt tempo. Hatt finns att låna.",
     "longDescription": "<p>Under den här kabaréworkshopen blandar vi jazzig känsla med lekfullt uttryck och hatt som rekvisita. Under workshopen tränar vi scenutstrålning, tydliga rörelser och det där lilla extra som gör dansen levande. Fokus ligger på att bygga självförtroende och våga ta plats i scenljuset. Workshopen passar dig som vill testa hatt som prop och har ett nybörjarvänligt tempo.</p><p>Workshopen leds av Kristina och Ella.</p>",
     "address": "Skylten, Södra Oskarsgatan 3, Linköping",
     "level": "Nybörjare",
-    "startDate": "2026-04-21T17:30:00",
-    "endDate": "2026-04-21T19:00:00",
-    "day": "Tisdag",
+    "startDate": "2026-04-23T17:30:00",
+    "endDate": "2026-04-23T19:00:00",
+    "day": "Torsdag",
     "url": "/anmalan",
     "type": "course",
     "numOccasions": 1,
-    "dayAndTimeInfo": "Tisdag 17:30-19:00",
+    "dayAndTimeInfo": "Torsdag 17:30-19:00",
     "buttonText": "Anmäl dig här",
     "price": 120,
     "image": {
-      "src": "/images/workshop/jazz-cabaret-21-april-2026.webp",
-      "alt": "Närbild på person som ler och håller i en svart hatt, med lockigt hår och ljus bakgrund.",
+      "src": "/images/danceclass/jazz-cabaret-21-april-2026.webp",
+      "alt": "Dansare i jazz- och cabaretinspirerad pose mot svart bakgrund, med hatt och tydligt scenuttryck.",
       "photographer": "Mattias Kannerstål"
     }
   },
@@ -153,7 +153,7 @@
     "id": "femme-fusion-26-april-2026",
     "title": "Femme Fusion",
     "shortDescription": "Femme Fusion är vår signaturstil där vi blandar influenser från flera olika dansstilar. I den här workshopen har koreografin tydliga inslag av <strong>feminine vibe och k-pop</strong>. Passar dig som dansat tidigare och vill utveckla ditt uttryck.",
-    "longDescription": "<p>Femme Fusion är vår signaturstil där vi hämtar inspiration från flera olika dansstilar som street, cabaret och feminine vibe. Varje workshop har sin egen tydliga riktning.</p><p>I just den här workshopen möts <strong>feminine vibe och k-pop</strong> i en koreografi med både attityd och musikalitet. Vi jobbar med tydliga rörelser, dynamik och scenuttryck, där kontraster mellan kraftfullt och mjukt får ta plats.</p><p>Vi dansar till <strong>Villain av K/DA</strong> och fokuserar på att våga ta plats i rörelsen, hitta självsäkerhet i uttrycket och äga koreografin fullt ut. Workshopen passar dig som har dansat tidigare och vill utmana ditt kroppsspråk i en kreativ och peppande miljö.</p><p>Workshopen leds av Hanna.</p>",
+    "longDescription": "<p>Femme Fusion är vår signaturstil där vi hämtar inspiration från flera olika dansstilar som street, cabaret och feminine vibe. Varje workshop har sin egen tydliga riktning.</p><p>I just den här workshopen möts <strong>feminine vibe och k-pop</strong> i en koreografi med både attityd och musikalitet. Vi jobbar med tydliga rörelser, dynamik och scenuttryck, där kontraster mellan kraftfullt och mjukt får ta plats.</p><p>Vi dansar till <strong>Villain av K/DA</strong> och fokuserar på att våga ta plats i rörelsen, hitta självsäkerhet i uttrycket och äga koreografin fullt ut. Workshopen passar dig som har dansat tidigare och vill utmana ditt kroppsspråk i en kreativ och peppande miljö.</p><p>Workshopen leds av Ella och Kristina.</p>",
     "address": "Skylten, Södra Oskarsgatan 3, Linköping",
     "level": "Fortsättning",
     "startDate": "2026-04-26T10:30:00",
@@ -166,8 +166,8 @@
     "buttonText": "Anmäl dig här",
     "price": 120,
     "image": {
-      "src": "/images/workshop/femme-fusion-26-april-2026.webp",
-      "alt": "Närbild på person som poserar vid en spiraltrappa med en tegelvägg i bakgrunden.",
+      "src": "/images/danceclass/femme-fusion-26-april-2026.webp",
+      "alt": "Närbild på dansare från Femme Fusion med glittrig scenkostym och lekfullt, inbjudande uttryck mot kameran.",
       "photographer": "Mattias Kannerstål"
     }
   },
@@ -188,9 +188,9 @@
     "buttonText": "Anmäl dig här",
     "price": 120,
     "image": {
-      "src": "/images/workshop/musikaldans-16-maj-2026.webp",
-      "alt": "Person på scen sitter på en stol och sjunger i mikrofon, med dramatisk pose och scenmiljö i bakgrunden.",
-      "photographer": "Fotograferna Hoog"
+      "src": "/images/danceclass/musikaldans-16-maj-2026.webp",
+      "alt": "Två dansare ler mot kameran i musikalinspirerad danspose, med öppna armar och scenisk närvaro.",
+      "photographer": "Mattias Kannerstål"
     }
   },
   {
@@ -212,7 +212,7 @@
     "image": null
   },
   {
-    "id": null,
+    "id": "show-7-februari-2026",
     "title": "Show på Danslabbets 1-årsfest",
     "shortDescription": "<p>Femme Fusion gästar Danslabbets 1-årsfest med en show fylld av dans, sång och scenuttryck.</p>",
     "longDescription": null,
@@ -227,13 +227,17 @@
     "dayAndTimeInfo": "Lördag ca 22:00",
     "buttonText": "Läs mer",
     "price": "Gratis",
-    "image": null
+    "image": {
+      "src": "/images/show/show-7-februari-2026.jpg",
+      "alt": "Två dansare sitter på stolar på scen och uppträder med stora vita fjäderfans i en elegant cabaret-inspirerad show.",
+      "photographer": "Kim Vestbrant"
+    }
   },
   {
-    "id": null,
+    "id": "feminine-vibe-7-februrai-2026",
     "title": "Feminine Vibe",
     "shortDescription": "<p>En nybörjarvänlig workshop i Feminine Vibe i samband med Danslabbets 1-årsfest. Fokus på uttryck, mjukhet och självsäker rörelse.</p>",
-    "longDescription": null,
+    "longDescription": "<p>Som en del av Danslabbets 1-årsfest håller Femme Fusion en workshop i Feminine Vibe. Klassen är öppen för alla och passar perfekt även för dig som är nybörjare.</p><p>Vi jobbar med kroppskontroll, musikalitet och uttryck i ett tryggt och lekfullt tempo. Fokus ligger på att hitta sitt eget flow och våga ta plats i rörelsen.</p>",
     "address": "Skylten, Södra Oskarsgatan 3, Linköping",
     "level": "Nybörjare",
     "startDate": "2026-02-07T17:00:00",
@@ -245,6 +249,10 @@
     "dayAndTimeInfo": "Lördag 17:00-18:00",
     "buttonText": "Anmäl dig här",
     "price": 100,
-    "image": null
+    "image": {
+      "src": "/images/danceclass/feminine-vibe-7-februrai-2026.webp",
+      "alt": "Två dansare poserar självsäkert på scen i feminine vibe-stil, med kraftfullt uttryck och urban känsla.",
+      "photographer": "Fotograferna Hoog"
+    }
   }
 ]
