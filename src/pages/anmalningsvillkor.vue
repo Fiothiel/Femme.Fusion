@@ -7,15 +7,15 @@
         <p>
           Anmälan är bindande. Din plats är garanterad först när du får mejl från oss om att du blivit
           antagen.
-          Efter antagningsbeskedet skickas faktura via Frilans Finans.
+          Efter antagningsbeskedet skickas faktura via WorkNode.
         </p>
 
         <h2>Betalning</h2>
         <p>
-          Betalning sker mot faktura via Frilans Finans. Fakturan har 30 dagars betalningsfrist.
+          Betalning sker mot faktura via WorkNode. Fakturan har 30 dagars betalningsfrist.
         </p>
         <p>
-          Vid utebliven betalning kan Frilans Finans ta ut påminnelseavgift och dröjsmålsränta
+          Vid utebliven betalning kan WorkNode ta ut påminnelseavgift och dröjsmålsränta
           enligt sina villkor.
         </p>
 
@@ -103,7 +103,7 @@ useHead({
             acceptedAnswer: {
               "@type": "Answer",
               text:
-                "Din plats är garanterad först när du får mejl från Femme Fusion om att du blivit antagen. Efter antagningsbeskedet skickas faktura via Frilans Finans.",
+                "Din plats är garanterad först när du får mejl från Femme Fusion om att du blivit antagen. Efter antagningsbeskedet skickas faktura via WorkNode.",
             },
           },
           {
@@ -112,7 +112,7 @@ useHead({
             acceptedAnswer: {
               "@type": "Answer",
               text:
-                "Betalning sker mot faktura via Frilans Finans. Fakturan har 30 dagars betalningsfrist.",
+                "Betalning sker mot faktura via WorkNode. Fakturan har 30 dagars betalningsfrist.",
             },
           },
           {
