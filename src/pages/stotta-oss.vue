@@ -47,7 +47,7 @@
     <section class="section">
       <div class="section__content">
         <h2>Tack till våra Patreons</h2>
-        <p class="support__patreons">Henrik, Mattias & Darlene. ❤</p>
+        <p class="support__patreons">Henrik P, Mattias P, Darlene A & Mattias K. ❤</p>
       </div>
     </section>
   </div>
