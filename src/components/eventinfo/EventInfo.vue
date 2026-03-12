@@ -3,10 +3,10 @@
     <h2>{{ event.title }}</h2>
     <div class="event-info__wrapper">
       <div class="event-info__details">
-        <div v-if="event.price || event.level">
-          <dl v-if="event.price">
+        <div v-if="priceLabel || event.level">
+          <dl v-if="priceLabel">
             <dt>Pris:</dt>
-            <dd>{{ event.price }} kr</dd>
+            <dd>{{ priceLabel }}</dd>
           </dl>
           <dl v-if="event.level">
             <dt>Nivå:</dt>
@@ -44,12 +44,29 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import type { IEvent } from "@/types/IEvent";
 import { useUtils } from "../../utils";
 
-defineProps<{
+const props = defineProps<{
   event: IEvent;
 }>();
+
+const priceLabel = computed(() => {
+  const price = props.event.price;
+
+  if (price === 0) {
+    return "Gratis";
+  }
+  if (typeof price === "number") {
+    return `${price} kr`;
+  }
+  if (typeof price === "string" && price.trim()) {
+    return price;
+  }
+
+  return "";
+});
 
 
 </script>

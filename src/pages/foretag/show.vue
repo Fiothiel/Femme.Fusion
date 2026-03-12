@@ -60,7 +60,7 @@
                     <li><strong>Passar för:</strong> konferensmiddag, gala, invigning, kundevent, julfest och kickoff
                     </li>
                     <li><strong>Format:</strong> från ett kort sceninslag till en sammanhållen show eller flera inslag
-                        under kvälle.</li>
+                        under kvällen.</li>
                     <li><strong>Uttryck:</strong> från elegant och stilrent till mer kaxigt och energifyllt</li>
                     <li><strong>Tryggt upplägg:</strong> vi anpassar efter scen, yta och teknik på plats</li>
                 </ul>
