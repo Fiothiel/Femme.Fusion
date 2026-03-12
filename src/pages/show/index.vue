@@ -4,8 +4,8 @@
             <div class="section__content">
                 <h1>Show</h1>
                 <p>
-                    VÃ¤lj det showspÃ¥r som passar ert tillfÃ¤lle. Dans, sÃ¥ng och scenenergi anpassas efter publik, lokal och
-                    Ã¶nskad kÃ¤nsla. VÃ¤lj spÃ¥r sÃ¥ guidar vi dig rÃ¤tt.
+                    Välj det showspår som passar ert tillfälle. Dans, sång och scenenergi anpassas efter publik, lokal och
+                    önskad känsla. Välj spår så guidar vi dig rätt.
                 </p>
             </div>
         </section>
@@ -15,14 +15,14 @@
                 <ul class="show-hub__cards">
                     <li>
                         <CardLink to="/foretag/show" :external="false" :icon="null">
-                            <h2>Show till fÃ¶retagsevent</h2>
-                            <p>Kickoff, middag, konferens eller lansering. Proffsigt, snyggt och lÃ¤tt att planera.</p>
+                            <h2>Show till företagsevent</h2>
+                            <p>Kickoff, middag, konferens eller lansering. Proffsigt, snyggt och lätt att planera.</p>
                         </CardLink>
                     </li>
                     <li>
                         <CardLink to="/privat/show" :external="false" :icon="null">
-                            <h2>Show till privata tillfÃ¤llen</h2>
-                            <p>FÃ¶delsedag, jubileum eller fest. Ett wow-nummer eller en hel show, ni vÃ¤ljer kÃ¤nslan.</p>
+                            <h2>Show till privata tillfällen</h2>
+                            <p>Födelsedag, jubileum eller fest. Ett wow-nummer eller en hel show, ni väljer känslan.</p>
                         </CardLink>
                     </li>
                 </ul>
@@ -44,7 +44,7 @@
 
                 <p v-else>
                     Inga publika datum ute just nu. Vill du boka ett nummer eller en hel show?
-                    <NuxtLink class="link link--accent" to="/kontakt">Skicka en fÃ¶rfrÃ¥gan</NuxtLink>.
+                    <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink>.
                 </p>
             </div>
         </section>
@@ -52,8 +52,8 @@
         <section class="section">
             <div class="section__content">
                 <p>
-                    OsÃ¤ker pÃ¥ vad som passar? <NuxtLink class="link link--accent" to="/kontakt">Skicka en fÃ¶rfrÃ¥gan</NuxtLink>
-                    med datum, plats och ungefÃ¤rlig idÃ© sÃ¥ Ã¥terkommer vi med fÃ¶rslag.
+                    Osäker på vad som passar? <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink>
+                    med datum, plats och ungefärlig idé så återkommer vi med förslag.
                 </p>
             </div>
         </section>
@@ -81,18 +81,18 @@ const upcomingShows: Ref<IEvent[]> = computed(() => {
 });
 
 applyPageSeo({
-    title: "Show | Femme Fusion - show till fÃ¶retagsevent och privata fester",
+    title: 'Show | Femme Fusion - show till företagsevent och privata fester',
     description:
-        "Boka show med Femme Fusion. VÃ¤lj mellan show till fÃ¶retagsevent eller privata tillfÃ¤llen. Vi levererar dans, sÃ¥ng och scenuttryck och anpassar upplÃ¤gg efter publik, plats och Ã¶nskad kÃ¤nsla.",
-    path: "/show",
-    ogTitle: "Show | Femme Fusion",
+        'Boka show med Femme Fusion. Välj mellan show till företagsevent eller privata tillfällen. Vi levererar dans, sång och scenuttryck och anpassar upplägg efter publik, plats och önskad känsla.',
+    path: '/show',
+    ogTitle: 'Show | Femme Fusion',
     ogDescription:
-        "Show till fÃ¶retagsevent och privata tillfÃ¤llen. VÃ¤lj spÃ¥r och hitta rÃ¤tt upplÃ¤gg direkt.",
-    twitterTitle: "Show | Femme Fusion",
+        'Show till företagsevent och privata tillfällen. Välj spår och hitta rätt upplägg direkt.',
+    twitterTitle: 'Show | Femme Fusion',
     twitterDescription:
-        "Boka show till fÃ¶retag eller privat. Vi anpassar upplÃ¤gg efter publik och plats.",
+        'Boka show till företag eller privat. Vi anpassar upplägg efter publik och plats.',
     breadcrumbs: [
-        { name: "Show", path: "/show" },
+        { name: 'Show', path: '/show' },
     ],
 });
 </script>
