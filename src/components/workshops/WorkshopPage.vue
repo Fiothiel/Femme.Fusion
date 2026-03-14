@@ -37,9 +37,14 @@
                 <div v-if="workshop.longDescription" class="workshop__body" v-html="workshop.longDescription"></div>
 
                 <p class="workshop__cta">
-                    <NuxtLink :to="ctaUrl" class="button" :target="ctaTarget" :rel="ctaRel">
+                    <NuxtLink v-if="!workshop.soldOut" :to="ctaUrl" class="button" :target="ctaTarget" :rel="ctaRel">
                         {{ workshop.buttonText || "Anmäl dig här" }}
                     </NuxtLink>
+                    <span v-else class="workshop__status">Fullbokad</span>
+                </p>
+
+                <p v-if="workshop.soldOut" class="workshop__sold-out-message">
+                    Den här workshopen är fullbokad. Håll gärna utkik efter nästa datum.
                 </p>
 
                 <p class="workshop__terms">

@@ -25,6 +25,14 @@
         display: flex;
         gap: $spacing-small;
         align-items: flex-start;
+
+        &--disabled {
+            opacity: 0.7;
+
+            input {
+                cursor: not-allowed;
+            }
+        }
     }
 
     &__option-content {
@@ -38,5 +46,10 @@
 
     &__option-meta {
         font-size: $font-size-button;
+    }
+
+    &__option-status {
+        font-size: $font-size-button;
+        color: $grey-light;
     }
 }

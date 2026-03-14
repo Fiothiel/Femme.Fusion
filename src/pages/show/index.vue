@@ -40,12 +40,12 @@
                         :class="{ 'table-list__item--interactive': !!event.id }"
                     >
                         <NuxtLink v-if="event.id" class="table-list__link" :to="`/show/${event.id}`">
-                            <span>{{ getShortDate(event.startDate) }}</span>
-                            {{ event.title }}
+                            <span class="table-list__date">{{ getShortDate(event.startDate) }}</span>
+                            <span class="table-list__main">{{ event.title }}</span>
                         </NuxtLink>
                         <div v-else class="table-list__text">
-                            <span>{{ getShortDate(event.startDate) }}</span>
-                            {{ event.title }}
+                            <span class="table-list__date">{{ getShortDate(event.startDate) }}</span>
+                            <span class="table-list__main">{{ event.title }}</span>
                         </div>
                     </li>
                 </ul>

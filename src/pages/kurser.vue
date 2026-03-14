@@ -17,8 +17,11 @@
                 <ul v-if="courses.length > 0" class="table-list">
                     <li v-for="event in courses" :key="event.id">
                         <NuxtLink class="table-list__link" :to="`/workshops/${event.id}`">
-                            <span>{{ getShortDate(event.startDate) }}</span>
-                            {{ event.title }}
+                            <span class="table-list__date">{{ getShortDate(event.startDate) }}</span>
+                            <span class="table-list__main">
+                                <strong>{{ event.title }}</strong>
+                                <small v-if="event.soldOut" class="table-list__status">Fullbokad</small>
+                            </span>
                         </NuxtLink>
                     </li>
                 </ul>

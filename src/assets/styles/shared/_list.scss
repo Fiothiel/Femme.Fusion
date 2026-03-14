@@ -10,18 +10,42 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: $spacing-small;
     cursor: pointer;
+    gap: $spacing-medium;
 
     &:hover {
       color: $grey-light;
     }
   }
 
+  &__date {
+    flex: 0 0 8rem;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-small;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  &__status {
+    color: #d36a6a;
+    font-size: 1.6rem;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
   &__text {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: $spacing-small;
+    gap: $spacing-medium;
   }
 
   li {
@@ -36,10 +60,9 @@
       background-color: $wine !important;
     }
 
-    span {
+    .table-list__date {
       margin-right: $spacing-medium;
-      display: inline-block;
-      width: 8rem;
+      vertical-align: top;
     }
 
 

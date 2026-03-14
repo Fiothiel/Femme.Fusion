@@ -102,7 +102,7 @@ function buildEventSchema(event: IEvent) {
       "@type": "Offer",
       price: String(event.price ?? 0),
       priceCurrency: "SEK",
-      availability: "https://schema.org/InStock",
+      availability: event.soldOut ? "https://schema.org/SoldOut" : "https://schema.org/InStock",
       url: `${siteUrl}/anmalan`,
     },
   };

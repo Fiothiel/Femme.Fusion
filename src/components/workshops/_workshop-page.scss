@@ -16,4 +16,17 @@
         flex-direction: column;
         row-gap: $spacing-small;
     }
+
+    &__status {
+        display: inline-flex;
+        align-items: center;
+        min-height: 5.6rem;
+        font-family: $font-family-oswald;
+        font-size: 2.3rem;
+        color: $white;
+    }
+
+    &__sold-out-message {
+        margin-top: -0.5rem;
+    }
 }

@@ -36,6 +36,7 @@ export const useEvents = () => {
       title: d.title,
       shortDescription: d.shortDescription ?? "",
       longDescription: d.longDescription ?? null,
+      soldOut: d.soldOut ?? false,
       level: d.level,
       address: d.address,
       startDate: d.startDate,
