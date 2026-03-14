@@ -34,11 +34,19 @@
                 <h2>Kommande shower</h2>
 
                 <ul v-if="upcomingShows.length > 0" class="table-list">
-                    <li v-for="event in upcomingShows" :key="event.id">
-                        <NuxtLink class="table-list__link" :to="`/show/${event.id}`">
+                    <li
+                        v-for="event in upcomingShows"
+                        :key="event.id ?? `${event.title}-${event.startDate}`"
+                        :class="{ 'table-list__item--interactive': !!event.id }"
+                    >
+                        <NuxtLink v-if="event.id" class="table-list__link" :to="`/show/${event.id}`">
                             <span>{{ getShortDate(event.startDate) }}</span>
                             {{ event.title }}
                         </NuxtLink>
+                        <div v-else class="table-list__text">
+                            <span>{{ getShortDate(event.startDate) }}</span>
+                            {{ event.title }}
+                        </div>
                     </li>
                 </ul>
 
@@ -77,7 +85,7 @@ const { getShortDate } = useUtils();
 const { getShows } = useEvents();
 
 const upcomingShows: Ref<IEvent[]> = computed(() => {
-    return getShows().filter((event) => !!event.id).slice(0, 5);
+    return getShows().slice(0, 5);
 });
 
 applyPageSeo({
