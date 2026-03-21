@@ -16,8 +16,8 @@
       <div class="section__content">
         <h2>Vad vi levererar</h2>
         <p>
-          Gruppen startade 2023 och består av erfarna artister med bakgrund inom flera dansstilar och showformat.
-          Vi skapar <strong>skräddarsydda nummer</strong> som passar rummet, publiken och ert tema. Med genomtänkt
+          Gruppen består av erfarna artister med bakgrund inom flera dansstilar och showformat.
+          Vi skapar <strong>skräddarsydda shower</strong> som passar rummet, publiken och ert tema. Med genomtänkt
           kostym,
           musikval och scenisk närvaro bygger vi en helhetsupplevelse som känns både exklusiv och lekfull.
         </p>
@@ -45,19 +45,43 @@
       </div>
     </section>
 
-    <section id="medlemmar">
-      <h2>Medlemmar</h2>
-      <div class="about__members">
-        <figure v-for="m in members" :key="m.name" class="about__member" :class="m.align">
-          <NuxtImg :src="m.src" :alt="`Porträtt av ${m.name}, dansare i Femme Fusion`" class="image"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 48vw, 520px" format="webp" loading="lazy" />
-          <figcaption>
-            <strong>{{ m.name }}</strong>
-            <span class="about__role">{{ m.role }}</span>
-          </figcaption>
-        </figure>
+    <section id="grundare" class="section section--airy section--darkred">
+      <div class="section__content">
+        <h2>Grundare</h2>
+        <p>
+          Femme Fusion grundades 2023 av fyra artister med en gemensam vision om att skapa professionell underhållning med dans, sång och stark scennärvaro. Som grundare sätter vi tonen, kvaliteten och uttrycket i det vi gör.
+        </p>
+        <div class="about__members">
+          <figure v-for="m in founders" :key="m.name" class="about__member about__member--founder">
+            <NuxtImg :src="m.src" :alt="`Porträtt av ${m.name}, grundare i Femme Fusion`" class="image"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" format="webp" loading="lazy" />
+            <figcaption>
+              <strong>{{ m.name }}</strong>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
+
+    <section id="showartister" class="section section--airy">
+      <div class="section__content">
+        <h2>Showartister i Femme Fusion</h2>
+        <p>
+          Femme Fusion består av flera showartister som har mångsidiga och varierade bakgrunder inom dans, sång och underhållning. Det gör att vi kan skapa dynamiska och minnesvärda nummer där showens uttryck och omfattning anpassas efter event, publik och scen.
+        </p>
+        <div class="about__members">
+          <figure v-for="m in showArtists" :key="m.name" class="about__member about__member--compact">
+            <NuxtImg :src="m.src" :alt="`Porträtt av ${m.name}, showartist i Femme Fusion`" class="image"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" format="webp" loading="lazy" />
+            <figcaption>
+              <strong>{{ m.name }}</strong>
+              <span class="about__role">{{ m.role }}</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <div class="about__cta">
       <NuxtLink to="/kontakt" class="button button--cta">Skicka förfrågan</NuxtLink>
     </div>
@@ -72,11 +96,20 @@ onMounted(() => {
   useUtils().scrollToMain();
 });
 
-const members = [
-  { name: "Ella", role: "Dans", src: "/images/profile/ella.jpg", align: "about__member--left" },
-  { name: "Hanna", role: "Dans & sång", src: "/images/profile/hanna.jpg", align: "about__member--left" },
-  { name: "Kristina", role: "Dans & sång", src: "/images/profile/kristina.jpg", align: "" },
-  { name: "Sandra", role: "Dans", src: "/images/profile/sandra.jpg", align: "" },
+const founders = [
+  { name: "Ella", src: "/images/profile/grundare-ella.jpg" },
+  { name: "Hanna", src: "/images/profile/grundare-hanna.jpg" },
+  { name: "Kristina", src: "/images/profile/grundare-kristina.jpg" },
+  { name: "Sandra", src: "/images/profile/grundare-sandra.jpg" },
+];
+
+const showArtists = [
+  { name: "Ella", role: "Dans", src: "/images/profile/artist-ella.jpg" },
+  { name: "Hanna", role: "Dans & sång", src: "/images/profile/artist-hanna.jpg" },
+  { name: "Kajsa", role: "Dans", src: "/images/profile/artist-kajsa.jpg" },
+  { name: "Kristina", role: "Dans & sång", src: "/images/profile/artist-kristina.jpg" },
+  { name: "Natalie", role: "Dans", src: "/images/profile/artist-natalie.jpg" },
+  { name: "Sandra", role: "Dans", src: "/images/profile/artist-sandra.jpg" },
 ];
 
 applyPageSeo({

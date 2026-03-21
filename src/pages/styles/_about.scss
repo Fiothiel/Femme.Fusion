@@ -5,50 +5,34 @@
 .about {
     &__members {
         @include flex-container;
-        row-gap: $spacing-large;
-        justify-content: space-between;
-        width: 60vw;
-        padding: 0 15rem;
-        margin-left: calc(50% - 30vw);
-        margin-right: calc(50% - 30vw);
-
-        @media (max-width: 1900px) {
-            width: 70vw;
-            margin-left: calc(50% - 35vw);
-            margin-right: calc(50% - 35vw);
-        }
+        gap: 2rem;
+        row-gap: 2rem;
+        justify-content: flex-start;
+        width: 65vw;
+        max-width: 1200px;
+        margin: $spacing-large 50% 0;
+        transform: translateX(-50%);
 
         @include for-big-desktop-down {
-            width: 80vw;
-            margin-left: calc(50% - 40vw);
-            margin-right: calc(50% - 40vw);
+            width: 75vw;
         }
 
         @include for-desktop-down {
-            width: 100vw;
-            padding: 0 $spacing-xx-large;
-            margin-left: calc(50% - 50vw);
-            margin-right: calc(50% - 50vw);
+            width: 85vw;
         }
 
         @include for-tablet-landscape-down {
-            padding: 0 $spacing-x-large;
+            width: 90vw;
         }
 
         @include for-phone-only {
-            padding: 0 $spacing-large;
-            row-gap: $spacing-small;
+            width: calc(100vw - var(--spacing-xxxl));
         }
     }
 
     &__member {
-        @include flex-item-half;
         position: relative;
         margin: 0;
-
-        @include for-tablet-landscape-down {
-            width: 100%;
-        }
 
         figcaption {
             transform: translateY(2px);
@@ -77,11 +61,53 @@
         }
 
 
-        &--left {
+        &--founder {
+            width: calc((100% - 6rem) / 4);
+
+            @include for-desktop-down {
+                width: calc((100% - 2rem) / 2);
+
+                .image {
+                    max-height: 450px;
+                }
+            }
+
+            @include for-phone-only {
+                width: 100%;
+            }
+
+            .image {
+                aspect-ratio: 4 / 5;
+            }
+
             figcaption {
                 left: $spacing-medium;
                 text-align: left;
                 right: auto;
+                font-size: 2.8rem;
+            }
+        }
+
+        &--compact {
+            width: calc((100% - 4rem) / 3);
+
+            @include for-tablet-landscape-down {
+                width: calc((100% - 2rem) / 2);                
+            }
+
+            @include for-phone-only {
+                width: 100%;
+            }
+
+            .image {
+                aspect-ratio: 1;
+            }
+
+            figcaption {
+                left: $spacing-medium;
+                right: $spacing-medium;
+                text-align: left;
+                font-size: 2.4rem;
             }
         }
     }
