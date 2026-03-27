@@ -28,7 +28,7 @@ const showUrls = (eventsData as any[])
 
     return isShow && isUpcoming;
   })
-  .map((e) => `/shower/${e.id}`);
+  .map((e) => `/show/${e.id}`);
   
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",

@@ -34,11 +34,19 @@
                 <h2>Kommande shower</h2>
 
                 <ul v-if="upcomingShows.length > 0" class="table-list">
-                    <li v-for="event in upcomingShows" :key="event.id">
-                        <NuxtLink class="table-list__link" :to="`/shower/${event.id}`">
+                    <li
+                        v-for="event in upcomingShows"
+                        :key="event.id ?? `${event.title}-${event.startDate}`"
+                        :class="{ 'table-list__item--interactive': !!event.id }"
+                    >
+                        <NuxtLink v-if="event.id" class="table-list__link" :to="`/show/${event.id}`">
                             <span>{{ getShortDate(event.startDate) }}</span>
                             {{ event.title }}
                         </NuxtLink>
+                        <div v-else class="table-list__text">
+                            <span>{{ getShortDate(event.startDate) }}</span>
+                            {{ event.title }}
+                        </div>
                     </li>
                 </ul>
 
@@ -81,18 +89,18 @@ const upcomingShows: Ref<IEvent[]> = computed(() => {
 });
 
 applyPageSeo({
-    title: "Show | Femme Fusion - show till företagsevent och privata fester",
+    title: 'Show | Femme Fusion - show till företagsevent och privata fester',
     description:
-        "Boka show med Femme Fusion. Välj mellan show till företagsevent eller privata tillfällen. Vi levererar dans, sång och scenuttryck och anpassar upplägg efter publik, plats och önskad känsla.",
-    path: "/show",
-    ogTitle: "Show | Femme Fusion",
+        'Boka show med Femme Fusion. Välj mellan show till företagsevent eller privata tillfällen. Vi levererar dans, sång och scenuttryck och anpassar upplägg efter publik, plats och önskad känsla.',
+    path: '/show',
+    ogTitle: 'Show | Femme Fusion',
     ogDescription:
-        "Show till företagsevent och privata tillfällen. Välj spår och hitta rätt upplägg direkt.",
-    twitterTitle: "Show | Femme Fusion",
+        'Show till företagsevent och privata tillfällen. Välj spår och hitta rätt upplägg direkt.',
+    twitterTitle: 'Show | Femme Fusion',
     twitterDescription:
-        "Boka show till företag eller privat. Vi anpassar upplägg efter publik och plats.",
+        'Boka show till företag eller privat. Vi anpassar upplägg efter publik och plats.',
     breadcrumbs: [
-        { name: "Show", path: "/show" },
+        { name: 'Show', path: '/show' },
     ],
 });
 </script>

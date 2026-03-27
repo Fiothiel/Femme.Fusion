@@ -28,11 +28,11 @@ const mockPost = {
   },
   body: `
         <p>
-          Vi söker ibland extradansare eller showartister till specifika nummer i våra shower. Det bästa sättet att visa ditt intresse är att prata med oss på någon av våra dansklasser, eller skicka ett DM till oss på Instagram: <a href="https://www.instagram.com/femmefusionofficial/" target="_blank">@femmefusionofficial</a>.
+          Vi söker ibland extra dansare, sångare eller showartister till specifika nummer i våra shower. Det bästa sättet att visa ditt intresse är att prata med oss på någon av våra dansklasser, eller skicka ett DM till oss på Instagram: <a href="https://www.instagram.com/femmefusionofficial/" target="_blank">@femmefusionofficial</a>.
         </p>
 
         <p>
-            Du behöver inte vara en fullfjädrad dansare! Kanske har du annan scenvana, utstrålning eller något vi inte visste att vi behövde. 
+            Du behöver inte vara en fullfjädrad dansare. Kanske är du sångare med stark scennärvaro, van vid mikrofon och publik, eller har annan scenvana och utstrålning. Kanske är du något vi inte visste att vi behövde.
         </p>
 
         <p>

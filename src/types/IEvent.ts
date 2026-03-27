@@ -20,7 +20,7 @@ export type IEvent = {
   type: EventType;
   numOccasions: number;
   dayAndTimeInfo: string;
-  price: number;
+  price: number | string | null;
   buttonText: string;
   image: IEventImage | null;
 };

@@ -1,0 +1,33 @@
+{
+  "routes": [
+    { "route": "/bokning", "redirect": "/bokning/foretag/", "statusCode": 301 },
+
+    { "route": "/bokning/show", "redirect": "/bokning/foretag/show/", "statusCode": 301 },
+
+    { "route": "/bokning/dansklass", "redirect": "/bokning/privat/dansklass/", "statusCode": 301 },
+
+    { "route": "/kalender", "redirect": "/kurser/", "statusCode": 301 },
+
+    { "route": "/shower/*", "rewrite": "/show/:splat" }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/images/*",
+      "/_nuxt/*",
+      "/favicon/*",
+      "/*.css",
+      "/*.js",
+      "/*.json",
+      "/*.xml",
+      "/*.txt",
+      "/*.webmanifest",
+      "/*.ico",
+      "/*.png",
+      "/*.jpg",
+      "/*.jpeg",
+      "/*.webp",
+      "/*.svg"
+    ]
+  }
+}

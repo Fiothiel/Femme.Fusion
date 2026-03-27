@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "title": "Linköpings stadsfest",
     "shortDescription": "<p>Vi ger en kort show, tillsammans med andra dansare, under Linköpings Stadsfest. Mer info kommer.</p>",
@@ -18,7 +18,7 @@
   },
   {
     "title": "En Toxic Christmas",
-    "shortDescription": "<p>Vi medverkar i \\\"EN TOXIC JUL - Årets mest radioaktiva julshow! ☢️\\\", med och av Scandinavian Scandal.</p>",
+    "shortDescription": "<p>Vi medverkar i \\\"EN TOXIC JUL - Ã…rets mest radioaktiva julshow! â˜¢ï¸\\\", med och av Scandinavian Scandal.</p>",
     "longDescription": null,
     "address": "Arbis, Norrköping, Bredgatan 54",
     "level": null,
@@ -33,7 +33,7 @@
     "image": null
   },
   {
-    "title": "Gratis dans - Burlesque & Feminine Vibe",
+    "title": "Gratis dans - Burlesque \u0026 Feminine Vibe",
     "shortDescription": "<p>Vi bjuder på gratis dans - och du bjuder på din närvaro framför kameran! Under denna workshop får du prova två av våra mest populära stilar:</p><ul><li>1 timme burlesque</li><li>15 min paus</li><li>1 timme feminine vibe</li></ul><p>Vi filmar och fotar hela danspasset för att sprida Femme Fusion-viben i våra sociala medier - du får dansa gratis i utbyte mot att synas med oss. Win/win! Anmäl dig via vår hemsida eller DM på Facebook eller Instagram. Ange om du vill delta på en eller båda passen.</p><p>Förkunskaper: Inga krav! Kom som du är, utforska uttryck och ha kul med oss.</p>",
     "longDescription": null,
     "address": "Skylten, Södra Oskarsgatan 3, Linköping",
@@ -51,7 +51,7 @@
   },
   {
     "title": "Streetdance",
-    "shortDescription": "<p>Är du student får du 25kr rabatt och betalar 175 kr!</p></p><p>Lär dig en koreografi med attityd och groove. Passar dig som har dansat lite innan och gillar att hänga med i tempo.</p><p>Workshopen hålls av Ella och Kristina.</p><p>Klädsel: Bekväma kläder och sneakers. Har du en keps? Ta med den! (Frivilligt)</p><p>Förkunskaper: Denna workshop är på fortsättningsnivå. Du bör ha viss danserfarenhet och känna dig bekväm med att ta till dig koreografi.</p>",
+    "shortDescription": "<p>Ã„r du student får du 25kr rabatt och betalar 175 kr!</p></p><p>Lär dig en koreografi med attityd och groove. Passar dig som har dansat lite innan och gillar att hänga med i tempo.</p><p>Workshopen hålls av Ella och Kristina.</p><p>Klädsel: Bekväma kläder och sneakers. Har du en keps? Ta med den! (Frivilligt)</p><p>Förkunskaper: Denna workshop är på fortsättningsnivå. Du bör ha viss danserfarenhet och känna dig bekväm med att ta till dig koreografi.</p>",
     "longDescription": null,
     "address": "Skylten, Södra Oskarsgatan 3, Linköping",
     "level": null,
@@ -203,7 +203,7 @@
     "startDate": "2026-01-30T18:00:00",
     "endDate": "2026-01-31T01:00:00",
     "day": "Fredag",
-    "url": "https://todecay.com/products/to-degay-presents-no-discipline-prohibition-night?_pos=1&_sid=c37667573&_ss=r",
+    "url": "https://todecay.com/products/to-degay-presents-no-discipline-prohibition-night?_pos=1\u0026_sid=c37667573\u0026_ss=r",
     "type": "show",
     "numOccasions": 1,
     "dayAndTimeInfo": "Fredag 18:00-01:00 (showstart 19:30)",
@@ -252,6 +252,86 @@
     "image": {
       "src": "/images/danceclass/feminine-vibe-7-februrai-2026.webp",
       "alt": "Två dansare poserar självsäkert på scen i feminine vibe-stil, med kraftfullt uttryck och urban känsla.",
+      "photographer": "Fotograferna Hoog"
+    }
+  },
+  {
+    "id": "massa-i-goteborg-28-mars-2026",
+    "title": "Mässa i Göteborg",
+    "shortDescription": "<p>Femme Fusion medverkar i Eriksbergshallen i Göteborg den 28 mars. Under dagen kan du se oss på scen och besöka vårt bord på plats.</p>",
+    "longDescription": "<p>Den 28 mars medverkar Femme Fusion i <strong>Eriksbergshallen i Göteborg</strong> under en heldag med show, scenuttryck och upplevelser.</p><p>Under dagen bjuder vi på ett nummer med vår mix av dans, attityd och glamour. Vi finns också på plats med eget bord, så kom gärna förbi och hälsa på oss.</p><p>Vill du träffa oss, få en känsla för vilka vi är och se oss i rätt miljö, är det här ett fint tillfälle att göra det.</p>",
+    "address": "Eriksbergshallen, Maskingatan 11, Göteborg",
+    "level": null,
+    "startDate": "2026-03-28T12:00:00",
+    "endDate": "2026-03-28T23:00:00",
+    "day": "Lördag",
+    "url": "https://www.tickster.com/se/sv/events/wu8vrzba1nj4mb3/2026-03-28/erotikmassan-i-eriksbergshallen",
+    "type": "show",
+    "numOccasions": 1,
+    "dayAndTimeInfo": "Lördag 12:00-23:00",
+    "buttonText": "Läs mer om eventet",
+    "price": null,
+    "image": {
+      "src": "/images/show/massa-i-goteborg-28-mars-2026.jpg",
+      "alt": "Tre artister från Femme Fusion uppträder på scen i röda paljettklänningar under en show med sång och dans.",
+      "photographer": "Fotograferna Hoog"
+    }
+  },
+  {
+    "id": null,
+    "title": "Privat show",
+    "shortDescription": "<p>Femme Fusion är bokade för en privat show detta datum.</p>",
+    "longDescription": null,
+    "address": "",
+    "level": null,
+    "startDate": "2026-05-27T00:00:00",
+    "endDate": "2026-05-27T23:59:00",
+    "day": "Onsdag",
+    "url": "",
+    "type": "show",
+    "numOccasions": 1,
+    "dayAndTimeInfo": "Onsdag",
+    "buttonText": "",
+    "price": null,
+    "image": null
+  },
+  {
+    "id": null,
+    "title": "Privat show",
+    "shortDescription": "<p>Femme Fusion är bokade för en privat show detta datum.</p>",
+    "longDescription": null,
+    "address": "",
+    "level": null,
+    "startDate": "2026-06-05T00:00:00",
+    "endDate": "2026-06-05T23:59:00",
+    "day": "Fredag",
+    "url": "",
+    "type": "show",
+    "numOccasions": 1,
+    "dayAndTimeInfo": "Fredag",
+    "buttonText": "",
+    "price": null,
+    "image": null
+  },
+  {
+    "id": "scandinavian-scandal-14-15-november-2026",
+    "title": "Scandinavian Scandal",
+    "shortDescription": "<p>Femme Fusion medverkar under Scandinavian Scandal i Norrköping den 14-15 november. En helg med scenuttryck, show och stark närvaro.</p>",
+    "longDescription": "<p>Den 14-15 november medverkar Femme Fusion under <strong>Scandinavian Scandal</strong> i <strong>Norrköping</strong>.</p><p>Scandinavian Scandal samlar publik, artister och tävlande under en helg där scenisk närvaro, uttryck och performance står i centrum. Vi är glada att få vara en del av sammanhanget och bidra med vår mix av dans, attityd och glamour.</p><p>Vill du uppleva oss live i en miljö där uttryck och scenkänsla får ta plats fullt ut, är det här ett fint tillfälle.</p>",
+    "address": "Arbis, Bredgatan 54, Norrköping",
+    "level": null,
+    "startDate": "2026-11-14T00:00:00",
+    "endDate": "2026-11-15T23:59:00",
+    "day": "Lördag-Söndag",
+    "url": "https://www.scandinavianscandal.com/",
+    "type": "show",
+    "numOccasions": 2,
+    "dayAndTimeInfo": "14-15 november 2026",
+    "buttonText": "Läs mer om eventet",
+    "price": null,
+    "image": {
+      "src": "/images/show/scandinavian-scandal-14-15-november-2026.jpg",
+      "alt": "Tre dansare från Femme Fusion poserar i starkt blått scenljus under ett energiskt shownummer.",
       "photographer": "Fotograferna Hoog"
     }
   }

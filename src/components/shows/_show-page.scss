@@ -4,10 +4,10 @@
 
 .show {
     &__image {
-        height: 650px;
+        height: 450px;
 
         @include for-phone-only {
-            height: 450px;
+            height: 300px;
         }
     }
 

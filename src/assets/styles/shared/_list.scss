@@ -12,11 +12,16 @@
   &__link {
     display: block;
     padding: $spacing-small;
-          cursor: pointer;
+    cursor: pointer;
 
-          &:hover {
+    &:hover {
       color: $grey-light;
     }
+  }
+
+  &__text {
+    display: block;
+    padding: $spacing-small;
   }
 
   li {
@@ -27,13 +32,9 @@
       cursor: pointer;
     } */
 
-    &:hover {
+    &.table-list__item--interactive:hover {
       background-color: $wine !important;
     }
-
-/*     a:hover {
-      color: $grey-light;
-    } */
 
     span {
       margin-right: $spacing-medium;

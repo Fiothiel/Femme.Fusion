@@ -81,10 +81,19 @@ const timeLabel = computed(() => {
 });
 
 const priceLabel = computed(() => {
-    if (props.workshop.price === 0) {
+    const price = props.workshop.price;
+
+    if (price === 0) {
         return "Gratis";
     }
-    return `${props.workshop.price} kr`;
+    if (typeof price === "number") {
+        return `${price} kr`;
+    }
+    if (typeof price === "string" && price.trim()) {
+        return price;
+    }
+
+    return "";
 });
 
 const ctaUrl = computed(() => props.workshop.url || "/anmalan");

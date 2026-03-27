@@ -2,6 +2,8 @@
 @use '../../assets/styles/mixins' as *;
 
 .content-post {
+    margin-bottom: var(--spacing-xl);
+
     &__published {
         opacity: 0.8;
     }
@@ -12,5 +14,9 @@
 
     &__image {
         height: 500px;
+
+        @include for-phone-only {
+            height: 300px;
+        }
     }
 }
