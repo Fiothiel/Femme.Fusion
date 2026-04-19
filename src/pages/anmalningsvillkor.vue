@@ -19,6 +19,19 @@
           enligt sina villkor.
         </p>
 
+        <h2>Personuppgifter och samarbete med Studiefrämjandet</h2>
+        <p>
+          Våra kurser och workshops genomförs i samarbete med Studiefrämjandet.
+        </p>
+        <p>
+          I samband med din anmälan samlar vi in vissa personuppgifter, inklusive personnummer.
+          Det görs för att kunna administrera din plats samt för att uppfylla de krav som finns för folkbildning.
+        </p>
+        <p>
+          Uppgifterna används för rapportering och uppföljning inom Studiefrämjandet och hanteras i enlighet med
+          gällande dataskyddsregler (GDPR).
+        </p>
+
         <h2>Ångerrätt</h2>
         <p>
           Enligt distansavtalslagen gäller normalt 14 dagars ångerrätt vid köp på distans.
@@ -66,7 +79,7 @@
 import { useUtils } from '@/utils';
 
 onMounted(() => {
-    useUtils().scrollToMain();
+  useUtils().scrollToMain();
 });
 
 const canonicalUrl = "https://femmefusion.se/anmalningsvillkor"

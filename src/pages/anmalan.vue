@@ -63,7 +63,8 @@
                     <input type="text" name="city" v-model="city" />
                     <div class="form__error" v-if="cityError">{{ cityError }}</div>
 
-                    <label>Personnummer (för fakturering, 10–12 siffror)</label>
+                    <label>Personnummer (10–12 siffror)</label>
+                    <small>Behövs för fakturering och rapportering via Studiefrämjandet</small>
                     <input type="text" name="personalNumber" v-model="personalNumber" />
                     <div class="form__error" v-if="personalNumberError">{{ personalNumberError }}</div>
 
