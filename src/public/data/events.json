@@ -172,10 +172,10 @@
     }
   },
   {
-    "id": "musikaldans-16-maj-2026",
-    "title": "Musikal - Dansa & Sjung",
-    "shortDescription": "Vi dansar och sjunger till ett nummer från High School Musical. Nybörjarvänlig och perfekt för dig som alltid velat vara med i en musikal.",
-    "longDescription": "<p>I den här musikalklassen kombinerar vi dans och sång i ett nummer från High School Musical. Du får prova på att dansa och sjunga samtidigt, tillsammans med andra i kör. Fokus ligger på glädje, timing och gruppkänsla.</p><p>Vi bygger upp numret steg för steg så att alla kan vara med, oavsett tidigare erfarenhet. Perfekt för dig som vill prova på musikal och känna på glädjen i att dansa och sjunga tillsammans i en varm och uppmuntrande atmosfär.</p><p>Workshopen leds av Hanna och Kristina.</p>",
+    "id": "burlesque-16-maj-2026",
+    "title": "Burlesque",
+    "shortDescription": "En nybörjarvänlig workshop i burlesque med fokus på uttryck, attityd och scenkänsla. Perfekt för dig som vill prova något nytt i en trygg och lekfull miljö.",
+    "longDescription": "<p>I den här workshopen får du prova på <strong>burlesque</strong> i ett nybörjarvänligt format med fokus på <strong>uttryck, attityd och scenkänsla</strong>. Vi jobbar med enkla rörelser, kroppskontroll och närvaro, och du får utforska ett dansuttryck som är både lekfullt, elegant och stärkande.</p><p>Vi bygger upp koreografin steg för steg så att du tryggt kan vara med, oavsett tidigare erfarenhet. Här handlar det inte om att prestera perfekt, utan om att ha roligt, våga ta plats och hitta känslan i rörelserna.</p><p>Workshopen leds av Kristina och Ella.</p>",
     "address": "Skylten, Södra Oskarsgatan 3, Linköping",
     "level": "Nybörjare",
     "startDate": "2026-05-16T10:30:00",
@@ -188,8 +188,8 @@
     "buttonText": "Anmäl dig här",
     "price": 120,
     "image": {
-      "src": "/images/danceclass/musikaldans-16-maj-2026.webp",
-      "alt": "Två dansare ler mot kameran i musikalinspirerad danspose, med öppna armar och scenisk närvaro.",
+      "src": "/images/danceclass/burlesque-16-maj-2026.webp",
+      "alt": "Dansare i burlesqueinspirerad pose med tydligt uttryck, scenkänsla och feminin energi.",
       "photographer": "Mattias Kannerstål"
     }
   },
