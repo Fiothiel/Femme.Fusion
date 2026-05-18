@@ -24,6 +24,16 @@
     padding: $spacing-small;
   }
 
+  &__badge {
+    display: inline-block;
+    margin-left: $spacing-small;
+    padding-left: $spacing-x-small;
+    font-size: 0.85em;
+    font-weight: 400;
+    color: $apricot;
+    white-space: nowrap;
+  }
+
   li {
     list-style: none;
     transition: 0.2s ease-in all;
@@ -41,7 +51,6 @@
       display: inline-block;
       width: 8rem;
     }
-
 
     &:nth-child(even) {
       background-color: #121212;

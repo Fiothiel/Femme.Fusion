@@ -19,6 +19,7 @@
                         <NuxtLink class="table-list__link" :to="`/workshops/${event.id}`">
                             <span>{{ getShortDate(event.startDate) }}</span>
                             {{ event.title }}
+                            <small class="table-list__badge">{{ getCourseFormat(event) }}</small>
                         </NuxtLink>
                     </li>
                 </ul>
@@ -62,6 +63,10 @@ const { getCourses } = useEvents();
 const courses: Ref<IEvent[]> = computed(() => {
     return getCourses();
 });
+
+const getCourseFormat = (event: IEvent): string => {
+    return event.numOccasions > 1 ? "kurs" : "workshop";
+};
 
 applyPageSeo({
     title: "Kurser & dansklasser | Femme Fusion - kommande datum",
