@@ -20,6 +20,18 @@ export const useEvents = () => {
     return upcomingEvents.sort(sort);
   }
 
+  function getPastEvents(): IEvent[] {
+    const events: IEvent[] = getAllEvents();
+    const now = new Date();
+
+    const pastEvents = events.filter((event) => {
+      const end = new Date(event.endDate ?? event.startDate);
+      return end < now;
+    });
+
+    return pastEvents.sort((a, b) => sort(b, a));
+  }
+
   function sort(a: IEvent, b: IEvent): number {
     const dateA = new Date(a.startDate);
     const dateB = new Date(b.startDate);
@@ -57,6 +69,12 @@ export const useEvents = () => {
     return typeof limit === "number" ? list.slice(0, limit) : list;
   }
 
+  function getPastCourses(limit?: number): IEvent[] {
+    const all = getPastEvents();
+    const list = all.filter((e) => e.type === EventType.Course);
+    return typeof limit === "number" ? list.slice(0, limit) : list;
+  }
+
   function getShows(limit?: number): IEvent[] {
     const all = getEvents();
     const list = all.filter((e) => e.type === EventType.Show);
@@ -71,7 +89,9 @@ export const useEvents = () => {
   return {
     getAllEvents,
     getEvents,
+    getPastEvents,
     getCourses,
+    getPastCourses,
     getShows,
     getById,
   };

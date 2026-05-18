@@ -4,6 +4,11 @@ import eventsData from "./public/data/events.json";
 
 const now = new Date();
 
+const isUpcoming = (event: any) => {
+  const date = event.endDate ?? event.startDate;
+  return date ? new Date(date) >= now : false;
+};
+
 const workshopUrls = (eventsData as any[])
   .filter((e) => {
     if (!e.id || !e.startDate) {
@@ -11,9 +16,7 @@ const workshopUrls = (eventsData as any[])
     }
 
     const isWorkshop = e.type === "course"; // justera om du även har "workshop"
-    const isUpcoming = new Date(e.startDate) >= now;
-
-    return isWorkshop && isUpcoming;
+    return isWorkshop;
   })
   .map((e) => `/workshops/${e.id}`);
 
@@ -24,11 +27,11 @@ const showUrls = (eventsData as any[])
     }
 
     const isShow = e.type === "show";
-    const isUpcoming = new Date(e.startDate) >= now;
-
-    return isShow && isUpcoming;
+    return isShow && isUpcoming(e);
   })
   .map((e) => `/show/${e.id}`);
+
+const extraUrls = ["/tidigare-kurser", ...workshopUrls, ...showUrls];
   
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
@@ -40,7 +43,7 @@ export default defineNuxtConfig({
   sitemap: {
     siteUrl: 'https://femmefusion.se',
     // add routes that aren’t easily discoverable:
-    urls: [...workshopUrls, ...showUrls],
+    urls: extraUrls,
     defaults: { changefreq: 'monthly', priority: 0.7 }
   },
   image: {
@@ -51,7 +54,7 @@ export default defineNuxtConfig({
     preset: "static",
     prerender: {
       // Nuxt will crawl links by default; list extra routes if needed:
-      routes: [...workshopUrls, ...showUrls],
+      routes: extraUrls,
     },
   },
 

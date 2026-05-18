@@ -1,0 +1,22 @@
+@use '../../assets/styles/variables' as *;
+
+.courses {
+    &__archive-link {
+        margin-top: $spacing-medium;
+    }
+}
+
+.course-archive {
+    &__groups {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-large;
+    }
+
+    &__group {
+        h2 {
+            text-align: left;
+            margin-bottom: $spacing-small;
+        }
+    }
+}

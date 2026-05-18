@@ -16,4 +16,18 @@
         flex-direction: column;
         row-gap: $spacing-small;
     }
+
+    &__notice {
+        border-left: 2px solid $apricot;
+        padding-left: $spacing-small;
+        margin-top: $spacing-small;
+
+        p {
+            margin-top: 0;
+        }
+    }
+
+    &__notice-buttons {
+        margin-top: $spacing-small;
+    }
 }

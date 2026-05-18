@@ -33,6 +33,7 @@
     "image": null
   },
   {
+    "id": "gratis-dans-burlesque-feminine-vibe-13-september-2025",
     "title": "Gratis dans - Burlesque \u0026 Feminine Vibe",
     "shortDescription": "<p>Vi bjuder på gratis dans - och du bjuder på din närvaro framför kameran! Under denna workshop får du prova två av våra mest populära stilar:</p><ul><li>1 timme burlesque</li><li>15 min paus</li><li>1 timme feminine vibe</li></ul><p>Vi filmar och fotar hela danspasset för att sprida Femme Fusion-viben i våra sociala medier - du får dansa gratis i utbyte mot att synas med oss. Win/win! Anmäl dig via vår hemsida eller DM på Facebook eller Instagram. Ange om du vill delta på en eller båda passen.</p><p>Förkunskaper: Inga krav! Kom som du är, utforska uttryck och ha kul med oss.</p>",
     "longDescription": null,
@@ -40,16 +41,21 @@
     "level": null,
     "startDate": "2025-09-13T10:00:00",
     "endDate": "2025-09-13T12:15:00",
-    "day": "",
+    "day": "Lördag",
     "url": "/workshop-gratis",
     "type": "course",
     "numOccasions": 1,
     "dayAndTimeInfo": "Lördag 10:00-12:15",
     "buttonText": "Anmäl dig gratis",
     "price": 0,
-    "image": null
+    "image": {
+      "src": "/images/danceclass/gratis-dans-burlesque-feminine-vibe-13-september-2025.webp",
+      "alt": "Deltagare dansar med handskar i en ljus studio under workshop i burlesque och feminine vibe.",
+      "photographer": "Hampus Zetterblom"
+    }
   },
   {
+    "id": "streetdance-20-september-2025",
     "title": "Streetdance",
     "shortDescription": "<p>Ã„r du student får du 25kr rabatt och betalar 175 kr!</p></p><p>Lär dig en koreografi med attityd och groove. Passar dig som har dansat lite innan och gillar att hänga med i tempo.</p><p>Workshopen hålls av Ella och Kristina.</p><p>Klädsel: Bekväma kläder och sneakers. Har du en keps? Ta med den! (Frivilligt)</p><p>Förkunskaper: Denna workshop är på fortsättningsnivå. Du bör ha viss danserfarenhet och känna dig bekväm med att ta till dig koreografi.</p>",
     "longDescription": null,
@@ -57,16 +63,21 @@
     "level": null,
     "startDate": "2025-09-20T10:30:00",
     "endDate": "2025-09-20T12:00:00",
-    "day": "",
+    "day": "Lördag",
     "url": "/workshop-streetdance",
     "type": "course",
     "numOccasions": 1,
     "dayAndTimeInfo": "Lördag 10:30-12:00",
     "buttonText": "Anmäl dig här",
     "price": 200,
-    "image": null
+    "image": {
+      "src": "/images/danceclass/streetdance-20-september-2025.webp",
+      "alt": "Två dansare i keps och streetkläder dansar på scen i lila ljus framför en graffitivägg.",
+      "photographer": "Fotograferna Hoog"
+    }
   },
   {
+    "id": "mean-girls-christmas-7-december-2025",
     "title": "A Mean Girls Christmas",
     "shortDescription": "<p>Kommer du ihåg scenen i Mean Girls (2004) där de dansar till Jingle Bell Rock? Lär dig koreografin från den ikoniska filmen!</p><p>Workshopen hålls av Ella och Kristina.</p><p>Förkunskaper: Inga förkunskaper behövs - bara kom och kör.</p>",
     "longDescription": null,
@@ -74,14 +85,18 @@
     "level": null,
     "startDate": "2025-12-07T10:30:00",
     "endDate": "2025-12-07T12:00:00",
-    "day": "",
+    "day": "Söndag",
     "url": "https://www.studieframjandet.se/ostergotlands-lan/gustav-arrangemang/kalenderhandelser/2025/december/a-mean-girls-christmas-med-femme-fusion/",
     "type": "course",
     "numOccasions": 1,
     "dayAndTimeInfo": "Söndag 10:30-12:00",
     "buttonText": "Anmäl dig här",
     "price": 200,
-    "image": null
+    "image": {
+      "src": "/images/danceclass/mean-girls-christmas-7-december-2025.webp",
+      "alt": "Fyra dansare i röda jultröjor och tomteluvor poserar mot en mörk bakgrund inför en Mean Girls-inspirerad julworkshop.",
+      "photographer": "Daniel Häggmyr"
+    }
   },
   {
     "id": "wicked-11-januari-2026",

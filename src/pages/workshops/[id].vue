@@ -68,6 +68,7 @@ applyPageSeo({
 
 function buildEventSchema(event: IEvent) {
   const siteUrl = "https://femmefusion.se";
+  const isPast = new Date(event.endDate || event.startDate) < new Date();
   const [streetAddress, cityMaybe] = (event.address || "")
     .split(",")
     .map((p) => p.trim());
@@ -78,7 +79,7 @@ function buildEventSchema(event: IEvent) {
     name: event.title,
     startDate: event.startDate,
     endDate: event.endDate,
-    eventStatus: "https://schema.org/EventScheduled",
+    eventStatus: isPast ? "https://schema.org/EventCompleted" : "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: {
       "@type": "Place",
@@ -102,7 +103,7 @@ function buildEventSchema(event: IEvent) {
       "@type": "Offer",
       price: String(event.price ?? 0),
       priceCurrency: "SEK",
-      availability: "https://schema.org/InStock",
+      availability: isPast ? "https://schema.org/SoldOut" : "https://schema.org/InStock",
       url: `${siteUrl}/anmalan`,
     },
   };
