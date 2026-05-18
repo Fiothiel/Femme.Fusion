@@ -8,7 +8,13 @@
                 </div>
 
                 <ul class="workshop__info">
-                    <li v-if="workshop.day">
+                    <li v-if="isMultiOccasion && periodLabel">
+                        <strong>Period:</strong> {{ periodLabel }}
+                    </li>
+                    <li v-if="isMultiOccasion">
+                        <strong>Antal tillfällen:</strong> {{ workshop.numOccasions }}
+                    </li>
+                    <li v-else-if="workshop.day">
                         <strong>Datum:</strong> {{ workshop.day }} {{ useUtils().getShortDate(workshop.startDate) }}
                     </li>
                     <li v-if="timeLabel">
@@ -61,6 +67,29 @@ import { useUtils } from "../../utils";
 const props = defineProps<{
     workshop: IEvent;
 }>();
+
+const isMultiOccasion = computed(() => props.workshop.numOccasions > 1);
+
+const periodLabel = computed(() => {
+    if (!isMultiOccasion.value || !props.workshop.startDate || !props.workshop.endDate) {
+        return "";
+    }
+
+    const start = new Date(props.workshop.startDate);
+    const end = new Date(props.workshop.endDate);
+    const startDate = useUtils().getShortDate(props.workshop.startDate);
+    const endDate = useUtils().getShortDate(props.workshop.endDate);
+
+    if (start.toDateString() === end.toDateString()) {
+        return `${startDate} ${start.getFullYear()}`;
+    }
+
+    if (start.getFullYear() === end.getFullYear()) {
+        return `${startDate} till ${endDate} ${end.getFullYear()}`;
+    }
+
+    return `${startDate} ${start.getFullYear()} till ${endDate} ${end.getFullYear()}`;
+});
 
 const timeLabel = computed(() => {
     if (!props.workshop.startDate || !props.workshop.endDate) {
