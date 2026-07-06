@@ -375,5 +375,45 @@
     "alt": "Två dansare i rörelse med tydligt uttryck, flow och feminin energi i en Feminine Vibe-klass.",
     "photographer": "Mattias Kannerstål"
    }
- }
+ },
+ {
+  "id": "linkopings-stadsfest-22-augusti-2026",
+  "title": "Linköpings Stadsfest",
+  "shortDescription": "<p>Femme Fusion uppträder på dansscenen under Linköpings Stadsfest. Kom förbi och upplev ett energifyllt shownummer mitt i festivalvimlet.</p>",
+  "longDescription": "<p>Den 22 augusti uppträder Femme Fusion på <strong>Linköpings Stadsfest</strong> som en del av programmet på dansscenen vid <strong>Melins torg</strong>. Vi bjuder på ett fartfyllt shownummer med attityd, glamour och scenenergi tillsammans med flera andra lokala dansgrupper.</p><p>Vår show börjar cirka <strong>13:00</strong>. Eventet är gratis och öppet för alla.</p>",
+  "address": "Melins torg, Linköping",
+  "level": null,
+  "startDate": "2026-08-22T13:00:00",
+  "endDate": "2026-08-22T13:10:00",
+  "day": "Lördag",
+  "url": "",
+  "type": "show",
+  "numOccasions": 1,
+  "dayAndTimeInfo": "Lördag ca 13:00",
+  "buttonText": "",
+  "price": "Gratis",
+    "image": {
+    "src": "/images/show/linkopings-stadsfest-22-augusti-2026.webp",
+    "alt": "Tre dansare uppträder på scen i svarta cargobyxor och glittriga toppar.",
+    "photographer": "Evelina Söderwall"
+   }  
+},
+{
+  "id": "privat-show-11-september-2026",
+  "title": "Privat show",
+  "shortDescription": "<p>Femme Fusion är bokade för en privat show detta datum.</p>",
+  "longDescription": null,
+  "address": "",
+  "level": null,
+  "startDate": "2026-09-11T00:00:00",
+  "endDate": "2026-09-11T23:59:00",
+  "day": "Fredag",
+  "url": "",
+  "type": "show",
+  "numOccasions": 1,
+  "dayAndTimeInfo": "Fredag",
+  "buttonText": "",
+  "price": null,
+  "image": null
+}
 ]
