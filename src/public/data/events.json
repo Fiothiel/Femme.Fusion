@@ -411,5 +411,49 @@
     "buttonText": "",
     "price": null,
     "image": null
+  },
+  {
+    "id": "burlesque-3-oktober-2026",
+    "title": "Burlesque",
+    "shortDescription": "Upptäck burlesque, en lekfull och scenisk dansstil där uttryck, attityd och elegans står i centrum. Nybörjarvänlig workshop i lugnt tempo.",
+    "longDescription": "<p><strong>Burlesque</strong> är en scenisk och lekfull dansstil där du arbetar med uttryck, attityd och kroppsspråk. Här möts elegans, humor och självsäkerhet, men du formar alltid känslan på ditt eget sätt.</p><p>Under workshopen lär vi oss en koreografi steg för steg med fokus på enkla rörelser, närvaro och scenkänsla. Du behöver inga förkunskaper. Kom i kläder som du känner dig bekväm att röra dig i och ge dig själv en stund fylld av dansglädje.</p><p>Workshopen leds av Ella och Hanna.</p>",
+    "address": "Skylten, Södra Oskarsgatan 3, Linköping",
+    "level": "Nybörjare",
+    "startDate": "2026-10-03T10:30:00",
+    "endDate": "2026-10-03T12:00:00",
+    "day": "Lördag",
+    "url": "/anmalan",
+    "type": "course",
+    "numOccasions": 1,
+    "dayAndTimeInfo": "Lördag 10:30-12:00",
+    "buttonText": "Anmäl dig här",
+    "price": 150,
+    "image": {
+      "src": "/images/danceclass/burlesque-3-oktober-2026.webp",
+      "alt": "Dansare från Femme Fusion i burlesqueinspirerad pose med scenkänsla och feminint uttryck.",
+      "photographer": "Mattias Kannerstål"
+    }
+  },
+  {
+    "id": "sensual-heels-christmas-edition-6-december-2026",
+    "title": "Sensual Heels Christmas Edition",
+    "shortDescription": "En julig och nybörjarvänlig workshop i Sensual Heels med fokus på mjuka rörelser, attityd och självförtroende. Klackar är helt valfritt.",
+    "longDescription": "<p><strong>Sensual Heels</strong> är en sensuell och stärkande dansstil med fokus på kroppskontroll, mjuka benrörelser, attityd och uttryck. Här dansar vi på golvet och bygger koreografin steg för steg i ett tryggt tempo.</p><p>På andra advent fyller vi studion med julkänsla från början till slut. Du väljer själv om du vill dansa i klackar. Alla klackhöjder är välkomna, och det går lika bra att delta utan klackar. Workshopen är nybörjarvänlig och kräver inga förkunskaper.</p><p>Workshopen leds av Kristina och Natalie.</p>",
+    "address": "Skylten, Södra Oskarsgatan 3, Linköping",
+    "level": "Nybörjare",
+    "startDate": "2026-12-06T10:30:00",
+    "endDate": "2026-12-06T12:00:00",
+    "day": "Söndag",
+    "url": "/anmalan",
+    "type": "course",
+    "numOccasions": 1,
+    "dayAndTimeInfo": "Söndag 10:30-12:00",
+    "buttonText": "Anmäl dig här",
+    "price": 150,
+    "image": {
+      "src": "/images/danceclass/sensual-heels-christmas-edition-6-december-2026.webp",
+      "alt": "Dansare från Femme Fusion i Sensual Heels med mjukt rörelseuttryck och julig känsla.",
+      "photographer": "Daniel Häggmyr"
+    }
   }
 ]
