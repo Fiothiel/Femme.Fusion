@@ -8,7 +8,13 @@
                 </div>
 
                 <ul class="workshop__info">
-                    <li v-if="workshop.day">
+                    <li v-if="isMultiOccasion && periodLabel">
+                        <strong>Period:</strong> {{ periodLabel }}
+                    </li>
+                    <li v-if="isMultiOccasion">
+                        <strong>Antal tillfällen:</strong> {{ workshop.numOccasions }}
+                    </li>
+                    <li v-else-if="workshop.day">
                         <strong>Datum:</strong> {{ workshop.day }} {{ useUtils().getShortDate(workshop.startDate) }}
                     </li>
                     <li v-if="timeLabel">
@@ -36,13 +42,24 @@
 
                 <div v-if="workshop.longDescription" class="workshop__body" v-html="workshop.longDescription"></div>
 
-                <p class="workshop__cta">
+                <div v-if="isPastWorkshop" class="workshop__notice">
+                    <p>
+                        <strong>Det här tillfället har passerat.</strong>
+                        Vill du gå en liknande kurs eller workshop? Se kommande datum eller skicka en förfrågan.
+                    </p>
+                    <div class="section__buttons workshop__notice-buttons">
+                        <NuxtLink to="/kurser" class="button">Se kommande datum</NuxtLink>
+                        <NuxtLink to="/kontakt" class="button button--secondary">Skicka förfrågan</NuxtLink>
+                    </div>
+                </div>
+
+                <p v-else class="workshop__cta">
                     <NuxtLink :to="ctaUrl" class="button" :target="ctaTarget" :rel="ctaRel">
                         {{ workshop.buttonText || "Anmäl dig här" }}
                     </NuxtLink>
                 </p>
 
-                <p class="workshop__terms">
+                <p v-if="!isPastWorkshop" class="workshop__terms">
                     <small>
                         Läs våra
                         <NuxtLink to="/anmalningsvillkor">anmälnings och betalningsvillkor</NuxtLink>.
@@ -61,6 +78,39 @@ import { useUtils } from "../../utils";
 const props = defineProps<{
     workshop: IEvent;
 }>();
+
+const isMultiOccasion = computed(() => props.workshop.numOccasions > 1);
+
+const isPastWorkshop = computed(() => {
+    const date = props.workshop.endDate || props.workshop.startDate;
+
+    if (!date) {
+        return false;
+    }
+
+    return new Date(date) < new Date();
+});
+
+const periodLabel = computed(() => {
+    if (!isMultiOccasion.value || !props.workshop.startDate || !props.workshop.endDate) {
+        return "";
+    }
+
+    const start = new Date(props.workshop.startDate);
+    const end = new Date(props.workshop.endDate);
+    const startDate = useUtils().getShortDate(props.workshop.startDate);
+    const endDate = useUtils().getShortDate(props.workshop.endDate);
+
+    if (start.toDateString() === end.toDateString()) {
+        return `${startDate} ${start.getFullYear()}`;
+    }
+
+    if (start.getFullYear() === end.getFullYear()) {
+        return `${startDate} till ${endDate} ${end.getFullYear()}`;
+    }
+
+    return `${startDate} ${start.getFullYear()} till ${endDate} ${end.getFullYear()}`;
+});
 
 const timeLabel = computed(() => {
     if (!props.workshop.startDate || !props.workshop.endDate) {

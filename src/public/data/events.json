@@ -33,6 +33,7 @@
     "image": null
   },
   {
+    "id": "gratis-dans-burlesque-feminine-vibe-13-september-2025",
     "title": "Gratis dans - Burlesque \u0026 Feminine Vibe",
     "shortDescription": "<p>Vi bjuder på gratis dans - och du bjuder på din närvaro framför kameran! Under denna workshop får du prova två av våra mest populära stilar:</p><ul><li>1 timme burlesque</li><li>15 min paus</li><li>1 timme feminine vibe</li></ul><p>Vi filmar och fotar hela danspasset för att sprida Femme Fusion-viben i våra sociala medier - du får dansa gratis i utbyte mot att synas med oss. Win/win! Anmäl dig via vår hemsida eller DM på Facebook eller Instagram. Ange om du vill delta på en eller båda passen.</p><p>Förkunskaper: Inga krav! Kom som du är, utforska uttryck och ha kul med oss.</p>",
     "longDescription": null,
@@ -40,16 +41,21 @@
     "level": null,
     "startDate": "2025-09-13T10:00:00",
     "endDate": "2025-09-13T12:15:00",
-    "day": "",
+    "day": "Lördag",
     "url": "/workshop-gratis",
     "type": "course",
     "numOccasions": 1,
     "dayAndTimeInfo": "Lördag 10:00-12:15",
     "buttonText": "Anmäl dig gratis",
     "price": 0,
-    "image": null
+    "image": {
+      "src": "/images/danceclass/gratis-dans-burlesque-feminine-vibe-13-september-2025.webp",
+      "alt": "Deltagare dansar med handskar i en ljus studio under workshop i burlesque och feminine vibe.",
+      "photographer": "Hampus Zetterblom"
+    }
   },
   {
+    "id": "streetdance-20-september-2025",
     "title": "Streetdance",
     "shortDescription": "<p>Ã„r du student får du 25kr rabatt och betalar 175 kr!</p></p><p>Lär dig en koreografi med attityd och groove. Passar dig som har dansat lite innan och gillar att hänga med i tempo.</p><p>Workshopen hålls av Ella och Kristina.</p><p>Klädsel: Bekväma kläder och sneakers. Har du en keps? Ta med den! (Frivilligt)</p><p>Förkunskaper: Denna workshop är på fortsättningsnivå. Du bör ha viss danserfarenhet och känna dig bekväm med att ta till dig koreografi.</p>",
     "longDescription": null,
@@ -57,16 +63,21 @@
     "level": null,
     "startDate": "2025-09-20T10:30:00",
     "endDate": "2025-09-20T12:00:00",
-    "day": "",
+    "day": "Lördag",
     "url": "/workshop-streetdance",
     "type": "course",
     "numOccasions": 1,
     "dayAndTimeInfo": "Lördag 10:30-12:00",
     "buttonText": "Anmäl dig här",
     "price": 200,
-    "image": null
+    "image": {
+      "src": "/images/danceclass/streetdance-20-september-2025.webp",
+      "alt": "Två dansare i keps och streetkläder dansar på scen i lila ljus framför en graffitivägg.",
+      "photographer": "Fotograferna Hoog"
+    }
   },
   {
+    "id": "mean-girls-christmas-7-december-2025",
     "title": "A Mean Girls Christmas",
     "shortDescription": "<p>Kommer du ihåg scenen i Mean Girls (2004) där de dansar till Jingle Bell Rock? Lär dig koreografin från den ikoniska filmen!</p><p>Workshopen hålls av Ella och Kristina.</p><p>Förkunskaper: Inga förkunskaper behövs - bara kom och kör.</p>",
     "longDescription": null,
@@ -74,14 +85,18 @@
     "level": null,
     "startDate": "2025-12-07T10:30:00",
     "endDate": "2025-12-07T12:00:00",
-    "day": "",
+    "day": "Söndag",
     "url": "https://www.studieframjandet.se/ostergotlands-lan/gustav-arrangemang/kalenderhandelser/2025/december/a-mean-girls-christmas-med-femme-fusion/",
     "type": "course",
     "numOccasions": 1,
     "dayAndTimeInfo": "Söndag 10:30-12:00",
     "buttonText": "Anmäl dig här",
     "price": 200,
-    "image": null
+    "image": {
+      "src": "/images/danceclass/mean-girls-christmas-7-december-2025.webp",
+      "alt": "Fyra dansare i röda jultröjor och tomteluvor poserar mot en mörk bakgrund inför en Mean Girls-inspirerad julworkshop.",
+      "photographer": "Daniel Häggmyr"
+    }
   },
   {
     "id": "wicked-11-januari-2026",
@@ -356,9 +371,133 @@
     "buttonText": "Läs mer om eventet",
     "price": null,
     "image": {
-      "src": "/images/show/scandinavian-scandal-14-15-november-2026.jpg",
-      "alt": "Tre dansare från Femme Fusion poserar i starkt blått scenljus under ett energiskt shownummer.",
-      "photographer": "Fotograferna Hoog"
+      "src": "/images/show/scandinavian-scandal-14-15-november-2026.webp",
+      "alt": "Sex kvinnor i rödsvarta korsetter poserar lekfullt med färgglada klubbor och sockervadd i blåtonad belysning.",
+      "photographer": "Mattias Kannerstål"
+    }
+  },
+  {
+    "id": "feminine-vibe-21-september-2026",
+    "title": "Feminine Vibe",
+    "shortDescription": "En nybörjarvänlig kurs i Feminine Vibe där du får utforska uttryck, flow och självsäkerhet i en trygg och peppande miljö.",
+    "longDescription": "<p>I den här kursen får du utforska <strong>Feminine Vibe</strong> med fokus på <strong>uttryck, musikkänsla och kroppskontroll</strong>. Våra rörelser växlar mellan styrka och mjukhet för att skapa ett härligt flow där du får landa i både kraft och elegans.</p><p>Vi bygger upp koreografi steg för steg i ett tempo anpassat för nybörjare, så att du tryggt kan vara med oavsett tidigare erfarenhet. Här handlar det inte om att vara perfekt, utan om att utvecklas i din egen stil och bygga självsäkerhet i en peppande miljö.</p><p>Vi dansar i sneakers eller barfota och du har på dig bekväma kläder som du känner dig fin i.</p>",
+    "address": "Skylten, Södra Oskarsgatan 3, Linköping",
+    "level": "Nybörjare",
+    "startDate": "2026-09-21T17:30:00",
+    "endDate": "2026-10-12T18:45:00",
+    "day": "Måndag",
+    "url": "/anmalan",
+    "type": "course",
+    "numOccasions": 4,
+    "dayAndTimeInfo": "Måndagar 17:30-18:45, 21 sep - 12 okt",
+    "buttonText": "Anmäl dig här",
+    "price": 450,
+    "image": {
+      "src": "/images/danceclass/feminine-vibe-21-sep-2026.webp",
+      "alt": "Två dansare i rörelse med tydligt uttryck, flow och feminin energi i en Feminine Vibe-klass.",
+      "photographer": "Mattias Kannerstål"
+    }
+  },
+  {
+    "id": "linkopings-stadsfest-22-augusti-2026",
+    "title": "Linköpings Stadsfest",
+    "shortDescription": "<p>Femme Fusion uppträder på dansscenen under Linköpings Stadsfest. Kom förbi och upplev ett energifyllt shownummer mitt i festivalvimlet.</p>",
+    "longDescription": "<p>Den 22 augusti uppträder Femme Fusion på <strong>Linköpings Stadsfest</strong> som en del av programmet på dansscenen vid <strong>Melins torg</strong>. Vi bjuder på ett fartfyllt shownummer med attityd, glamour och scenenergi tillsammans med flera andra lokala dansgrupper.</p><p>Vår show börjar cirka <strong>13:00</strong>. Eventet är gratis och öppet för alla.</p>",
+    "address": "Melins torg, Linköping",
+    "level": null,
+    "startDate": "2026-08-22T13:00:00",
+    "endDate": "2026-08-22T13:10:00",
+    "day": "Lördag",
+    "url": "https://linkopingsstadsfest.se/",
+    "type": "show",
+    "numOccasions": 1,
+    "dayAndTimeInfo": "Lördag ca 13:00",
+    "buttonText": "Läs mer om Linköpings Stadsfest",
+    "price": "Gratis",
+    "image": {
+      "src": "/images/show/linkopings-stadsfest-22-augusti-2026.webp",
+      "alt": "Tre dansare uppträder på scen i svarta cargobyxor och glittriga toppar.",
+      "photographer": "Evelina Söderwall"
+    }
+  },
+  {
+    "id": "privat-show-11-september-2026",
+    "title": "Privat show",
+    "shortDescription": "<p>Femme Fusion är bokade för en privat show detta datum.</p>",
+    "longDescription": null,
+    "address": "",
+    "level": null,
+    "startDate": "2026-09-11T00:00:00",
+    "endDate": "2026-09-11T23:59:00",
+    "day": "Fredag",
+    "url": "",
+    "type": "show",
+    "numOccasions": 1,
+    "dayAndTimeInfo": "Fredag",
+    "buttonText": "",
+    "price": null,
+    "image": null
+  },
+  {
+    "id": "privat-show-9-september-2026",
+    "title": "Privat show",
+    "shortDescription": "<p>Femme Fusion är bokade för en privat show detta datum.</p>",
+    "longDescription": null,
+    "address": "",
+    "level": null,
+    "startDate": "2026-09-09T00:00:00",
+    "endDate": "2026-09-09T23:59:00",
+    "day": "Fredag",
+    "url": "",
+    "type": "show",
+    "numOccasions": 1,
+    "dayAndTimeInfo": "Onsdag",
+    "buttonText": "",
+    "price": null,
+    "image": null
+  },
+  {
+    "id": "burlesque-3-oktober-2026",
+    "title": "Burlesque",
+    "shortDescription": "Upptäck burlesque, en lekfull och scenisk dansstil där uttryck, attityd och elegans står i centrum. Nybörjarvänlig workshop i lugnt tempo.",
+    "longDescription": "<p><strong>Burlesque</strong> är en scenisk och lekfull dansstil där du arbetar med uttryck, attityd och kroppsspråk. Här möts elegans, humor och självsäkerhet, men du formar alltid känslan på ditt eget sätt.</p><p>Under workshopen lär vi oss en koreografi steg för steg med fokus på enkla rörelser, närvaro och scenkänsla. Du behöver inga förkunskaper. Kom i kläder som du känner dig bekväm att röra dig i och ge dig själv en stund fylld av dansglädje.</p><p>Workshopen leds av Ella och Hanna.</p>",
+    "address": "Skylten, Södra Oskarsgatan 3, Linköping",
+    "level": "Nybörjare",
+    "startDate": "2026-10-03T10:30:00",
+    "endDate": "2026-10-03T12:00:00",
+    "day": "Lördag",
+    "url": "/anmalan",
+    "type": "course",
+    "numOccasions": 1,
+    "dayAndTimeInfo": "Lördag 10:30-12:00",
+    "buttonText": "Anmäl dig här",
+    "price": 150,
+    "image": {
+      "src": "/images/danceclass/burlesque-3-oktober-2026.webp",
+      "alt": "Dansare från Femme Fusion i burlesqueinspirerad pose med scenkänsla och feminint uttryck.",
+      "photographer": "Mattias Kannerstål"
+    }
+  },
+  {
+    "id": "sensual-heels-christmas-edition-6-december-2026",
+    "title": "Sensual Heels Christmas Edition",
+    "shortDescription": "En julig och nybörjarvänlig workshop i Sensual Heels med fokus på mjuka rörelser, attityd och självförtroende. Klackar är helt valfritt.",
+    "longDescription": "<p><strong>Sensual Heels</strong> är en sensuell och stärkande dansstil med fokus på kroppskontroll, mjuka benrörelser, attityd och uttryck. Här dansar vi på golvet och bygger koreografin steg för steg i ett tryggt tempo.</p><p>På andra advent fyller vi studion med julkänsla från början till slut. Du väljer själv om du vill dansa i klackar. Alla klackhöjder är välkomna, och det går lika bra att delta utan klackar. Workshopen är nybörjarvänlig och kräver inga förkunskaper.</p><p>Workshopen leds av Kristina och Natalie.</p>",
+    "address": "Skylten, Södra Oskarsgatan 3, Linköping",
+    "level": "Nybörjare",
+    "startDate": "2026-12-06T10:30:00",
+    "endDate": "2026-12-06T12:00:00",
+    "day": "Söndag",
+    "url": "/anmalan",
+    "type": "course",
+    "numOccasions": 1,
+    "dayAndTimeInfo": "Söndag 10:30-12:00",
+    "buttonText": "Anmäl dig här",
+    "price": 150,
+    "image": {
+      "src": "/images/danceclass/sensual-heels-christmas-edition-6-december-2026.webp",
+      "alt": "Dansare från Femme Fusion i Sensual Heels med mjukt rörelseuttryck och julig känsla.",
+      "photographer": "Daniel Häggmyr"
     }
   },
   {

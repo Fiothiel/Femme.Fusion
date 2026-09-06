@@ -190,7 +190,7 @@ const sendEmail = async () => {
 
     // 1. Mail till FF
     await sendMessageEmail({
-        subject: "Ny workshopanmälan",
+        subject: "Ny anmälan",
         message: "Ny anmälan via anmälningsformuläret.",
         name: name.value,
         email: email.value,

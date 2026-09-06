@@ -19,6 +19,7 @@
                         <NuxtLink class="table-list__link" :to="`/workshops/${event.id}`">
                             <span>{{ getShortDate(event.startDate) }}</span>
                             {{ event.title }}
+                            <small class="table-list__badge">{{ getCourseFormat(event) }}</small>
                         </NuxtLink>
                     </li>
                 </ul>
@@ -39,6 +40,11 @@
                         <NuxtLink class="link link--accent" to="/kontakt">Skicka en förfrågan</NuxtLink>.
                     </p>
                 </div>
+
+                <p class="courses__archive-link">
+                    Vill du se vad vi har gjort tidigare?
+                    <NuxtLink class="link link--accent" to="/tidigare-kurser">Se tidigare kurser & workshops</NuxtLink>.
+                </p>
             </div>
         </section>
     </div>
@@ -63,11 +69,15 @@ const courses: Ref<IEvent[]> = computed(() => {
     return getCourses();
 });
 
+const getCourseFormat = (event: IEvent): string => {
+    return event.numOccasions > 1 ? "kurs" : "workshop";
+};
+
 applyPageSeo({
     title: "Kurser & dansklasser | Femme Fusion - kommande datum",
     description:
         "Se kommande öppna dansklasser med Femme Fusion. Klicka för info och bokning. Vill du boka en egen dansklass för privat eller företag? Skicka en förfrågan.",
-    path: "/courses",
+    path: "/kurser",
     ogTitle: "Kurser & dansklasser | Femme Fusion",
     ogDescription:
         "Kommande öppna dansklasser. Se datum och boka din plats.",
@@ -75,7 +85,7 @@ applyPageSeo({
     twitterDescription:
         "Se kommande öppna dansklasser med Femme Fusion. Boka din plats.",
     breadcrumbs: [
-        { name: "Kurser & dansklasser", path: "/courses" },
+        { name: "Kurser & dansklasser", path: "/kurser" },
     ],
 });
 </script>

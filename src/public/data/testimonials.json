@@ -4,7 +4,7 @@
     "quote": "Det var en jätterolig workshop med härlig energi! Tiden gick alldeles för fort, och man gick därifrån och ville ha mer!",
     "from": "workshopdeltagare",
     "category": "danceclass"
-  }, 
+  },
   {
     "id": "d2",
     "quote": "The lessons were so much fun! The instructors were welcoming and encouraging. The music choice was also really good!",
@@ -58,5 +58,29 @@
     "quote": "Femme Fusion är en proffsig och engagerad dansgrupp som verkligen levererar efter kundens önskemål. Vi på HSB Östergötland hade nöjet att anlita dem i samband med vår personalfest. Deras shownummer satte ribban på vår fest, vilket gjorde att den blev succé! Vi kan med nöje rekommendera Femme Fusion för att sätta ribban på er fest!",
     "from": "HSB Östergötland",
     "category": "show"
+  },
+  {
+    "id": "s3",
+    "quote": "En fantastisk upplevelse från början till slutet. Ni gjorde min fest till den magiska kvällen det blev. Helt sömlöst utan några frågor eller problem. Leverans i toppklass! Absolut det bästa beslut jag tagit att ha er på min fest.",
+    "from": "Privat 50-årsfest, Halmstad",
+    "category": "show"
+  },
+  {
+    "id": "s4",
+    "quote": "Det har varit helt fantastiskt att arbeta med er. Ni är otroligt professionella, kreativa och varma, och samarbetet med er kändes både inspirerande och smidigt. Ni skapade minnesvärda shower – inte bara för publiken, utan också för våra tävlande och vårt crew – och det är något vi verkligen värdesätter. Vi kommer definitivt att samarbeta med er vid flera tillfällen under året som kommer, och vi ser redan fram emot allt vi ska hitta på tillsammans. Stort tack igen för att ni var en del av Scandinavian Scandal – och vi hoppas såklart att få välkomna er tillbaka i höst!",
+    "from": "Scandinavian Scandal 2025",
+    "category": "show"
+  },
+  {
+    "id": "d9",
+    "quote": "Superkul timme som gärna fått vara några timmar till! Guldstjärna för ett toppenfint bemötande och glatt humör! Trots att vi var lite sena, spridda åt alla håll till en början.",
+    "from": "blivande brud, möhippa",
+    "category": "danceclass"
+  },
+  {
+    "id": "d10",
+    "quote": "Mycket bra ordnat med streetdance på möhippa. Superkul!",
+    "from": "möhippedeltagare",
+    "category": "danceclass"
   }
 ]

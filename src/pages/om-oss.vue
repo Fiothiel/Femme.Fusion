@@ -124,7 +124,6 @@ const showArtists = [
   { name: "Kajsa", role: "Dans", src: "/images/profile/artist-kajsa.jpg" },
   { name: "Kristina", role: "Dans & sång", src: "/images/profile/artist-kristina.jpg" },
   { name: "Natalie", role: "Dans", src: "/images/profile/artist-natalie.jpg" },
-  { name: "Sandra", role: "Dans", src: "/images/profile/artist-sandra.jpg" },
 ];
 
 applyPageSeo({
