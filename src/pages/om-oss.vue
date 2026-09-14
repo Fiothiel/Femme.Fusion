@@ -3,11 +3,12 @@
     <section class="section section--airy">
       <div class="section__content">
         <h1 class="about__title">Femme Fusion - showgrupp i Linköping</h1>
+
         <p class="about__intro">
-          Vi är <strong>Femme Fusion</strong>, en professionell showgrupp som levererar dynamiska shower med dans, sång
-          och stark scennärvaro.
-          Vi utgår från Linköping i Östergötland, men reser dit bokningarna tar oss. Med en mix av energi, uttryck och
-          glamour skapar vi minnesvärd underhållning för företagsevent, bröllop, möhippor och privata fester.
+          Vi är <strong>Femme Fusion</strong>, en professionell showgrupp som levererar dynamiska shower med dans,
+          sång och stark scennärvaro. Vi utgår från Linköping i Östergötland, men reser dit bokningarna tar oss.
+          Med en mix av energi, uttryck och glamour skapar vi minnesvärd underhållning för företagsevent, bröllop,
+          möhippor och privata fester.
         </p>
       </div>
     </section>
@@ -15,16 +16,17 @@
     <section class="section section--airy section--darkred">
       <div class="section__content">
         <h2>Vad vi levererar</h2>
+
         <p>
-          Gruppen består av erfarna artister med bakgrund inom flera dansstilar och showformat.
-          Vi skapar <strong>skräddarsydda shower</strong> som passar rummet, publiken och ert tema. Med genomtänkt
-          kostym,
-          musikval och scenisk närvaro bygger vi en helhetsupplevelse som känns både exklusiv och lekfull.
+          Våra shower kombinerar <strong>dans, sång och scenunderhållning</strong> med variation i både dansstil,
+          musik och scenkostym. Vi blandar glamour, energi, sensualitet och humor och hämtar ofta inspiration från
+          burlesque. Resultatet är en dynamisk show där uttrycket kan anpassas efter eventet, publiken och rummet.
         </p>
+
         <ul class="about__bullets">
-          <li><strong>Flexibla upplägg.</strong> Fristående nummer eller sammanhållen show.</li>
-          <li><strong>Passar många sammanhang.</strong> Företagsfest, gala, after work, bröllop, privata events.</li>
-          <li><strong>Fusion av stilar.</strong> Alltid stilfullt och underhållande.</li>
+          <li><strong>Flexibla upplägg.</strong> Fristående nummer eller en sammanhållen show.</li>
+          <li><strong>Variation på scen.</strong> Olika dansstilar, musikstilar, scenkostymer och uttryck.</li>
+          <li><strong>Anpassat efter ert event.</strong> Från företagsfest och gala till bröllop och privat fest.</li>
         </ul>
       </div>
     </section>
@@ -32,68 +34,54 @@
     <section class="section section--airy">
       <div class="section__content">
         <h2>Varför boka Femme Fusion?</h2>
+
         <p>
-          Ni får <strong>pålitliga artister</strong> som kan scen, publik och logistik. Vi hjälper gärna med
-          <strong>programförslag</strong>, tempo och placering i körschemat, och samarbetar smidigt med konferencier
-          och teknik.
+          Ni får <strong>professionella och pålitliga artister</strong> som är vana vid scen, publik och de praktiska
+          delarna runt ett framträdande. Vi hjälper gärna till med programförslag, tempo och placering i körschemat
+          och samarbetar smidigt med konferencier och teknik.
         </p>
+
         <p>
-          Behöver ni även <NuxtLink to="/dansklass" class="link">en dansklass</NuxtLink> för
-          gruppen?
-          Vi håller korta <strong>prova på-pass</strong> som värmer upp publiken och skapar energi i rummet.
+          Behöver ni även
+          <NuxtLink to="/dansklass" class="link">en dansklass</NuxtLink>
+          för gruppen? Vi håller <strong>prova på-pass</strong> där deltagarna får testa en av våra dansstilar
+          tillsammans med oss.
         </p>
       </div>
     </section>
 
-    <section id="grundare" class="section section--airy section--darkred">
+    <section id="medlemmar" class="section section--airy section--darkred">
       <div class="section__content">
-        <h2>Grundare</h2>
-        <p>
-          Femme Fusion grundades 2023 av fyra artister med en gemensam vision om att skapa professionell underhållning
-          med dans, sång och stark scennärvaro. Som grundare sätter vi tonen, kvaliteten och uttrycket i det vi gör.
-        </p>
-        <div class="about__members">
-          <figure v-for="m in founders" :key="m.name" class="about__member about__member--founder">
-            <NuxtImg
-              :src="m.src"
-              :alt="`Porträtt av ${m.name}, grundare i Femme Fusion`"
-              class="image"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              format="webp"
-              loading="lazy"
-            />
-            <figcaption>
-              <strong>{{ m.name }}</strong>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+        <h2>Medlemmar</h2>
 
-    <section id="showartister" class="section section--airy">
-      <div class="section__content">
-        <h2>Showartister i Femme Fusion</h2>
         <p>
-          Femme Fusion består av flera showartister som har mångsidiga och varierade bakgrunder inom dans, sång och
-          underhållning. Det gör att vi kan skapa dynamiska och minnesvärda nummer där showens uttryck och omfattning
-          anpassas efter event, publik och scen.
+          Femme Fusion består av artister med erfarenhet inom dans, sång och underhållning. Våra olika bakgrunder
+          och styrkor gör att vi kan skapa dynamiska shower med variation i både dansstil, musik och scenuttryck.
         </p>
+
         <div class="about__members">
-          <figure v-for="m in showArtists" :key="m.name" class="about__member about__member--compact">
-            <NuxtImg
-              :src="m.src"
-              :alt="`Porträtt av ${m.name}, showartist i Femme Fusion`"
-              class="image"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              format="webp"
-              loading="lazy"
-            />
+          <figure v-for="m in members" :key="m.name" class="about__member about__member--compact">
+            <NuxtImg :src="m.src" :alt="`Porträtt av ${m.name}, medlem i Femme Fusion`" class="image"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" format="webp" loading="lazy" />
+
             <figcaption>
               <strong>{{ m.name }}</strong>
               <span class="about__role">{{ m.role }}</span>
             </figcaption>
           </figure>
         </div>
+      </div>
+    </section>
+
+    <section id="historia" class="section section--airy">
+      <div class="section__content">
+        <h2>Så startade Femme Fusion</h2>
+
+        <p>
+          Femme Fusion grundades 2023 av Ella, Hanna, Kristina och Sandra, med en gemensam vision om att skapa
+          professionell scenunderhållning där dans, sång och olika sceniska uttryck möts. Sedan dess har gruppen
+          utvecklats med fler artister, nya shower och en stor variation av uppdrag.
+        </p>
       </div>
     </section>
 
@@ -111,85 +99,70 @@ onMounted(() => {
   useUtils().scrollToMain();
 });
 
-const founders = [
-  { name: "Ella", src: "/images/profile/grundare-ella.jpg" },
-  { name: "Hanna", src: "/images/profile/grundare-hanna.jpg" },
-  { name: "Kristina", src: "/images/profile/grundare-kristina.jpg" },
-  { name: "Sandra", src: "/images/profile/grundare-sandra.jpg" },
-];
-
-const showArtists = [
-  { name: "Ella", role: "Dans", src: "/images/profile/artist-ella.jpg" },
-  { name: "Hanna", role: "Dans & sång", src: "/images/profile/artist-hanna.jpg" },
-  { name: "Kajsa", role: "Dans", src: "/images/profile/artist-kajsa.jpg" },
-  { name: "Kristina", role: "Dans & sång", src: "/images/profile/artist-kristina.jpg" },
-  { name: "Natalie", role: "Dans", src: "/images/profile/artist-natalie.jpg" },
+const members = [
+  { name: 'Ella', role: 'Dans', src: '/images/profile/artist-ella.jpg' },
+  { name: 'Hanna', role: 'Dans & sång', src: '/images/profile/artist-hanna.jpg' },
+  { name: 'Kajsa', role: 'Dans', src: '/images/profile/artist-kajsa.jpg' },
+  { name: 'Kristina', role: 'Dans & sång', src: '/images/profile/artist-kristina.jpg' },
+  { name: 'Natalie', role: 'Dans', src: '/images/profile/artist-natalie.jpg' },
 ];
 
 applyPageSeo({
-  title: "Femme Fusion - Om oss | Showgrupp från Linköping för event",
+  title: 'Femme Fusion - Om oss | Showgrupp från Linköping för event',
   description:
-    "Femme Fusion är en professionell showgrupp från Linköping. Vi skapar skräddarsydda shower med dans, sång och stark scennärvaro för företagsevent, bröllop, möhippor och privata fester i hela Sverige.",
-  path: "/om-oss",
-
+    'Femme Fusion är en professionell showgrupp från Linköping. Vi skapar skräddarsydda shower med dans, sång och stark scennärvaro för företagsevent, bröllop, möhippor och privata fester i hela Sverige.',
+  path: '/om-oss',
   breadcrumbs: [
-    { name: "Om oss", path: "/om-oss" },
+    { name: 'Om oss', path: '/om-oss' },
   ],
-
-  ogTitle: "Femme Fusion - Om oss",
+  ogTitle: 'Femme Fusion - Om oss',
   ogDescription:
-    "Lär känna Femme Fusion, grundarna och showartisterna bakom våra skräddarsydda shower för event i hela Sverige.",
-
-  twitterTitle: "Femme Fusion - Om oss",
+    'Lär känna Femme Fusion och artisterna bakom våra shower med dans, sång och scenunderhållning för event i hela Sverige.',
+  twitterTitle: 'Femme Fusion - Om oss',
   twitterDescription:
-    "Lär känna showgruppen från Linköping, våra grundare och showartister samt hur vi skapar skräddarsydd underhållning för event.",
+    'Lär känna Femme Fusion, vår historia och artisterna bakom våra shower med dans, sång och scenunderhållning.',
 
-  faqKey: "faq-om-oss",
+  faqKey: 'faq-om-oss',
   faq: [
     {
-      question: "Vad erbjuder ni?",
+      question: 'Vad erbjuder ni?',
       answer:
-        "Vi erbjuder skräddarsydd scenunderhållning med dans, sång och showinslag för företagsevent, bröllop, möhippor och privata fester. Vi erbjuder också prova på-pass och dansklasser för grupper.",
+        'Vi erbjuder skräddarsydd scenunderhållning med dans, sång och showinslag för företagsevent, bröllop, möhippor och privata fester. Vi erbjuder också prova på-pass och dansklasser för grupper.',
     },
     {
-      question: "Var uppträder ni?",
+      question: 'Var uppträder ni?',
       answer:
-        "Vi utgår från Linköping i Östergötland men reser dit bokningarna tar oss och uppträder på event i hela Sverige.",
+        'Vi utgår från Linköping i Östergötland men reser dit bokningarna tar oss och uppträder på event i hela Sverige.',
     },
     {
-      question: "Hur lång är en show?",
+      question: 'Hur lång är en show?',
       answer:
-        "Upplägget anpassas efter ert event och kan bestå av fristående nummer eller en sammanhållen show. Längd och omfattning planeras utifrån publik, tema och körschema.",
+        'Upplägget anpassas efter ert event och kan bestå av fristående nummer eller en sammanhållen show. Längd och omfattning planeras utifrån publik, tema och körschema.',
     },
     {
-      question: "Vad behöver ni på plats?",
+      question: 'Vad behöver ni på plats?',
       answer:
-        "Behoven varierar beroende på upplägg, lokal och typ av show. Vi samarbetar smidigt kring programförslag, tempo, placering i körschema och praktiska förutsättningar inför bokningen.",
+        'Behoven varierar beroende på upplägg, lokal och typ av show. Vi samarbetar kring teknik, körschema och andra praktiska förutsättningar inför bokningen.',
     },
     {
-      question: "Hur bokar vi?",
+      question: 'Hur bokar vi?',
       answer:
-        "Skicka en förfrågan via kontaktformuläret och beskriv datum, plats, publik och önskat upplägg så återkommer vi med förslag och offert.",
+        'Skicka en förfrågan via kontaktformuläret och beskriv datum, plats, publik och önskat upplägg så återkommer vi med förslag och offert.',
     },
     {
-      question: "Vilka är Femme Fusion?",
+      question: 'Vilka är Femme Fusion?',
       answer:
-        "Femme Fusion grundades 2023 av fyra artister och består av flera showartister med varierade bakgrunder inom dans, sång och underhållning.",
+        'Femme Fusion är en professionell showgrupp från Linköping med artister som har erfarenhet inom dans, sång och underhållning. Gruppen grundades 2023 och uppträder på event runt om i Sverige.',
     },
     {
-      question: "Hur anpassar ni era shower?",
+      question: 'Hur anpassar ni era shower?',
       answer:
-        "Vi skapar skräddarsydda shower som anpassas efter rum, publik, tema och körschema. Det kan vara fristående nummer eller en sammanhållen show.",
+        'Vi anpassar showens upplägg och uttryck efter event, publik och scen. Det kan vara fristående nummer eller en sammanhållen show med variation i dans, musik, scenkostym och uttryck.',
     },
     {
-      question: "Varför boka Femme Fusion?",
+      question: 'Varför boka Femme Fusion?',
       answer:
-        "Ni får pålitliga artister som kan scen, publik och logistik. Vi hjälper gärna till med programförslag och samarbetar smidigt med konferencier och teknik.",
-    },
-    {
-      question: "Var utgår ni från?",
-      answer:
-        "Vi utgår från Linköping i Östergötland men reser dit bokningarna tar oss och uppträder i hela Sverige.",
+        'Ni får professionella och pålitliga artister som är vana vid scen, publik och logistik. Vi hjälper gärna till med programförslag och samarbetar smidigt med konferencier och teknik.',
     },
   ],
 });
