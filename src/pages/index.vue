@@ -54,8 +54,10 @@ import { useTestimonials } from '~/services/testimonials-service';
 const { getRandom } = useTestimonials();
 
 const testimonials = [
+  ...getRandom(1, TestimonialCategory.Show),
   ...getRandom(1, TestimonialCategory.DanceClass),
   ...getRandom(1, TestimonialCategory.Show),
+  ...getRandom(1, TestimonialCategory.DanceClass),
 ];
 
 applyPageSeo({
