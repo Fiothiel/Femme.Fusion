@@ -33,11 +33,11 @@ const options = JSON.stringify({
 });
 
 const images: Ref<IImageInfo[]> = ref([
-  {
-    src: "/images/hero/hero-splide-0.webp",
+    {
+    src: "/images/hero/hero-splide-3.webp",
     photographer: "Foto: Kim Vestbrant",
     alt:
-      "Tre showartister uppträder i synkron koreografi med utsträckta armar under en energifylld scenföreställning.",
+      "Två showartister uppträder med fjäderfantasier i en elegant och lekfull scenkoreografi.",
   },
   {
     src: "/images/hero/hero-splide-1.webp",
@@ -52,22 +52,16 @@ const images: Ref<IImageInfo[]> = ref([
       "Tre dansare på scen i dramatisk blå och lila ljussättning, mitt i en kraftfull koreografisk rörelse med hår i rörelse och starkt scenuttryck.",
   },
   {
-    src: "/images/hero/hero-splide-3.webp",
-    photographer: "Foto: Kim Vestbrant",
+    src: "/images/hero/hero-splide-7.webp",
+    photographer: "Foto: Mattias Åström",
     alt:
-      "Två showartister uppträder med fjäderfantasier i en elegant och lekfull scenkoreografi.",
-  },
+      "Två artister från Femme Fusion sjunger och dansar på scen under en show.",
+  },  
   {
     src: "/images/hero/hero-splide-2.webp",
     photographer: "Foto: Kim Vestbrant",
     alt:
       "Showartist sjunger live på scen med mikrofon under en professionell scenföreställning.",
-  },
-  {
-    src: "/images/hero/hero-splide-5.webp",
-    photographer: "Foto: Mattias Åström",
-    alt:
-      "Tre showartister i ljusa scenkostymer poserar leende på scen i blått ljus under en professionell show.",
   },
 ]);
 </script>

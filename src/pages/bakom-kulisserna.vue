@@ -60,7 +60,7 @@ const ogImage = computed(() => {
   const src = latestPost.value?.image?.src;
 
   if (!src) {
-    return "https://femmefusion.se/images/meta-2026.jpg";
+    return "https://femmefusion.se/images/meta-2026.webp";
   }
 
   if (src.startsWith("http")) {

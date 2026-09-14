@@ -44,7 +44,7 @@ const ogImage = computed(() => {
   if (image) {
     return `https://femmefusion.se${image}`;
   }
-  return "https://femmefusion.se/images/meta-2026.jpg";
+  return "https://femmefusion.se/images/meta-2026.webp";
 });
 
 applyPageSeo({
@@ -95,7 +95,7 @@ function buildEventSchema(event: IEvent) {
         addressCountry: "SE",
       },
     },
-    image: event.image ? `${siteUrl}${event.image.src}` : `${siteUrl}/images/meta-2026.jpg`,
+    image: event.image ? `${siteUrl}${event.image.src}` : `${siteUrl}/images/meta-2026.webp`,
     description: (event.longDescription || event.shortDescription || "")
       .replace(/<[^>]+>/g, ""),
     organizer: {
