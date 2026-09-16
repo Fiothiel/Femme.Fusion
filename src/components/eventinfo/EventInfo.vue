@@ -39,7 +39,8 @@
         </p>
       </div>
     </div>
-    <a v-if="event.url" :href="event.url" class="button">{{ event.buttonText }}</a>
+    <p v-if="event.soldOut"><strong>Fullbokad</strong></p>
+    <a v-else-if="event.url" :href="event.url" class="button">{{ event.buttonText }}</a>
   </div>
 </template>
 

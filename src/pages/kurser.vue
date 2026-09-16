@@ -20,6 +20,7 @@
                             <span>{{ getShortDate(event.startDate) }}</span>
                             {{ event.title }}
                             <small class="table-list__badge">{{ getCourseFormat(event) }}</small>
+                            <small v-if="event.soldOut" class="table-list__badge">Fullbokad</small>
                         </NuxtLink>
                     </li>
                 </ul>

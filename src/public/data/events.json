@@ -370,6 +370,7 @@
     "dayAndTimeInfo": "Måndagar 17:30-18:45, 21 sep - 12 okt",
     "buttonText": "Anmäl dig här",
     "price": 450,
+    "soldOut": true,
     "image": {
       "src": "/images/danceclass/feminine-vibe-21-sep-2026.webp",
       "alt": "Två dansare i rörelse med tydligt uttryck, flow och feminin energi i en Feminine Vibe-klass.",

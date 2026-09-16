@@ -16,11 +16,12 @@
                     </label>
 
                     <div class="signup__options">
-                        <label v-for="event in courses" :key="event.url" class="signup__option">
+                        <label v-for="event in courses" :key="event.id ?? `${event.title}-${event.startDate}`" class="signup__option">
                             <input
                                 type="checkbox"
                                 :value="event.title + ' - ' + useUtils().getShortDate(event.startDate) + ', ' + event.dayAndTimeInfo"
                                 v-model="selectedWorkshops"
+                                :disabled="event.soldOut"
                             />
                             <div class="signup__option-content">
                                 <a
@@ -34,6 +35,7 @@
                                 <span class="signup__option-meta">
                                     {{ useUtils().getShortDate(event.startDate) }} {{ event.dayAndTimeInfo }}
                                 </span>
+                                <strong v-if="event.soldOut" class="signup__option-status">Fullbokad</strong>
                             </div>
                         </label>
                     </div>

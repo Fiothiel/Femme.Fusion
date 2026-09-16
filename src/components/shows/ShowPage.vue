@@ -29,7 +29,8 @@
 
                 <div v-if="show.longDescription" class="show__body" v-html="show.longDescription"></div>
 
-                <p class="show__cta">
+                <p v-if="show.soldOut"><strong>Fullbokad</strong></p>
+                <p v-else class="show__cta">
                     <NuxtLink :to="ctaUrl" class="button" target="_blank" rel="noopener">
                         {{ ctaLabel }}
                     </NuxtLink>

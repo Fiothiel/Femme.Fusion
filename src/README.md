@@ -1,5 +1,14 @@
 # Nuxt Minimal Starter
 
+## Markera ett event som fullbokat
+
+Lägg till `"soldOut": true` på eventet i `public/data/events.json` och publicera
+webbplatsen igen. Då visas **Fullbokad** i listan och på eventsidan, bokningsknappen
+ersätts och eventet går inte att välja i anmälningsformuläret.
+
+Sätt `"soldOut": false` eller ta bort fältet för att öppna bokningen igen.
+Behåll `buttonText` som bokningstext, statusen visas automatiskt.
+
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup

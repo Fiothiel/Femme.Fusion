@@ -42,10 +42,12 @@
                         <NuxtLink v-if="event.id" class="table-list__link" :to="`/show/${event.id}`">
                             <span>{{ getShortDate(event.startDate) }}</span>
                             {{ event.title }}
+                            <small v-if="event.soldOut" class="table-list__badge">Fullbokad</small>
                         </NuxtLink>
                         <div v-else class="table-list__text">
                             <span>{{ getShortDate(event.startDate) }}</span>
                             {{ event.title }}
+                            <small v-if="event.soldOut" class="table-list__badge">Fullbokad</small>
                         </div>
                     </li>
                 </ul>

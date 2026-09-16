@@ -11,6 +11,7 @@ export type IEvent = {
   title: string;
   shortDescription: string;
   longDescription: string | null;
+  soldOut?: boolean;
   level: string | null;
   address: string;
   startDate: string;

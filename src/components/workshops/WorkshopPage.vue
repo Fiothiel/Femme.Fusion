@@ -53,6 +53,10 @@
                     </div>
                 </div>
 
+                <div v-else-if="workshop.soldOut" class="workshop__notice">
+                    <p><strong>Fullbokad.</strong> Håll gärna utkik efter nästa datum.</p>
+                </div>
+
                 <p v-else class="workshop__cta">
                     <NuxtLink :to="ctaUrl" class="button" :target="ctaTarget" :rel="ctaRel">
                         {{ workshop.buttonText || "Anmäl dig här" }}
